@@ -5,7 +5,7 @@ Artifacts for the preprint:
 > **Fold, Don't Stream: Recurrent Depth as a Storage-Residency Optimization for Consumer-Device LLM Inference**
 > Gigyeom Ahn, 2026 — preprint draft v2.2 (revised after adversarial review, cross-session literature and log-consistency checks)
 
-Zenodo record: *(DOI to be added at upload)*. The English PDF is authoritative; the Korean PDF is a translation provided for accessibility.
+Zenodo record: [doi:10.5281/zenodo.21534339](https://doi.org/10.5281/zenodo.21534339) (concept DOI — always resolves to the latest version; v2.2 version DOI: [10.5281/zenodo.21534340](https://doi.org/10.5281/zenodo.21534340)). The English PDF is authoritative; the Korean PDF is a translation provided for accessibility.
 
 A dense 70B model that exceeds a 32 GB laptop's RAM decodes at ~0.02 tokens/s because every token re-reads 40–44 GB of weights from SSD. A ~300-line graph-folding patch to llama.cpp (`LLAMA_FOLD_K`) makes a looped model's *unique* weights resident and removes that cliff on the same laptop (~125× vs the untuned lazy-mmap streaming baseline, dense 70B). Controlled 30M-parameter studies measure what looping costs in quality at equal resident weights and equal training tokens, and a *flattened twin* of a production looped model (Nanbeige4.2-3B) isolates residency as the sole cause of a 151× speed gap.
 
@@ -72,8 +72,8 @@ Absolute paths inside scripts and logs refer to the author's machine; adjust bef
   title        = {Fold, Don't Stream: Recurrent Depth as a Storage-Residency
                   Optimization for Consumer-Device LLM Inference},
   year         = {2026},
-  howpublished = {Preprint},
-  doi          = {TBD (Zenodo concept DOI)},
+  howpublished = {Preprint, Zenodo},
+  doi          = {10.5281/zenodo.21534339},
   url          = {https://github.com/cornch-k/fold-dont-stream}
 }
 ```
