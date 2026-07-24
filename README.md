@@ -3,7 +3,7 @@
 Artifacts for the preprint:
 
 > **Fold, Don't Stream: Recurrent Depth as a Storage-Residency Optimization for Consumer-Device LLM Inference**
-> Gigyeom Ahn, 2026 — preprint draft v2 (revised after adversarial review)
+> Gigyeom Ahn, 2026 — preprint draft v2.1 (revised after adversarial review and a cross-session literature check)
 
 Zenodo record: *(DOI to be added at upload)*. The English PDF is authoritative; the Korean PDF is a translation provided for accessibility.
 
@@ -12,7 +12,7 @@ A dense 70B model that exceeds a 32 GB laptop's RAM decodes at ~0.02 tokens/s be
 ## Repository layout
 
 ```
-paper/      HTML sources (en/ko), figures, figure generator, PDF builds (v2)
+paper/      HTML sources (en/ko), figures, figure generator, PDF builds (v2.1)
 patches/    llama.cpp patches (see below)
 training/   §3 quality studies: 30M/42M TinyStories code, tests, training logs,
             Colab notebooks (T4 cross-check, MoE, multi-seed, R-sweep)
