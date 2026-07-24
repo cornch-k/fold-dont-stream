@@ -7,7 +7,7 @@ Artifacts for the preprint:
 
 Zenodo record: *(DOI to be added at upload)*. The English PDF is authoritative; the Korean PDF is a translation provided for accessibility.
 
-A dense 70B model that exceeds a 32 GB laptop's RAM decodes at ~0.02 tokens/s because every token re-reads ~44 GB of weights from SSD. A ~300-line graph-folding patch to llama.cpp (`LLAMA_FOLD_K`) makes a looped model's *unique* weights resident and removes that cliff on the same laptop (~125× for dense 70B). Controlled 30M-parameter studies measure what looping costs in quality at equal resident bytes and equal training tokens, and a *flattened twin* of a production looped model (Nanbeige4.2-3B) isolates residency as the sole cause of a 151× speed gap.
+A dense 70B model that exceeds a 32 GB laptop's RAM decodes at ~0.02 tokens/s because every token re-reads 40–44 GB of weights from SSD. A ~300-line graph-folding patch to llama.cpp (`LLAMA_FOLD_K`) makes a looped model's *unique* weights resident and removes that cliff on the same laptop (~125× vs the untuned lazy-mmap streaming baseline, dense 70B). Controlled 30M-parameter studies measure what looping costs in quality at equal resident weights and equal training tokens, and a *flattened twin* of a production looped model (Nanbeige4.2-3B) isolates residency as the sole cause of a 151× speed gap.
 
 ## Repository layout
 
