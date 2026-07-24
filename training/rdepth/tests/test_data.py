@@ -1,9 +1,16 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np
+import pytest
 from tokenizers import Tokenizer
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# data/는 리포에 포함되지 않음 — prepare_data.py 실행 후에만 검사
+pytestmark = pytest.mark.skipif(
+    not os.path.exists(os.path.join(HERE, "data", "tok4096.json")),
+    reason="data/ not present — run prepare_data.py first",
+)
 
 def test_roundtrip():
     tok = Tokenizer.from_file(os.path.join(HERE, "data/tok4096.json"))

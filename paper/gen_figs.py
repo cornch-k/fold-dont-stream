@@ -9,7 +9,7 @@ from matplotlib.patches import FancyArrowPatch, Rectangle
 import numpy as np
 import os
 
-OUTDIR = "/Users/angigyeom/Desktop/optillama/docs/paper"
+OUTDIR = os.path.dirname(os.path.abspath(__file__))  # 그림은 스크립트와 같은 디렉터리에 생성
 
 # ---------------------------------------------------------------- palette --
 BLUE = "#0072B2"       # primary series

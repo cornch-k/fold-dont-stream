@@ -30,6 +30,9 @@ systems/    §4 measurement harness: run scripts, mlock ballast, GGUF flattener,
 
 ## Reproducing
 
+Exact hardware, OS, compiler, and pinned package versions for every arm are in
+[ENVIRONMENT.md](ENVIRONMENT.md).
+
 **Systems (§4).**
 
 ```sh
@@ -46,6 +49,8 @@ LLAMA_FOLD_K=20 ./build/bin/llama-cli -m <model.gguf> --no-repack ...   # see sy
 
 ```sh
 cd training/rdepth
+pip install -r requirements.txt
+python -m pytest tests        # fresh clone: 14 passed, 2 skipped
 python prepare_data.py        # TinyStories, 4k BPE
 python train.py --run small|loop|large|... [--seed N] [--dtype fp32]
 ```
