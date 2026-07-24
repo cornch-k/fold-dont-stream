@@ -1,0 +1,39 @@
+>>> smoke: ngen=64 ctx=4096
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10060-635cdd5fc
+model      : /Users/angigyeom/optillama-models/Qwen3.5-122B-A10B-UD-IQ2_M.gguf
+ftype      : IQ2_M - 2.7 bpw
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Explain, step by step, how a mixture-of-experts transformer routes tokens to experts, and why sparse activation reduces compute per token. Then give three concrete tradeoffs.
+
+[Start thinking]
+
+Here is the user's request. The user wants an explanation of how a mixture-of-experts (MoE) transformer routes tokens to experts and why sparse activation reduces compute per token. Finally, they want three concrete tradeoffs.
+
+The user has also provided a preamble stating that they want me to explain "how a
+
+[ Prompt: 1.7 t/s | Generation: 1.0 t/s ]
+
+
+Exiting...

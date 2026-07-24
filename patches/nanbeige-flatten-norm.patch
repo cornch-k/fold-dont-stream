@@ -1,0 +1,29 @@
+diff --git a/src/models/nanbeige.cpp b/src/models/nanbeige.cpp
+index 2e2c5bf..5e561b9 100644
+--- a/src/models/nanbeige.cpp
++++ b/src/models/nanbeige.cpp
+@@ -1,5 +1,7 @@
+ #include "models.h"
+ 
++#include <cstdlib>
++
+ void llama_model_nanbeige::load_arch_hparams(llama_model_loader & ml) {
+     ml.get_key(LLM_KV_ATTENTION_LAYERNORM_RMS_EPS, hparams.f_norm_rms_eps);
+ 
+@@ -157,8 +159,14 @@ llama_model_nanbeige::graph::graph(const llama_model & model, const llm_graph_pa
+ 
+         inpL = cur;
+ 
+-        if (n_loops > 1 &&
+-            ((il + 1) % n_phys) == 0 &&
++        // [로컬 패치 twin] NANBEIGE_BOUNDARY_STRIDE=S: 펼친(비루프) GGUF에서도
++        // 원본의 루프 경계 norm을 물리 스트라이드 S 기준으로 재현 (함수 동일성 보존)
++        static const int bstride_env = getenv("NANBEIGE_BOUNDARY_STRIDE")
++                                       ? atoi(getenv("NANBEIGE_BOUNDARY_STRIDE")) : 0;
++        const int  bstride      = bstride_env > 0 ? bstride_env : (int) n_phys;
++        const bool has_boundary = (n_loops > 1) || (bstride_env > 0);
++        if (has_boundary &&
++            ((il + 1) % bstride) == 0 &&
+             (il + 1) < n_layer &&
+             !nb.skip_loop_final_norm) {
+             cur = build_norm(inpL, model.output_norm, NULL, LLM_NORM_RMS, il);

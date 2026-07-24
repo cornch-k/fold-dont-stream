@@ -1,0 +1,247 @@
+diff --git a/src/models/laguna.cpp b/src/models/laguna.cpp
+index 78974d801..73af0e4ac 100644
+--- a/src/models/laguna.cpp
++++ b/src/models/laguna.cpp
+@@ -6,6 +6,16 @@
+ 
+ #include "models.h"
+ 
++#include <cstdlib>
++
++// [로컬 패치 E1] 층 접기: LLAMA_FOLD_K=K → 가중치를 앞 K개 층에서 il%K로 재사용.
++// KV·위치는 논리층 il 유지. SWA 하이브리드면 K는 SWA 주기의 배수여야 함 (아래 assert).
++static int llm_fold_wl(int il) {
++    static const int k = [] { const char * e = getenv("LLAMA_FOLD_K"); return e ? atoi(e) : 0; }();
++    if (k > 0 && il == 0) fprintf(stderr, "[E1-FOLD] active: K=%d (weights folded)\n", k);
++    return k > 0 ? il % k : il;
++}
++
+ void llama_model_laguna::load_arch_hparams(llama_model_loader & ml) {
+     ml.get_key(LLM_KV_ATTENTION_LAYERNORM_RMS_EPS, hparams.f_norm_rms_eps);
+     ml.get_key(LLM_KV_LEADING_DENSE_BLOCK_COUNT,   hparams.n_layer_dense_lead);
+@@ -175,9 +185,13 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+         // residual-stream capture for speculative drafters (EAGLE3 / DFlash)
+         res->t_layer_inp[il] = inpL;
+ 
++        const int wl = llm_fold_wl(il);  // [E1] 가중치 참조용 물리층 인덱스
++        // 접기 시 rope/캐시 정합: 논리층과 물리층의 SWA 위상이 같아야 함
++        GGML_ASSERT(hparams.is_swa(il) == hparams.is_swa(wl) && "LLAMA_FOLD_K must be a multiple of the SWA period");
++
+         const bool    is_swa_il   = hparams.is_swa(il);
+-        const int64_t n_head_il   = hparams.n_head(il);
+-        const int64_t n_head_kv_il = hparams.n_head_kv(il);
++        const int64_t n_head_il   = hparams.n_head(wl);
++        const int64_t n_head_kv_il = hparams.n_head_kv(wl);
+ 
+         // Per-layer-type RoPE config. SWA layers run plain rope (no YaRN),
+         // achieved by zeroing the YaRN ext/beta params for those layers.
+@@ -198,25 +212,25 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+         ggml_tensor * inpSA = inpL;
+ 
+         // Pre-norm
+-        cur = build_norm(inpL, model.layers[il].attn_norm, NULL, LLM_NORM_RMS, il);
++        cur = build_norm(inpL, model.layers[wl].attn_norm, NULL, LLM_NORM_RMS, il);
+         cb(cur, "attn_norm", il);
+ 
+         // Self-attention
+         {
+             ggml_tensor * attn_inp = cur;  // saved for the gate projection
+ 
+-            auto [Qcur, Kcur, Vcur] = build_qkv(model.layers[il], cur,
++            auto [Qcur, Kcur, Vcur] = build_qkv(model.layers[wl], cur,
+                     n_embd_head, n_head_il, n_head_kv_il, il);
+ 
+             // g_proj on the *pre-attention* hidden state (matches HF
+             // reference: gate is computed from the same `hidden_states`
+             // input as q/k/v, not from the attn output).
+-            ggml_tensor * gate = build_lora_mm(model.layers[il].wqkv_gate, attn_inp);
++            ggml_tensor * gate = build_lora_mm(model.layers[wl].wqkv_gate, attn_inp);
+             cb(gate, "attn_gate_proj", il);
+ 
+             // QK RMSNorm at head_dim level (Qwen3 style)
+-            Qcur = build_norm(Qcur, model.layers[il].attn_q_norm, NULL, LLM_NORM_RMS, il);
+-            Kcur = build_norm(Kcur, model.layers[il].attn_k_norm, NULL, LLM_NORM_RMS, il);
++            Qcur = build_norm(Qcur, model.layers[wl].attn_q_norm, NULL, LLM_NORM_RMS, il);
++            Kcur = build_norm(Kcur, model.layers[wl].attn_k_norm, NULL, LLM_NORM_RMS, il);
+             cb(Qcur, "Qcur_normed", il);
+             cb(Kcur, "Kcur_normed", il);
+ 
+@@ -250,7 +264,7 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+             cb(gate, "attn_gate_softplus", il);
+ 
+             const int64_t n_tokens = cur->ne[1];
+-            if (model.layers[il].wqkv_gate->ne[1] == n_head_il) {
++            if (model.layers[wl].wqkv_gate->ne[1] == n_head_il) {
+                 cur  = ggml_reshape_3d(ctx0, cur,  n_embd_head, n_head_il, n_tokens);
+                 gate = ggml_reshape_3d(ctx0, gate, 1,           n_head_il, n_tokens);
+                 cur  = ggml_mul(ctx0, cur, gate);
+@@ -260,7 +274,7 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+             }
+             cb(cur, "attn_gated", il);
+ 
+-            cur = build_lora_mm(model.layers[il].wo, cur, model.layers[il].wo_s);
++            cur = build_lora_mm(model.layers[wl].wo, cur, model.layers[wl].wo_s);
+             cb(cur, "attn_o_proj", il);
+         }
+ 
+@@ -276,18 +290,18 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+         cb(ffn_inp, "ffn_inp", il);
+ 
+         // Pre-norm only (no post-attn norm)
+-        cur = build_norm(ffn_inp, model.layers[il].ffn_norm, NULL, LLM_NORM_RMS, il);
++        cur = build_norm(ffn_inp, model.layers[wl].ffn_norm, NULL, LLM_NORM_RMS, il);
+         cb(cur, "ffn_norm", il);
+ 
+-        if ((uint32_t)il >= hparams.n_layer_dense_lead) {
++        if ((uint32_t)wl >= hparams.n_layer_dense_lead) {  // [E1] 구조는 가중치(물리층)를 따름 — dense-lead 접힘 시 NULL MoE 텐서 방지
+             // MoE: sigmoid routing + score-correction bias + sum-norm +
+             // routed_scaling_factor (all handled by build_moe_ffn).
+             ggml_tensor * moe_out = build_moe_ffn(cur,
+-                    model.layers[il].ffn_gate_inp,
+-                    model.layers[il].ffn_up_exps,
+-                    model.layers[il].ffn_gate_exps,
+-                    model.layers[il].ffn_down_exps,
+-                    model.layers[il].ffn_exp_probs_b,
++                    model.layers[wl].ffn_gate_inp,
++                    model.layers[wl].ffn_up_exps,
++                    model.layers[wl].ffn_gate_exps,
++                    model.layers[wl].ffn_down_exps,
++                    model.layers[wl].ffn_exp_probs_b,
+                     n_expert, n_expert_used,
+                     LLM_FFN_SILU,
+                     hparams.expert_weights_norm,
+@@ -298,9 +312,9 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+ 
+             // Always-on shared expert, summed in parallel.
+             ggml_tensor * ffn_shexp = build_ffn(cur,
+-                    model.layers[il].ffn_up_shexp,   NULL, NULL,
+-                    model.layers[il].ffn_gate_shexp, NULL, NULL,
+-                    model.layers[il].ffn_down_shexp, NULL, NULL,
++                    model.layers[wl].ffn_up_shexp,   NULL, NULL,
++                    model.layers[wl].ffn_gate_shexp, NULL, NULL,
++                    model.layers[wl].ffn_down_shexp, NULL, NULL,
+                     NULL,
+                     LLM_FFN_SILU, LLM_FFN_PAR, il);
+             cb(ffn_shexp, "ffn_shexp", il);
+@@ -310,9 +324,9 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+         } else {
+             // Dense FFN for the leading n_layer_dense_lead layers (XS.2: 1, M.1: 3)
+             cur = build_ffn(cur,
+-                    model.layers[il].ffn_up,   NULL, NULL,
+-                    model.layers[il].ffn_gate, NULL, NULL,
+-                    model.layers[il].ffn_down, NULL, NULL,
++                    model.layers[wl].ffn_up,   NULL, NULL,
++                    model.layers[wl].ffn_gate, NULL, NULL,
++                    model.layers[wl].ffn_down, NULL, NULL,
+                     NULL,
+                     LLM_FFN_SILU, LLM_FFN_PAR, il);
+             cb(cur, "ffn_out", il);
+diff --git a/src/models/llama.cpp b/src/models/llama.cpp
+index 4bfebc884..223a7a736 100644
+--- a/src/models/llama.cpp
++++ b/src/models/llama.cpp
+@@ -1,5 +1,15 @@
+ #include "models.h"
+ 
++#include <cstdlib>
++
++// [로컬 패치 E1] 층 접기: LLAMA_FOLD_K=K → 가중치를 앞 K개 층에서 il%K로 재사용.
++// KV 캐시·위치·콜백은 논리층 il 유지. 품질 무보증 — 상주/처리량 실측 전용.
++static int llm_fold_wl(int il) {
++    static const int k = [] { const char * e = getenv("LLAMA_FOLD_K"); return e ? atoi(e) : 0; }();
++    if (k > 0 && il == 0) fprintf(stderr, "[E1-FOLD] active: K=%d (weights folded)\n", k);
++    return k > 0 ? il % k : il;
++}
++
+ void llama_model_llama::load_arch_hparams(llama_model_loader & ml) {
+     uint32_t n_vocab = 0;
+     ml.get_key(LLM_KV_VOCAB_SIZE, n_vocab, false) || ml.get_arr_n(LLM_KV_TOKENIZER_LIST, n_vocab, false);
+@@ -126,11 +136,13 @@ llama_model_llama::graph<embed>::graph(const llama_model & model, const llm_grap
+     for (int il = 0; il < n_layer; ++il) {
+         res->t_layer_inp[il] = inpL;
+ 
++        const int wl = llm_fold_wl(il);  // [E1] 가중치 참조용 물리층 인덱스
++
+         ggml_tensor * inpSA = inpL;
+ 
+         // norm
+         cur = build_norm(inpL,
+-                model.layers[il].attn_norm, NULL,
++                model.layers[wl].attn_norm, NULL,
+                 LLM_NORM_RMS, il);
+         cb(cur, "attn_norm", il);
+ 
+@@ -140,7 +152,7 @@ llama_model_llama::graph<embed>::graph(const llama_model & model, const llm_grap
+             ggml_tensor * rope_factors = model.get_rope_factors(cparams, il);
+ 
+             // compute Q and K and RoPE them
+-            auto [Qcur, Kcur, Vcur] = build_qkv(model.layers[il], cur,
++            auto [Qcur, Kcur, Vcur] = build_qkv(model.layers[wl], cur,
+                     n_embd_head, n_head, n_head_kv, il);
+ 
+             Qcur = ggml_rope_ext(
+@@ -167,7 +179,7 @@ llama_model_llama::graph<embed>::graph(const llama_model & model, const llm_grap
+                 cb(Kcur, "Kcur_normed", il);
+             }
+             cur = build_attn(inp_attn,
+-                    model.layers[il].wo, model.layers[il].wo_b, model.layers[il].wo_s,
++                    model.layers[wl].wo, model.layers[wl].wo_b, model.layers[wl].wo_s,
+                     Qcur, Kcur, Vcur, nullptr, nullptr, nullptr, kq_scale, il);
+             cb(cur, "attn_out", il);
+         }
+@@ -179,32 +191,32 @@ llama_model_llama::graph<embed>::graph(const llama_model & model, const llm_grap
+         cb(ffn_inp, "ffn_inp", il);
+ 
+         // feed-forward network (non-MoE)
+-        if (model.layers[il].ffn_gate_inp == nullptr) {
++        if (model.layers[wl].ffn_gate_inp == nullptr) {
+ 
+             cur = build_norm(ffn_inp,
+-                    model.layers[il].ffn_norm, NULL,
++                    model.layers[wl].ffn_norm, NULL,
+                     LLM_NORM_RMS, il);
+             cb(cur, "ffn_norm", il);
+ 
+             cur = build_ffn(cur,
+-                    model.layers[il].ffn_up,   model.layers[il].ffn_up_b,   model.layers[il].ffn_up_s,
+-                    model.layers[il].ffn_gate, model.layers[il].ffn_gate_b, model.layers[il].ffn_gate_s,
+-                    model.layers[il].ffn_down, model.layers[il].ffn_down_b, model.layers[il].ffn_down_s,
++                    model.layers[wl].ffn_up,   model.layers[wl].ffn_up_b,   model.layers[wl].ffn_up_s,
++                    model.layers[wl].ffn_gate, model.layers[wl].ffn_gate_b, model.layers[wl].ffn_gate_s,
++                    model.layers[wl].ffn_down, model.layers[wl].ffn_down_b, model.layers[wl].ffn_down_s,
+                     NULL,
+                     LLM_FFN_SILU, LLM_FFN_PAR, il);
+             cb(cur, "ffn_out", il);
+         } else {
+             // MoE branch
+             cur = build_norm(ffn_inp,
+-                    model.layers[il].ffn_norm, NULL,
++                    model.layers[wl].ffn_norm, NULL,
+                     LLM_NORM_RMS, il);
+             cb(cur, "ffn_norm", il);
+ 
+             cur = build_moe_ffn(cur,
+-                    model.layers[il].ffn_gate_inp,
+-                    model.layers[il].ffn_up_exps,
+-                    model.layers[il].ffn_gate_exps,
+-                    model.layers[il].ffn_down_exps,
++                    model.layers[wl].ffn_gate_inp,
++                    model.layers[wl].ffn_up_exps,
++                    model.layers[wl].ffn_gate_exps,
++                    model.layers[wl].ffn_down_exps,
+                     nullptr,
+                     n_expert, n_expert_used,
+                     LLM_FFN_SILU, true,
+@@ -212,9 +224,9 @@ llama_model_llama::graph<embed>::graph(const llama_model & model, const llm_grap
+                     LLAMA_EXPERT_GATING_FUNC_TYPE_SOFTMAX,
+                     il,
+                     nullptr, nullptr,
+-                    model.layers[il].ffn_up_exps_s,
+-                    model.layers[il].ffn_gate_exps_s,
+-                    model.layers[il].ffn_down_exps_s);
++                    model.layers[wl].ffn_up_exps_s,
++                    model.layers[wl].ffn_gate_exps_s,
++                    model.layers[wl].ffn_down_exps_s);
+             cb(cur, "ffn_moe_out", il);
+         }
+         cur = ggml_add(ctx0, cur, ffn_inp);

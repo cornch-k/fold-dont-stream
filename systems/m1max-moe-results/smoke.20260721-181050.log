@@ -1,0 +1,70 @@
+>>> smoke: ngen=32 ctx=4096
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-0.55.854.348 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.55.854.353 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.55.854.368 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.55.854.370 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+\0.55.913.770 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.55.913.779 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.55.913.780 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.55.913.780 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.55.913.800 E ggml_metal_graph_compute: backend is in error state from a previous command buffer failure - recreate the backend to recover
+0.55.913.801 E graph_compute: ggml_backend_sched_graph_compute_async failed with error -1
+0.55.913.802 E process_ubatch: failed to compute graph, compute status: -1
+0.55.913.813 E llama_decode: failed to decode, ret = -3
+0.55.913.814 E cmn  common_conte: llama_decode() failed: -3
+0.55.918.172 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.55.918.178 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+|/ 0.56.119.358 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.365 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.366 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.366 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.411 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.411 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.411 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.411 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.412 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.412 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.412 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.119.413 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0.56.119.413 E ggml_metal_graph_compute: backend is in error state from a previous command buffer failure - recreate the backend to recover
+0.56.119.414 E graph_compute: ggml_backend_sched_graph_compute_async failed with error -1
+0.56.119.415 E process_ubatch: failed to compute graph, compute status: -1
+0.56.119.431 E llama_decode: failed to decode, ret = -3
+0.56.119.433 E srv        decode: Compute error. off = 0, n_batch = 512, ret = -3
+0.56.119.434 E srv    send_error: task id = 0, error: Compute error.
+0.56.119.471 E srv  update_slots: decode() failed: Compute error.
+0.56.120.082 E ggml_metal_synchronize: error: command buffer 1 failed with status 5
+0.56.120.084 E error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10060-635cdd5fc
+model      : /Volumes/X31/optillama/models/Qwen3.5-122B-A10B-MTP-GGUF/Qwen3.5-122B-A10B-UD-IQ2_M.gguf
+ftype      : IQ2_M - 2.7 bpw
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Explain, step by step, how a mixture-of-experts transformer routes tokens to experts, and why sparse activation reduces compute per token. Then give three concrete tradeoffs.
+Error: Compute error.
+
+[ Prompt: 0.0 t/s | Generation: 0.0 t/s ]
+
+
+Exiting...

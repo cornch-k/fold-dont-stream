@@ -1,0 +1,7 @@
+
+
+
+downloaded: {'train': '/Users/angigyeom/.cache/huggingface/hub/datasets--roneneldan--TinyStories/snapshots/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStories-train.txt', 'val': '/Users/angigyeom/.cache/huggingface/hub/datasets--roneneldan--TinyStories/snapshots/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64/TinyStories-valid.txt'}
+tokenizer ready
+/Users/angigyeom/Desktop/optillama/protolab/rdepth/data/val.bin: 4,836,702 tokens
+/Users/angigyeom/Desktop/optillama/protolab/rdepth/data/train.bin: 480,711,146 tokens

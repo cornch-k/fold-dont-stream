@@ -1,0 +1,6 @@
+>>> smoke: ngen=64 ctx=4096
+=== rc=0 ===
+--- perf tail ---
+--- mem peaks ---
+peakRSS=21871 MB peakWired=9428 MB peakSwap=1929 MB
+raw: /Users/angigyeom/Desktop/optillama/llama.cpp/scripts/m1max-moe/results/smoke.20260722-205715.log

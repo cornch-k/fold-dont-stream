@@ -1,0 +1,8 @@
+free-like=GB ballast=0GB
+folded st=OK elapsed=30s peakRSS=23GB ssd_read=4GB swap_d=0MB [ Prompt: 23.7 t/s | Generation: 15.6 t/s ]
+flat st=OK elapsed=30s peakRSS=24GB ssd_read=7GB swap_d=0MB [ Prompt: 23.5 t/s | Generation: 15.6 t/s ]
+TWIN_DONE
+free-like=27.09GB ballast=19GB
+folded st=OK elapsed=41s peakRSS=5GB ssd_read=10GB swap_d=0MB [ Prompt: 7.9 t/s | Generation: 15.1 t/s ]
+flat st=OK elapsed=308s peakRSS=5GB ssd_read=231GB swap_d=0MB [ Prompt: 4.0 t/s | Generation: 0.1 t/s ]
+TWIN_DONE

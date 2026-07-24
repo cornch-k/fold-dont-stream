@@ -1,0 +1,7 @@
+llama_fold st=OK elapsed=87s peakRSS=24GB ssd_read=27GB swap_delta=-8MB [ Prompt: 1.1 t/s | Generation: 2.5 t/s ]
+llama_fold_metal st=EXITED elapsed=144s peakRSS=1GB ssd_read=319GB swap_delta=-40MB 
+laguna_fold st=EXITED elapsed=7s peakRSS=0GB ssd_read=0GB swap_delta=0MB 
+laguna_fold st=OK elapsed=68s peakRSS=17GB ssd_read=14GB swap_delta=-8MB [ Prompt: 2.0 t/s | Generation: 3.8 t/s ]
+llama_base st=OK elapsed=480s peakRSS=23GB ssd_read=355GB swap_delta=-15MB [ Prompt: 0.6 t/s | Generation: 0.0 t/s ]
+laguna_base st=OK elapsed=107s peakRSS=22GB ssd_read=37GB swap_delta=-8MB [ Prompt: 0.8 t/s | Generation: 1.4 t/s ]
+BATTERY_DONE

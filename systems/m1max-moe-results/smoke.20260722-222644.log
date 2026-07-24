@@ -1,0 +1,47 @@
+>>> smoke: ngen=128 ctx=4096
+
+
+Loading model... |-\|/-\|/-\moe-prefetch: 8 touch threads
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10099-1f4b9d65f
+model      : /Users/angigyeom/Desktop/optillama/models/Qwen3.5-122B-A10B-MTP-GGUF/UD-Q4_K_XL/Qwen3.5-122B-A10B-UD-Q4_K_XL-00001-of-00003.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Explain, step by step, how a mixture-of-experts transformer routes tokens to experts, and why sparse activation reduces compute per token. Then give three concrete tradeoffs.
+
+[Start thinking]
+
+Here's a thinking process that leads to the suggested explanation:
+
+1.  **Deconstruct the Request:**
+    *   **Topic:** Mixture-of-Experts (MoE) Transformers.
+    *   **Core Task 1:** Explain step-by-step how token routing works.
+    *   **Core Task 2:** Explain *why* sparse activation reduces compute per token.
+    *   **Core Task 3:** Provide three concrete tradeoffs.
+    *   **Format:** Step-by-step explanation, clear reasoning, three distinct tradeoffs.
+
+2.  **Part 1: Step-by-
+
+[ Prompt: 2.1 t/s | Generation: 1.4 t/s ]
+
+
+Exiting...

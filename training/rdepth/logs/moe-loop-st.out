@@ -1,0 +1,63 @@
+run=moe-loop-st unique_params=41,906,688 resident_fp16=83.8MB dev=mps dtype=fp32
+step 50/3051 loss 6.7441 7,217 tok/s
+step 100/3051 loss 5.1269 7,284 tok/s
+step 150/3051 loss 4.2695 7,313 tok/s
+step 200/3051 loss 3.8985 7,320 tok/s
+step 250/3051 loss 3.7223 7,333 tok/s
+step 300/3051 loss 3.3249 7,334 tok/s
+step 350/3051 loss 3.0489 7,341 tok/s
+step 400/3051 loss 2.9023 7,345 tok/s
+step 450/3051 loss 2.7212 7,349 tok/s
+step 500/3051 loss 2.6125 7,357 tok/s
+  [eval] step 500 val 2.6714 uniq_exp 2.000
+step 550/3051 loss 2.5026 7,255 tok/s
+step 600/3051 loss 2.4775 7,269 tok/s
+step 650/3051 loss 2.4241 7,279 tok/s
+step 700/3051 loss 2.2533 7,291 tok/s
+step 750/3051 loss 2.2227 7,299 tok/s
+step 800/3051 loss 2.2052 7,307 tok/s
+step 850/3051 loss 2.1236 7,313 tok/s
+step 900/3051 loss 2.1030 7,319 tok/s
+step 950/3051 loss 1.9844 7,325 tok/s
+step 1000/3051 loss 1.9858 7,330 tok/s
+  [eval] step 1000 val 2.0958 uniq_exp 2.000
+step 1050/3051 loss 2.0691 7,278 tok/s
+step 1100/3051 loss 2.0168 7,284 tok/s
+step 1150/3051 loss 1.9482 7,290 tok/s
+step 1200/3051 loss 1.9760 7,295 tok/s
+step 1250/3051 loss 1.9079 7,299 tok/s
+step 1300/3051 loss 1.9112 7,301 tok/s
+step 1350/3051 loss 1.8830 7,303 tok/s
+step 1400/3051 loss 1.8628 7,306 tok/s
+step 1450/3051 loss 1.8579 7,309 tok/s
+step 1500/3051 loss 1.8365 7,310 tok/s
+  [eval] step 1500 val 1.9064 uniq_exp 2.000
+step 1550/3051 loss 1.8565 7,274 tok/s
+step 1600/3051 loss 1.8068 7,277 tok/s
+step 1650/3051 loss 1.8155 7,280 tok/s
+step 1700/3051 loss 1.8475 7,283 tok/s
+step 1750/3051 loss 1.7790 7,286 tok/s
+step 1800/3051 loss 1.7768 7,289 tok/s
+step 1850/3051 loss 1.7100 7,292 tok/s
+step 1900/3051 loss 1.7811 7,293 tok/s
+step 1950/3051 loss 1.7053 7,295 tok/s
+step 2000/3051 loss 1.7308 7,297 tok/s
+  [eval] step 2000 val 1.8059 uniq_exp 2.000
+step 2050/3051 loss 1.7208 7,268 tok/s
+step 2100/3051 loss 1.7702 7,270 tok/s
+step 2150/3051 loss 1.7072 7,275 tok/s
+step 2200/3051 loss 1.6852 7,280 tok/s
+step 2250/3051 loss 1.7468 7,284 tok/s
+step 2300/3051 loss 1.7272 7,288 tok/s
+step 2350/3051 loss 1.7198 7,291 tok/s
+step 2400/3051 loss 1.5993 7,293 tok/s
+step 2450/3051 loss 1.6989 7,296 tok/s
+step 2500/3051 loss 1.6654 7,298 tok/s
+  [eval] step 2500 val 1.7449 uniq_exp 2.000
+step 2550/3051 loss 1.6673 7,277 tok/s
+step 2600/3051 loss 1.6176 7,280 tok/s
+step 2650/3051 loss 1.6436 7,284 tok/s
+step 2700/3051 loss 1.6267 7,288 tok/s
+step 2750/3051 loss 1.6608 7,291 tok/s
+step 2800/3051 loss 1.6847 7,292 tok/s
+step 2850/3051 loss 1.6301 7,296 tok/s

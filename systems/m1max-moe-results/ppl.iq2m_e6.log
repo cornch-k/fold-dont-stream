@@ -1,0 +1,9 @@
+0.12.453.886 I 
+0.12.453.945 I system_info: n_threads = 4 (n_threads_batch = 4) / 8 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.12.454.466 I perplexity: tokenizing the input ..
+0.12.753.524 I perplexity: tokenization took 299.061 ms
+0.12.760.307 I perplexity: calculating perplexity over 8 chunks, n_ctx=2048, batch_size=2048, n_seq=1
+4.24.501.948 I perplexity: 251.75 seconds per pass - ETA 33.55 minutes
+[1]7.5546,[2]9.4752,[3]9.7782,[4]9.7032,[5]9.8748,[6]8.4911,[7]7.6202,[8]7.5629,
+33.54.211.345 I Final estimate: PPL = 7.5629 +/- 0.20916
+
