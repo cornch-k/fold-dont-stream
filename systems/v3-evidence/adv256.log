@@ -1,0 +1,47 @@
+
+===== 4. magnitudes on the folded trajectory (per-token medians of the norm) =====
+||X||   median    14.028
+||Y||   median     8.390   (full FFN output)
+||shexp||           4.720   ratio to Y 0.570
+||R||               6.422   ratio to Y 0.778   ratio to X 0.454
+
+===== 0+1+2. reproduce the ceiling, and check the solver =====
+  [built layer-22 expert outputs in 27s]
+  tok0: lstsq32 0.941309  lstsq64 0.941309  QR64 0.941309  cond(A) 3.170e+00
+  tok1: lstsq32 0.941420  lstsq64 0.941420  QR64 0.941420  cond(A) 3.170e+00
+  tok2: lstsq32 0.936530  lstsq64 0.936530  QR64 0.936530  cond(A) 3.280e+00
+  tok3: lstsq32 0.932493  lstsq64 0.932493  QR64 0.932493  cond(A) 3.712e+00
+  ceiling T=64  (paper) : 0.9352
+  ceiling T=256        : 0.9292
+  -> norm captured  = sqrt(1-c^2) = 36.9%
+  -> energy captured= 1-c^2       = 13.7%
+
+===== 5. per-token spread (paper reports only the aggregate) =====
+  min/p10/p25/median/p75/p90/max = 0.672 0.924 0.932 0.938 0.944 0.947 0.953
+  mean 0.9354  std 0.0211
+
+===== 3. NULL controls -- what would an UNINFORMATIVE basis give? =====
+  analytic random 256-dim subspace of R^3072: sqrt(1-256/3072) = 0.9574
+  empirical iid-Gaussian basis                : 0.9571
+  layer-22 experts, TOKEN-SHUFFLED inputs      : 0.9430
+  layer-22 experts, correct inputs (ceiling)   : 0.9292
+
+===== 7. escape the bound does not cover: input-side diagonal modulation =====
+  diag gain D = w_ffn_norm[24]/w_ffn_norm[22]  min 0.952 med 1.093 max 43.937
+  ceiling with modulated input, same target R : 0.9293   [51s]
+  (one arbitrary D, not optimized -- the point is that D moves the basis at all)
+
+===== 6. trajectory control: same solve on the UNFOLDED trajectory =====
+  ceiling on unfolded trajectory              : 0.7576   [56s]
+  input drift folded-vs-unfolded: rel 0.919  cos 0.523
+
+===== 8. residual spectrum: how low-rank is what the routed branch cannot reach? =====
+  top-1    directions carry  10.8% of residual energy
+  top-4    directions carry  18.1% of residual energy
+  top-8    directions carry  24.5% of residual energy
+  top-16   directions carry  33.5% of residual energy
+  top-32   directions carry  45.9% of residual energy
+  top-64   directions carry  61.8% of residual energy
+  top-128  directions carry  81.5% of residual energy
+  top-255  directions carry 100.0% of residual energy
+  (isotropic null for a 256x3072 matrix would give top-k ~ k/256 = ['1:0.4%', '8:3.1%', '32:12.5%', '128:50.0%'])

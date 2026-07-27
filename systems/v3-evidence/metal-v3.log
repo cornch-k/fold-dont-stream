@@ -1,0 +1,36 @@
+# v3 Metal 측정 원본 (2026-07-27, M1 Max 32GB, build-fold @ γ수정 후 재빌드)
+# 모델: Laguna-S-2.1-UD-IQ4_XS, wikitext-2 --chunks 2 -c 512 (=1024 토큰)
+# 사상: wl[il]=1+((il-1)/3)*3, 층0 dense lead, 층 45/46/47 자기고정
+# 공통: LLAMA_ARG_REPACK=false LLAMA_MMAP_NO_PREFETCH=1 GGML_OP_OFFLOAD_MIN_BATCH=999999
+# GPU: LLAMA_MMAP_GPU_COPY=1 LLAMA_FOLD_SKIP_LOAD=1
+
+[mtlppl.sh]  Metal빌드 --device none, -b512     27.5888
+[mtlppl.sh]  Metal, -ngl 99, -b512              nan
+[mtlppl.sh]  llama-bench -p0 -n32 -r3 -ngl99    34.41 ± 0.74 t/s   (단일 프로세스 내 3반복)
+             wired: 시작 2.6 -> ppl후 26.3 -> 종료 24.3 GB
+
+[nandiag.sh] 배치 스윕 (Metal -ngl99, MAP+SHEXP+γ)
+   -b512 -ub512   nan
+   -b512 -ub128   nan
+   -b128 -ub128   nan
+   -b64  -ub64    nan
+   -b1   -ub1     27.1728
+   부분 오프로드 -ngl24 / -ngl40 : nan
+
+[rev1.sh] 배치/백엔드 분리
+   CPU경로 -b512   27.5888
+   CPU경로 -b1     27.2702
+   Metal   -b1     27.1728      -> 백엔드 차이 0.36%, 배치 차이 1.16%
+
+[knob.sh / attrib.sh / rev1.sh] b512 프리필 사다리 (Metal -ngl99)
+   EXPERTS=6 + SHEXP   ~15GB   6150400.50   유한
+   EXPERTS=5 + SHEXP   ~16GB   6297533.98   유한
+   EXPERTS=4 + SHEXP   17.6GB  5345773.24   유한
+   EXPERTS=4 무손잡이  17.3GB  1204256.58   유한
+   EXPERTS=3 무손잡이  22.0GB    37782.92   유한   <- 경계
+   EXPERTS=3 + SHEXP   22.4GB       nan            <- 경계
+   MAP+pins+SHEXP+γ    25.0GB       nan
+   EXPERTS=2 무손잡이  31.3GB  Insufficient Memory (kIOGPUCommandBufferCallbackErrorOutOfMemory)
+
+[mtlmem.sh] ggml_metal_device_init: recommendedMaxWorkingSetSize = 26800.60 MB
+            sysctl iogpu.wired_limit_mb = 0 (기본값), hw.memsize = 34.4 GB

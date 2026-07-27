@@ -256,17 +256,29 @@ def fig3():
 def fig4():
     # Llama-3.3-70B: 80 layers, GQA kv_heads=8, head_dim=128, fp16 KV
     # KV/token = 2 * 8 * 128 * 80 * 2 bytes = 327680 bytes = 320 KiB/token
-    KV_GIB_PER_TOK = 320.0 / (1024.0 ** 2)  # GiB per token, fp16
+    # Everything on this figure is in decimal GB (10^9 B), the same unit the
+    # file sizes elsewhere in the paper are quoted in. (v2.2 mixed a decimal-GB
+    # weight axis with a GiB KV axis, and computed weights as file_size / R.)
+    KV_GB_PER_TOK = 327680.0 / 1e9  # decimal GB per token, fp16
 
-    WEIGHTS = {"R=2": 21.2, "R=3": 14.2, "R=4": 10.6}
+    # Measured per-tensor from the Q4_K_M GGUF (gguf-py), not file_size / R:
+    # the non-block tensors (token_embd + output) never fold.
+    NONBLOCK_GB = 1452916992 / 1e9   # 1.453
+    FOLDABLE_GB = 41059614720 / 1e9  # 41.060  (the 80 blk.* layers)
+    WEIGHTS = {f"R={R}": NONBLOCK_GB + FOLDABLE_GB / R for R in (2, 3, 4)}
     RAM_LINE = 24.0
 
+    # §4.1의 상주 예산과 같은 항목을 쓴다: 가중치 + KV + 런타임 버퍼.
+    # v3 이전에는 버퍼항이 빠져 있었고, 21.2 -> 21.98 GB 정정으로 R=2의 여유가
+    # 2.8 -> 2.02 GB로 줄면서 그 누락이 50% 오차가 됐다.
+    BUFFERS_GB = 1.0
+
     def total_gb(weight_gb, ctx_tok, kv_scale=1.0):
-        return weight_gb + kv_scale * KV_GIB_PER_TOK * ctx_tok
+        return weight_gb + BUFFERS_GB + kv_scale * KV_GB_PER_TOK * ctx_tok
 
     def crossing_ctx(weight_gb, kv_scale=1.0):
-        budget = RAM_LINE - weight_gb
-        return budget / (kv_scale * KV_GIB_PER_TOK)
+        budget = RAM_LINE - weight_gb - BUFFERS_GB
+        return budget / (kv_scale * KV_GB_PER_TOK)
 
     fig, ax = plt.subplots(figsize=(3.4, 2.6))
 
@@ -305,7 +317,7 @@ def fig4():
                 markeredgewidth=0.6, zorder=5)
         dx, dy = marker_label_offsets[key]
         ha = "left" if dx > 0 else ("right" if dx < 0 else "center")
-        ctx_k = xc / 1024.0
+        ctx_k = xc / 1000.0   # 라벨은 10진 k (토큰수). 1024로 나누면 본문과 어긋난다
         ax.annotate(f"{ctx_k:.1f}k", xy=(xc, RAM_LINE),
                     xytext=(dx, dy), textcoords="offset points",
                     ha=ha, fontsize=6.2, color=color, zorder=6)
@@ -313,7 +325,7 @@ def fig4():
     # direct curve labels, placed at distinct x to avoid clutter
     label_specs = [
         ("R4",      8192,  VERMILLION),
-        ("R3",      11500, ORANGE),
+        ("R3",       4096, ORANGE),   # 마커 라벨과 겹치지 않도록 왼쪽으로
         ("R2_kvq8", 41000, BLUE),
         ("R2",      50000, BLUE),
     ]

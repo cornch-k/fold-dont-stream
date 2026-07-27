@@ -1,0 +1,11 @@
+T=128 tokens
+
+ il  wl     traj  ceiling   norm%  energy%
+  5   4   folded   0.9247   38.1%    14.5%   [61s]
+  5   4   unfold   0.7783   62.8%    39.4%   [63s]
+ 24  22   folded   0.9334   35.9%    12.9%   [53s]
+ 24  22   unfold   0.7381   67.5%    45.5%   [60s]
+ 41  40   folded   0.9527   30.4%     9.2%   [63s]
+ 41  40   unfold   0.9510   30.9%     9.6%   [62s]
+
+random-basis floor (256 dims in 3072): 0.9574  -> energy 8.3%

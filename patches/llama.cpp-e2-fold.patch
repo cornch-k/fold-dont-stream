@@ -1,0 +1,587 @@
+# [E2] Expert fold — the code behind §4.1's expert-only fold, §4.5, and Table 3's Metal row.
+# Base: local commit a5faf8d8d. Includes the new file src/models/fold.h.
+# Env knobs: LLAMA_FOLD_EXPERTS / LLAMA_FOLD_MAP / LLAMA_FOLD_GAMMA[_FILE] /
+#            LLAMA_FOLD_SHEXP_LOGICAL / LLAMA_FOLD_NORM_LOGICAL / LLAMA_FOLD_SKIP_LOAD /
+#            LLAMA_MMAP_GPU_COPY.  Metal = SKIP_LOAD + MMAP_GPU_COPY + GGML_OP_OFFLOAD_MIN_BATCH.
+
+diff --git a/src/models/fold.h b/src/models/fold.h
+new file mode 100644
+index 000000000..38fe8c3c8
+--- /dev/null
++++ b/src/models/fold.h
+@@ -0,0 +1,230 @@
++#pragma once
++
++// [로컬 패치 E2] 전문가 접기(expert fold) — 논리층 -> 물리층 사상, FFN/전문가 텐서 전용.
++//
++//   LLAMA_FOLD_EXPERTS=R  (R >= 2)
++//     연속한 R개 논리층이 한 물리층의 FFN/전문가 가중치를 공유한다. 대표는 각 그룹의
++//     첫 층이므로 물리층은 논리층에서 항상 R-1 이내다 (깊이가 크게 어긋나지 않는다).
++//
++// 믹서(어텐션 또는 gated delta-net)는 절대 접지 않는다 — 논리 인덱스를 그대로 쓴다.
++// 하이브리드 아키텍처에서 이게 안전한 이유가 그것이다: SWA 위상, recurrent 층 위상,
++// 층별 head 수, 층별 RoPE가 전부 학습된 그대로 남는다.
++// 비용도 작다 — Qwen3.5-122B-A10B와 Laguna-S-2.1에서 믹서는 가중치 바이트의 4~5%이고
++// 라우팅 전문가가 91~93%다.
++//
++// 기존 LLAMA_FOLD_K(전 층 순환 접기, llama/laguna 전용)와는 독립이다.
++
++#include "ggml.h"
++#include "llama-arch.h"
++#include "llama-hparams.h"
++
++#include <cstring>
++
++#include <cstdio>
++#include <cstdlib>
++#include <vector>
++
++struct llm_fold_map {
++    std::vector<int>  wl;              // 논리 -> 물리
++    std::vector<char> repeat;          // 1 = 더 작은 논리층이 이 물리층을 이미 썼다
++    int   n_unique = 0;                // 상주해야 하는 물리 FFN 블록 수
++    int   group    = 1;                // R
++    int   lead     = 0;                // 접지 않는 선행 dense 블록 수
++    float gamma    = 1.0f;             // 반복 사용 층의 FFN 분기 스케일 (전역)
++    std::vector<float> gamma_l;        // 논리층별 γ (LLAMA_FOLD_GAMMA_FILE). 비면 전역값 사용
++    bool  norm_phys  = true;           // false = FFN pre-norm 은 논리층 유지 (H-B 검증용)
++    bool  shexp_phys = true;           // false = 공유 전문가는 논리층 유지 (H-E 검증용)
++    bool  active   = false;            // 항등이 아니면 true
++};
++
++// 매 그래프 생성마다 새로 만든다 (L=48 기준 비용 무시 가능). 정적 상태를 두지 않으므로
++// 한 프로세스에서 여러 모델(드래프트 모델, 아키텍처 테스트)을 열어도 섞이지 않는다.
++// 불리언 환경 노브: 존재만 보면 LLAMA_FOLD_SKIP_LOAD=0 이 "켜짐"이 된다.
++// 부록 A(10)과 같은 함정이므로 값까지 본다. 빈 문자열/0/false/off 는 꺼짐.
++static inline bool llm_fold_env_flag(const char * name) {
++    const char * v = getenv(name);
++    if (v == nullptr || v[0] == '\0') return false;
++    return !(strcmp(v, "0") == 0 || strcmp(v, "false") == 0 || strcmp(v, "off") == 0);
++}
++
++static inline llm_fold_map llm_fold_build(const llama_hparams & hp) {
++    llm_fold_map f;
++
++    const int L = (int) hp.n_layer();
++    GGML_ASSERT(L > 0);
++    f.wl.resize(L);
++    f.repeat.assign(L, 0);
++
++    const char * env = getenv("LLAMA_FOLD_EXPERTS");
++    const int    R   = (env && env[0] != '\0') ? atoi(env) : 0;
++
++    // LLAMA_FOLD_GAMMA=g: 반복 사용되는 논리층의 FFN 분기 출력을 g배 한다.
++    //   g=1 (기본) 감쇠 없음.
++    //   g=0        반복 층이 정확히 항등이 되어, 모델은 "전 층 믹서 + 그룹 대표 층에만 FFN"이
++    //              된다. 붕괴하지 않는 바닥이 보장되므로 g는 0~1 사이의 안전한 다이얼이다.
++    //   g>1        pre-norm RMSNorm이 스케일을 먼저 나눠버리므로 재사용 층은 폭발이 아니라
++    //              자기 감쇠한다. 따라서 g>1도 유효한 탐색 범위다.
++    // 빈 문자열은 "설정 안 함"으로 본다. atof("") == 0.0 이라 그냥 두면
++    // LLAMA_FOLD_GAMMA= (빈 값)이 조용히 gamma=0 이 된다.
++    // H-B / H-E 검증 노브. 기본값은 지금 동작 그대로(물리층).
++    //   LLAMA_FOLD_NORM_LOGICAL=1   FFN pre-norm 을 논리층에서 가져온다
++    //   LLAMA_FOLD_SHEXP_LOGICAL=1  공유 전문가를 논리층에서 가져온다 (전 토큰이 타므로 의심 1순위)
++    f.norm_phys  = !llm_fold_env_flag("LLAMA_FOLD_NORM_LOGICAL");
++    f.shexp_phys = !llm_fold_env_flag("LLAMA_FOLD_SHEXP_LOGICAL");
++
++    if (const char * g = getenv("LLAMA_FOLD_GAMMA")) {
++        if (g[0] != '\0') {
++            f.gamma = (float) atof(g);
++        }
++    }
++
++    // LLAMA_FOLD_GAMMA_FILE=<path>: 논리층당 float 한 줄. 층별 국소 회귀로 맞춘 γ 를 넣는다.
++    if (const char * gf = getenv("LLAMA_FOLD_GAMMA_FILE")) {
++        if (gf[0] != '\0') {
++            FILE * fp = fopen(gf, "r");
++            GGML_ASSERT(fp && "LLAMA_FOLD_GAMMA_FILE 을 열 수 없음");
++            f.gamma_l.assign(L, f.gamma);
++            for (int il = 0; il < L; ++il) {
++                double v;
++                GGML_ASSERT(fscanf(fp, "%lf", &v) == 1 && "gamma 파일의 값 개수가 n_layer 와 다름");
++                f.gamma_l[il] = (float) v;
++            }
++            fclose(fp);
++        }
++    }
++
++    // LLAMA_FOLD_MAP="0,1,1,3,..." — 명시적 사상. 이분탐색·디버깅용.
++    // 길이는 n_layer 와 같아야 하고, 지정되면 R 은 무시된다.
++    if (const char * m = getenv("LLAMA_FOLD_MAP")) {
++        if (m[0] != '\0') {
++            int n = 0;
++            const char * q = m;
++            while (*q && n < L) {
++                f.wl[n++] = atoi(q);
++                while (*q && *q != ',') ++q;
++                if (*q == ',') ++q;
++            }
++            GGML_ASSERT(n == L && "LLAMA_FOLD_MAP 길이가 n_layer 와 다름");
++            std::vector<char> seen0(L, 0);
++            for (int il = 0; il < L; ++il) {
++                const int w = f.wl[il];
++                GGML_ASSERT(w >= 0 && w < L);
++                f.repeat[il] = seen0[w];
++                if (!seen0[w]) { seen0[w] = 1; f.n_unique++; }
++                f.active = f.active || (w != il);
++            }
++            f.group = -1;
++            return f;
++        }
++    }
++
++    if (R < 2) {
++        for (int il = 0; il < L; ++il) {
++            f.wl[il] = il;
++        }
++        f.n_unique = L;
++        return f;                      // 항등 — 비활성일 때 증명 가능한 no-op
++    }
++
++    f.group = R;
++
++    // 선행 dense 블록(laguna: 1, deepseek 계열: 3)은 FFN 구조가 MoE와 다르다.
++    // 접지 않고, MoE 층이 그 위로 사상되지도 않게 한다 — 그렇지 않으면 그 논리층이
++    // 256-전문가 블록 대신 dense FFN을 실행하게 된다.
++    const int lead = (int) hp.n_layer_dense_lead;
++    GGML_ASSERT(lead >= 0 && lead < L);
++    f.lead = lead;
++
++    std::vector<char> seen(L, 0);
++    for (int il = 0; il < L; ++il) {
++        const int w = il < lead ? il                       // dense-lead: 항상 자기 자신
++                                : lead + ((il - lead) / R) * R;  // 그룹의 첫 층
++        GGML_ASSERT(w >= 0 && w < L);
++        GGML_ASSERT((w < lead) == (il < lead) && "dense-lead 경계를 넘는 사상");
++        f.wl[il]     = w;
++        f.repeat[il] = seen[w];
++        if (!seen[w]) {
++            seen[w] = 1;
++            f.n_unique++;
++        }
++        f.active = f.active || (w != il);
++    }
++
++    return f;
++}
++
++// 프로세스당 한 번만 찍는다 (그래프는 ubatch마다 다시 만들어진다).
++static inline void llm_fold_log_once(const llm_fold_map & f, const char * arch) {
++    static bool done = false;
++    if (done || !f.active) {
++        return;
++    }
++    done = true;
++
++    fprintf(stderr, "[E2-FOLD] arch=%s experts_folded R=%d lead=%d unique_ffn=%d/%d gamma=%.3f map=",
++            arch, f.group, f.lead, f.n_unique, (int) f.wl.size(), f.gamma);
++    if (!f.norm_phys)  fprintf(stderr, "[E2-FOLD] ffn pre-norm follows the LOGICAL layer\n");
++    if (!f.shexp_phys) fprintf(stderr, "[E2-FOLD] shared expert follows the LOGICAL layer\n");
++    for (size_t il = 0; il < f.wl.size(); ++il) {
++        fprintf(stderr, "%d%s", f.wl[il], il + 1 < f.wl.size() ? "," : "\n");
++    }
++    fprintf(stderr, "[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept\n");
++}
++
++// 그래프가 wl(물리층)로 읽는 텐서 클래스. qwen35moe.cpp 의 build_layer_ffn 및
++// attn_post_norm 처리와 반드시 일치해야 한다.
++//
++// 로더가 이 목록을 쓰는 이유: Metal은 "닿은 페이지"가 아니라 "버퍼 전체"를 wire 하고,
++// 버퍼 범위는 생성된 텐서 오프셋의 min/max 껍질이다(llama-model-loader.cpp:1375).
++// 믹서를 전 층 남기면 껍질이 파일 전체라 접기 효과가 0이 된다. 접혀서 안 쓰이는
++// 텐서를 아예 만들지 않아야 버퍼가 줄어든다 (LLAMA_MMAP_GPU_COPY=1 과 함께).
++static inline bool llm_fold_is_folded_tensor(llm_tensor t) {
++    switch (t) {
++        case LLM_TENSOR_FFN_GATE_INP:
++        case LLM_TENSOR_FFN_GATE_INP_SHEXP:
++        case LLM_TENSOR_FFN_DOWN_EXPS:
++        case LLM_TENSOR_FFN_GATE_EXPS:
++        case LLM_TENSOR_FFN_UP_EXPS:
++        case LLM_TENSOR_FFN_GATE_UP_EXPS:
++        case LLM_TENSOR_FFN_DOWN_SHEXP:
++        case LLM_TENSOR_FFN_GATE_SHEXP:
++        case LLM_TENSOR_FFN_UP_SHEXP:
++        case LLM_TENSOR_FFN_EXP_PROBS_B:
++        case LLM_TENSOR_ATTN_POST_NORM:   // qwen35moe: FFN 그룹의 pre-norm
++            return true;
++        default:
++            return false;
++    }
++}
++
++// 논리층 il 의 이 텐서 클래스가 그래프에서 절대 참조되지 않는가?
++static inline bool llm_fold_is_shexp_tensor(llm_tensor t) {
++    switch (t) {
++        case LLM_TENSOR_FFN_DOWN_SHEXP:
++        case LLM_TENSOR_FFN_GATE_SHEXP:
++        case LLM_TENSOR_FFN_UP_SHEXP:
++        case LLM_TENSOR_FFN_GATE_INP_SHEXP:
++            return true;
++        default:
++            return false;
++    }
++}
++
++static inline bool llm_fold_skip_tensor(const llm_fold_map & f, int bid, llm_tensor t) {
++    if (!f.active || bid < 0 || bid >= (int) f.repeat.size()) {
++        return false;   // MTP/nextn 블록(bid == n_layer)은 여기서 걸러진다
++    }
++    if (!f.repeat[bid] || !llm_fold_is_folded_tensor(t)) {
++        return false;
++    }
++    // 공유 전문가가 논리층을 따라가면(LLAMA_FOLD_SHEXP_LOGICAL) 모든 층에서 필요하다.
++    // 이걸 빼먹으면 그래프가 만들어지지 않은 텐서를 참조한다.
++    if (!f.shexp_phys && llm_fold_is_shexp_tensor(t)) {
++        return false;
++    }
++    // 마찬가지로 pre-norm 이 논리층을 따라가면 건너뛰면 안 된다.
++    if (!f.norm_phys && t == LLM_TENSOR_ATTN_POST_NORM) {
++        return false;
++    }
++    return true;
++}
+diff --git a/src/llama-model-loader.cpp b/src/llama-model-loader.cpp
+index 28f8bb793..59aa97add 100644
+--- a/src/llama-model-loader.cpp
++++ b/src/llama-model-loader.cpp
+@@ -1112,8 +1112,12 @@ struct ggml_tensor * llama_model_loader::create_tensor(
+             const size_t nbytes = ggml_nbytes(t_meta);
+             LLAMA_LOG_WARN("model has unused tensor %s (size = %zu bytes) -- ignoring\n", tn.str().c_str(), nbytes);
+ 
+-            size_data -= nbytes;
+-            n_created++;
++            // weightless models (no backing file) never count tensors here, so the
++            // skip must not either — otherwise n_created > n_tensors == 0.
++            if (!files.empty()) {
++                size_data -= nbytes;
++                n_created++;
++            }
+ 
+             return nullptr;
+         }
+@@ -1250,7 +1254,12 @@ struct ggml_tensor * llama_model_loader::create_tensor(
+         ggml_set_name(&t_meta, tn.str().c_str());
+ 
+         ggml_backend_buffer_type_t buft = buft_for_tensor(&t_meta);
+-        GGML_ASSERT(buft != nullptr);
++        if (buft == nullptr) {
++            // deliberately skipped (TENSOR_SKIP / GGML_OP_NONE) or absent and not required;
++            // the file-backed path below handles this the same way. A genuinely
++            // incompatible buffer type still throws inside buft_for_tensor.
++            return nullptr;
++        }
+         ggml_context * ctx = ctx_for_buft(buft);
+         ggml_tensor * ret = ggml_dup_tensor(ctx, &t_meta);
+         ggml_set_name(ret, tn.str().c_str());
+diff --git a/src/llama-model.cpp b/src/llama-model.cpp
+index e1057e3dc..5343bfbec 100644
+--- a/src/llama-model.cpp
++++ b/src/llama-model.cpp
+@@ -1347,6 +1347,9 @@ bool llama_model_base::load_tensors(llama_model_loader & ml) {
+ 
+         layers.resize(n_layer_all);
+ 
++        // [E2] 텐서 생성 전에 접기 사상을 확정한다 (아래 create_tensor 가 참조)
++        fold_load = llm_fold_build(hparams);
++
+         // call the per-model loading function
+         load_arch_tensors(ml);
+ 
+@@ -1503,7 +1506,7 @@ bool llama_model_base::load_tensors(llama_model_loader & ml) {
+             }
+         }
+     }
+-    ml.done_getting_tensors();
++    ml.done_getting_tensors(/* partial = */ fold_load.active);
+ 
+     // Tied NVFP4 output is valid when no separate LM-head scale tensors are present.
+     // If sidecar scales exist, the output weight must be an actual output tensor.
+@@ -1519,7 +1522,7 @@ bool llama_model_base::load_tensors(llama_model_loader & ml) {
+     }
+ 
+     // prefetching a model larger than physical RAM only churns the page cache
+-    const bool mmap_prefetch = getenv("LLAMA_MMAP_NO_PREFETCH") == nullptr;
++    const bool mmap_prefetch = !llm_fold_env_flag("LLAMA_MMAP_NO_PREFETCH");
+     ml.init_mappings(mmap_prefetch, use_mlock ? &pimpl->mlock_mmaps : nullptr);
+     pimpl->mappings.reserve(ml.mappings.size());
+ 
+@@ -1560,7 +1563,7 @@ bool llama_model_base::load_tensors(llama_model_loader & ml) {
+         // buft's tensors; with interleaved tensors from other bufts (e.g. --n-cpu-moe)
+         // that range can approach the whole file, and Metal wires the full buffer at
+         // command submission, which fails when it exceeds physical RAM
+-        const bool mmap_gpu_copy = getenv("LLAMA_MMAP_GPU_COPY") != nullptr &&
++        const bool mmap_gpu_copy = llm_fold_env_flag("LLAMA_MMAP_GPU_COPY") &&
+                                    ggml_backend_dev_type(dev) != GGML_BACKEND_DEVICE_TYPE_CPU;
+ 
+         std::vector<ggml_backend_buffer_ptr> bufs;
+@@ -1666,6 +1669,20 @@ bool llama_model_base::load_tensors(llama_model_loader & ml) {
+ }
+ 
+ ggml_tensor * llama_model_base::create_tensor(llama_model_loader & ml, const LLM_TN_IMPL & tn, const std::initializer_list<int64_t> & ne, int flags) {
++    // [E2] 접혀서 그래프가 절대 읽지 않는 FFN/전문가 텐서는 생성 자체를 건너뛴다.
++    // 백엔드 버퍼가 그 범위를 덮지 않게 하는 것이 목적이다.
++    // [E2/미검증] LLAMA_FOLD_SKIP_LOAD=1 일 때만. 접혀서 그래프가 절대 읽지 않는
++    // FFN/전문가 텐서를 아예 만들지 않아 백엔드 버퍼 범위를 줄인다 — Metal은 "닿은
++    // 페이지"가 아니라 버퍼 전체를 wire 하고, 버퍼 범위는 생성된 텐서 오프셋의 min/max
++    // 껍질이기 때문이다(llama-model-loader.cpp:1375). LLAMA_MMAP_GPU_COPY=1 과 함께 써야
++    // 껍질이 아니라 실제 텐서 크기로 버퍼가 잡힌다.
++    //
++    // 기본 OFF: 실제 체크포인트로 검증하지 않았다. 켜면 로드 시 출력되는
++    // "model buffer size" 줄이 파일 크기가 아니라 실사용 바이트여야 한다.
++    static const bool skip_load = llm_fold_env_flag("LLAMA_FOLD_SKIP_LOAD");
++    if (skip_load && llm_fold_skip_tensor(fold_load, tn.bid, tn.tensor)) {
++        flags |= TENSOR_SKIP;
++    }
+     const buft_list_t * buft_list_layer = tn.bid == -1 ? nullptr : pimpl->dev_layer.at(tn.bid).buft_list;
+     return ml.create_tensor(
+         hparams, &pimpl->cpu_buft_list, pimpl->dev_input.buft_list, pimpl->dev_output.buft_list, buft_list_layer,
+diff --git a/src/models/laguna.cpp b/src/models/laguna.cpp
+index 73af0e4ac..cb0f1290b 100644
+--- a/src/models/laguna.cpp
++++ b/src/models/laguna.cpp
+@@ -6,6 +6,8 @@
+ 
+ #include "models.h"
+ 
++#include "fold.h"
++
+ #include <cstdlib>
+ 
+ // [로컬 패치 E1] 층 접기: LLAMA_FOLD_K=K → 가중치를 앞 K개 층에서 il%K로 재사용.
+@@ -181,11 +183,16 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+ 
+     const float kq_scale = 1.0f / sqrtf(float(n_embd_head));
+ 
++    // [E2] 전문가 접기 — FFN/전문가만 물리층으로. 믹서는 논리층(또는 E1의 wl) 유지.
++    const llm_fold_map fold = llm_fold_build(hparams);
++    llm_fold_log_once(fold, "laguna");
++
+     for (int il = 0; il < n_layer; ++il) {
+         // residual-stream capture for speculative drafters (EAGLE3 / DFlash)
+         res->t_layer_inp[il] = inpL;
+ 
+-        const int wl = llm_fold_wl(il);  // [E1] 가중치 참조용 물리층 인덱스
++        const int wl = llm_fold_wl(il);                       // [E1] 전체 접기 (없으면 il)
++        const int fl = fold.active ? fold.wl[il] : wl;        // [E2] FFN/전문가 전용 물리층
+         // 접기 시 rope/캐시 정합: 논리층과 물리층의 SWA 위상이 같아야 함
+         GGML_ASSERT(hparams.is_swa(il) == hparams.is_swa(wl) && "LLAMA_FOLD_K must be a multiple of the SWA period");
+ 
+@@ -290,18 +297,18 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+         cb(ffn_inp, "ffn_inp", il);
+ 
+         // Pre-norm only (no post-attn norm)
+-        cur = build_norm(ffn_inp, model.layers[wl].ffn_norm, NULL, LLM_NORM_RMS, il);
++        cur = build_norm(ffn_inp, model.layers[fold.norm_phys ? fl : il].ffn_norm, NULL, LLM_NORM_RMS, il);
+         cb(cur, "ffn_norm", il);
+ 
+-        if ((uint32_t)wl >= hparams.n_layer_dense_lead) {  // [E1] 구조는 가중치(물리층)를 따름 — dense-lead 접힘 시 NULL MoE 텐서 방지
++        if ((uint32_t)fl >= hparams.n_layer_dense_lead) {  // [E1] 구조는 가중치(물리층)를 따름 — dense-lead 접힘 시 NULL MoE 텐서 방지
+             // MoE: sigmoid routing + score-correction bias + sum-norm +
+             // routed_scaling_factor (all handled by build_moe_ffn).
+             ggml_tensor * moe_out = build_moe_ffn(cur,
+-                    model.layers[wl].ffn_gate_inp,
+-                    model.layers[wl].ffn_up_exps,
+-                    model.layers[wl].ffn_gate_exps,
+-                    model.layers[wl].ffn_down_exps,
+-                    model.layers[wl].ffn_exp_probs_b,
++                    model.layers[fl].ffn_gate_inp,
++                    model.layers[fl].ffn_up_exps,
++                    model.layers[fl].ffn_gate_exps,
++                    model.layers[fl].ffn_down_exps,
++                    model.layers[fl].ffn_exp_probs_b,
+                     n_expert, n_expert_used,
+                     LLM_FFN_SILU,
+                     hparams.expert_weights_norm,
+@@ -311,27 +318,46 @@ llama_model_laguna::graph::graph(const llama_model & model, const llm_graph_para
+             cb(moe_out, "ffn_moe_out", il);
+ 
+             // Always-on shared expert, summed in parallel.
++            const int sl = fold.shexp_phys ? fl : il;   // [H-E] 공유 전문가는 전 토큰이 탄다
++            // LLAMA_FOLD_SKIP_LOAD 의 스킵 술어는 이 그래프의 손으로 유지되는 사본이다.
++            // 둘이 어긋나면 크래시 없이 조용히 틀린다(실제로 ppl 46 -> 7130 사례). 여기서 잡는다.
++            GGML_ASSERT(model.layers[fl].ffn_gate_exps && "fold: 그래프가 읽는 텐서를 로더가 건너뛰었다");
++            GGML_ASSERT(model.layers[sl].ffn_up_shexp  && "fold: 그래프가 읽는 공유 전문가를 로더가 건너뛰었다");
+             ggml_tensor * ffn_shexp = build_ffn(cur,
+-                    model.layers[wl].ffn_up_shexp,   NULL, NULL,
+-                    model.layers[wl].ffn_gate_shexp, NULL, NULL,
+-                    model.layers[wl].ffn_down_shexp, NULL, NULL,
++                    model.layers[sl].ffn_up_shexp,   NULL, NULL,
++                    model.layers[sl].ffn_gate_shexp, NULL, NULL,
++                    model.layers[sl].ffn_down_shexp, NULL, NULL,
+                     NULL,
+                     LLM_FFN_SILU, LLM_FFN_PAR, il);
+             cb(ffn_shexp, "ffn_shexp", il);
+ 
++            // [E2] 공유 전문가가 논리층(=올바른 텐서)이면 gamma 는 접힌 라우팅 분기에만 건다.
++            // 합에 걸면 고쳐놓은 공유 전문가까지 같이 깎여 두 수정이 서로 상쇄된다.
++            const float g_il = fold.gamma_l.empty() ? fold.gamma : fold.gamma_l[il];
++            if (!fold.shexp_phys && fold.repeat[il] && g_il != 1.0f) {
++                moe_out = ggml_scale(ctx0, moe_out, g_il);
++                cb(moe_out, "ffn_moe_out_damped", il);
++            }
+             cur = ggml_add(ctx0, moe_out, ffn_shexp);
+             cb(cur, "ffn_out", il);
+         } else {
+             // Dense FFN for the leading n_layer_dense_lead layers (XS.2: 1, M.1: 3)
+             cur = build_ffn(cur,
+-                    model.layers[wl].ffn_up,   NULL, NULL,
+-                    model.layers[wl].ffn_gate, NULL, NULL,
+-                    model.layers[wl].ffn_down, NULL, NULL,
++                    model.layers[fl].ffn_up,   NULL, NULL,
++                    model.layers[fl].ffn_gate, NULL, NULL,
++                    model.layers[fl].ffn_down, NULL, NULL,
+                     NULL,
+                     LLM_FFN_SILU, LLM_FFN_PAR, il);
+             cb(cur, "ffn_out", il);
+         }
+ 
++        // [E2] 종단 감쇠 — 공유 전문가도 접혀 있을 때만(그때는 분기 전체가 틀린 텐서다).
++        // 공유 전문가가 논리층이면 위에서 moe_out 에만 걸었으므로 여기서는 건너뛴다.
++        if (fold.shexp_phys && fold.repeat[il] && fold.gamma != 1.0f) {
++            cur = ggml_scale(ctx0, cur, fold.gamma);
++            cb(cur, "ffn_out_damped", il);
++        }
++
+         // No post-ffn norm
+         cur = ggml_add(ctx0, cur, ffn_inp);
+         cur = build_cvec(cur, il);
+diff --git a/src/models/models.h b/src/models/models.h
+index f08e89ab6..13b13834a 100644
+--- a/src/models/models.h
++++ b/src/models/models.h
+@@ -2045,7 +2045,10 @@ struct llama_model_qwen35moe : public llama_model_base {
+ 
+         ggml_tensor * build_layer_ffn(
+                     ggml_tensor * cur,
+-                            int   il);
++                            int   il,
++                            int   wl,
++                            int   sl,      // [E2] 공유 전문가의 층 (shexp_phys=false 면 il)
++                          float   g_il);   // [E2] 이 논리층의 gamma
+ 
+         ggml_tensor * build_norm_gated(
+                     ggml_tensor * input,
+diff --git a/src/models/qwen35moe.cpp b/src/models/qwen35moe.cpp
+index 7b0876cbb..197a6495b 100644
+--- a/src/models/qwen35moe.cpp
++++ b/src/models/qwen35moe.cpp
+@@ -1,6 +1,8 @@
+ #include "models.h"
+ #include "llama-memory-recurrent.h"
+ 
++#include "fold.h"
++
+ void llama_model_qwen35moe::load_arch_hparams(llama_model_loader & ml) {
+     ml.get_key(LLM_KV_EXPERT_FEED_FORWARD_LENGTH,        hparams.n_ff_exp, false);
+     ml.get_key(LLM_KV_EXPERT_SHARED_FEED_FORWARD_LENGTH, hparams.n_ff_shexp, false);
+@@ -177,8 +179,13 @@ llama_model_qwen35moe::graph::graph(const llama_model & model, const llm_graph_p
+     ggml_tensor * inp_pos     = build_inp_pos();
+     ggml_tensor * inp_out_ids = build_inp_out_ids();
+ 
++    // [E2] 전문가 접기: FFN/전문가 텐서만 물리층 wl을 쓴다. 믹서는 il 그대로.
++    const llm_fold_map fold = llm_fold_build(hparams);
++    llm_fold_log_once(fold, "qwen35moe");
++
+     // MTP/NextN layers are loaded as extra decoder blocks but not executed in the main pass.
+     for (int il = 0; il < n_layer; ++il) {
++        const int wl = fold.wl[il];
+         res->t_layer_inp[il] = inpL;
+ 
+         ggml_tensor * inpSA = inpL;
+@@ -210,13 +217,27 @@ llama_model_qwen35moe::graph::graph(const llama_model & model, const llm_graph_p
+         ggml_tensor * ffn_residual = cur;
+ 
+         // Post-attention norm
+-        ggml_tensor * attn_post_norm = build_norm(cur, model.layers[il].attn_post_norm, nullptr, LLM_NORM_RMS, il);
++        // [E2] 기본은 물리층(전문가와 같이 움직임). LLAMA_FOLD_NORM_LOGICAL=1 이면 논리층.
++        //      laguna.cpp 와 동작이 일치해야 한다 — 예전엔 이 노브가 여기서 조용히 무시됐다.
++        const int nl = fold.norm_phys ? wl : il;
++        ggml_tensor * attn_post_norm = build_norm(cur, model.layers[nl].attn_post_norm, nullptr, LLM_NORM_RMS, il);
+         cb(attn_post_norm, "attn_post_norm", il);
+ 
+         // MOE FFN layer
+-        cur = build_layer_ffn(attn_post_norm, il);
++        // [E2] sl: 공유 전문가의 층(shexp_phys=false 면 논리층). g_il: 이 논리층의 gamma.
++        const int   sl   = fold.shexp_phys ? wl : il;
++        const float g_il = fold.gamma_l.empty() ? fold.gamma : fold.gamma_l[il];
++        cur = build_layer_ffn(attn_post_norm, il, wl, sl, g_il);
+         cb(cur, "ffn_out", il);
+ 
++        // [E2] 반복 사용 층의 FFN 분기 감쇠. gamma=0이면 이 층은 정확히 항등이 되어
++        // "전 층 믹서 + 그룹 대표 층에만 FFN"으로 퇴화한다 — 보장된 바닥.
++        // 공유 전문가가 논리층일 때는 build_layer_ffn 안에서 라우팅 분기에만 걸었다.
++        if (fold.shexp_phys && fold.repeat[il] && fold.gamma != 1.0f) {
++            cur = ggml_scale(ctx0, cur, fold.gamma);
++            cb(cur, "ffn_out_damped", il);
++        }
++
+         // Residual connection for FFN - add to the tensor from before post_attention_layernorm
+         cur = ggml_add(ctx0, cur, ffn_residual);
+         cb(cur, "post_moe", il);
+@@ -493,34 +514,43 @@ ggml_tensor * llama_model_qwen35moe::graph::build_layer_attn_linear(
+     return cur;
+ }
+ 
+-ggml_tensor * llama_model_qwen35moe::graph::build_layer_ffn(ggml_tensor * cur, const int il) {
++ggml_tensor * llama_model_qwen35moe::graph::build_layer_ffn(ggml_tensor * cur, const int il, const int wl, const int sl, const float g_il) {
+     // Check if this is an MoE layer
+-    GGML_ASSERT(model.layers[il].ffn_gate_inp != nullptr);
++    GGML_ASSERT(model.layers[wl].ffn_gate_inp != nullptr);
+ 
+     ggml_tensor * moe_out =
+         build_moe_ffn(cur,
+-            model.layers[il].ffn_gate_inp,
+-            model.layers[il].ffn_up_exps,
+-            model.layers[il].ffn_gate_exps,
+-            model.layers[il].ffn_down_exps,
++            model.layers[wl].ffn_gate_inp,
++            model.layers[wl].ffn_up_exps,
++            model.layers[wl].ffn_gate_exps,
++            model.layers[wl].ffn_down_exps,
+             nullptr,
+             n_expert, n_expert_used,
+             LLM_FFN_SILU, true,
+             hparams.expert_weights_scale,
+             LLAMA_EXPERT_GATING_FUNC_TYPE_SOFTMAX, il,
+-            nullptr, model.layers[il].ffn_gate_up_exps,
+-            model.layers[il].ffn_up_exps_s,
+-            model.layers[il].ffn_gate_exps_s,
+-            model.layers[il].ffn_down_exps_s);
++            nullptr, model.layers[wl].ffn_gate_up_exps,
++            model.layers[wl].ffn_up_exps_s,
++            model.layers[wl].ffn_gate_exps_s,
++            model.layers[wl].ffn_down_exps_s);
+     cb(moe_out, "ffn_moe_out", il);
+ 
++    // 로더 스킵 술어(llm_fold_skip_tensor)와 이 그래프가 어긋나면 조용히 틀린다.
++    GGML_ASSERT((model.layers[wl].ffn_gate_exps || model.layers[wl].ffn_gate_up_exps)
++                && "fold: 그래프가 읽는 전문가 텐서를 로더가 건너뛰었다");
++
++    // [E2] 공유 전문가가 논리층(sl != wl)이면 gamma 는 라우팅 분기에만 건다.
++    if (sl != wl && g_il != 1.0f) {
++        moe_out = ggml_scale(ctx0, moe_out, g_il);
++    }
++
+     // Add shared experts if present - following Qwen3Next reference implementation
+-    if (model.layers[il].ffn_up_shexp != nullptr) {
++    if (model.layers[sl].ffn_up_shexp != nullptr) {
+         ggml_tensor * ffn_shexp =
+             build_ffn(cur,
+-                model.layers[il].ffn_up_shexp, NULL, model.layers[il].ffn_up_shexp_s,
+-                model.layers[il].ffn_gate_shexp, NULL, model.layers[il].ffn_gate_shexp_s,
+-                model.layers[il].ffn_down_shexp, NULL, model.layers[il].ffn_down_shexp_s,
++                model.layers[sl].ffn_up_shexp, NULL, model.layers[sl].ffn_up_shexp_s,
++                model.layers[sl].ffn_gate_shexp, NULL, model.layers[sl].ffn_gate_shexp_s,
++                model.layers[sl].ffn_down_shexp, NULL, model.layers[sl].ffn_down_shexp_s,
+                 NULL,
+                 LLM_FFN_SILU, LLM_FFN_PAR, il);
+         cb(ffn_shexp, "ffn_shexp", il);
+@@ -528,7 +558,7 @@ ggml_tensor * llama_model_qwen35moe::graph::build_layer_ffn(ggml_tensor * cur, c
+         // Apply shared expert gating as in the reference implementation
+         // The shared expert has its own gate that is sigmoided
+         // Note: ffn_gate_inp_shexp is the shared expert gate (outputs 1 value per token)
+-        ggml_tensor * shared_gate = build_lora_mm(model.layers[il].ffn_gate_inp_shexp, cur);
++        ggml_tensor * shared_gate = build_lora_mm(model.layers[sl].ffn_gate_inp_shexp, cur);
+         cb(shared_gate, "shared_expert_gate", il);
+ 
+         // Apply sigmoid to the gate
