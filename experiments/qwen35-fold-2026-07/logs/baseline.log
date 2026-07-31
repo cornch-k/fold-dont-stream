@@ -1,0 +1,10 @@
+0.00.371.379 W common_fit_params: failed to fit params to free device memory: was unable to fit model into system memory by reducing context, abort
+0.28.584.833 I 
+0.28.584.869 I system_info: n_threads = 8 (n_threads_batch = 8) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.28.585.074 I perplexity: tokenizing the input ..
+0.28.893.793 I perplexity: tokenization took 308.713 ms
+0.28.894.853 I perplexity: calculating perplexity over 16 chunks, n_ctx=512, batch_size=512, n_seq=1
+1.37.958.169 I perplexity: 69.06 seconds per pass - ETA 18.40 minutes
+[1]3.9510,[2]5.6423,[3]4.3843,[4]3.8500,[5]3.7308,[6]3.8841,[7]4.0398,[8]4.2664,[9]4.4044,[10]4.4633,[11]4.4345,[12]4.6394,[13]5.0370,[14]4.8971,[15]4.9748,[16]5.0950,
+20.46.496.402 I Final estimate: PPL = 5.0950 +/- 0.17955
+

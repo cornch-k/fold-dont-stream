@@ -1,0 +1,5 @@
+RESULT_KNOB delta07 ppl=12.2935 +/- 0.50156  모델버퍼=15.11GiB
+RESULT_KNOB delta13 ppl=12.5378 +/- 0.51310  모델버퍼=15.11GiB
+RESULT_KNOB delta16 ppl=13.2417 +/- 0.54667  모델버퍼=15.11GiB
+RESULT_KNOB delta20 ppl=14.7127 +/- 0.61813  모델버퍼=15.11GiB
+노브 스윕 완료: exp/spec-delta.txt

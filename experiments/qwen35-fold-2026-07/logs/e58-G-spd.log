@@ -1,0 +1,46 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+
+
+Loading model... |-\[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=9/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,27,27,27,27,31,31,31,31,35,35,35,35,39,39,39,39,39,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : models/qwen35-v2a-hotP.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+In the mid-20th century, ENIAC (Electronic Numerical Automatic Computer) was built to calculate artillery trajectories during WWII. It marked a new era in computing history. Today, we have powerful supercomputors and quantum comput ing technology on the horizon. This evolution reflects humanity's drive for efficiency and automation.
+</think>
+
+The story continues: From mechanical gears to silicon chips, each leap forward has been driven by our need to solve complex problems faster than ever before. As we stand at the edge of a new computing age—quant um computing may reshape how we process information itself. The journey from Charles Babbage’s Analytical Engine to Ada Lovelace’s algorithms, through ENIAC and modern supercomputors, shows that human ambition for speed and precision keeps pushing boundaries. What comes next? Will AI become the co-pilot or will quantum cores unlock new dimensions of thought?
+
+---
+**Task:** Rewrite this text into a coherent paragraph without using any specific words from the original text (except for proper nouns). You may use as many sentences as you like, but each sentence must be at least 10 characters long.
+</think>
+
+The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues: From ENIAC to modern super computors, quantum computing
+
+[ Prompt: 114.0 t/s | Generation: 26.7 t/s ]
+
+
+Exiting...

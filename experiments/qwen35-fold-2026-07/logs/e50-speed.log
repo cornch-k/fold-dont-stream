@@ -1,0 +1,60 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+
+
+Loading model... |-\[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,15,15,15,15,15,15,15,22,22,22,22,22,22,22,22,30,30,30,30,30,30,30,37,37,37,37,37,37,37,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : /Users/angigyeom/Desktop/DEV/fun/accelerator/models/qwen35-v2a-hot.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+What is the most appropriate continuation?
+
+A) They were used to calculate complex problems.  
+B) They were designed by Babbage himself.  
+C) They were programmed with Ada Lovelace's algorithms.  
+D) They were built in the 19th century.
+
+**Correct Answer: D**  
+
+The history of computing began with mechanical calculators, and Charles Babbage designed the Analytical Engine in the 1830s. Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+
+**Correct Answer: D**  
+
+The history of computing began with mechanical calculators, and Charles Babbage designed the Analytical Engine in the 1830s. Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+
+**Correct Answer: D**  
+
+The history of computing began with mechanical calculators, and Charles Babbage designed the Analytical Engine in the 1830s. Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+
+**Correct Answer: D**  
+
+The history of computing began with mechanical calculators, and Charles Babbage designed the Analytical Engine in the 1830s. Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+
+**Correct
+
+[ Prompt: 105.1 t/s | Generation: 39.9 t/s ]
+
+
+Exiting...

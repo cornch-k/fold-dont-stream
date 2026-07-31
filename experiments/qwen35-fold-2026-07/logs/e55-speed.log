@@ -1,0 +1,59 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+
+
+Loading model... |-\[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=9/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,0,9,9,9,9,9,9,9,9,9,18,18,18,18,18,18,18,18,18,27,27,27,27,27,27,27,27,27,36,36,36,36,36,36,36,36,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : /Users/angigyeom/Desktop/DEV/fun/accelerator/models/qwen35-v2a-hotP.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+Here is a continuation of this historical narrative about computing evolution:
+
+**The Evolution of Computing:**
+
+- **Mid-20th Century (Vacuum Era):** Vacuum tubes were used in early computers like ENIAC and UNIVAC. These machines occupied large space, requiring water cooling systems for heat dissipation.
+  
+- **Late 20th Century (Transistor Era):** Transistors replaced vacuum tubes, enabling smaller devices to be built with transistors. This led to the miniaturization of computers from room-sized to personal-sized.
+
+**The Modern Era:**
+
+- **Microelectronics Era:** Microelectronics enabled further reduction in size and power consumption. The development of microchips allowed for even more compactness.
+  
+- **Quantum Computing (21st Century):** Quantum computing promises a new paradigm shift, moving from classical to quantum-based systems. This will redefine the boundaries of what is possible with computation.
+
+**The Future:**
+
+- **Post-Microelectronics Era:** Post-microelectronics era suggests that microchips may be integrated into everyday objects through Internet of Things (IoT).
+  
+- **Neural Computing:** Neural computing integrates human brains and computers, creating a symbiosis between humans and machines. This will redefine the boundaries of what is possible with computation.
+
+**The Future:**
+
+- **Post-Microelectronics Era:** Post-microelectronics era suggests that microchips may be integrated into everyday objects through Internet of Things (
+
+[ Prompt: 105.2 t/s | Generation: 27.1 t/s ]
+
+
+Exiting...

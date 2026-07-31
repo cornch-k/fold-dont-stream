@@ -1,0 +1,1399 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+0.00.044.331 W DEPRECATED: argument '--tensor-filter' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.044.336 W DEPRECATED: argument '--tensor-filter' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.044.337 W DEPRECATED: argument '--tensor-filter' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.044.337 W DEPRECATED: argument '--tensor-filter' specified multiple times, use comma-separated values instead (only last value will be used)
+0.00.044.337 W DEPRECATED: argument '--tensor-filter' specified multiple times, use comma-separated values instead (only last value will be used)
+[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=0.300 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,15,15,15,15,15,15,15,22,22,22,22,22,22,22,22,30,30,30,30,30,30,30,37,37,37,37,37,37,37,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+0.00.648.984 W model has unused tensor blk.1.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.059 W model has unused tensor blk.1.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.064 W model has unused tensor blk.1.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.065 W model has unused tensor blk.1.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.095 W model has unused tensor blk.2.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.153 W model has unused tensor blk.2.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.155 W model has unused tensor blk.2.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.157 W model has unused tensor blk.2.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.185 W model has unused tensor blk.3.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.226 W model has unused tensor blk.3.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.229 W model has unused tensor blk.3.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.230 W model has unused tensor blk.3.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.258 W model has unused tensor blk.4.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.309 W model has unused tensor blk.4.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.312 W model has unused tensor blk.4.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.314 W model has unused tensor blk.4.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.344 W model has unused tensor blk.5.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.404 W model has unused tensor blk.5.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.408 W model has unused tensor blk.5.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.410 W model has unused tensor blk.5.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.441 W model has unused tensor blk.6.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.495 W model has unused tensor blk.6.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.498 W model has unused tensor blk.6.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.500 W model has unused tensor blk.6.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.528 W model has unused tensor blk.7.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.570 W model has unused tensor blk.7.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.573 W model has unused tensor blk.7.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.575 W model has unused tensor blk.7.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.715 W model has unused tensor blk.9.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.768 W model has unused tensor blk.9.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.771 W model has unused tensor blk.9.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.773 W model has unused tensor blk.9.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.805 W model has unused tensor blk.10.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.864 W model has unused tensor blk.10.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.868 W model has unused tensor blk.10.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.869 W model has unused tensor blk.10.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.901 W model has unused tensor blk.11.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.649.946 W model has unused tensor blk.11.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.949 W model has unused tensor blk.11.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.951 W model has unused tensor blk.11.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.649.984 W model has unused tensor blk.12.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.041 W model has unused tensor blk.12.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.044 W model has unused tensor blk.12.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.046 W model has unused tensor blk.12.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.076 W model has unused tensor blk.13.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.133 W model has unused tensor blk.13.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.136 W model has unused tensor blk.13.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.138 W model has unused tensor blk.13.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.168 W model has unused tensor blk.14.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.224 W model has unused tensor blk.14.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.229 W model has unused tensor blk.14.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.231 W model has unused tensor blk.14.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.357 W model has unused tensor blk.16.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.412 W model has unused tensor blk.16.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.416 W model has unused tensor blk.16.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.418 W model has unused tensor blk.16.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.449 W model has unused tensor blk.17.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.508 W model has unused tensor blk.17.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.511 W model has unused tensor blk.17.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.513 W model has unused tensor blk.17.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.546 W model has unused tensor blk.18.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.604 W model has unused tensor blk.18.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.607 W model has unused tensor blk.18.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.609 W model has unused tensor blk.18.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.640 W model has unused tensor blk.19.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.684 W model has unused tensor blk.19.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.687 W model has unused tensor blk.19.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.689 W model has unused tensor blk.19.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.722 W model has unused tensor blk.20.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.779 W model has unused tensor blk.20.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.783 W model has unused tensor blk.20.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.785 W model has unused tensor blk.20.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.819 W model has unused tensor blk.21.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.650.876 W model has unused tensor blk.21.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.879 W model has unused tensor blk.21.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.650.881 W model has unused tensor blk.21.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.016 W model has unused tensor blk.23.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.060 W model has unused tensor blk.23.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.063 W model has unused tensor blk.23.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.065 W model has unused tensor blk.23.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.097 W model has unused tensor blk.24.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.151 W model has unused tensor blk.24.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.154 W model has unused tensor blk.24.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.156 W model has unused tensor blk.24.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.187 W model has unused tensor blk.25.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.242 W model has unused tensor blk.25.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.246 W model has unused tensor blk.25.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.248 W model has unused tensor blk.25.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.282 W model has unused tensor blk.26.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.336 W model has unused tensor blk.26.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.340 W model has unused tensor blk.26.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.341 W model has unused tensor blk.26.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.373 W model has unused tensor blk.27.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.417 W model has unused tensor blk.27.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.420 W model has unused tensor blk.27.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.422 W model has unused tensor blk.27.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.453 W model has unused tensor blk.28.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.509 W model has unused tensor blk.28.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.512 W model has unused tensor blk.28.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.514 W model has unused tensor blk.28.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.544 W model has unused tensor blk.29.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.598 W model has unused tensor blk.29.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.602 W model has unused tensor blk.29.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.603 W model has unused tensor blk.29.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.741 W model has unused tensor blk.31.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.785 W model has unused tensor blk.31.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.789 W model has unused tensor blk.31.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.790 W model has unused tensor blk.31.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.821 W model has unused tensor blk.32.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.875 W model has unused tensor blk.32.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.879 W model has unused tensor blk.32.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.880 W model has unused tensor blk.32.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.911 W model has unused tensor blk.33.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.651.965 W model has unused tensor blk.33.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.969 W model has unused tensor blk.33.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.651.971 W model has unused tensor blk.33.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.001 W model has unused tensor blk.34.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.059 W model has unused tensor blk.34.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.063 W model has unused tensor blk.34.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.065 W model has unused tensor blk.34.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.095 W model has unused tensor blk.35.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.139 W model has unused tensor blk.35.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.144 W model has unused tensor blk.35.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.146 W model has unused tensor blk.35.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.178 W model has unused tensor blk.36.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.232 W model has unused tensor blk.36.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.236 W model has unused tensor blk.36.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.237 W model has unused tensor blk.36.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.381 W model has unused tensor blk.38.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.459 W model has unused tensor blk.38.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.463 W model has unused tensor blk.38.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.465 W model has unused tensor blk.38.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.496 W model has unused tensor blk.39.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.545 W model has unused tensor blk.39.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.549 W model has unused tensor blk.39.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.551 W model has unused tensor blk.39.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.624 W model has unused tensor blk.40.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.755 W model has unused tensor blk.40.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.762 W model has unused tensor blk.40.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.764 W model has unused tensor blk.40.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.821 W model has unused tensor blk.41.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.652.898 W model has unused tensor blk.41.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.903 W model has unused tensor blk.41.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.905 W model has unused tensor blk.41.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.652.941 W model has unused tensor blk.42.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.653.000 W model has unused tensor blk.42.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.653.004 W model has unused tensor blk.42.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.653.006 W model has unused tensor blk.42.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.653.064 W model has unused tensor blk.43.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.653.114 W model has unused tensor blk.43.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.653.118 W model has unused tensor blk.43.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.653.120 W model has unused tensor blk.43.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0020,       0.0016,       0.0103,    ...,       0.0030,       0.0037,       0.0034  ],
+            [      0.0009,       0.0009,       0.0038,    ...,       0.0027,       0.0016,       0.0062  ],
+        ],
+    ]
+    sum = 1.999999
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0177,       0.0041,       0.0044,    ...,       0.0048,       0.0040,       0.0039  ],
+            [      0.0046,       0.0020,       0.0024,    ...,       0.0020,       0.0024,       0.0019  ],
+        ],
+    ]
+    sum = 2.000001
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0057,       0.0045,       0.0024,    ...,       0.0044,       0.0030,       0.0031  ],
+            [      0.0035,       0.0113,       0.0039,    ...,       0.0068,       0.0026,       0.0032  ],
+        ],
+    ]
+    sum = 2.000000
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0014,       0.0023,       0.0019,    ...,       0.0042,       0.0030,       0.0073  ],
+            [      0.0012,       0.0050,       0.0247,    ...,       0.0024,       0.0024,       0.0040  ],
+        ],
+    ]
+    sum = 2.000001
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0014,       0.0128,       0.0032,    ...,       0.0022,       0.0050,       0.0032  ],
+            [      0.0026,       0.0022,       0.0010,    ...,       0.0014,       0.0031,       0.0008  ],
+        ],
+    ]
+    sum = 2.000000
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 2, 1, 1}, }) = {256, 2, 1, 1}
+    [
+        [
+            [      0.0090,       0.0017,       0.0014,    ...,       0.0032,       0.0019,       0.0017  ],
+            [      0.0031,       0.0097,       0.0014,    ...,       0.0012,       0.0027,       0.0035  ],
+        ],
+    ]
+    sum = 2.000000
+0.25.693.011 I 
+0.25.693.069 I system_info: n_threads = 8 (n_threads_batch = 8) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.25.693.069 I 
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0035,       0.0010,       0.0065,    ...,       0.0028,       0.0035,       0.0029  ],
+            [      0.0007,       0.0043,       0.0037,    ...,       0.0012,       0.0112,       0.0034  ],
+            [      0.0004,       0.0031,       0.0003,    ...,       0.0028,       0.0079,       0.0028  ],
+            ..., 
+            [      0.0005,       0.0034,       0.0005,    ...,       0.0131,       0.0096,       0.0029  ],
+            [      0.0010,       0.0010,       0.0002,    ...,       0.0038,       0.0158,       0.0075  ],
+            [      0.0032,       0.0013,       0.0001,    ...,       0.0005,       0.0035,       0.0012  ],
+        ],
+    ]
+    sum = 511.999817
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0246,       0.0058,       0.0046,    ...,       0.0041,       0.0021,       0.0040  ],
+            [      0.0602,       0.0016,       0.0070,    ...,       0.0086,       0.0014,       0.0033  ],
+            [      0.0020,       0.0011,       0.0015,    ...,       0.0043,       0.0013,       0.0022  ],
+            ..., 
+            [      0.0019,       0.0006,       0.0004,    ...,       0.0028,       0.0121,       0.0021  ],
+            [      0.0004,       0.0012,       0.0006,    ...,       0.0044,       0.0044,       0.0013  ],
+            [      0.0005,       0.0010,       0.0001,    ...,       0.0010,       0.0009,       0.0019  ],
+        ],
+    ]
+    sum = 511.998169
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0027,       0.0059,       0.0019,    ...,       0.0042,       0.0047,       0.0028  ],
+            [      0.0067,       0.0079,       0.0028,    ...,       0.0024,       0.0009,       0.0035  ],
+            [      0.0007,       0.0020,       0.0011,    ...,       0.0022,       0.0035,       0.0021  ],
+            ..., 
+            [      0.0007,       0.0010,       0.0006,    ...,       0.0063,       0.0066,       0.0026  ],
+            [      0.0005,       0.0008,       0.0015,    ...,       0.0246,       0.0141,       0.0058  ],
+            [      0.0004,       0.0010,       0.0002,    ...,       0.0005,       0.0003,       0.0002  ],
+        ],
+    ]
+    sum = 511.994751
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0027,       0.0021,       0.0017,    ...,       0.0058,       0.0043,       0.0059  ],
+            [      0.0018,       0.0007,       0.0118,    ...,       0.0063,       0.0042,       0.0057  ],
+            [      0.0011,       0.0004,       0.0025,    ...,       0.0032,       0.0015,       0.0013  ],
+            ..., 
+            [      0.0012,       0.0004,       0.0007,    ...,       0.0005,       0.0016,       0.0335  ],
+            [      0.0003,       0.0003,       0.0002,    ...,       0.0024,       0.0016,       0.0150  ],
+            [      0.0004,       0.0008,       0.0017,    ...,       0.0033,       0.0101,       0.0076  ],
+        ],
+    ]
+    sum = 511.997650
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0016,       0.0011,       0.0023,    ...,       0.0015,       0.0033,       0.0022  ],
+            [      0.0006,       0.0007,       0.0004,    ...,       0.0006,       0.0023,       0.0015  ],
+            [      0.0004,       0.0005,       0.0004,    ...,       0.0017,       0.0031,       0.0018  ],
+            ..., 
+            [      0.0005,       0.0004,       0.0021,    ...,       0.0006,       0.0009,       0.0031  ],
+            [      0.0007,       0.0005,       0.0029,    ...,       0.0017,       0.0006,       0.0043  ],
+            [      0.0008,       0.0006,       0.0080,    ...,       0.0016,       0.0012,       0.0014  ],
+        ],
+    ]
+    sum = 512.000854
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0012,       0.0009,       0.0007,    ...,       0.0035,       0.0031,       0.0011  ],
+            [      0.0016,       0.0039,       0.0061,    ...,       0.0029,       0.0032,       0.0009  ],
+            [      0.0007,       0.0010,       0.0013,    ...,       0.0025,       0.0019,       0.0039  ],
+            ..., 
+            [      0.0006,       0.0014,       0.0012,    ...,       0.0269,       0.0012,       0.0058  ],
+            [      0.0012,       0.0018,       0.0010,    ...,       0.0104,       0.0008,       0.0053  ],
+            [      0.0006,       0.0015,       0.0037,    ...,       0.0135,       0.0008,       0.0015  ],
+        ],
+    ]
+    sum = 511.997498
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0021,       0.0047,       0.0014,    ...,       0.0079,       0.0071,       0.0030  ],
+            [      0.0014,       0.0009,       0.0016,    ...,       0.0084,       0.0069,       0.0078  ],
+            [      0.0018,       0.0009,       0.0002,    ...,       0.0029,       0.0153,       0.0054  ],
+            ..., 
+            [      0.0027,       0.0013,       0.0055,    ...,       0.0055,       0.0070,       0.0032  ],
+            [      0.0013,       0.0027,       0.0009,    ...,       0.0036,       0.0092,       0.0042  ],
+            [      0.0012,       0.0010,       0.0007,    ...,       0.0047,       0.0052,       0.0054  ],
+        ],
+    ]
+    sum = 511.999298
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0015,       0.0078,       0.0008,    ...,       0.0043,       0.0055,       0.0055  ],
+            [      0.0016,       0.0043,       0.0010,    ...,       0.0041,       0.0094,       0.0035  ],
+            [      0.0012,       0.0016,       0.0016,    ...,       0.0039,       0.0053,       0.0027  ],
+            ..., 
+            [      0.0020,       0.0042,       0.0009,    ...,       0.0049,       0.0067,       0.0056  ],
+            [      0.0027,       0.0025,       0.0008,    ...,       0.0059,       0.0067,       0.0039  ],
+            [      0.0035,       0.0031,       0.0008,    ...,       0.0088,       0.0062,       0.0048  ],
+        ],
+    ]
+    sum = 512.002930
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0009,       0.0061,       0.0007,    ...,       0.0054,       0.0107,       0.0033  ],
+            [      0.0010,       0.0024,       0.0014,    ...,       0.0071,       0.0085,       0.0037  ],
+            [      0.0004,       0.0011,       0.0207,    ...,       0.0110,       0.0038,       0.0061  ],
+            ..., 
+            [      0.0106,       0.0032,       0.0017,    ...,       0.0073,       0.0061,       0.0046  ],
+            [      0.0010,       0.0026,       0.0012,    ...,       0.0039,       0.0033,       0.0062  ],
+            [      0.0007,       0.0028,       0.0011,    ...,       0.0032,       0.0023,       0.0086  ],
+        ],
+    ]
+    sum = 512.005005
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0009,       0.0007,       0.0011,    ...,       0.0024,       0.0040,       0.0080  ],
+            [      0.0014,       0.0008,       0.0009,    ...,       0.0055,       0.0085,       0.0566  ],
+            [      0.0009,       0.0005,       0.0005,    ...,       0.0072,       0.0070,       0.0047  ],
+            ..., 
+            [      0.0071,       0.0034,       0.0027,    ...,       0.0038,       0.0044,       0.0008  ],
+            [      0.0037,       0.0011,       0.0015,    ...,       0.0047,       0.0037,       0.0011  ],
+            [      0.0022,       0.0008,       0.0015,    ...,       0.0026,       0.0024,       0.0011  ],
+        ],
+    ]
+    sum = 512.000854
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0006,       0.0005,       0.0048,    ...,       0.0058,       0.0026,       0.0060  ],
+            [      0.0008,       0.0005,       0.0018,    ...,       0.0052,       0.0027,       0.0053  ],
+            [      0.0004,       0.0004,       0.0012,    ...,       0.0043,       0.0031,       0.0052  ],
+            ..., 
+            [      0.0012,       0.0203,       0.0015,    ...,       0.0025,       0.0040,       0.0034  ],
+            [      0.0007,       0.0016,       0.0031,    ...,       0.0029,       0.0050,       0.0030  ],
+            [      0.0007,       0.0009,       0.0044,    ...,       0.0020,       0.0040,       0.0023  ],
+        ],
+    ]
+    sum = 512.003540
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0013,       0.0066,    ...,       0.0099,       0.0015,       0.0030  ],
+            [      0.0013,       0.0015,       0.0018,    ...,       0.0134,       0.0021,       0.0026  ],
+            [      0.0006,       0.0009,       0.0010,    ...,       0.0095,       0.0010,       0.0035  ],
+            ..., 
+            [      0.0276,       0.0069,       0.0044,    ...,       0.0087,       0.0028,       0.0025  ],
+            [      0.0026,       0.0018,       0.0144,    ...,       0.0071,       0.0032,       0.0042  ],
+            [      0.0012,       0.0017,       0.0058,    ...,       0.0091,       0.0023,       0.0037  ],
+        ],
+    ]
+    sum = 511.999664
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0016,       0.0101,       0.0004,    ...,       0.0020,       0.0208,       0.0019  ],
+            [      0.0011,       0.0044,       0.0011,    ...,       0.0051,       0.0093,       0.0042  ],
+            [      0.0018,       0.0012,       0.0004,    ...,       0.0044,       0.0115,       0.0055  ],
+            ..., 
+            [      0.0015,       0.0040,       0.0014,    ...,       0.0045,       0.0046,       0.0036  ],
+            [      0.0016,       0.0027,       0.0007,    ...,       0.0036,       0.0071,       0.0047  ],
+            [      0.0021,       0.0319,       0.0003,    ...,       0.0030,       0.0184,       0.0021  ],
+        ],
+    ]
+    sum = 512.002197
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0025,       0.0023,       0.0013,    ...,       0.0044,       0.0028,       0.0029  ],
+            [      0.0024,       0.0063,       0.0010,    ...,       0.0077,       0.0042,       0.0066  ],
+            [      0.0020,       0.0035,       0.0007,    ...,       0.0059,       0.0045,       0.0036  ],
+            ..., 
+            [      0.0034,       0.0027,       0.0005,    ...,       0.0038,       0.0031,       0.0048  ],
+            [      0.0029,       0.0019,       0.0009,    ...,       0.0060,       0.0040,       0.0056  ],
+            [      0.0028,       0.0017,       0.0008,    ...,       0.0043,       0.0027,       0.0020  ],
+        ],
+    ]
+    sum = 511.998505
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0005,       0.0045,       0.0008,    ...,       0.0055,       0.0025,       0.0073  ],
+            [      0.0007,       0.0038,       0.0004,    ...,       0.0032,       0.0039,       0.0068  ],
+            [      0.0007,       0.0028,       0.0008,    ...,       0.0058,       0.0067,       0.0034  ],
+            ..., 
+            [      0.0015,       0.0033,       0.0009,    ...,       0.0029,       0.0032,       0.0026  ],
+            [      0.0007,       0.0030,       0.0012,    ...,       0.0058,       0.0042,       0.0036  ],
+            [      0.0007,       0.0063,       0.0006,    ...,       0.0014,       0.0048,       0.0029  ],
+        ],
+    ]
+    sum = 511.997559
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0005,       0.0010,    ...,       0.0040,       0.0038,       0.0010  ],
+            [      0.0018,       0.0005,       0.0011,    ...,       0.0016,       0.0015,       0.0005  ],
+            [      0.0035,       0.0004,       0.0006,    ...,       0.0037,       0.0033,       0.0006  ],
+            ..., 
+            [      0.0019,       0.0025,       0.0038,    ...,       0.0018,       0.0011,       0.0015  ],
+            [      0.0029,       0.0007,       0.0011,    ...,       0.0018,       0.0029,       0.0015  ],
+            [      0.0018,       0.0006,       0.0028,    ...,       0.0015,       0.0024,       0.0019  ],
+        ],
+    ]
+    sum = 512.003052
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0006,       0.0005,       0.0026,    ...,       0.0011,       0.0032,       0.0022  ],
+            [      0.0009,       0.0009,       0.0030,    ...,       0.0080,       0.0011,       0.0036  ],
+            [      0.0003,       0.0002,       0.0007,    ...,       0.0053,       0.0020,       0.0056  ],
+            ..., 
+            [      0.0024,       0.0021,       0.0031,    ...,       0.0043,       0.0024,       0.0031  ],
+            [      0.0007,       0.0004,       0.0085,    ...,       0.0025,       0.0036,       0.0030  ],
+            [      0.0006,       0.0003,       0.1018,    ...,       0.0022,       0.0033,       0.0013  ],
+        ],
+    ]
+    sum = 511.999847
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0009,       0.0010,    ...,       0.0075,       0.0017,       0.0026  ],
+            [      0.0007,       0.0007,       0.0018,    ...,       0.0042,       0.0021,       0.0048  ],
+            [      0.0006,       0.0009,       0.0008,    ...,       0.0074,       0.0018,       0.0063  ],
+            ..., 
+            [      0.0037,       0.0063,       0.0360,    ...,       0.0040,       0.0066,       0.0012  ],
+            [      0.0008,       0.0021,       0.0070,    ...,       0.0039,       0.0036,       0.0036  ],
+            [      0.0008,       0.0022,       0.0012,    ...,       0.0049,       0.0027,       0.0015  ],
+        ],
+    ]
+    sum = 511.993317
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0047,       0.0020,       0.0005,    ...,       0.0027,       0.0073,       0.0042  ],
+            [      0.0016,       0.0238,       0.0009,    ...,       0.0021,       0.0044,       0.0061  ],
+            [      0.0023,       0.0053,       0.0002,    ...,       0.0028,       0.0092,       0.0097  ],
+            ..., 
+            [      0.0007,       0.0028,       0.0008,    ...,       0.0027,       0.0070,       0.0022  ],
+            [      0.0010,       0.0025,       0.0003,    ...,       0.0047,       0.0064,       0.0053  ],
+            [      0.0015,       0.0009,       0.0009,    ...,       0.0060,       0.0035,       0.0037  ],
+        ],
+    ]
+    sum = 512.003235
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0011,       0.0040,       0.0010,    ...,       0.0042,       0.0028,       0.0040  ],
+            [      0.0036,       0.0194,       0.0006,    ...,       0.0043,       0.0043,       0.0029  ],
+            [      0.0018,       0.0032,       0.0010,    ...,       0.0021,       0.0021,       0.0030  ],
+            ..., 
+            [      0.0054,       0.0018,       0.0021,    ...,       0.0053,       0.0028,       0.0039  ],
+            [      0.0006,       0.0007,       0.0013,    ...,       0.0045,       0.0010,       0.0019  ],
+            [      0.0021,       0.0035,       0.0007,    ...,       0.0038,       0.0050,       0.0056  ],
+        ],
+    ]
+    sum = 512.000427
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0018,       0.0026,    ...,       0.0033,       0.0045,       0.0031  ],
+            [      0.0009,       0.0041,       0.0010,    ...,       0.0048,       0.0021,       0.0050  ],
+            [      0.0007,       0.0057,       0.0022,    ...,       0.0032,       0.0025,       0.0035  ],
+            ..., 
+            [      0.0005,       0.0020,       0.0028,    ...,       0.0049,       0.0023,       0.0048  ],
+            [      0.0006,       0.0015,       0.0011,    ...,       0.0021,       0.0024,       0.0130  ],
+            [      0.0008,       0.0016,       0.0005,    ...,       0.0034,       0.0087,       0.0040  ],
+        ],
+    ]
+    sum = 512.003174
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0010,       0.0005,       0.0008,    ...,       0.0021,       0.0036,       0.0009  ],
+            [      0.0015,       0.0009,       0.0011,    ...,       0.0020,       0.0028,       0.0018  ],
+            [      0.0014,       0.0007,       0.0018,    ...,       0.0025,       0.0032,       0.0018  ],
+            ..., 
+            [      0.0012,       0.0003,       0.0009,    ...,       0.0034,       0.0043,       0.0024  ],
+            [      0.0008,       0.0007,       0.0010,    ...,       0.0028,       0.0028,       0.0024  ],
+            [      0.0023,       0.0009,       0.0011,    ...,       0.0033,       0.0062,       0.0021  ],
+        ],
+    ]
+    sum = 511.997345
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0003,       0.0003,       0.0011,    ...,       0.0023,       0.0105,       0.0025  ],
+            [      0.0012,       0.0009,       0.0083,    ...,       0.0016,       0.0085,       0.0013  ],
+            [      0.0008,       0.0007,       0.0109,    ...,       0.0021,       0.0034,       0.0033  ],
+            ..., 
+            [      0.0002,       0.0002,       0.0007,    ...,       0.0034,       0.0047,       0.0026  ],
+            [      0.0008,       0.0004,       0.0009,    ...,       0.0024,       0.0026,       0.0010  ],
+            [      0.0009,       0.0009,       0.0018,    ...,       0.0038,       0.0040,       0.0020  ],
+        ],
+    ]
+    sum = 511.998596
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0007,       0.0017,       0.0020,    ...,       0.0038,       0.0018,       0.0029  ],
+            [      0.0015,       0.0032,       0.0059,    ...,       0.0040,       0.0034,       0.0016  ],
+            [      0.0008,       0.0015,       0.0028,    ...,       0.0036,       0.0029,       0.0050  ],
+            ..., 
+            [      0.0003,       0.0006,       0.0007,    ...,       0.0044,       0.0010,       0.0018  ],
+            [      0.0004,       0.0010,       0.0015,    ...,       0.0043,       0.0008,       0.0008  ],
+            [      0.0013,       0.0016,       0.0022,    ...,       0.0089,       0.0018,       0.0009  ],
+        ],
+    ]
+    sum = 512.001587
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0010,       0.0072,       0.0004,    ...,       0.0038,       0.0117,       0.0016  ],
+            [      0.0014,       0.0032,       0.0003,    ...,       0.0021,       0.0033,       0.0017  ],
+            [      0.0023,       0.0012,       0.0003,    ...,       0.0069,       0.0019,       0.0016  ],
+            ..., 
+            [      0.0009,       0.0013,       0.0010,    ...,       0.0044,       0.0068,       0.0040  ],
+            [      0.0022,       0.0014,       0.0044,    ...,       0.0031,       0.0114,       0.0026  ],
+            [      0.0006,       0.0040,       0.0004,    ...,       0.0023,       0.0156,       0.0018  ],
+        ],
+    ]
+    sum = 511.995483
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0015,       0.0034,       0.0010,    ...,       0.0047,       0.0019,       0.0046  ],
+            [      0.0008,       0.0025,       0.0010,    ...,       0.0046,       0.0029,       0.0030  ],
+            [      0.0018,       0.0028,       0.0006,    ...,       0.0044,       0.0035,       0.0098  ],
+            ..., 
+            [      0.0029,       0.0031,       0.0011,    ...,       0.0059,       0.0048,       0.0047  ],
+            [      0.0056,       0.0027,       0.0013,    ...,       0.0050,       0.0039,       0.0048  ],
+            [      0.0019,       0.0033,       0.0015,    ...,       0.0060,       0.0041,       0.0046  ],
+        ],
+    ]
+    sum = 512.005798
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0004,       0.0019,       0.0003,    ...,       0.0022,       0.0053,       0.0048  ],
+            [      0.0010,       0.0030,       0.0011,    ...,       0.0044,       0.0082,       0.0058  ],
+            [      0.0004,       0.0003,       0.0002,    ...,       0.0008,       0.0006,       0.0018  ],
+            ..., 
+            [      0.0007,       0.0029,       0.0009,    ...,       0.0027,       0.0047,       0.0037  ],
+            [      0.0135,       0.0044,       0.0023,    ...,       0.0051,       0.0033,       0.0028  ],
+            [      0.0008,       0.0018,       0.0017,    ...,       0.0037,       0.0033,       0.0039  ],
+        ],
+    ]
+    sum = 511.998749
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0014,       0.0004,       0.0007,    ...,       0.0045,       0.0081,       0.0041  ],
+            [      0.0006,       0.0013,       0.0011,    ...,       0.0028,       0.0021,       0.0010  ],
+            [      0.0012,       0.0008,       0.0023,    ...,       0.0056,       0.0013,       0.0022  ],
+            ..., 
+            [      0.0013,       0.0003,       0.0005,    ...,       0.0039,       0.0112,       0.0037  ],
+            [      0.0135,       0.0021,       0.0039,    ...,       0.0028,       0.0034,       0.0010  ],
+            [      0.0008,       0.0004,       0.0013,    ...,       0.0050,       0.0032,       0.0022  ],
+        ],
+    ]
+    sum = 511.998596
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0004,       0.0002,       0.0016,    ...,       0.0020,       0.0049,       0.0026  ],
+            [      0.0011,       0.0006,       0.0014,    ...,       0.0033,       0.0073,       0.0020  ],
+            [      0.0016,       0.0004,       0.0014,    ...,       0.0007,       0.0055,       0.0014  ],
+            ..., 
+            [      0.0004,       0.0004,       0.0009,    ...,       0.0044,       0.0029,       0.0054  ],
+            [      0.0020,       0.0020,       0.0005,    ...,       0.0028,       0.0053,       0.0024  ],
+            [      0.0004,       0.0004,       0.0007,    ...,       0.0037,       0.0031,       0.0035  ],
+        ],
+    ]
+    sum = 511.999847
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0004,       0.0008,       0.0005,    ...,       0.0135,       0.0012,       0.0022  ],
+            [      0.0008,       0.0014,       0.0051,    ...,       0.0082,       0.0015,       0.0023  ],
+            [      0.0005,       0.0017,       0.0080,    ...,       0.0054,       0.0008,       0.0010  ],
+            ..., 
+            [      0.0005,       0.0008,       0.0029,    ...,       0.0078,       0.0020,       0.0026  ],
+            [      0.0021,       0.0062,       0.0018,    ...,       0.0042,       0.0090,       0.0031  ],
+            [      0.0005,       0.0006,       0.0029,    ...,       0.0058,       0.0023,       0.0022  ],
+        ],
+    ]
+    sum = 511.999634
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0014,       0.0010,       0.0001,    ...,       0.0004,       0.0041,       0.0023  ],
+            [      0.0055,       0.0009,       0.0041,    ...,       0.0042,       0.0052,       0.0030  ],
+            [      0.0006,       0.0219,       0.0003,    ...,       0.0027,       0.0116,       0.0012  ],
+            ..., 
+            [      0.0017,       0.0030,       0.0021,    ...,       0.0048,       0.0038,       0.0045  ],
+            [      0.0015,       0.0011,       0.0004,    ...,       0.0033,       0.0041,       0.0061  ],
+            [      0.0016,       0.0012,       0.0057,    ...,       0.0035,       0.0048,       0.0028  ],
+        ],
+    ]
+    sum = 512.004150
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0017,       0.0020,       0.0011,    ...,       0.0082,       0.0003,       0.0004  ],
+            [      0.0032,       0.0103,       0.0012,    ...,       0.0033,       0.0051,       0.0090  ],
+            [      0.0014,       0.0042,       0.0008,    ...,       0.0022,       0.0025,       0.0028  ],
+            ..., 
+            [      0.0040,       0.0028,       0.0014,    ...,       0.0079,       0.0048,       0.0051  ],
+            [      0.0013,       0.0017,       0.0015,    ...,       0.0026,       0.0040,       0.0025  ],
+            [      0.0032,       0.0022,       0.0009,    ...,       0.0059,       0.0056,       0.0054  ],
+        ],
+    ]
+    sum = 512.000549
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0004,       0.0005,       0.0002,    ...,       0.0010,       0.0020,       0.0025  ],
+            [      0.0297,       0.0044,       0.0008,    ...,       0.0041,       0.0037,       0.0017  ],
+            [      0.0011,       0.0075,       0.0003,    ...,       0.0014,       0.0028,       0.0011  ],
+            ..., 
+            [      0.0006,       0.0036,       0.0006,    ...,       0.0030,       0.0022,       0.0048  ],
+            [      0.0005,       0.0015,       0.0037,    ...,       0.0027,       0.0024,       0.0039  ],
+            [      0.0075,       0.0024,       0.0007,    ...,       0.0071,       0.0043,       0.0058  ],
+        ],
+    ]
+    sum = 511.997620
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0015,       0.0005,       0.0011,    ...,       0.0039,       0.0023,       0.0060  ],
+            [      0.0046,       0.0078,       0.0053,    ...,       0.0034,       0.0015,       0.0014  ],
+            [      0.0005,       0.0016,       0.0022,    ...,       0.0017,       0.0014,       0.0025  ],
+            ..., 
+            [      0.0011,       0.0004,       0.0007,    ...,       0.0052,       0.0110,       0.0038  ],
+            [      0.0014,       0.0003,       0.0009,    ...,       0.0061,       0.0094,       0.0022  ],
+            [      0.0048,       0.0015,       0.0019,    ...,       0.0042,       0.0078,       0.0005  ],
+        ],
+    ]
+    sum = 511.995972
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0005,       0.0002,    ...,       0.0041,       0.0008,       0.0016  ],
+            [      0.0033,       0.0038,       0.0004,    ...,       0.0018,       0.0025,       0.0018  ],
+            [      0.0015,       0.0006,       0.0019,    ...,       0.0009,       0.0034,       0.0013  ],
+            ..., 
+            [      0.0003,       0.0004,       0.0017,    ...,       0.0040,       0.0073,       0.0034  ],
+            [      0.0004,       0.0002,       0.0003,    ...,       0.0041,       0.0043,       0.0020  ],
+            [      0.0024,       0.0278,       0.0016,    ...,       0.0037,       0.0046,       0.0018  ],
+        ],
+    ]
+    sum = 512.001343
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0009,       0.0018,       0.0029,    ...,       0.0044,       0.0016,       0.0015  ],
+            [      0.0054,       0.0773,       0.0039,    ...,       0.0037,       0.0074,       0.0008  ],
+            [      0.0009,       0.0018,       0.0042,    ...,       0.0059,       0.0026,       0.0014  ],
+            ..., 
+            [      0.0006,       0.0009,       0.0013,    ...,       0.0079,       0.0013,       0.0033  ],
+            [      0.0004,       0.0012,       0.0015,    ...,       0.0065,       0.0008,       0.0025  ],
+            [      0.0143,       0.0107,       0.0038,    ...,       0.0048,       0.0035,       0.0025  ],
+        ],
+    ]
+    sum = 512.004700
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0009,       0.0017,       0.0008,    ...,       0.0057,       0.0042,       0.0037  ],
+            [      0.0009,       0.0006,       0.0006,    ...,       0.0045,       0.0032,       0.0036  ],
+            [      0.0009,       0.0052,       0.0005,    ...,       0.0035,       0.0061,       0.0021  ],
+            ..., 
+            [      0.0006,       0.0011,       0.0008,    ...,       0.0040,       0.0037,       0.0033  ],
+            [      0.0014,       0.0040,       0.0004,    ...,       0.0029,       0.0068,       0.0021  ],
+            [      0.0013,       0.0014,       0.0002,    ...,       0.0026,       0.0078,       0.0015  ],
+        ],
+    ]
+    sum = 512.000427
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0031,       0.0029,       0.0011,    ...,       0.0034,       0.0067,       0.0072  ],
+            [      0.0028,       0.0016,       0.0010,    ...,       0.0037,       0.0045,       0.0052  ],
+            [      0.0038,       0.0019,       0.0013,    ...,       0.0036,       0.0027,       0.0038  ],
+            ..., 
+            [      0.0021,       0.0033,       0.0006,    ...,       0.0041,       0.0071,       0.0041  ],
+            [      0.0016,       0.0017,       0.0016,    ...,       0.0036,       0.0053,       0.0026  ],
+            [      0.0016,       0.0018,       0.0022,    ...,       0.0053,       0.0021,       0.0016  ],
+        ],
+    ]
+    sum = 512.000793
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0028,       0.0011,    ...,       0.0032,       0.0019,       0.0064  ],
+            [      0.0004,       0.0015,       0.0023,    ...,       0.0064,       0.0026,       0.0026  ],
+            [      0.0004,       0.0027,       0.0010,    ...,       0.0046,       0.0024,       0.0058  ],
+            ..., 
+            [      0.0005,       0.0019,       0.0008,    ...,       0.0065,       0.0047,       0.0015  ],
+            [      0.0006,       0.0018,       0.0121,    ...,       0.0055,       0.0021,       0.0026  ],
+            [      0.0006,       0.0015,       0.0035,    ...,       0.0033,       0.0035,       0.0061  ],
+        ],
+    ]
+    sum = 512.001343
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0017,       0.0003,       0.0007,    ...,       0.0041,       0.0050,       0.0012  ],
+            [      0.0020,       0.0003,       0.0009,    ...,       0.0029,       0.0048,       0.0006  ],
+            [      0.0064,       0.0004,       0.0009,    ...,       0.0024,       0.0035,       0.0007  ],
+            ..., 
+            [      0.0008,       0.0003,       0.0005,    ...,       0.0030,       0.0050,       0.0130  ],
+            [      0.0004,       0.0004,       0.0015,    ...,       0.0041,       0.0035,       0.0011  ],
+            [      0.0006,       0.0003,       0.0005,    ...,       0.0033,       0.0030,       0.0022  ],
+        ],
+    ]
+    sum = 512.002625
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0003,       0.0006,       0.0007,    ...,       0.0053,       0.0050,       0.0016  ],
+            [      0.0003,       0.0004,       0.0010,    ...,       0.0055,       0.0041,       0.0017  ],
+            [      0.0005,       0.0007,       0.0015,    ...,       0.0033,       0.0020,       0.0016  ],
+            ..., 
+            [      0.0002,       0.0003,       0.0029,    ...,       0.0034,       0.0202,       0.0068  ],
+            [      0.0003,       0.0003,       0.0013,    ...,       0.0032,       0.0081,       0.0032  ],
+            [      0.0003,       0.0003,       0.0003,    ...,       0.0036,       0.0050,       0.0034  ],
+        ],
+    ]
+    sum = 512.002686
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0010,       0.0014,       0.0023,    ...,       0.0065,       0.0023,       0.0035  ],
+            [      0.0007,       0.0009,       0.0008,    ...,       0.0053,       0.0034,       0.0025  ],
+            [      0.0009,       0.0011,       0.0006,    ...,       0.0061,       0.0049,       0.0014  ],
+            ..., 
+            [      0.0004,       0.0006,       0.0009,    ...,       0.0079,       0.0012,       0.0124  ],
+            [      0.0003,       0.0007,       0.0004,    ...,       0.0031,       0.0007,       0.0042  ],
+            [      0.0005,       0.0007,       0.0004,    ...,       0.0041,       0.0009,       0.0027  ],
+        ],
+    ]
+    sum = 512.001343
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0028,       0.0095,       0.0007,    ...,       0.0046,       0.0034,       0.0025  ],
+            [      0.0020,       0.0022,       0.0005,    ...,       0.0051,       0.0040,       0.0031  ],
+            [      0.0021,       0.0004,       0.0006,    ...,       0.0033,       0.0024,       0.0019  ],
+            ..., 
+            [      0.0029,       0.0043,       0.0005,    ...,       0.0027,       0.0147,       0.0055  ],
+            [      0.0079,       0.0009,       0.0051,    ...,       0.0054,       0.0061,       0.0034  ],
+            [      0.0017,       0.0070,       0.0009,    ...,       0.0029,       0.0096,       0.0021  ],
+        ],
+    ]
+    sum = 511.998596
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0019,       0.0062,       0.0012,    ...,       0.0035,       0.0045,       0.0034  ],
+            [      0.0008,       0.0020,       0.0023,    ...,       0.0086,       0.0038,       0.0037  ],
+            [      0.0011,       0.0019,       0.0003,    ...,       0.0052,       0.0038,       0.0058  ],
+            ..., 
+            [      0.0031,       0.0011,       0.0013,    ...,       0.0061,       0.0053,       0.0018  ],
+            [      0.0032,       0.0030,       0.0006,    ...,       0.0057,       0.0048,       0.0037  ],
+            [      0.0035,       0.0022,       0.0017,    ...,       0.0037,       0.0046,       0.0030  ],
+        ],
+    ]
+    sum = 511.999420
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0007,       0.0074,       0.0008,    ...,       0.0033,       0.0051,       0.0033  ],
+            [      0.0009,       0.0021,       0.0017,    ...,       0.0048,       0.0056,       0.0031  ],
+            [      0.0008,       0.0013,       0.0009,    ...,       0.0087,       0.0048,       0.0040  ],
+            ..., 
+            [      0.0011,       0.0026,       0.0014,    ...,       0.0066,       0.0037,       0.0038  ],
+            [      0.0141,       0.0026,       0.0009,    ...,       0.0052,       0.0085,       0.0036  ],
+            [      0.0008,       0.0074,       0.0008,    ...,       0.0019,       0.0017,       0.0025  ],
+        ],
+    ]
+    sum = 512.002563
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0014,       0.0009,       0.0014,    ...,       0.0024,       0.0022,       0.0025  ],
+            [      0.0022,       0.0003,       0.0006,    ...,       0.0066,       0.0056,       0.0007  ],
+            [      0.0010,       0.0004,       0.0011,    ...,       0.0062,       0.0019,       0.0128  ],
+            ..., 
+            [      0.0006,       0.0008,       0.0005,    ...,       0.0098,       0.0036,       0.0004  ],
+            [      0.0079,       0.0043,       0.0022,    ...,       0.0022,       0.0030,       0.0007  ],
+            [      0.0088,       0.0017,       0.0019,    ...,       0.0046,       0.0038,       0.0012  ],
+        ],
+    ]
+    sum = 511.998077
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0006,       0.0006,       0.0016,    ...,       0.0059,       0.0103,       0.0059  ],
+            [      0.0002,       0.0003,       0.0004,    ...,       0.0040,       0.0074,       0.0138  ],
+            [      0.0007,       0.0004,       0.0010,    ...,       0.0025,       0.0016,       0.0046  ],
+            ..., 
+            [      0.0006,       0.0004,       0.0006,    ...,       0.0038,       0.0049,       0.0063  ],
+            [      0.0015,       0.0203,       0.0013,    ...,       0.0053,       0.0046,       0.0048  ],
+            [      0.0007,       0.0009,       0.0015,    ...,       0.0047,       0.0057,       0.0086  ],
+        ],
+    ]
+    sum = 512.001587
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0021,       0.0063,    ...,       0.0029,       0.0045,       0.0034  ],
+            [      0.0004,       0.0011,       0.0006,    ...,       0.0050,       0.0014,       0.0082  ],
+            [      0.0018,       0.0029,       0.0030,    ...,       0.0028,       0.0053,       0.0047  ],
+            ..., 
+            [      0.0007,       0.0014,       0.0008,    ...,       0.0037,       0.0007,       0.0028  ],
+            [      0.0317,       0.0124,       0.0084,    ...,       0.0070,       0.0033,       0.0009  ],
+            [      0.0016,       0.0024,       0.0105,    ...,       0.0046,       0.0029,       0.0024  ],
+        ],
+    ]
+    sum = 512.001221
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0013,       0.0013,       0.0011,    ...,       0.0059,       0.0047,       0.0066  ],
+            [      0.0010,       0.0123,       0.0003,    ...,       0.0027,       0.0086,       0.0029  ],
+            [      0.0017,       0.0019,       0.0002,    ...,       0.0044,       0.0120,       0.0019  ],
+            ..., 
+            [      0.0050,       0.0007,       0.0025,    ...,       0.0034,       0.0050,       0.0073  ],
+            [      0.0019,       0.0010,       0.0009,    ...,       0.0048,       0.0042,       0.0039  ],
+            [      0.0019,       0.0010,       0.0007,    ...,       0.0087,       0.0045,       0.0030  ],
+        ],
+    ]
+    sum = 511.998474
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0045,       0.0026,       0.0009,    ...,       0.0068,       0.0091,       0.0030  ],
+            [      0.0021,       0.0019,       0.0015,    ...,       0.0063,       0.0047,       0.0024  ],
+            [      0.0058,       0.0012,       0.0013,    ...,       0.0137,       0.0008,       0.0028  ],
+            ..., 
+            [      0.0065,       0.0031,       0.0020,    ...,       0.0034,       0.0055,       0.0052  ],
+            [      0.0053,       0.0022,       0.0016,    ...,       0.0041,       0.0066,       0.0051  ],
+            [      0.0051,       0.0013,       0.0009,    ...,       0.0048,       0.0087,       0.0045  ],
+        ],
+    ]
+    sum = 511.995331
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0004,       0.0028,       0.0008,    ...,       0.0037,       0.0038,       0.0035  ],
+            [      0.0007,       0.0046,       0.0006,    ...,       0.0048,       0.0030,       0.0031  ],
+            [      0.0005,       0.0013,       0.0004,    ...,       0.0019,       0.0027,       0.0016  ],
+            ..., 
+            [      0.0014,       0.0047,       0.0017,    ...,       0.0033,       0.0039,       0.0049  ],
+            [      0.0006,       0.0031,       0.0012,    ...,       0.0060,       0.0029,       0.0046  ],
+            [      0.0004,       0.0027,       0.0010,    ...,       0.0062,       0.0033,       0.0024  ],
+        ],
+    ]
+    sum = 511.997284
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0048,       0.0007,       0.0016,    ...,       0.0037,       0.0055,       0.0033  ],
+            [      0.0013,       0.0004,       0.0011,    ...,       0.0044,       0.0050,       0.0018  ],
+            [      0.0016,       0.0005,       0.0013,    ...,       0.0044,       0.0041,       0.0016  ],
+            ..., 
+            [      0.0075,       0.0006,       0.0010,    ...,       0.0050,       0.0044,       0.0013  ],
+            [      0.0020,       0.0004,       0.0007,    ...,       0.0039,       0.0040,       0.0010  ],
+            [      0.0033,       0.0003,       0.0006,    ...,       0.0058,       0.0041,       0.0010  ],
+        ],
+    ]
+    sum = 512.002258
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0005,       0.0007,       0.0022,    ...,       0.0040,       0.0044,       0.0056  ],
+            [      0.0003,       0.0002,       0.0034,    ...,       0.0032,       0.0058,       0.0079  ],
+            [      0.0005,       0.0005,       0.0004,    ...,       0.0041,       0.0018,       0.0026  ],
+            ..., 
+            [      0.0005,       0.0004,       0.0018,    ...,       0.0061,       0.0046,       0.0034  ],
+            [      0.0004,       0.0003,       0.0073,    ...,       0.0045,       0.0050,       0.0026  ],
+            [      0.0004,       0.0005,       0.0083,    ...,       0.0033,       0.0044,       0.0047  ],
+        ],
+    ]
+    sum = 512.001831
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0014,       0.0018,       0.0116,    ...,       0.0060,       0.0025,       0.0026  ],
+            [      0.0004,       0.0007,       0.0021,    ...,       0.0062,       0.0012,       0.0026  ],
+            [      0.0008,       0.0012,       0.0013,    ...,       0.0039,       0.0013,       0.0018  ],
+            ..., 
+            [      0.0010,       0.0011,       0.0021,    ...,       0.0065,       0.0018,       0.0021  ],
+            [      0.0006,       0.0007,       0.0014,    ...,       0.0042,       0.0015,       0.0026  ],
+            [      0.0005,       0.0008,       0.0020,    ...,       0.0051,       0.0014,       0.0015  ],
+        ],
+    ]
+    sum = 511.994812
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0013,       0.0010,       0.0008,    ...,       0.0081,       0.0048,       0.0046  ],
+            [      0.0008,       0.0013,       0.0010,    ...,       0.0079,       0.0041,       0.0036  ],
+            [      0.0023,       0.0024,       0.0003,    ...,       0.0031,       0.0103,       0.0027  ],
+            ..., 
+            [      0.0048,       0.0010,       0.0023,    ...,       0.0035,       0.0053,       0.0072  ],
+            [      0.0014,       0.0007,       0.0010,    ...,       0.0054,       0.0061,       0.0051  ],
+            [      0.0009,       0.0044,       0.0004,    ...,       0.0035,       0.0096,       0.0041  ],
+        ],
+    ]
+    sum = 512.001648
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0089,       0.0021,       0.0011,    ...,       0.0046,       0.0123,       0.0054  ],
+            [      0.0051,       0.0022,       0.0008,    ...,       0.0036,       0.0067,       0.0091  ],
+            [      0.0042,       0.0011,       0.0034,    ...,       0.0027,       0.0034,       0.0044  ],
+            ..., 
+            [      0.0057,       0.0024,       0.0016,    ...,       0.0034,       0.0062,       0.0058  ],
+            [      0.0091,       0.0017,       0.0011,    ...,       0.0035,       0.0082,       0.0051  ],
+            [      0.0076,       0.0020,       0.0035,    ...,       0.0032,       0.0050,       0.0087  ],
+        ],
+    ]
+    sum = 511.998505
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0006,       0.0017,       0.0005,    ...,       0.0031,       0.0050,       0.0029  ],
+            [      0.0005,       0.0020,       0.0004,    ...,       0.0042,       0.0048,       0.0012  ],
+            [      0.0010,       0.0022,       0.0148,    ...,       0.0060,       0.0028,       0.0022  ],
+            ..., 
+            [      0.0014,       0.0054,       0.0016,    ...,       0.0034,       0.0042,       0.0058  ],
+            [      0.0005,       0.0021,       0.0014,    ...,       0.0048,       0.0035,       0.0050  ],
+            [      0.0004,       0.0018,       0.0015,    ...,       0.0029,       0.0044,       0.0039  ],
+        ],
+    ]
+    sum = 511.999817
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0002,       0.0006,    ...,       0.0047,       0.0026,       0.0021  ],
+            [      0.0009,       0.0002,       0.0012,    ...,       0.0016,       0.0040,       0.0177  ],
+            [      0.0008,       0.0007,       0.0014,    ...,       0.0034,       0.0021,       0.0033  ],
+            ..., 
+            [      0.0030,       0.0008,       0.0013,    ...,       0.0058,       0.0039,       0.0044  ],
+            [      0.0030,       0.0005,       0.0013,    ...,       0.0059,       0.0039,       0.0026  ],
+            [      0.0010,       0.0004,       0.0011,    ...,       0.0075,       0.0036,       0.0022  ],
+        ],
+    ]
+    sum = 512.003967
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0003,       0.0004,       0.0051,    ...,       0.0055,       0.0031,       0.0081  ],
+            [      0.0002,       0.0005,       0.0054,    ...,       0.0051,       0.0033,       0.0114  ],
+            [      0.0004,       0.0005,       0.0020,    ...,       0.0040,       0.0036,       0.0043  ],
+            ..., 
+            [      0.0005,       0.0005,       0.0011,    ...,       0.0037,       0.0067,       0.0024  ],
+            [      0.0004,       0.0004,       0.0010,    ...,       0.0046,       0.0081,       0.0024  ],
+            [      0.0003,       0.0003,       0.0009,    ...,       0.0030,       0.0042,       0.0011  ],
+        ],
+    ]
+    sum = 512.002502
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0006,       0.0008,       0.0008,    ...,       0.0048,       0.0013,       0.0023  ],
+            [      0.0010,       0.0008,       0.0030,    ...,       0.0063,       0.0017,       0.0020  ],
+            [      0.0006,       0.0017,       0.0011,    ...,       0.0045,       0.0033,       0.0030  ],
+            ..., 
+            [      0.0013,       0.0015,       0.0027,    ...,       0.0062,       0.0025,       0.0030  ],
+            [      0.0007,       0.0008,       0.0009,    ...,       0.0062,       0.0021,       0.0046  ],
+            [      0.0006,       0.0007,       0.0005,    ...,       0.0066,       0.0019,       0.0024  ],
+        ],
+    ]
+    sum = 511.997528
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0014,       0.0025,       0.0011,    ...,       0.0050,       0.0033,       0.0032  ],
+            [      0.0037,       0.0022,       0.0007,    ...,       0.0039,       0.0061,       0.0051  ],
+            [      0.0051,       0.0009,       0.0039,    ...,       0.0050,       0.0037,       0.0039  ],
+            ..., 
+            [      0.0012,       0.0010,       0.0009,    ...,       0.0051,       0.0036,       0.0025  ],
+            [      0.0020,       0.0013,       0.0002,    ...,       0.0036,       0.0107,       0.0025  ],
+            [      0.0016,       0.0027,       0.0011,    ...,       0.0060,       0.0031,       0.0035  ],
+        ],
+    ]
+    sum = 512.001587
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0055,       0.0030,       0.0010,    ...,       0.0050,       0.0062,       0.0075  ],
+            [      0.0022,       0.0024,       0.0014,    ...,       0.0029,       0.0049,       0.0032  ],
+            [      0.0040,       0.0033,       0.0008,    ...,       0.0041,       0.0058,       0.0042  ],
+            ..., 
+            [      0.0023,       0.0062,       0.0008,    ...,       0.0028,       0.0066,       0.0056  ],
+            [      0.0015,       0.0050,       0.0021,    ...,       0.0019,       0.0040,       0.0039  ],
+            [      0.0024,       0.0036,       0.0008,    ...,       0.0040,       0.0127,       0.0026  ],
+        ],
+    ]
+    sum = 512.000427
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0005,       0.0031,       0.0005,    ...,       0.0065,       0.0073,       0.0040  ],
+            [      0.0009,       0.0027,       0.0023,    ...,       0.0049,       0.0073,       0.0030  ],
+            [      0.0018,       0.0031,       0.0014,    ...,       0.0070,       0.0068,       0.0047  ],
+            ..., 
+            [      0.0008,       0.0025,       0.0012,    ...,       0.0044,       0.0044,       0.0018  ],
+            [      0.0007,       0.0038,       0.0123,    ...,       0.0058,       0.0047,       0.0028  ],
+            [      0.0006,       0.0030,       0.0018,    ...,       0.0062,       0.0049,       0.0012  ],
+        ],
+    ]
+    sum = 511.999817
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0016,       0.0006,       0.0009,    ...,       0.0021,       0.0042,       0.0134  ],
+            [      0.0016,       0.0006,       0.0011,    ...,       0.0042,       0.0041,       0.0031  ],
+            [      0.0016,       0.0010,       0.0020,    ...,       0.0040,       0.0057,       0.0051  ],
+            ..., 
+            [      0.0008,       0.0006,       0.0012,    ...,       0.0029,       0.0039,       0.0179  ],
+            [      0.0035,       0.0006,       0.0008,    ...,       0.0050,       0.0049,       0.0018  ],
+            [      0.0014,       0.0011,       0.0016,    ...,       0.0028,       0.0035,       0.0025  ],
+        ],
+    ]
+    sum = 512.004761
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0007,       0.0008,       0.0014,    ...,       0.0016,       0.0038,       0.0015  ],
+            [      0.0004,       0.0004,       0.0010,    ...,       0.0042,       0.0033,       0.0015  ],
+            [      0.0009,       0.0012,       0.0011,    ...,       0.0043,       0.0048,       0.0021  ],
+            ..., 
+            [      0.0006,       0.0007,       0.0016,    ...,       0.0023,       0.0063,       0.0048  ],
+            [      0.0004,       0.0003,       0.0006,    ...,       0.0037,       0.0057,       0.0032  ],
+            [      0.0008,       0.0008,       0.0009,    ...,       0.0072,       0.0077,       0.0041  ],
+        ],
+    ]
+    sum = 512.002930
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0011,       0.0015,       0.0021,    ...,       0.0094,       0.0024,       0.0009  ],
+            [      0.0009,       0.0009,       0.0011,    ...,       0.0071,       0.0016,       0.0017  ],
+            [      0.0019,       0.0035,       0.0017,    ...,       0.0062,       0.0036,       0.0023  ],
+            ..., 
+            [      0.0012,       0.0011,       0.0019,    ...,       0.0106,       0.0018,       0.0054  ],
+            [      0.0010,       0.0012,       0.0008,    ...,       0.0062,       0.0016,       0.0066  ],
+            [      0.0016,       0.0015,       0.0019,    ...,       0.0042,       0.0020,       0.0069  ],
+        ],
+    ]
+    sum = 512.006836
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0015,       0.0011,       0.0005,    ...,       0.0062,       0.0034,       0.0050  ],
+            [      0.0057,       0.0009,       0.0003,    ...,       0.0028,       0.0034,       0.0027  ],
+            [      0.0027,       0.0042,       0.0014,    ...,       0.0044,       0.0036,       0.0030  ],
+            ..., 
+            [      0.0011,       0.0015,       0.0020,    ...,       0.0031,       0.0033,       0.0052  ],
+            [      0.0018,       0.0031,       0.0004,    ...,       0.0014,       0.0049,       0.0043  ],
+            [      0.0072,       0.0074,       0.0008,    ...,       0.0105,       0.0047,       0.0061  ],
+        ],
+    ]
+    sum = 511.999084
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0019,       0.0042,       0.0008,    ...,       0.0030,       0.0067,       0.0057  ],
+            [      0.0011,       0.0025,       0.0009,    ...,       0.0022,       0.0047,       0.0057  ],
+            [      0.0024,       0.0073,       0.0008,    ...,       0.0043,       0.0042,       0.0059  ],
+            ..., 
+            [      0.0032,       0.0048,       0.0014,    ...,       0.0028,       0.0042,       0.0046  ],
+            [      0.0014,       0.0050,       0.0016,    ...,       0.0015,       0.0036,       0.0023  ],
+            [      0.0024,       0.0028,       0.0017,    ...,       0.0020,       0.0080,       0.0044  ],
+        ],
+    ]
+    sum = 511.998627
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0008,       0.0027,       0.0026,    ...,       0.0041,       0.0019,       0.0025  ],
+            [      0.0013,       0.0028,       0.0083,    ...,       0.0111,       0.0024,       0.0013  ],
+            [      0.0026,       0.0061,       0.0017,    ...,       0.0039,       0.0056,       0.0043  ],
+            ..., 
+            [      0.0021,       0.0077,       0.0024,    ...,       0.0034,       0.0050,       0.0028  ],
+            [      0.0007,       0.0028,       0.0082,    ...,       0.0030,       0.0021,       0.0041  ],
+            [      0.0011,       0.0051,       0.0004,    ...,       0.0046,       0.0038,       0.0018  ],
+        ],
+    ]
+    sum = 512.001099
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0017,       0.0008,       0.0009,    ...,       0.0040,       0.0031,       0.0014  ],
+            [      0.0005,       0.0012,       0.0022,    ...,       0.0031,       0.0027,       0.0013  ],
+            [      0.0029,       0.0021,       0.0020,    ...,       0.0020,       0.0024,       0.0026  ],
+            ..., 
+            [      0.0063,       0.0008,       0.0034,    ...,       0.0029,       0.0023,       0.0013  ],
+            [      0.0027,       0.0007,       0.0021,    ...,       0.0029,       0.0013,       0.0016  ],
+            [      0.0019,       0.0011,       0.0022,    ...,       0.0017,       0.0022,       0.0007  ],
+        ],
+    ]
+    sum = 512.000244
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0007,       0.0005,       0.0006,    ...,       0.0069,       0.0062,       0.0067  ],
+            [      0.0007,       0.0006,       0.0005,    ...,       0.0067,       0.0031,       0.0047  ],
+            [      0.0021,       0.0026,       0.0017,    ...,       0.0030,       0.0034,       0.0038  ],
+            ..., 
+            [      0.0007,       0.0015,       0.0010,    ...,       0.0023,       0.0045,       0.0037  ],
+            [      0.0006,       0.0005,       0.0014,    ...,       0.0014,       0.0032,       0.0055  ],
+            [      0.0009,       0.0007,       0.0217,    ...,       0.0056,       0.0037,       0.0030  ],
+        ],
+    ]
+    sum = 512.000122
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 512, 1, 1}, }) = {256, 512, 1, 1}
+    [
+        [
+            [      0.0009,       0.0015,       0.0024,    ...,       0.0053,       0.0035,       0.0058  ],
+            [      0.0017,       0.0031,       0.0018,    ...,       0.0035,       0.0040,       0.0039  ],
+            [      0.0049,       0.0047,       0.0119,    ...,       0.0076,       0.0048,       0.0028  ],
+            ..., 
+            [      0.0018,       0.0088,       0.0045,    ...,       0.0059,       0.0021,       0.0017  ],
+            [      0.0007,       0.0011,       0.0015,    ...,       0.0035,       0.0014,       0.0014  ],
+            [      0.0011,       0.0015,       0.0021,    ...,       0.0060,       0.0047,       0.0027  ],
+        ],
+    ]
+    sum = 511.998718
+common_debug_cb_eval:          ffn_moe_probs-4 = (f32)   SOFT_MAX(ffn_moe_logits-4{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0017,       0.0038,       0.0014,    ...,       0.0046,       0.0058,       0.0043  ],
+            [      0.0024,       0.0021,       0.0065,    ...,       0.0039,       0.0104,       0.0046  ],
+            [      0.0031,       0.0018,       0.0064,    ...,       0.0030,       0.0143,       0.0044  ],
+            ..., 
+            [      0.0013,       0.0012,       0.0003,    ...,       0.0027,       0.0024,       0.0078  ],
+            [      0.0054,       0.0020,       0.0028,    ...,       0.0060,       0.0036,       0.0066  ],
+            [      0.0015,       0.0040,       0.0018,    ...,       0.0024,       0.0033,       0.0085  ],
+        ],
+    ]
+    sum = 340.001526
+common_debug_cb_eval:          ffn_moe_probs-5 = (f32)   SOFT_MAX(ffn_moe_logits-5{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0031,       0.0051,       0.0018,    ...,       0.0059,       0.0061,       0.0055  ],
+            [      0.0030,       0.0014,       0.0037,    ...,       0.0058,       0.0029,       0.0027  ],
+            [      0.0254,       0.0023,       0.0030,    ...,       0.0054,       0.0024,       0.0034  ],
+            ..., 
+            [      0.0031,       0.0026,       0.0011,    ...,       0.0187,       0.0021,       0.0028  ],
+            [      0.0016,       0.0257,       0.0016,    ...,       0.0048,       0.0067,       0.0059  ],
+            [      0.0035,       0.0127,       0.0014,    ...,       0.0027,       0.0055,       0.0038  ],
+        ],
+    ]
+    sum = 340.002258
+common_debug_cb_eval:          ffn_moe_probs-6 = (f32)   SOFT_MAX(ffn_moe_logits-6{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0007,       0.0036,       0.0005,    ...,       0.0028,       0.0052,       0.0038  ],
+            [      0.0288,       0.0072,       0.0016,    ...,       0.0023,       0.0023,       0.0032  ],
+            [      0.0099,       0.0050,       0.0011,    ...,       0.0020,       0.0033,       0.0052  ],
+            ..., 
+            [      0.0003,       0.0011,       0.0009,    ...,       0.0012,       0.0033,       0.0020  ],
+            [      0.0063,       0.0117,       0.0008,    ...,       0.0026,       0.0050,       0.0027  ],
+            [      0.0022,       0.0136,       0.0011,    ...,       0.0036,       0.0042,       0.0024  ],
+        ],
+    ]
+    sum = 339.999146
+common_debug_cb_eval:         ffn_moe_probs-16 = (f32)   SOFT_MAX(ffn_moe_logits-16{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0012,       0.0009,       0.0009,    ...,       0.0023,       0.0026,       0.0028  ],
+            [      0.0095,       0.0152,       0.0112,    ...,       0.0017,       0.0017,       0.0009  ],
+            [      0.0227,       0.0175,       0.0285,    ...,       0.0013,       0.0024,       0.0009  ],
+            ..., 
+            [      0.0009,       0.0009,       0.0018,    ...,       0.0164,       0.0023,       0.0170  ],
+            [      0.0069,       0.0012,       0.0028,    ...,       0.0030,       0.0020,       0.0023  ],
+            [      0.0060,       0.0009,       0.0036,    ...,       0.0035,       0.0017,       0.0024  ],
+        ],
+    ]
+    sum = 339.998169
+common_debug_cb_eval:         ffn_moe_probs-17 = (f32)   SOFT_MAX(ffn_moe_logits-17{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0008,       0.0010,       0.0059,    ...,       0.0039,       0.0039,       0.0048  ],
+            [      0.0508,       0.0264,       0.0033,    ...,       0.0029,       0.0021,       0.0021  ],
+            [      0.0100,       0.0022,       0.0018,    ...,       0.0026,       0.0026,       0.0017  ],
+            ..., 
+            [      0.0005,       0.0008,       0.0011,    ...,       0.0010,       0.0004,       0.0039  ],
+            [      0.0010,       0.0023,       0.0011,    ...,       0.0042,       0.0025,       0.0034  ],
+            [      0.0008,       0.0014,       0.0008,    ...,       0.0030,       0.0038,       0.0026  ],
+        ],
+    ]
+    sum = 339.998169
+common_debug_cb_eval:         ffn_moe_probs-20 = (f32)   SOFT_MAX(ffn_moe_logits-20{256, 340, 1, 1}, }) = {256, 340, 1, 1}
+    [
+        [
+            [      0.0014,       0.0014,       0.0012,    ...,       0.0052,       0.0016,       0.0026  ],
+            [      0.0201,       0.0218,       0.0037,    ...,       0.0043,       0.0141,       0.0014  ],
+            [      0.0031,       0.0055,       0.0018,    ...,       0.0036,       0.0180,       0.0010  ],
+            ..., 
+            [      0.0009,       0.0023,       0.0036,    ...,       0.0172,       0.0025,       0.0035  ],
+            [      0.0028,       0.0286,       0.0404,    ...,       0.0067,       0.0040,       0.0018  ],
+            [      0.0021,       0.0107,       0.0256,    ...,       0.0044,       0.0033,       0.0024  ],
+        ],
+    ]
+    sum = 340.001465
+Model add_bos: false
+Input prompt: " 
+ = Valkyria Chronicles III = 
+ 
+ Senjō no Valkyria 3 : Unrecorded Chronicles ( Japanese : 戦場のヴァルキュリア3 , lit . Valkyria of the Battlefield 3 ) , commonly referred to as Valkyria Chronicles III outside Japan , is a tactical role @-@ playing video game developed by Sega and Media.Vision for the PlayStation Portable . Released in January 2011 in Japan , it is the third game in the Valkyria series . Employing the same fusion of tactical and real @-@ time gameplay as its predecessors , the story runs parallel to the first game and follows the " Nameless " , a penal military unit serving the nation of Gallia during the Second Europan War who perform secret black operations and are pitted against the Imperial unit " Calamaty Raven " . 
+ The game began development in 2010 , carrying over a large portion of the work done on Valkyria Chronicles II . While it retained the standard features of the series , it also underwent multiple adjustments , such as making the game more forgiving for series newcomers . Character designer Raita Honjou and composer Hitoshi Sakimoto both returned from previous entries , along with Valkyria Chronicles II director Takeshi Ozawa . A large team of writers handled the script . The game 's opening theme was sung by May 'n . 
+ It met with positive sales in Japan , and was praised by both Japanese and western critics . After release , it received downloadable content , along with an expanded edition in November of that year . It was also adapted into manga and an original video animation series . Due to low sales of Valkyria Chronicles II , Valkyria Chronicles III was not localized , but a fan translation compatible with the game 's expanded edition was released in 2014 . Media.Vision would return to the franchise with the development of Valkyria : Azure Revolution for the PlayStation 4 . 
+ 
+ = = Gameplay = = 
+ 
+ As with previous Valkyira Chronicles games , Valkyria Chronicles III is a tactical role @-@ playing game where players take control of a military unit and take part in missions against enemy forces . Stories are told through comic book @-@ like panels with animated character portraits , with characters speaking partially through voiced speech bubbles and partially through unvoiced text . The player progresses through a series of linear missions , gradually unlocked as maps that can be freely scanned through and replayed as they are unlocked . The route to each story location on the map varies depending on an individual player 's approach : when one option is selected , the other is sealed off to the player . Outside missions , the player characters rest in a camp , where units can be customized and character growth occurs . Alongside the main story missions are character @-@ specific sub missions relating to different squad members . After the game 's completion , additional episodes are unlocked , some of them having a higher difficulty than those found in the rest of the game . There are also love simulation elements related to the game 's two main heroines , although they take a very minor role . 
+ The game 's battle system , the BliTZ system , is carried over directly from Valkyira Chronicles . During missions , players select each unit using a top @-@ down perspective of the battlefield map : once a character is selected , the player moves the character around the battlefield in third @-@ person . A character can only act once per @-@ turn , but characters can be granted multiple turns at the expense of other characters ' turns . Each character has a field and distance of movement limited by their Action Gauge . Up to nine characters can be assigned to a single mission . During gameplay , characters will call out if something happens to them , such as their health points ( HP ) getting low or being knocked out by enemy attacks . Each character has specific " Potentials " , skills unique to each character . They are divided into " Personal Potential " , which are innate skills that remain unaltered unless otherwise dictated by the story and can either help or impede a character , and " Battle Potentials " , which are grown throughout the game and always grant boons to a character . To learn Battle Potentials , each character has a unique " Masters Table " , a grid @-@ based skill table that can be used to acquire and link different skills . Characters also have Special Abilities that grant them temporary boosts on the battlefield : Kurt can activate " Direct Command " and move around the battlefield without depleting his Action Point gauge , the character Reila can shift into her " Valkyria Form " and become invincible , while Imca can target multiple enemy units with her heavy weapon . 
+ Troops are divided into five classes : Scouts , Shocktroopers , Engineers , Lancers and Armored Soldier . Troopers can switch classes by changing their assigned weapon . Changing class does not greatly affect the stats gained while in a previous class . With victory in battle , experience points are awarded to the squad , which are distributed into five different attributes shared by the entire squad , a feature differing from early games ' method of distributing to different unit types . 
+ 
+ = = Plot = = 
+ 
+ The game takes place during the Second Europan War . Gallian Army Squad 422 , also known as " The Nameless " , are a penal military unit composed of criminals , foreign deserters , and military offenders whose real names are erased from the records and thereon officially referred to by numbers . Ordered by the Gallian military to perform the most dangerous missions that the Regular Army and Militia will not do , they are nevertheless up to the task , exemplified by their motto , Altaha Abilia , meaning " Always Ready . " The three main characters are No.7 Kurt Irving , an army officer falsely accused of treason who wishes to redeem himself ; Ace No.1 Imca , a female Darcsen heavy weapons specialist who seeks revenge against the Valkyria who destroyed her home ; and No.13 Riela Marcellis , a seemingly jinxed young woman who is unknowingly a descendant of the Valkyria . Together with their fellow squad members , these three are tasked to fight against a mysterious Imperial unit known as Calamity Raven , consisting of mostly Darcsen soldiers . 
+ As the Nameless officially do not exist , the upper echelons of the Gallian Army exploit the concept of plausible deniability in order to send them on missions that would otherwise make Gallia lose face in the war . While at times this works to their advantage , such as a successful incursion into Imperial territory , other orders cause certain members of the 422nd great distress . One such member , Gusurg , becomes so enraged that he abandons his post and defects into the ranks of Calamity Raven , attached to the ideal of Darcsen independence proposed by their leader , Dahau . At the same time , elements within Gallian Army Command move to erase the Nameless in order to protect their own interests . Hounded by both allies and enemies , and combined with the presence of a traitor within their ranks , the 422nd desperately move to keep themselves alive while at the same time fight to help the Gallian war effort . This continues until the Nameless 's commanding officer , Ramsey Crowe , who had been kept under house arrest , is escorted to the capital city of Randgriz in order to present evidence exonerating the weary soldiers and expose the real traitor , the Gallian General that had accused Kurt of Treason . 
+ Partly due to these events , and partly due to the major losses in manpower Gallia suffers towards the end of the war with the Empire , the Nameless are offered a formal position as a squad in the Gallian Army rather than serve as an anonymous shadow force . This is short @-@ lived , however , as following Maximilian 's defeat , Dahau and Calamity Raven move to activate an ancient Valkyrian super weapon within the Empire , kept secret by their benefactor . Without the support of Maximilian or the chance to prove themselves in the war with Gallia , it is Dahau 's last trump card in creating a new Darcsen nation . As an armed Gallian force invading the Empire just following the two nations ' cease @-@ fire would certainly wreck their newfound peace , Kurt decides to once again make his squad the Nameless , asking Crowe to list himself and all under his command as killed @-@ in @-@ action . Now owing allegiance to none other than themselves , the 422nd confronts Dahau and destroys the Valkyrian weapon . Each member then goes their separate ways in order to begin their lives anew . 
+ 
+ = = Development = = 
+ 
+ Concept work for Valkyria Chronicles III began after development finished on Valkyria Chronicles II in early 2010 , with full development beginning shortly after this . The director of Valkyria Chronicles II , Takeshi Ozawa , returned to that role for Valkyria Chronicles III . Development work took approximately one year . After the release of Valkyria Chronicles II , the staff took a look at both the popular response for the game and what they wanted to do next for the series . Like its predecessor , Valkyria Chronicles III was developed for PlayStation Portable : this was due to the team wanting to refine the mechanics created for Valkyria Chronicles II , and they had not come up with the " revolutionary " idea that would warrant a new entry for the PlayStation 3 . Speaking in an interview , it was stated that the development team considered Valkyria Chronicles III to be the series ' first true sequel : while Valkyria Chronicles II had required a large amount of trial and error during development due to the platform move , the third game gave them a chance to improve upon the best parts of Valkyria Chronicles II due to being on the same platform . In addition to Sega staff from the previous games , development work was also handled by Media.Vision. The original scenario was written Kazuki Yamanobe , while the script was written by Hiroyuki Fujii , Koichi Majima , Kishiko Miyagi , Seiki Nagakawa and Takayuki Shouji . Its story was darker and more somber than that of its predecessor . 
+ The majority of material created for previous games , such as the BLiTZ system and the design of maps , was carried over . Alongside this , improvements were made to the game 's graphics and some elements were expanded , such as map layouts , mission structure , and the number of playable units per mission . A part of this upgrade involved creating unique polygon models for each character 's body . In order to achieve this , the cooperative elements incorporated into the second game were removed , as they took up a large portion of memory space needed for the improvements . They also adjusted the difficulty settings and ease of play so they could appeal to new players while retaining the essential components of the series ' gameplay . The newer systems were decided upon early in development . The character designs were done by Raita Honjou , who had worked on the previous Valkyria Chronicles games . When creating the Nameless Squad , Honjou was faced with the same problem he had had during the first game : the military uniforms essentially destroyed character individuality , despite him needing to create unique characters the player could identify while maintaining a sense of reality within the Valkyria Chronicles world . The main color of the Nameless was black . As with the previous Valkyria games , Valkyria Chronicles III used the CANVAS graphics engine . The anime opening was produced by Production I.G. 
+ 
+ = = = Music = = = 
+ 
+ The music was composed by Hitoshi Sakimoto , who had also worked on the previous Valkyria Chronicles games . When he originally heard about the project , he thought it would be a light tone similar to other Valkyria Chronicles games , but found the themes much darker than expected . An early theme he designed around his original vision of the project was rejected . He redid the main theme about seven times through the music production due to this need to reassess the game . The main theme was initially recorded using orchestra , then Sakimoto removed elements such as the guitar and bass , then adjusted the theme using a synthesizer before redoing segments such as the guitar piece on their own before incorporating them into the theme . The rejected main theme was used as a hopeful tune that played during the game 's ending . The battle themes were designed around the concept of a " modern battle " divorced from a fantasy scenario by using modern musical instruments , constructed to create a sense of atonality . While Sakimoto was most used to working with synthesized music , he felt that he needed to incorporate live instruments such as orchestra and guitar . The guitar was played by Mitsuhiro Ohta , who also arranged several of the later tracks . The game 's opening theme song , " If You Wish for ... " ( もしも君が願うのなら , Moshimo Kimi ga Negauno Nara ) , was sung by Japanese singer May 'n . Its theme was the reason soldiers fought , in particular their wish to protect what was precious to them rather than a sense of responsibility or duty . Its lyrics were written by Seiko Fujibayashi , who had worked on May 'n on previous singles . 
+ 
+ = = = Release = = = 
+ 
+ In September 2010 , a teaser website was revealed by Sega , hinting at a new Valkyria Chronicles game . In its September issue , Famitsu listed that Senjō no Valkyria 3 would be arriving on the PlayStation Portable . Its first public appearance was at the 2010 Tokyo Game Show ( TGS ) , where a demo was made available for journalists and attendees . During the publicity , story details were kept scant so as not to spoil too much for potential players , along with some of its content still being in flux at the time of its reveal . To promote the game and detail the story leading into the game 's events , an episodic Flash visual novel written by Fujii began release in January 2011 . The game was released January 27 , 2011 . During an interview , the development team said that the game had the capacity for downloadable content ( DLC ) , but that no plans were finalized . Multiple DLC maps , featuring additional missions and recruitable characters , were released between February and April 2011 . An expanded edition of the game , Valkyria Chronicles III Extra Edition , released on November 23 , 2011 . Packaged and sold at a lower price than the original , Extra Edition game with seven additional episodes : three new , three chosen by staff from the game 's DLC , and one made available as a pre @-@ order bonus . People who also owned the original game could transfer their save data between versions . 
+ Unlike its two predecessors , Valkyria Chronicles III was not released in the west . According to Sega , this was due to poor sales of Valkyria Chronicles II and the general unpopularity of the PSP in the west . An unofficial fan translation patch began development in February 2012 : players with a copy of Valkyria Chronicles III could download and apply the patch , which translated the game 's text into English . Compatible with the Extra Edition , the patch was released in January 2014 . 
+ 
+ = = Reception = = 
+ 
+ On its day of release in Japan , Valkyria Chronicles III topped both platform @-@ exclusive and multi @-@ platform sales charts . By early February , the game sold 102 @,@ 779 units , coming in second overall to The Last Story for the Wii . By the end of the year , the game had sold just over 152 @,@ 500 units . 
+ Famitsu enjoyed the story , and were particularly pleased with the improvements to gameplay . Japanese gaming site Game Watch Impress , despite negatively noting its pacing and elements recycled from previous games , was generally positive about its story and characters , and found its gameplay entertaining despite off @-@ putting difficulty spikes . 4Gamer.net writer Naohiko Misuosame , in a " Play Test " article based on the game 's PSN demo , felt that Valkyria Chronicles III provided a " profound feeling of closure " for the Valkyria Chronicles series . He praised its gameplay despite annoying limitations to aspects such as special abilities , and positively noted its shift in story to a tone similar to the first game . 
+ PlayStation Official Magazine - UK praised the story 's blurring of Gallia 's moral standing , art style , and most points about its gameplay , positively noting the latter for both its continued quality and the tweaks to balance and content . Its one major criticism were multiple difficulty spikes , something that had affected the previous games . Heath Hindman of gaming website PlayStation Lifestyle praised the addition of non @-@ linear elements and improvements or removal of mechanics from Valkyria Chronicles II in addition to praising the returning gameplay style of previous games . He also positively noted the story 's serious tone . Points criticized in the review were recycled elements , awkward cutscenes that seemed to include all characters in a scene for no good reason , pacing issues , and occasional problems with the game 's AI . 
+ In a preview of the TGS demo , Ryan Geddes of IGN was left excited as to where the game would go after completing the demo , along with enjoying the improved visuals over Valkyria Chronicles II . Kotaku 's Richard Eisenbeis was highly positive about the game , citing is story as a return to form after Valkyria Chronicles II and its gameplay being the best in the series . His main criticisms were its length and gameplay repetition , along with expressing regret that it would not be localized . 
+ 
+ = = Legacy = = 
+ 
+ Kurt and Riela were featured in the Nintendo 3DS crossover Project X Zone , representing the Valkyria series . Media.Vision would return to the series to develop Valkyria : Azure Revolution , with Ozawa returning as director . Azure Revolution is a role @-@ playing video game for the PlayStation 4 that forms the beginning of a new series within the Valkyria franchise . 
+ 
+ = = = Adaptations = = = 
+ 
+ Valkyria Chronicles 3 was adapted into a two @-@ episode original video animation series in the same year of its release . Titled Senjō no Valkyria 3 : Taga Tame no Jūsō ( 戦場のヴァルキュリア３ 誰がための銃瘡 , lit . Valkyria of the Battlefield 3 : The Wound Taken for Someone 's Sake ) , it was originally released through PlayStation Network and Qriocity between April and May 2011 . The initially @-@ planned release and availability period needed to be extended due to a stoppage to PSN during the early summer of that year . It later released for DVD on June 29 and August 31 , 2011 , with separate " Black " and " Blue " editions being available for purchase . The anime is set during the latter half of Valkyria Chronicles III , detailing a mission by the Nameless against their Imperial rivals Calamity Raven . The anime was first announced in November 2010 . It was developed by A @-@ 1 Pictures , produced by Shinji Motoyama , directed by Nobuhiro Kondō , and written by Hiroshi Ōnogi . Sakimoto 's music for the game was used in the anime . 
+ The anime 's title was inspired by the principle purpose of the Nameless : to suffer in battle for the goals of others . A subtitle attached to the project during development was " The Road to Kubinka " , which referenced the Kubinka Tank Museum in Moscow . The game 's main theme was how the characters regained their sense of self when stripped of their names and identities , along with general themes focused on war and its consequences . While making the anime , the production team were told by Sega to make it as realistic as possible , with the consequence that the team did extensive research into aspects such as what happened when vehicles like tanks were overturned or damaged . Due to it being along the same timeline as the original game and its television anime adaptation , the cast of Valkyria Chronicles could make appearances , which pleased the team . The opening theme , " Akari ( Light ) -Tomoshibi- " ( 灯 @-@ TOMOSHIBI- ) , was sung by Japanese singer Faylan . The ending theme , " Someday the Flowers of Light Will Bloom " ( いつか咲く光の花 , Itsuka Saku Hikari no Hana ) , was sung by Minami Kuribayashi . Both songs ' lyrics were written by their respective artists . 
+ Two manga adaptations were produced , following each of the game 's main female protagonists Imca and Riela . They were Senjō no Valkyria 3 : Namo naki Chikai no Hana ( 戦場のヴァルキュリア3 名もなき誓いの花 , lit . Valkyria of the Battlefield 3 : The Flower of the Nameless Oath ) , illustrated by Naoyuki Fujisawa and eventually released in two volumes after being serialized in Dengeki Maoh between 2011 and 2012 ; and Senjō no Valkyria 3 : -Akaki Unmei no Ikusa Otome- ( 戦場のヴァルキュリア3 -赤き運命の戦乙女- , lit . Valkyria of the Battlefield 3 -The Valkyrie of the Crimson Fate ) , illustrated by Mizuki Tsuge and eventually released in a single volume by Kadokawa Shoten in 2012 . 
+ 
+ 
+ = Tower Building of the Little Rock Arsenal = 
+ 
+ The Tower Building of the Little Rock Arsenal , also known as U.S. Arsenal Building , is a building located in MacArthur Park in downtown Little Rock , Arkansas . Built in 1840 , it was part of Little Rock 's first military installation . Since its decommissioning , The Tower Building has housed two museums . It was home to the Arkansas Museum of Natural History and Antiquities from 1942 to 1997 and the MacArthur Museum of Arkansas Military History since 2001 . It has also been the headquarters of the Little Rock Æsthetic Club since 1894 . 
+ The building receives its name from its distinct octagonal tower . Besides being the last remaining structure of the original Little Rock Arsenal and one of the oldest buildings in central Arkansas , it was also the birthplace of General Douglas MacArthur , who became the supreme commander of US forces in the South Pacific during World War II . It was also the starting place of the Camden Expedition . In 2011 it was named as one of the top 10 attractions in the state of Arkansas by Arkansas.com. 
+ 
+ = = Construction = = 
+ 
+ The arsenal was constructed at the request of Governor James Sevier Conway in response to the perceived dangers of frontier life and fears of the many Native Americans who were passing through the state on their way to the newly established Oklahoma Territory . Thirty @-@ six acres were appropriated on the outskirts of Little Rock by Major Robert B. Lee of the U.S. Army . The land had been previously used as a racetrack by the local jockey club . John Wormley Walker , a builder for the Federal Government , supervised the construction . Originally $ 14 @,@ 000 was allocated for the construction of the arsenal , but proved inadequate . The budget was later increased to $ 30 @,@ 000 . Work began on the Tower Building in 1840 , and it was the first permanent structure of the arsenal to be built . Being originally constructed to store ammunition , the building was designed with 3 @-@ foot @-@ thick ( 0 @.@ 91 m ) exterior walls . The original plans called for it to be built of stone , however , masonry was used instead . The Arkansas Gazette referred to the structure as " A splendid specimen of masonry " . 
+ 
+ = = Civil War = = 
+ 
+ For several years the arsenal , which was owned by the federal government , served as a simple arms depot and was staffed with only a handful of soldiers . But in November 1860 , with the American Civil War on the horizon , a company of the Second United States Artillery , consisting of sixty @-@ five men , was transferred to Little Rock under the command of Captain James Totten . On January 15 , 1861 , the state legislature decided to hold a referendum to determine if a state convention should be held to consider the issue of secession and to elect delegates to such a convention . It was planned for February 18 ; however , events at the arsenal , would not wait . On January 28 , then Governor Henry Massey Rector informed Captain Totten that he and his soldiers would be " permitted to remain in the possession of the Federal officers until the State , by authority of the people , shall have determined to sever their connection with the General Government , " Totten responded to this by telling the Governor that his orders came from the United States Government and began a desperate but ultimately futile dispatch of letters and telegrams asking for reinforcements , although rumors were widely spread that they were already coming . The first telegraph wire to span between Little Rock and Memphis had recently been completed . Local attorney John M Harrel was asked to compose the first telegraph dispatched from Arkansas 's capital . In his message , Harrel reported unconfirmed rumors that more federal troops had been sent to reinforce the Little Rock Arsenal . 
+ The United States troops at the outposts of the western frontier of the state and in the Indian nation have all been recalled from winter quarters to reinforce the garrison at Fort Smith . The garrison at Fort Smith had been previously transferred to the United States Arsenal in this city ( Little Rock ) . The arsenal is one of the richest depositories of military stores in the United States and is supposed to be the ultimate destination of the tropps [ sic ] ordered from the frontier . 
+ -John M Harrel Telegram , January 31 , 1861 
+ The item was intended simply as a piece of news , but telegraph lines quickly spread the news throughout the state , fueling procession sentiment . The rumor was interpreted by some Arkansans as a call from the governor to assemble to help expel the federal troops from the arsenal . By February 5 , six militia units , consisting of 1 @,@ 000 men , with a guarantee that the numbers could be increased to 5 @,@ 000 if the situations deemed it necessary , had assembled in Little Rock . Governor Rector vehemently denied ordering the troops to assemble or giving any order at all in connection with the troops . Faced with the fact that the military had assembled believing they were following his orders and the consensus of the citizens of Little Rock against any armed conflict between the civilian army and federal troops , Governor Rector was forced to take control of the situation . On February 6 , he sent a formal demand for surrender of the arsenal to Captain Totten , 
+ This movement is prompted by the feeling that pervades the citizens of this State that in the present emergency the arms and munitions of war in the Arsenal should be under the control of the State authorities , in order to their security . This movement , although not authorized by me , has assumed such an aspect that it becomes my duty , as the executive of this Sate , to interpose my official authority to prevent a collision between the people of the State and the Federal troops under your command . I therefore demand in the name of the State the delivery of the possession of the Arsenal and munitions of war under your charge to the State authorities , to be held subject to the action of the convention to be held on the 4th of March next . 
+ Perhaps because Abraham Lincoln had not yet been inaugurated as President , Captain Totten received no instructions from his superiors and was forced to withdraw his troops . He agreed to surrender the arsenal as long as the governor agreed to three provisions : 
+ The governor would take possession of the arsenal in the name of the United States . 
+ The soldiers would be allowed safe passage in any direction carrying any personal and public property besides munitions of war . 
+ The soldiers would be allowed to march away as men leaving under orders , not as conquered and surrendering soldiers . 
+ On the morning of February 8 , 1861 , Rector and Totten signed an agreement placing the arsenal in the hands of state officials . That afternoon , the citizen militia marched to the arsenal with Governor Rector at its head . All of the federal troops had left at this point , except Totten who had stayed behind to listen to the Governor 's speech and to hand the arsenal over in person . 
+ The Little Rock Arsenal was classified in 1860 as an " arsenal of deposit , " meaning that it was simply a warehouse for the storage of weapons intended for the use of the state militia in times of crisis . Thus there were no substantial operations for ordnance fabrication or repairs , nor for the manufacture of cartridges at the time the Arsenal fell into State hands . Most of these operations were started from scratch through the efforts of the Arkansas Military Board . 
+ Inside the Little Rock Arsenal after its seizure in February , 1861 , the Confederates inventoried some 10 @,@ 247 weapons , 250 @,@ 000 musket cartridges , and 520 @,@ 000 percussion caps , as well as the four bronze cannon of Totten 's battery . Long arms in the Arsenal 's inventory consisted of : 
+ M1822 .69 cal ( flintlock ) 5 @,@ 625 
+ M1822 .69 cal ( percussion @-@ converted ) 53 
+ M1842 .69 cal smoothbore ( percussion ) 357 
+ M1855 .58 cal rifle @-@ muskets 900 
+ M1817 common rifles 125 
+ M1841 rifle ( " Mississippi Rifle " ) 54 
+ M1847 musketoon 2 
+ Hall 's carbines 267 
+ Hall 's rifles ( flintlock ) 2 @,@ 864 
+ Total 10 @,@ 247 
+ Of this number , approximately 9600 weapons were serviceable , or ready @-@ for @-@ issue . Note there were only 1 @,@ 364 percussion weapons available . Disposition of the weapons found in the Arsenal is somewhat sketchy , but from various records it can be surmised that the 5th , 6th , 7th , and 8th Arkansas Infantry Regiments , mustered in June , 1861 , were issued M1816 / M1822 .69 caliber flintlocks . The 9th and 10th Arkansas , four companies of Kelly 's 9th Arkansas Battalion , and the 3rd Arkansas Cavalry Regiment were issued flintlock Hall 's Rifles . The units comprising the infantry force of Van Dorn 's"
+Token ids (6484):
+ 
+(695)  =(283)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  =(283)  
+ 
+(30858)  Sen(5195) j(73) ō(53792)  no(874)  Valk(82224) y(88) ria(4065)  (220) 3(18)  :(535)  Un(1188) record(8286) ed(290)  Chronicles(63110)  ((318)  Japanese(10452)  :(535)  (220) 戦(246811) 場の(186427) ヴァ(184676) ル(31532) キュ(156333) リア(149877) 3(18)  ,(1116)  lit(12647)  .(641)  Valk(82224) y(88) ria(4065)  of(314)  the(279)  Battlefield(68245)  (220) 3(18)  )(847)  ,(1116)  commonly(16138)  referred(13464)  to(310)  as(430)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  outside(4732)  Japan(6124)  ,(1116)  is(369)  a(264)  tactical(37365)  role(3364)  @(554) -(12) @(31)  playing(5442)  video(2678)  game(1746)  developed(7633)  by(539)  Sega(77098)  and(321)  Media(7569) .V(4896) ision(1753)  for(364)  the(279)  PlayStation(30238)  Portable(40111)  .(641)  Released(43304)  in(303)  January(5869)  (220) 2(17) 0(15) 1(16) 1(16)  in(303)  Japan(6124)  ,(1116)  it(424)  is(369)  the(279)  third(4688)  game(1746)  in(303)  the(279)  Valk(82224) y(88) ria(4065)  series(3878)  .(641)  Employ(20148) ing(286)  the(279)  same(1788)  fusion(35302)  of(314)  tactical(37365)  and(321)  real(1865)  @(554) -(12) @(31)  time(854)  gameplay(25197)  as(430)  its(1141)  predecessors(59367)  ,(1116)  the(279)  story(3255)  runs(8213)  parallel(14835)  to(310)  the(279)  first(1118)  game(1746)  and(321)  follows(10695)  the(279)  "(328)  Name(3855) less(1657)  "(328)  ,(1116)  a(264)  penal(44782)  military(6079)  unit(4821)  serving(13092)  the(279)  nation(6777)  of(314)  Gall(24088) ia(667)  during(2261)  the(279)  Second(10130)  Euro(18870) pan(822)  War(4843)  who(852)  perform(2649)  secret(6038)  black(3565)  operations(7289)  and(321)  are(513)  p(280) itted(3634)  against(2272)  the(279)  Imperial(28936)  unit(4821)  "(328)  Cal(3210) amat(40529) y(88)  Raven(43601)  "(328)  .(641)  
+(695)  The(561)  game(1746)  began(5820)  development(4257)  in(303)  (220) 2(17) 0(15) 1(16) 0(15)  ,(1116)  carrying(14885)  over(888)  a(264)  large(3349)  portion(12961)  of(314)  the(279)  work(944)  done(2725)  on(383)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  .(641)  While(5788)  it(424)  retained(33129)  the(279)  standard(5129)  features(4275)  of(314)  the(279)  series(3878)  ,(1116)  it(424)  also(1048)  underwent(52181)  multiple(5081)  adjustments(31881)  ,(1116)  such(1680)  as(430)  making(3154)  the(279)  game(1746)  more(777)  forgiving(89153)  for(364)  series(3878)  newcomers(65180)  .(641)  Character(15174)  designer(14268)  R(423) ait(1269) a(64)  Hon(16061) jou(192638)  and(321)  composer(38144)  Hit(15414) oshi(30799)  Sak(37485) imoto(92832)  both(2107)  returned(5743)  from(494)  previous(3555)  entries(10379)  ,(1116)  along(3055)  with(440)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  director(7300)  Takes(36363) hi(5834)  Oz(34427) awa(13674)  .(641)  A(357)  large(3349)  team(2015)  of(314)  writers(15620)  handled(17083)  the(279)  script(5148)  .(641)  The(561)  game(1746)  '(359) s(82)  opening(8306)  theme(6697)  was(557)  sung(38038)  by(539)  May(3114)  '(359) n(77)  .(641)  
+(695)  It(1049)  met(2197)  with(440)  positive(6572)  sales(6416)  in(303)  Japan(6124)  ,(1116)  and(321)  was(557)  praised(35172)  by(539)  both(2107)  Japanese(10452)  and(321)  western(17942)  critics(21993)  .(641)  After(4486)  release(4722)  ,(1116)  it(424)  received(3816)  downloadable(67292)  content(2144)  ,(1116)  along(3055)  with(440)  an(449)  expanded(16676)  edition(13295)  in(303)  November(6492)  of(314)  that(421)  year(1007)  .(641)  It(1049)  was(557)  also(1048)  adapted(28404)  into(1083)  manga(33116)  and(321)  an(449)  original(3889)  video(2678)  animation(10047)  series(3878)  .(641)  Due(22921)  to(310)  low(3238)  sales(6416)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  was(557)  not(524)  localized(42051)  ,(1116)  but(694)  a(264)  fan(8145)  translation(14053)  compatible(17606)  with(440)  the(279)  game(1746)  '(359) s(82)  expanded(16676)  edition(13295)  was(557)  released(5698)  in(303)  (220) 2(17) 0(15) 1(16) 4(19)  .(641)  Media(7569) .V(4896) ision(1753)  would(1000)  return(460)  to(310)  the(279)  franchise(18451)  with(440)  the(279)  development(4257)  of(314)  Valk(82224) y(88) ria(4065)  :(535)  Azure(32990)  Revolution(21440)  for(364)  the(279)  PlayStation(30238)  (220) 4(19)  .(641)  
+ 
+(30858)  =(283)  =(283)  Gameplay(82932)  =(283)  =(283)  
+ 
+(30858)  As(1577)  with(440)  previous(3555)  Valk(82224) y(88) ira(8565)  Chronicles(63110)  games(3739)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  is(369)  a(264)  tactical(37365)  role(3364)  @(554) -(12) @(31)  playing(5442)  game(1746)  where(1332)  players(4078)  take(1831)  control(2444)  of(314)  a(264)  military(6079)  unit(4821)  and(321)  take(1831)  part(919)  in(303)  missions(23864)  against(2272)  enemy(8902)  forces(8177)  .(641)  Stories(28082)  are(513)  told(3125)  through(1472)  comic(19122)  book(2236)  @(554) -(12) @(31)  like(1040)  panels(20631)  with(440)  animated(11043)  character(3542)  portraits(56182)  ,(1116)  with(440)  characters(5587)  speaking(11750)  partially(24443)  through(1472)  voiced(49640)  speech(8540)  bubbles(42237)  and(321)  partially(24443)  through(1472)  un(632) vo(3225) iced(7332)  text(1414)  .(641)  The(561)  player(2693)  progresses(65332)  through(1472)  a(264)  series(3878)  of(314)  linear(13094)  missions(23864)  ,(1116)  gradually(25193)  unlocked(34441)  as(430)  maps(13640)  that(421)  can(628)  be(381)  freely(24765)  scanned(45867)  through(1472)  and(321)  replay(33341) ed(290)  as(430)  they(781)  are(513)  unlocked(34441)  .(641)  The(561)  route(5832)  to(310)  each(1754)  story(3255)  location(3602)  on(383)  the(279)  map(2336)  varies(33094)  depending(11313)  on(383)  an(449)  individual(3714)  player(2693)  '(359) s(82)  approach(5313)  :(535)  when(948)  one(799)  option(2904)  is(369)  selected(3955)  ,(1116)  the(279)  other(975)  is(369)  sealed(18473)  off(974)  to(310)  the(279)  player(2693)  .(641)  Outside(39792)  missions(23864)  ,(1116)  the(279)  player(2693)  characters(5587)  rest(2645)  in(303)  a(264)  camp(3013)  ,(1116)  where(1332)  units(7896)  can(628)  be(381)  customized(30650)  and(321)  character(3542)  growth(6310)  occurs(13273)  .(641)  Along(30798) side(2835)  the(279)  main(1822)  story(3255)  missions(23864)  are(513)  character(3542)  @(554) -(12) @(31)  specific(3050)  sub(1146)  missions(23864)  relating(21827)  to(310)  different(2086)  squad(17975)  members(3492)  .(641)  After(4486)  the(279)  game(1746)  '(359) s(82)  completion(9463)  ,(1116)  additional(4945)  episodes(17240)  are(513)  unlocked(34441)  ,(1116)  some(1010)  of(314)  them(1070)  having(3322)  a(264)  higher(4918)  difficulty(16337)  than(1056)  those(1782)  found(1669)  in(303)  the(279)  rest(2645)  of(314)  the(279)  game(1746)  .(641)  There(2532)  are(513)  also(1048)  love(2854)  simulation(18465)  elements(5255)  related(5265)  to(310)  the(279)  game(1746)  '(359) s(82)  two(1330)  main(1822)  hero(11482) ines(1489)  ,(1116)  although(7643)  they(781)  take(1831)  a(264)  very(1546)  minor(8652)  role(3364)  .(641)  
+(695)  The(561)  game(1746)  '(359) s(82)  battle(7796)  system(1785)  ,(1116)  the(279)  B(417) li(719) TZ(87314)  system(1785)  ,(1116)  is(369)  carried(11354)  over(888)  directly(5774)  from(494)  Valk(82224) y(88) ira(8565)  Chronicles(63110)  .(641)  During(11615)  missions(23864)  ,(1116)  players(4078)  select(3186)  each(1754)  unit(4821)  using(1608)  a(264)  top(1844)  @(554) -(12) @(31)  down(1441)  perspective(12682)  of(314)  the(279)  battlefield(36150)  map(2336)  :(535)  once(2957)  a(264)  character(3542)  is(369)  selected(3955)  ,(1116)  the(279)  player(2693)  moves(10480)  the(279)  character(3542)  around(2094)  the(279)  battlefield(36150)  in(303)  third(4688)  @(554) -(12) @(31)  person(1637)  .(641)  A(357)  character(3542)  can(628)  only(1132)  act(1121)  once(2957)  per(791)  @(554) -(12) @(31)  turn(2404)  ,(1116)  but(694)  characters(5587)  can(628)  be(381)  granted(11340)  multiple(5081)  turns(10263)  at(506)  the(279)  expense(19668)  of(314)  other(975)  characters(5587)  '(359)  turns(10263)  .(641)  Each(8618)  character(3542)  has(682)  a(264)  field(2002)  and(321)  distance(5821)  of(314)  movement(6977)  limited(6973)  by(539)  their(836)  Action(5411)  Gauge(69612)  .(641)  Up(3038)  to(310)  nine(11292)  characters(5587)  can(628)  be(381)  assigned(12244)  to(310)  a(264)  single(3074)  mission(8684)  .(641)  During(11615)  gameplay(25197)  ,(1116)  characters(5587)  will(668)  call(1562)  out(680)  if(413)  something(2414)  happens(8311)  to(310)  them(1070)  ,(1116)  such(1680)  as(430)  their(836)  health(2730)  points(3387)  ((318)  HP(11852)  )(847)  getting(3583)  low(3238)  or(466)  being(1602)  knocked(30932)  out(680)  by(539)  enemy(8902)  attacks(8511)  .(641)  Each(8618)  character(3542)  has(682)  specific(3050)  "(328)  Pot(13312) entials(8216)  "(328)  ,(1116)  skills(7129)  unique(4752)  to(310)  each(1754)  character(3542)  .(641)  They(2302)  are(513)  divided(17249)  into(1083)  "(328)  Personal(18627)  Potential(52145)  "(328)  ,(1116)  which(864)  are(513)  innate(61811)  skills(7129)  that(421)  remain(6922)  un(632) al(278) tered(32058)  unless(7014)  otherwise(5752)  dictated(77627)  by(539)  the(279)  story(3255)  and(321)  can(628)  either(2892)  help(1438)  or(466)  imp(3062) ede(14880)  a(264)  character(3542)  ,(1116)  and(321)  "(328)  Battle(15641)  Pot(13312) entials(8216)  "(328)  ,(1116)  which(864)  are(513)  grown(14276)  throughout(6600)  the(279)  game(1746)  and(321)  always(2590)  grant(12816)  bo(688) ons(2305)  to(310)  a(264)  character(3542)  .(641)  To(1946)  learn(3827)  Battle(15641)  Pot(13312) entials(8216)  ,(1116)  each(1754)  character(3542)  has(682)  a(264)  unique(4752)  "(328)  Masters(32509)  Table(6424)  "(328)  ,(1116)  a(264)  grid(5646)  @(554) -(12) @(31)  based(3018)  skill(9653)  table(1898)  that(421)  can(628)  be(381)  used(1429)  to(310)  acquire(20604)  and(321)  link(2569)  different(2086)  skills(7129)  .(641)  Characters(43038)  also(1048)  have(599)  Special(9493)  Abilities(76649)  that(421)  grant(12816)  them(1070)  temporary(12955)  boosts(63900)  on(383)  the(279)  battlefield(36150)  :(535)  Kurt(41504)  can(628)  activate(19660)  "(328)  Direct(6916)  Command(7117)  "(328)  and(321)  move(3166)  around(2094)  the(279)  battlefield(36150)  without(1973)  de(401) ple(675) ting(1235)  his(780)  Action(5411)  Point(4963)  gauge(29877)  ,(1116)  the(279)  character(3542)  Re(997) ila(10211)  can(628)  shift(6206)  into(1083)  her(1024)  "(328)  Valk(82224) y(88) ria(4065)  Form(3268)  "(328)  and(321)  become(3512)  inv(1475) incible(74244)  ,(1116)  while(1345)  Im(2285) ca(895)  can(628)  target(2100)  multiple(5081)  enemy(8902)  units(7896)  with(440)  her(1024)  heavy(8545)  weapon(9982)  .(641)  
+(695)  Tro(18737) ops(3595)  are(513)  divided(17249)  into(1083)  five(4097)  classes(6632)  :(535)  Scouts(66961)  ,(1116)  Shock(45414) tro(31371) opers(49368)  ,(1116)  Engineers(47070)  ,(1116)  L(436) ancers(30700)  and(321)  Arm(12618) ored(2922)  Soldier(50665)  .(641)  Tro(18737) opers(49368)  can(628)  switch(3289)  classes(6632)  by(539)  changing(9722)  their(836)  assigned(12244)  weapon(9982)  .(641)  Changing(48483)  class(523)  does(1503)  not(524)  greatly(18305)  affect(7556)  the(279)  stats(10159)  gained(17622)  while(1345)  in(303)  a(264)  previous(3555)  class(523)  .(641)  With(2985)  victory(12200)  in(303)  battle(7796)  ,(1116)  experience(3039)  points(3387)  are(513)  awarded(20672)  to(310)  the(279)  squad(17975)  ,(1116)  which(864)  are(513)  distributed(4098)  into(1083)  five(4097)  different(2086)  attributes(7944)  shared(5904)  by(539)  the(279)  entire(4307)  squad(17975)  ,(1116)  a(264)  feature(4416)  differing(58333)  from(494)  early(3988)  games(3739)  '(359)  method(1654)  of(314)  distributing(48039)  to(310)  different(2086)  unit(4821)  types(4346)  .(641)  
+ 
+(30858)  =(283)  =(283)  Plot(25201)  =(283)  =(283)  
+ 
+(30858)  The(561)  game(1746)  takes(4829)  place(1925)  during(2261)  the(279)  Second(10130)  Euro(18870) pan(822)  War(4843)  .(641)  Gall(24088) ian(1068)  Army(12638)  Squad(33559)  (220) 4(19) 2(17) 2(17)  ,(1116)  also(1048)  known(3750)  as(430)  "(328)  The(561)  Name(3855) less(1657)  "(328)  ,(1116)  are(513)  a(264)  penal(44782)  military(6079)  unit(4821)  composed(22687)  of(314)  criminals(30500)  ,(1116)  foreign(6988)  desert(22865) ers(382)  ,(1116)  and(321)  military(6079)  offenders(39263)  whose(6483)  real(1865)  names(4874)  are(513)  erased(61551)  from(494)  the(279)  records(7189)  and(321)  there(1017) on(263)  officially(18003)  referred(13464)  to(310)  by(539)  numbers(4947)  .(641)  Ordered(38269)  by(539)  the(279)  Gall(24088) ian(1068)  military(6079)  to(310)  perform(2649)  the(279)  most(1379)  dangerous(11078)  missions(23864)  that(421)  the(279)  Regular(27858)  Army(12638)  and(321)  Milit(64917) ia(667)  will(668)  not(524)  do(635)  ,(1116)  they(781)  are(513)  nevertheless(35999)  up(685)  to(310)  the(279)  task(3274)  ,(1116)  exempl(36687) ified(1806)  by(539)  their(836)  motto(60227)  ,(1116)  Alt(22941) aha(13154)  Ab(3554) ilia(23324)  ,(1116)  meaning(7063)  "(328)  Always(22516)  Ready(29965)  .(641)  "(328)  The(561)  three(2250)  main(1822)  characters(5587)  are(513)  No(2233) .(13) 7(22)  Kurt(41504)  Irving(53356)  ,(1116)  an(449)  army(13003)  officer(9173)  falsely(58320)  accused(12803)  of(314)  treason(75576)  who(852)  wishes(23479)  to(310)  redeem(47146)  himself(5387)  ;(2502)  Ace(36459)  No(2233) .(13) 1(16)  Im(2285) ca(895)  ,(1116)  a(264)  female(8513)  Dar(14581) cs(4682) en(268)  heavy(8545)  weapons(9600)  specialist(23011)  who(852)  seeks(24836)  revenge(34875)  against(2272)  the(279)  Valk(82224) y(88) ria(4065)  who(852)  destroyed(14012)  her(1024)  home(2046)  ;(2502)  and(321)  No(2233) .(13) 1(16) 3(18)  Ri(49988) ela(8036)  Mar(2783) cell(5691) is(284)  ,(1116)  a(264)  seemingly(21957)  j(492) inx(19404) ed(290)  young(3777)  woman(5054)  who(852)  is(369)  unknow(80663) ingly(10980)  a(264)  descendant(73260)  of(314)  the(279)  Valk(82224) y(88) ria(4065)  .(641)  Together(30135)  with(440)  their(836)  fellow(12004)  squad(17975)  members(3492)  ,(1116)  these(1439)  three(2250)  are(513)  tasked(49110)  to(310)  fight(4226)  against(2272)  a(264)  mysterious(24577)  Imperial(28936)  unit(4821)  known(3750)  as(430)  Cal(3210) am(308) ity(477)  Raven(43601)  ,(1116)  consisting(29607)  of(314)  mostly(9712)  Dar(14581) cs(4682) en(268)  soldiers(14426)  .(641)  
+(695)  As(1577)  the(279)  Name(3855) less(1657)  officially(18003)  do(635)  not(524)  exist(2905)  ,(1116)  the(279)  upper(8156)  ech(29859) el(300) ons(2305)  of(314)  the(279)  Gall(24088) ian(1068)  Army(12638)  exploit(31133)  the(279)  concept(7059)  of(314)  plausible(47675)  den(3262) iability(75656)  in(303)  order(1906)  to(310)  send(3502)  them(1070)  on(383)  missions(23864)  that(421)  would(1000)  otherwise(5752)  make(1236)  Gall(24088) ia(667)  lose(8779)  face(3460)  in(303)  the(279)  war(3980)  .(641)  While(5788)  at(506)  times(2942)  this(411)  works(4138)  to(310)  their(836)  advantage(9144)  ,(1116)  such(1680)  as(430)  a(264)  successful(6635)  inc(3503) ursion(33146)  into(1083)  Imperial(28936)  territory(17435)  ,(1116)  other(975)  orders(9861)  cause(5073)  certain(3529)  members(3492)  of(314)  the(279)  (220) 4(19) 2(17) 2(17) nd(302)  great(2172)  distress(32877)  .(641)  One(3648)  such(1680)  member(4314)  ,(1116)  Gus(78575) urg(5382)  ,(1116)  becomes(8772)  so(748)  enraged(93844)  that(421)  he(551)  aband(165691) ons(2305)  his(780)  post(1675)  and(321)  defects(40181)  into(1083)  the(279)  ranks(20169)  of(314)  Cal(3210) am(308) ity(477)  Raven(43601)  ,(1116)  attached(12037)  to(310)  the(279)  ideal(10194)  of(314)  Dar(14581) cs(4682) en(268)  independence(22924)  proposed(10660)  by(539)  their(836)  leader(7410)  ,(1116)  Dah(72725) au(2770)  .(641)  At(2332)  the(279)  same(1788)  time(854)  ,(1116)  elements(5255)  within(2785)  Gall(24088) ian(1068)  Army(12638)  Command(7117)  move(3166)  to(310)  erase(34795)  the(279)  Name(3855) less(1657)  in(303)  order(1906)  to(310)  protect(5827)  their(836)  own(1765)  interests(11435)  .(641)  H(462) ounded(12705)  by(539)  both(2107)  allies(19507)  and(321)  enemies(13484)  ,(1116)  and(321)  combined(10539)  with(440)  the(279)  presence(9084)  of(314)  a(264)  trait(17043) or(269)  within(2785)  their(836)  ranks(20169)  ,(1116)  the(279)  (220) 4(19) 2(17) 2(17) nd(302)  desperately(36300)  move(3166)  to(310)  keep(2426)  themselves(5402)  alive(13282)  while(1345)  at(506)  the(279)  same(1788)  time(854)  fight(4226)  to(310)  help(1438)  the(279)  Gall(24088) ian(1068)  war(3980)  effort(4879)  .(641)  This(1061)  continues(9257)  until(2980)  the(279)  Name(3855) less(1657)  '(359) s(82)  commanding(62168)  officer(9173)  ,(1116)  Ramsey(62365)  Crow(26031) e(68)  ,(1116)  who(852)  had(995)  been(978)  kept(8341)  under(1172)  house(3626)  arrest(7753)  ,(1116)  is(369)  escorted(73938)  to(310)  the(279)  capital(6511)  city(3177)  of(314)  Rand(23215) gr(873) iz(441)  in(303)  order(1906)  to(310)  present(2945)  evidence(5721)  ex(495) oner(25728) ating(1060)  the(279)  weary(72978)  soldiers(14426)  and(321)  expose(27228)  the(279)  real(1865)  trait(17043) or(269)  ,(1116)  the(279)  Gall(24088) ian(1068)  General(3146)  that(421)  had(995)  accused(12803)  Kurt(41504)  of(314)  Tre(12118) ason(1443)  .(641)  
+(695)  Part(3534) ly(391)  due(4016)  to(310)  these(1439)  events(4216)  ,(1116)  and(321)  partly(26170)  due(4016)  to(310)  the(279)  major(3478)  losses(17157)  in(303)  manpower(92456)  Gall(24088) ia(667)  suffers(44875)  towards(6757)  the(279)  end(809)  of(314)  the(279)  war(3980)  with(440)  the(279)  Empire(19825)  ,(1116)  the(279)  Name(3855) less(1657)  are(513)  offered(8632)  a(264)  formal(15440)  position(2234)  as(430)  a(264)  squad(17975)  in(303)  the(279)  Gall(24088) ian(1068)  Army(12638)  rather(4598)  than(1056)  serve(8418)  as(430)  an(449)  anonymous(21464)  shadow(12098)  force(5176)  .(641)  This(1061)  is(369)  short(2716)  @(554) -(12) @(31)  lived(11815)  ,(1116)  however(4611)  ,(1116)  as(430)  following(2614)  Maxim(53661) ilian(65785)  '(359) s(82)  defeat(17480)  ,(1116)  Dah(72725) au(2770)  and(321)  Cal(3210) am(308) ity(477)  Raven(43601)  move(3166)  to(310)  activate(19660)  an(449)  ancient(13437)  Valk(82224) y(88) rian(7039)  super(2184)  weapon(9982)  within(2785)  the(279)  Empire(19825)  ,(1116)  kept(8341)  secret(6038)  by(539)  their(836)  benef(4039) actor(5444)  .(641)  Without(16643)  the(279)  support(1761)  of(314)  Maxim(53661) ilian(65785)  or(466)  the(279)  chance(5823)  to(310)  prove(11774)  themselves(5402)  in(303)  the(279)  war(3980)  with(440)  Gall(24088) ia(667)  ,(1116)  it(424)  is(369)  Dah(72725) au(2770)  '(359) s(82)  last(1483)  trump(36797)  card(3575)  in(303)  creating(6611)  a(264)  new(491)  Dar(14581) cs(4682) en(268)  nation(6777)  .(641)  As(1577)  an(449)  armed(16929)  Gall(24088) ian(1068)  force(5176)  invading(79686)  the(279)  Empire(19825)  just(1066)  following(2614)  the(279)  two(1330)  nations(16185)  '(359)  cease(30479)  @(554) -(12) @(31)  fire(3807)  would(1000)  certainly(7590)  wreck(34565)  their(836)  newfound(90300)  peace(8649)  ,(1116)  Kurt(41504)  decides(26731)  to(310)  once(2957)  again(1495)  make(1236)  his(780)  squad(17975)  the(279)  Name(3855) less(1657)  ,(1116)  asking(9859)  Crow(26031) e(68)  to(310)  list(1103)  himself(5387)  and(321)  all(660)  under(1172)  his(780)  command(3108)  as(430)  killed(7190)  @(554) -(12) @(31)  in(303)  @(554) -(12) @(31)  action(1852)  .(641)  Now(4543)  owing(53648)  allegiance(64715)  to(310)  none(6643)  other(975)  than(1056)  themselves(5402)  ,(1116)  the(279)  (220) 4(19) 2(17) 2(17) nd(302)  confront(16383) s(82)  Dah(72725) au(2770)  and(321)  destroys(57716)  the(279)  Valk(82224) y(88) rian(7039)  weapon(9982)  .(641)  Each(8618)  member(4314)  then(1179)  goes(5601)  their(836)  separate(8387)  ways(5337)  in(303)  order(1906)  to(310)  begin(3060)  their(836)  lives(6107)  anew(89107)  .(641)  
+ 
+(30858)  =(283)  =(283)  Development(10499)  =(283)  =(283)  
+ 
+(30858)  Concept(33214)  work(944)  for(364)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  began(5820)  after(1238)  development(4257)  finished(7807)  on(383)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  in(303)  early(3988)  (220) 2(17) 0(15) 1(16) 0(15)  ,(1116)  with(440)  full(2400)  development(4257)  beginning(6941)  shortly(19020)  after(1238)  this(411)  .(641)  The(561)  director(7300)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  ,(1116)  Takes(36363) hi(5834)  Oz(34427) awa(13674)  ,(1116)  returned(5743)  to(310)  that(421)  role(3364)  for(364)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  .(641)  Development(10499)  work(944)  took(3738)  approximately(12805)  one(799)  year(1007)  .(641)  After(4486)  the(279)  release(4722)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  ,(1116)  the(279)  staff(5395)  took(3738)  a(264)  look(1353)  at(506)  both(2107)  the(279)  popular(5243)  response(1965)  for(364)  the(279)  game(1746)  and(321)  what(1092)  they(781)  wanted(4674)  to(310)  do(635)  next(1727)  for(364)  the(279)  series(3878)  .(641)  Like(8639)  its(1141)  predecessor(37877)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  was(557)  developed(7633)  for(364)  PlayStation(30238)  Portable(40111)  :(535)  this(411)  was(557)  due(4016)  to(310)  the(279)  team(2015)  wanting(18631)  to(310)  refine(43850)  the(279)  mechanics(28079)  created(3354)  for(364)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  ,(1116)  and(321)  they(781)  had(995)  not(524)  come(2445)  up(685)  with(440)  the(279)  "(328)  revolutionary(28140)  "(328)  idea(4374)  that(421)  would(1000)  warrant(6870)  a(264)  new(491)  entry(4202)  for(364)  the(279)  PlayStation(30238)  (220) 3(18)  .(641)  Speaking(42516)  in(303)  an(449)  interview(6906)  ,(1116)  it(424)  was(557)  stated(10661)  that(421)  the(279)  development(4257)  team(2015)  considered(6306)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  to(310)  be(381)  the(279)  series(3878)  '(359)  first(1118)  true(804)  sequel(33612)  :(535)  while(1345)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  had(995)  required(2483)  a(264)  large(3349)  amount(3202)  of(314)  trial(8818)  and(321)  error(1412)  during(2261)  development(4257)  due(4016)  to(310)  the(279)  platform(5171)  move(3166)  ,(1116)  the(279)  third(4688)  game(1746)  gave(6348)  them(1070)  a(264)  chance(5823)  to(310)  improve(7042)  upon(5028)  the(279)  best(1786)  parts(5306)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  due(4016)  to(310)  being(1602)  on(383)  the(279)  same(1788)  platform(5171)  .(641)  In(733)  addition(5089)  to(310)  Sega(77098)  staff(5395)  from(494)  the(279)  previous(3555)  games(3739)  ,(1116)  development(4257)  work(944)  was(557)  also(1048)  handled(17083)  by(539)  Media(7569) .V(4896) ision(1753) .(13)  The(561)  original(3889)  scenario(14611)  was(557)  written(5158)  Kaz(33817) uki(20846)  Y(783) aman(12350) obe(14972)  ,(1116)  while(1345)  the(279)  script(5148)  was(557)  written(5158)  by(539)  Hi(20375) roy(3243) uki(20846)  Fuj(60172) ii(3680)  ,(1116)  Ko(28358) ichi(39213)  Maj(29678) ima(7287)  ,(1116)  K(710) ish(786) iko(22891)  Miy(64216) agi(34841)  ,(1116)  Se(1297) iki(7330)  Nag(28113) ak(570) awa(13674)  and(321)  Tak(32187) ay(347) uki(20846)  Sh(1369) ou(282) ji(7508)  .(641)  Its(11116)  story(3255)  was(557)  darker(37737)  and(321)  more(777)  som(1695) ber(634)  than(1056)  that(421)  of(314)  its(1141)  predecessor(37877)  .(641)  
+(695)  The(561)  majority(8421)  of(314)  material(3558)  created(3354)  for(364)  previous(3555)  games(3739)  ,(1116)  such(1680)  as(430)  the(279)  BL(14420) iT(80706) Z(57)  system(1785)  and(321)  the(279)  design(2790)  of(314)  maps(13640)  ,(1116)  was(557)  carried(11354)  over(888)  .(641)  Along(30798) side(2835)  this(411)  ,(1116)  improvements(17602)  were(998)  made(1801)  to(310)  the(279)  game(1746)  '(359) s(82)  graphics(13775)  and(321)  some(1010)  elements(5255)  were(998)  expanded(16676)  ,(1116)  such(1680)  as(430)  map(2336)  layouts(47410)  ,(1116)  mission(8684)  structure(5759)  ,(1116)  and(321)  the(279)  number(1324)  of(314)  playable(49316)  units(7896)  per(791)  mission(8684)  .(641)  A(357)  part(919)  of(314)  this(411)  upgrade(13511)  involved(6197)  creating(6611)  unique(4752)  polygon(28412)  models(3983)  for(364)  each(1754)  character(3542)  '(359) s(82)  body(2407)  .(641)  In(733)  order(1906)  to(310)  achieve(10752)  this(411)  ,(1116)  the(279)  cooperative(45883)  elements(5255)  incorporated(30623)  into(1083)  the(279)  second(2018)  game(1746)  were(998)  removed(6747)  ,(1116)  as(430)  they(781)  took(3738)  up(685)  a(264)  large(3349)  portion(12961)  of(314)  memory(4779)  space(3433)  needed(4221)  for(364)  the(279)  improvements(17602)  .(641)  They(2302)  also(1048)  adjusted(22643)  the(279)  difficulty(16337)  settings(4842)  and(321)  ease(13813)  of(314)  play(1432)  so(748)  they(781)  could(1362)  appeal(13893)  to(310)  new(491)  players(4078)  while(1345)  retaining(48326)  the(279)  essential(7326)  components(6599)  of(314)  the(279)  series(3878)  '(359)  gameplay(25197)  .(641)  The(561)  newer(24733)  systems(5757)  were(998)  decided(6426)  upon(5028)  early(3988)  in(303)  development(4257)  .(641)  The(561)  character(3542)  designs(14018)  were(998)  done(2725)  by(539)  R(423) ait(1269) a(64)  Hon(16061) jou(192638)  ,(1116)  who(852)  had(995)  worked(6237)  on(383)  the(279)  previous(3555)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  games(3739)  .(641)  When(3095)  creating(6611)  the(279)  Name(3855) less(1657)  Squad(33559)  ,(1116)  Hon(16061) jou(192638)  was(557)  faced(16113)  with(440)  the(279)  same(1788)  problem(3377)  he(551)  had(995)  had(995)  during(2261)  the(279)  first(1118)  game(1746)  :(535)  the(279)  military(6079)  uniforms(42666)  essentially(15327)  destroyed(14012)  character(3542)  individual(3714) ity(477)  ,(1116)  despite(8552)  him(1384)  needing(31733)  to(310)  create(1791)  unique(4752)  characters(5587)  the(279)  player(2693)  could(1362)  identify(10229)  while(1345)  maintaining(19720)  a(264)  sense(5357)  of(314)  reality(8464)  within(2785)  the(279)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  world(1814)  .(641)  The(561)  main(1822)  color(1829)  of(314)  the(279)  Name(3855) less(1657)  was(557)  black(3565)  .(641)  As(1577)  with(440)  the(279)  previous(3555)  Valk(82224) y(88) ria(4065)  games(3739)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  used(1429)  the(279)  CAN(18916) VAS(60182)  graphics(13775)  engine(4560)  .(641)  The(561)  anime(22099)  opening(8306)  was(557)  produced(8677)  by(539)  Production(23288)  I(353) .G(1182) .(13)  
+ 
+(30858)  =(283)  =(283)  =(283)  Music(10401)  =(283)  =(283)  =(283)  
+ 
+(30858)  The(561)  music(4477)  was(557)  composed(22687)  by(539)  Hit(15414) oshi(30799)  Sak(37485) imoto(92832)  ,(1116)  who(852)  had(995)  also(1048)  worked(6237)  on(383)  the(279)  previous(3555)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  games(3739)  .(641)  When(3095)  he(551)  originally(12830)  heard(6408)  about(883)  the(279)  project(2313)  ,(1116)  he(551)  thought(3272)  it(424)  would(1000)  be(381)  a(264)  light(3000)  tone(15754)  similar(4283)  to(310)  other(975)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  games(3739)  ,(1116)  but(694)  found(1669)  the(279)  themes(20730)  much(1691)  darker(37737)  than(1056)  expected(3481)  .(641)  An(1473)  early(3988)  theme(6697)  he(551)  designed(5995)  around(2094)  his(780)  original(3889)  vision(10806)  of(314)  the(279)  project(2313)  was(557)  rejected(17030)  .(641)  He(1216)  red(2438) id(306)  the(279)  main(1822)  theme(6697)  about(883)  seven(7840)  times(2942)  through(1472)  the(279)  music(4477)  production(5492)  due(4016)  to(310)  this(411)  need(1144)  to(310)  reass(30692) ess(425)  the(279)  game(1746)  .(641)  The(561)  main(1822)  theme(6697)  was(557)  initially(14661)  recorded(12076)  using(1608)  orchestra(65758)  ,(1116)  then(1179)  Sak(37485) imoto(92832)  removed(6747)  elements(5255)  such(1680)  as(430)  the(279)  guitar(16488)  and(321)  bass(20869)  ,(1116)  then(1179)  adjusted(22643)  the(279)  theme(6697)  using(1608)  a(264)  synthes(49564) izer(3035)  before(1518)  redo(55979) ing(286)  segments(20006)  such(1680)  as(430)  the(279)  guitar(16488)  piece(6365)  on(383)  their(836)  own(1765)  before(1518)  incorporating(50069)  them(1070)  into(1083)  the(279)  theme(6697)  .(641)  The(561)  rejected(17030)  main(1822)  theme(6697)  was(557)  used(1429)  as(430)  a(264)  hopeful(36307)  tune(24439)  that(421)  played(6141)  during(2261)  the(279)  game(1746)  '(359) s(82)  ending(13004)  .(641)  The(561)  battle(7796)  themes(20730)  were(998)  designed(5995)  around(2094)  the(279)  concept(7059)  of(314)  a(264)  "(328)  modern(6278)  battle(7796)  "(328)  divorced(47828)  from(494)  a(264)  fantasy(17832)  scenario(14611)  by(539)  using(1608)  modern(6278)  musical(17264)  instruments(22591)  ,(1116)  constructed(19729)  to(310)  create(1791)  a(264)  sense(5357)  of(314)  at(506) on(263) ality(2632)  .(641)  While(5788)  Sak(37485) imoto(92832)  was(557)  most(1379)  used(1429)  to(310)  working(3133)  with(440)  synthesized(87871)  music(4477)  ,(1116)  he(551)  felt(6273)  that(421)  he(551)  needed(4221)  to(310)  incorporate(31268)  live(3756)  instruments(22591)  such(1680)  as(430)  orchestra(65758)  and(321)  guitar(16488)  .(641)  The(561)  guitar(16488)  was(557)  played(6141)  by(539)  M(380) itsu(47891) hiro(82201)  O(496) hta(73218)  ,(1116)  who(852)  also(1048)  arranged(26899)  several(3679)  of(314)  the(279)  later(2843)  tracks(13518)  .(641)  The(561)  game(1746)  '(359) s(82)  opening(8306)  theme(6697)  song(5319)  ,(1116)  "(328)  If(1368)  You(1394)  Wish(36400)  for(364)  ...(2423)  "(328)  ((318)  もし(197392) も(30831) 君(98979) が(27279) 願(101205) う(28242) のなら(219174)  ,(1116)  M(380) osh(8992) imo(11038)  Kim(13120) i(72)  ga(13121)  N(443) ega(10863) uno(15832)  N(443) ara(4897)  )(847)  ,(1116)  was(557)  sung(38038)  by(539)  Japanese(10452)  singer(22049)  May(3114)  '(359) n(77)  .(641)  Its(11116)  theme(6697)  was(557)  the(279)  reason(2781)  soldiers(14426)  fought(19839)  ,(1116)  in(303)  particular(3820)  their(836)  wish(6224)  to(310)  protect(5827)  what(1092)  was(557)  precious(25556)  to(310)  them(1070)  rather(4598)  than(1056)  a(264)  sense(5357)  of(314)  responsibility(11415)  or(466)  duty(13783)  .(641)  Its(11116)  lyrics(22537)  were(998)  written(5158)  by(539)  Se(1297) iko(22891)  Fuj(60172) ib(564) ay(347) ashi(29389)  ,(1116)  who(852)  had(995)  worked(6237)  on(383)  May(3114)  '(359) n(77)  on(383)  previous(3555)  singles(16878)  .(641)  
+ 
+(30858)  =(283)  =(283)  =(283)  Release(16870)  =(283)  =(283)  =(283)  
+ 
+(30858)  In(733)  September(5930)  (220) 2(17) 0(15) 1(16) 0(15)  ,(1116)  a(264)  teaser(67195)  website(3779)  was(557)  revealed(10144)  by(539)  Sega(77098)  ,(1116)  hint(12639) ing(286)  at(506)  a(264)  new(491)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  game(1746)  .(641)  In(733)  its(1141)  September(5930)  issue(4125)  ,(1116)  Fam(32489) itsu(47891)  listed(9711)  that(421)  Sen(5195) j(73) ō(53792)  no(874)  Valk(82224) y(88) ria(4065)  (220) 3(18)  would(1000)  be(381)  arriving(30957)  on(383)  the(279)  PlayStation(30238)  Portable(40111)  .(641)  Its(11116)  first(1118)  public(569)  appearance(10771)  was(557)  at(506)  the(279)  (220) 2(17) 0(15) 1(16) 0(15)  Tokyo(25358)  Game(3914)  Show(6712)  ((318)  T(345) GS(16035)  )(847)  ,(1116)  where(1332)  a(264)  demo(16171)  was(557)  made(1801)  available(2420)  for(364)  journalists(21832)  and(321)  attendees(37888)  .(641)  During(11615)  the(279)  publicity(41248)  ,(1116)  story(3255)  details(3447)  were(998)  kept(8341)  scant(80962)  so(748)  as(430)  not(524)  to(310)  spoil(62600)  too(2166)  much(1691)  for(364)  potential(4499)  players(4078)  ,(1116)  along(3055)  with(440)  some(1010)  of(314)  its(1141)  content(2144)  still(1990)  being(1602)  in(303)  flux(29317)  at(506)  the(279)  time(854)  of(314)  its(1141)  reveal(15919)  .(641)  To(1946)  promote(11587)  the(279)  game(1746)  and(321)  detail(7472)  the(279)  story(3255)  leading(6187)  into(1083)  the(279)  game(1746)  '(359) s(82)  events(4216)  ,(1116)  an(449)  epis(64249) odic(50985)  Flash(16753)  visual(8851)  novel(11183)  written(5158)  by(539)  Fuj(60172) ii(3680)  began(5820)  release(4722)  in(303)  January(5869)  (220) 2(17) 0(15) 1(16) 1(16)  .(641)  The(561)  game(1746)  was(557)  released(5698)  January(5869)  (220) 2(17) 7(22)  ,(1116)  (220) 2(17) 0(15) 1(16) 1(16)  .(641)  During(11615)  an(449)  interview(6906)  ,(1116)  the(279)  development(4257)  team(2015)  said(1018)  that(421)  the(279)  game(1746)  had(995)  the(279)  capacity(8390)  for(364)  downloadable(67292)  content(2144)  ((318)  DLC(41500)  )(847)  ,(1116)  but(694)  that(421)  no(874)  plans(6440)  were(998)  finalized(58351)  .(641)  Multiple(27869)  DLC(41500)  maps(13640)  ,(1116)  featuring(15963)  additional(4945)  missions(23864)  and(321)  recru(11773) itable(14921)  characters(5587)  ,(1116)  were(998)  released(5698)  between(1881)  February(7165)  and(321)  April(5632)  (220) 2(17) 0(15) 1(16) 1(16)  .(641)  An(1473)  expanded(16676)  edition(13295)  of(314)  the(279)  game(1746)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  Extra(24200)  Edition(13666)  ,(1116)  released(5698)  on(383)  November(6492)  (220) 2(17) 3(18)  ,(1116)  (220) 2(17) 0(15) 1(16) 1(16)  .(641)  Pack(13399) aged(3173)  and(321)  sold(5898)  at(506)  a(264)  lower(4570)  price(3240)  than(1056)  the(279)  original(3889)  ,(1116)  Extra(24200)  Edition(13666)  game(1746)  with(440)  seven(7840)  additional(4945)  episodes(17240)  :(535)  three(2250)  new(491)  ,(1116)  three(2250)  chosen(11543)  by(539)  staff(5395)  from(494)  the(279)  game(1746)  '(359) s(82)  DLC(41500)  ,(1116)  and(321)  one(799)  made(1801)  available(2420)  as(430)  a(264)  pre(829)  @(554) -(12) @(31)  order(1906)  bonus(11694)  .(641)  People(8586)  who(852)  also(1048)  owned(12567)  the(279)  original(3889)  game(1746)  could(1362)  transfer(8059)  their(836)  save(3462)  data(795)  between(1881)  versions(10478)  .(641)  
+(695)  Unlike(25215)  its(1141)  two(1330)  predecessors(59367)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  was(557)  not(524)  released(5698)  in(303)  the(279)  west(9422)  .(641)  According(10235)  to(310)  Sega(77098)  ,(1116)  this(411)  was(557)  due(4016)  to(310)  poor(7604)  sales(6416)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  and(321)  the(279)  general(4437)  un(632) pop(8115) ularity(28032)  of(314)  the(279)  PSP(66485)  in(303)  the(279)  west(9422)  .(641)  An(1473)  unofficial(54756)  fan(8145)  translation(14053)  patch(10582)  began(5820)  development(4257)  in(303)  February(7165)  (220) 2(17) 0(15) 1(16) 2(17)  :(535)  players(4078)  with(440)  a(264)  copy(2880)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  could(1362)  download(4003)  and(321)  apply(3668)  the(279)  patch(10582)  ,(1116)  which(864)  translated(23756)  the(279)  game(1746)  '(359) s(82)  text(1414)  into(1083)  English(6163)  .(641)  Compatible(64028)  with(440)  the(279)  Extra(24200)  Edition(13666)  ,(1116)  the(279)  patch(10582)  was(557)  released(5698)  in(303)  January(5869)  (220) 2(17) 0(15) 1(16) 4(19)  .(641)  
+ 
+(30858)  =(283)  =(283)  Reception(73353)  =(283)  =(283)  
+ 
+(30858)  On(1848)  its(1141)  day(1834)  of(314)  release(4722)  in(303)  Japan(6124)  ,(1116)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  topped(38480)  both(2107)  platform(5171)  @(554) -(12) @(31)  exclusive(13366)  and(321)  multi(7072)  @(554) -(12) @(31)  platform(5171)  sales(6416)  charts(25296)  .(641)  By(3113)  early(3988)  February(7165)  ,(1116)  the(279)  game(1746)  sold(5898)  (220) 1(16) 0(15) 2(17)  @(554) ,@(30095)  (220) 7(22) 7(22) 9(24)  units(7896)  ,(1116)  coming(4840)  in(303)  second(2018)  overall(7830)  to(310)  The(561)  Last(7745)  Story(14665)  for(364)  the(279)  Wii(37895)  .(641)  By(3113)  the(279)  end(809)  of(314)  the(279)  year(1007)  ,(1116)  the(279)  game(1746)  had(995)  sold(5898)  just(1066)  over(888)  (220) 1(16) 5(20) 2(17)  @(554) ,@(30095)  (220) 5(20) 0(15) 0(15)  units(7896)  .(641)  
+(695)  Fam(32489) itsu(47891)  enjoyed(13604)  the(279)  story(3255)  ,(1116)  and(321)  were(998)  particularly(7695)  pleased(17892)  with(440)  the(279)  improvements(17602)  to(310)  gameplay(25197)  .(641)  Japanese(10452)  gaming(15367)  site(2660)  Game(3914)  Watch(10049)  Impress(93440)  ,(1116)  despite(8552)  negatively(45615)  noting(25464)  its(1141)  pacing(79306)  and(321)  elements(5255)  recycled(45002)  from(494)  previous(3555)  games(3739)  ,(1116)  was(557)  generally(8524)  positive(6572)  about(883)  its(1141)  story(3255)  and(321)  characters(5587)  ,(1116)  and(321)  found(1669)  its(1141)  gameplay(25197)  entertaining(28256)  despite(8552)  off(974)  @(554) -(12) @(31)  putting(10371)  difficulty(16337)  spikes(48955)  .(641)  (220) 4(19) G(38) amer(14788) .net(4909)  writer(6700)  Na(12444) oh(2194) iko(22891)  Mis(31484) uos(80822) ame(368)  ,(1116)  in(303)  a(264)  "(328)  Play(6834)  Test(3284)  "(328)  article(4400)  based(3018)  on(383)  the(279)  game(1746)  '(359) s(82)  PS(11077) N(45)  demo(16171)  ,(1116)  felt(6273)  that(421)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  provided(3766)  a(264)  "(328)  profound(26281)  feeling(8008)  of(314)  closure(21278)  "(328)  for(364)  the(279)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  series(3878)  .(641)  He(1216)  praised(35172)  its(1141)  gameplay(25197)  despite(8552)  annoying(28855)  limitations(9201)  to(310)  aspects(13173)  such(1680)  as(430)  special(3175)  abilities(17020)  ,(1116)  and(321)  positively(38237)  noted(10036)  its(1141)  shift(6206)  in(303)  story(3255)  to(310)  a(264)  tone(15754)  similar(4283)  to(310)  the(279)  first(1118)  game(1746)  .(641)  
+(695)  PlayStation(30238)  Official(21948)  Magazine(20794)  -(471)  UK(6222)  praised(35172)  the(279)  story(3255)  '(359) s(82)  bl(1447) urring(19826)  of(314)  Gall(24088) ia(667)  '(359) s(82)  moral(15200)  standing(10932)  ,(1116)  art(1880)  style(1647)  ,(1116)  and(321)  most(1379)  points(3387)  about(883)  its(1141)  gameplay(25197)  ,(1116)  positively(38237)  noting(25464)  the(279)  latter(14827)  for(364)  both(2107)  its(1141)  continued(8308)  quality(4131)  and(321)  the(279)  tweaks(60238)  to(310)  balance(7915)  and(321)  content(2144)  .(641)  Its(11116)  one(799)  major(3478)  criticism(18248)  were(998)  multiple(5081)  difficulty(16337)  spikes(48955)  ,(1116)  something(2414)  that(421)  had(995)  affected(11164)  the(279)  previous(3555)  games(3739)  .(641)  Heath(45879)  Hind(19220) man(1461)  of(314)  gaming(15367)  website(3779)  PlayStation(30238)  Lifestyle(65853)  praised(35172)  the(279)  addition(5089)  of(314)  non(2397)  @(554) -(12) @(31)  linear(13094)  elements(5255)  and(321)  improvements(17602)  or(466)  removal(16162)  of(314)  mechanics(28079)  from(494)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  in(303)  addition(5089)  to(310)  praising(77797)  the(279)  returning(13064)  gameplay(25197)  style(1647)  of(314)  previous(3555)  games(3739)  .(641)  He(1216)  also(1048)  positively(38237)  noted(10036)  the(279)  story(3255)  '(359) s(82)  serious(5812)  tone(15754)  .(641)  Points(20098)  criticized(30477)  in(303)  the(279)  review(3286)  were(998)  recycled(45002)  elements(5255)  ,(1116)  awkward(27817)  cut(3799) scenes(83965)  that(421)  seemed(9047)  to(310)  include(2830)  all(660)  characters(5587)  in(303)  a(264)  scene(5918)  for(364)  no(874)  good(1603)  reason(2781)  ,(1116)  pacing(79306)  issues(4562)  ,(1116)  and(321)  occasional(26957)  problems(5154)  with(440)  the(279)  game(1746)  '(359) s(82)  AI(14791)  .(641)  
+(695)  In(733)  a(264)  preview(16620)  of(314)  the(279)  T(345) GS(16035)  demo(16171)  ,(1116)  Ryan(13253)  Ged(62297) des(5618)  of(314)  IGN(48163)  was(557)  left(2047)  excited(11692)  as(430)  to(310)  where(1332)  the(279)  game(1746)  would(1000)  go(708)  after(1238)  completing(25720)  the(279)  demo(16171)  ,(1116)  along(3055)  with(440)  enjoying(20756)  the(279)  improved(12573)  visuals(51199)  over(888)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  .(641)  Kot(59582) aku(22822)  '(359) s(82)  Richard(11528)  Eisen(52663) be(1323) is(284)  was(557)  highly(7309)  positive(6572)  about(883)  the(279)  game(1746)  ,(1116)  citing(31104)  is(369)  story(3255)  as(430)  a(264)  return(460)  to(310)  form(1304)  after(1238)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  II(7696)  and(321)  its(1141)  gameplay(25197)  being(1602)  the(279)  best(1786)  in(303)  the(279)  series(3878)  .(641)  His(5133)  main(1822)  criticisms(60622)  were(998)  its(1141)  length(2984)  and(321)  gameplay(25197)  repetition(51623)  ,(1116)  along(3055)  with(440)  expressing(35493)  regret(21542)  that(421)  it(424)  would(1000)  not(524)  be(381)  localized(42051)  .(641)  
+ 
+(30858)  =(283)  =(283)  Legacy(36636)  =(283)  =(283)  
+ 
+(30858)  Kurt(41504)  and(321)  Ri(49988) ela(8036)  were(998)  featured(14338)  in(303)  the(279)  Nintendo(22089)  (220) 3(18) DS(5751)  crossover(46768)  Project(5606)  X(1543)  Zone(21490)  ,(1116)  representing(13661)  the(279)  Valk(82224) y(88) ria(4065)  series(3878)  .(641)  Media(7569) .V(4896) ision(1753)  would(1000)  return(460)  to(310)  the(279)  series(3878)  to(310)  develop(2154)  Valk(82224) y(88) ria(4065)  :(535)  Azure(32990)  Revolution(21440)  ,(1116)  with(440)  Oz(34427) awa(13674)  returning(13064)  as(430)  director(7300)  .(641)  Azure(32990)  Revolution(21440)  is(369)  a(264)  role(3364)  @(554) -(12) @(31)  playing(5442)  video(2678)  game(1746)  for(364)  the(279)  PlayStation(30238)  (220) 4(19)  that(421)  forms(7346)  the(279)  beginning(6941)  of(314)  a(264)  new(491)  series(3878)  within(2785)  the(279)  Valk(82224) y(88) ria(4065)  franchise(18451)  .(641)  
+ 
+(30858)  =(283)  =(283)  =(283)  Adapt(56460) ations(778)  =(283)  =(283)  =(283)  
+ 
+(30858)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  (220) 3(18)  was(557)  adapted(28404)  into(1083)  a(264)  two(1330)  @(554) -(12) @(31)  episode(8961)  original(3889)  video(2678)  animation(10047)  series(3878)  in(303)  the(279)  same(1788)  year(1007)  of(314)  its(1141)  release(4722)  .(641)  T(345) itled(14819)  Sen(5195) j(73) ō(53792)  no(874)  Valk(82224) y(88) ria(4065)  (220) 3(18)  :(535)  Tag(12000) a(64)  T(345) ame(368)  no(874)  J(604) ūs(152838) ō(53792)  ((318)  (220) 戦(246811) 場の(186427) ヴァ(184676) ル(31532) キュ(156333) リア(149877) ３(32405)  (220) 誰(102996) が(27279) ための(155710) 銃(247029) �(96830) �(94)  ,(1116)  lit(12647)  .(641)  Valk(82224) y(88) ria(4065)  of(314)  the(279)  Battlefield(68245)  (220) 3(18)  :(535)  The(561)  W(457) ound(770)  Taken(54097)  for(364)  Someone(33042)  '(359) s(82)  S(326) ake(706)  )(847)  ,(1116)  it(424)  was(557)  originally(12830)  released(5698)  through(1472)  PlayStation(30238)  Network(7884)  and(321)  Q(1167) ri(452) ocity(7218)  between(1881)  April(5632)  and(321)  May(3114)  (220) 2(17) 0(15) 1(16) 1(16)  .(641)  The(561)  initially(14661)  @(554) -(12) @(31)  planned(12539)  release(4722)  and(321)  availability(17509)  period(4031)  needed(4221)  to(310)  be(381)  extended(11244)  due(4016)  to(310)  a(264)  stop(2842) page(2799)  to(310)  PS(11077) N(45)  during(2261)  the(279)  early(3988)  summer(7094)  of(314)  that(421)  year(1007)  .(641)  It(1049)  later(2843)  released(5698)  for(364)  DVD(17553)  on(383)  June(5361)  (220) 2(17) 9(24)  and(321)  August(5963)  (220) 3(18) 1(16)  ,(1116)  (220) 2(17) 0(15) 1(16) 1(16)  ,(1116)  with(440)  separate(8387)  "(328)  Black(5068)  "(328)  and(321)  "(328)  Blue(8432)  "(328)  editions(44980)  being(1602)  available(2420)  for(364)  purchase(7384)  .(641)  The(561)  anime(22099)  is(369)  set(716)  during(2261)  the(279)  latter(14827)  half(4139)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  III(14016)  ,(1116)  detailing(42724)  a(264)  mission(8684)  by(539)  the(279)  Name(3855) less(1657)  against(2272)  their(836)  Imperial(28936)  rivals(33683)  Cal(3210) am(308) ity(477)  Raven(43601)  .(641)  The(561)  anime(22099)  was(557)  first(1118)  announced(7002)  in(303)  November(6492)  (220) 2(17) 0(15) 1(16) 0(15)  .(641)  It(1049)  was(557)  developed(7633)  by(539)  A(357)  @(554) -(12) @(31)  (220) 1(16)  Pictures(27460)  ,(1116)  produced(8677)  by(539)  Shin(33305) ji(7508)  Moto(45914) y(88) ama(2933)  ,(1116)  directed(15083)  by(539)  Nob(18444) u(84) hiro(82201)  Kond(162183) ō(53792)  ,(1116)  and(321)  written(5158)  by(539)  Hiro(54399) shi(57415)  �(25087) �(234) n(77) ogi(61720)  .(641)  Sak(37485) imoto(92832)  '(359) s(82)  music(4477)  for(364)  the(279)  game(1746)  was(557)  used(1429)  in(303)  the(279)  anime(22099)  .(641)  
+(695)  The(561)  anime(22099)  '(359) s(82)  title(2192)  was(557)  inspired(14185)  by(539)  the(279)  principle(16988)  purpose(7193)  of(314)  the(279)  Name(3855) less(1657)  :(535)  to(310)  suffer(7433)  in(303)  battle(7796)  for(364)  the(279)  goals(8578)  of(314)  others(3672)  .(641)  A(357)  subtitle(30693)  attached(12037)  to(310)  the(279)  project(2313)  during(2261)  development(4257)  was(557)  "(328)  The(561)  Road(9254)  to(310)  Kub(60442) inka(71602)  "(328)  ,(1116)  which(864)  referenced(24001)  the(279)  Kub(60442) inka(71602)  Tank(30362)  Museum(15849)  in(303)  Moscow(21717)  .(641)  The(561)  game(1746)  '(359) s(82)  main(1822)  theme(6697)  was(557)  how(1204)  the(279)  characters(5587)  regained(81997)  their(836)  sense(5357)  of(314)  self(638)  when(948)  stripped(35463)  of(314)  their(836)  names(4874)  and(321)  identities(38116)  ,(1116)  along(3055)  with(440)  general(4437)  themes(20730)  focused(10419)  on(383)  war(3980)  and(321)  its(1141)  consequences(15448)  .(641)  While(5788)  making(3154)  the(279)  anime(22099)  ,(1116)  the(279)  production(5492)  team(2015)  were(998)  told(3125)  by(539)  Sega(77098)  to(310)  make(1236)  it(424)  as(430)  realistic(24679)  as(430)  possible(3102)  ,(1116)  with(440)  the(279)  consequence(27735)  that(421)  the(279)  team(2015)  did(1467)  extensive(15895)  research(3302)  into(1083)  aspects(13173)  such(1680)  as(430)  what(1092)  happened(6716)  when(948)  vehicles(11145)  like(1040)  tanks(25042)  were(998)  overturned(65703)  or(466)  damaged(19510)  .(641)  Due(22921)  to(310)  it(424)  being(1602)  along(3055)  the(279)  same(1788)  timeline(24024)  as(430)  the(279)  original(3889)  game(1746)  and(321)  its(1141)  television(12069)  anime(22099)  adaptation(31988)  ,(1116)  the(279)  cast(6113)  of(314)  Valk(82224) y(88) ria(4065)  Chronicles(63110)  could(1362)  make(1236)  appearances(25417)  ,(1116)  which(864)  pleased(17892)  the(279)  team(2015)  .(641)  The(561)  opening(8306)  theme(6697)  ,(1116)  "(328)  Ak(15878) ari(2692)  ((318)  Light(8394)  )(847)  -(471) Tom(23953) os(428) hib(5622) i(72) -(12)  "(328)  ((318)  (220) 灯(96980)  @(554) -(12) @(31)  TOM(79622) OSH(83214) IB(3151) I(40) -(12)  )(847)  ,(1116)  was(557)  sung(38038)  by(539)  Japanese(10452)  singer(22049)  Fay(86231) lan(10399)  .(641)  The(561)  ending(13004)  theme(6697)  ,(1116)  "(328)  Som(17041) eday(43606)  the(279)  Flowers(49808)  of(314)  Light(8394)  Will(4686)  Bloom(23728)  "(328)  ((318)  いつ(202047) か(30031) 咲(246931) く(45220) 光(96183) の花(197323)  ,(1116)  Its(11116) uka(24396)  S(326) aku(22822)  Hik(213703) ari(2692)  no(874)  H(462) ana(3253)  )(847)  ,(1116)  was(557)  sung(38038)  by(539)  Min(3277) ami(10291)  Kur(30248) ib(564) ay(347) ashi(29389)  .(641)  Both(11396)  songs(11338)  '(359)  lyrics(22537)  were(998)  written(5158)  by(539)  their(836)  respective(18919)  artists(13122)  .(641)  
+(695)  Two(8771)  manga(33116)  adaptations(74043)  were(998)  produced(8677)  ,(1116)  following(2614)  each(1754)  of(314)  the(279)  game(1746)  '(359) s(82)  main(1822)  female(8513)  protagonists(91366)  Im(2285) ca(895)  and(321)  Ri(49988) ela(8036)  .(641)  They(2302)  were(998)  Sen(5195) j(73) ō(53792)  no(874)  Valk(82224) y(88) ria(4065)  (220) 3(18)  :(535)  N(443) amo(20453)  n(307) aki(14203)  Ch(882) ikai(186259)  no(874)  H(462) ana(3253)  ((318)  (220) 戦(246811) 場の(186427) ヴァ(184676) ル(31532) キュ(156333) リア(149877) 3(18)  (220) 名(96009) も(30831) なき(167810) 誓(99420) いの(173849) 花(96203)  ,(1116)  lit(12647)  .(641)  Valk(82224) y(88) ria(4065)  of(314)  the(279)  Battlefield(68245)  (220) 3(18)  :(535)  The(561)  Flower(41271)  of(314)  the(279)  Name(3855) less(1657)  O(496) ath(572)  )(847)  ,(1116)  illustrated(34482)  by(539)  Na(12444) oy(2181) uki(20846)  Fuj(60172) is(284) awa(13674)  and(321)  eventually(9297)  released(5698)  in(303)  two(1330)  volumes(25442)  after(1238)  being(1602)  serialized(31824)  in(303)  D(414) enge(6111) ki(6433)  Ma(11004) oh(2194)  between(1881)  (220) 2(17) 0(15) 1(16) 1(16)  and(321)  (220) 2(17) 0(15) 1(16) 2(17)  ;(2502)  and(321)  Sen(5195) j(73) ō(53792)  no(874)  Valk(82224) y(88) ria(4065)  (220) 3(18)  :(535)  -(471) Ak(53931) aki(14203)  Un(1188) me(2573) i(72)  no(874)  Ik(39967) usa(29748)  Ot(29577) ome(617) -(12)  ((318)  (220) 戦(246811) 場の(186427) ヴァ(184676) ル(31532) キュ(156333) リア(149877) 3(18)  -(471) 赤(99067) き(48061) 運(97682) 命(96512) の(15303) 戦(246811) 乙(97753) 女(96350) -(12)  ,(1116)  lit(12647)  .(641)  Valk(82224) y(88) ria(4065)  of(314)  the(279)  Battlefield(68245)  (220) 3(18)  -(471) The(760)  Valk(82224) y(88) rie(7004)  of(314)  the(279)  Crimson(63847)  Fate(56932)  )(847)  ,(1116)  illustrated(34482)  by(539)  Miz(69164) uki(20846)  Ts(24281) uge(4580)  and(321)  eventually(9297)  released(5698)  in(303)  a(264)  single(3074)  volume(7867)  by(539)  Kad(71171) ok(547) awa(13674)  Shot(31279) en(268)  in(303)  (220) 2(17) 0(15) 1(16) 2(17)  .(641)  
+ 
+(30858)  
+(695)  =(283)  Tower(21262)  Building(16366)  of(314)  the(279)  Little(14250)  Rock(8854)  Arsenal(30948)  =(283)  
+ 
+(30858)  The(561)  Tower(21262)  Building(16366)  of(314)  the(279)  Little(14250)  Rock(8854)  Arsenal(30948)  ,(1116)  also(1048)  known(3750)  as(430)  U(533) .S(782) .(13)  Arsenal(30948)  Building(16366)  ,(1116)  is(369)  a(264)  building(4599)  located(7172)  in(303)  Mac(7166) Arthur(57646)  Park(5367)  in(303)  downtown(18337)  Little(14250)  Rock(8854)  ,(1116)  Arkansas(30651)  .(641)  Built(31959)  in(303)  (220) 1(16) 8(23) 4(19) 0(15)  ,(1116)  it(424)  was(557)  part(919)  of(314)  Little(14250)  Rock(8854)  '(359) s(82)  first(1118)  military(6079)  installation(13319)  .(641)  Since(8439)  its(1141)  decom(27572) mission(2641) ing(286)  ,(1116)  The(561)  Tower(21262)  Building(16366)  has(682)  housed(49436)  two(1330)  museums(48874)  .(641)  It(1049)  was(557)  home(2046)  to(310)  the(279)  Arkansas(30651)  Museum(15849)  of(314)  Natural(17898)  History(10776)  and(321)  Ant(6543) iqu(4850) ities(1313)  from(494)  (220) 1(16) 9(24) 4(19) 2(17)  to(310)  (220) 1(16) 9(24) 9(24) 7(22)  and(321)  the(279)  Mac(7166) Arthur(57646)  Museum(15849)  of(314)  Arkansas(30651)  Military(26096)  History(10776)  since(2394)  (220) 2(17) 0(15) 0(15) 1(16)  .(641)  It(1049)  has(682)  also(1048)  been(978)  the(279)  headquarters(24249)  of(314)  the(279)  Little(14250)  Rock(8854)  �(1624) �(228) st(267) hetic(26001)  Club(9839)  since(2394)  (220) 1(16) 8(23) 9(24) 4(19)  .(641)  
+(695)  The(561)  building(4599)  receives(20539)  its(1141)  name(803)  from(494)  its(1141)  distinct(12103)  oct(17940) agonal(22718)  tower(20618)  .(641)  Besides(29802)  being(1602)  the(279)  last(1483)  remaining(9376)  structure(5759)  of(314)  the(279)  original(3889)  Little(14250)  Rock(8854)  Arsenal(30948)  and(321)  one(799)  of(314)  the(279)  oldest(22778)  buildings(13308)  in(303)  central(8358)  Arkansas(30651)  ,(1116)  it(424)  was(557)  also(1048)  the(279)  birth(6968) place(1940)  of(314)  General(3146)  Douglas(29080)  Mac(7166) Arthur(57646)  ,(1116)  who(852)  became(5924)  the(279)  supreme(41699)  commander(27088)  of(314)  US(2201)  forces(8177)  in(303)  the(279)  South(4725)  Pacific(15979)  during(2261)  World(4196)  War(4843)  II(7696)  .(641)  It(1049)  was(557)  also(1048)  the(279)  starting(5732)  place(1925)  of(314)  the(279)  Camden(79625)  Expedition(80885)  .(641)  In(733)  (220) 2(17) 0(15) 1(16) 1(16)  it(424)  was(557)  named(6725)  as(430)  one(799)  of(314)  the(279)  top(1844)  (220) 1(16) 0(15)  attractions(37214)  in(303)  the(279)  state(1528)  of(314)  Arkansas(30651)  by(539)  Arkansas(30651) .com(877) .(13)  
+ 
+(30858)  =(283)  =(283)  Construction(23275)  =(283)  =(283)  
+ 
+(30858)  The(561)  arsenal(55027)  was(557)  constructed(19729)  at(506)  the(279)  request(1622)  of(314)  Governor(22633)  James(7555)  Se(1297) vier(45154)  Conway(57467)  in(303)  response(1965)  to(310)  the(279)  perceived(24723)  dangers(34772)  of(314)  frontier(46398)  life(2199)  and(321)  fears(22485)  of(314)  the(279)  many(1599)  Native(16213)  Americans(8609)  who(852)  were(998)  passing(11946)  through(1472)  the(279)  state(1528)  on(383)  their(836)  way(1560)  to(310)  the(279)  newly(13238)  established(9272)  Oklahoma(22087)  Territory(46483)  .(641)  Thirty(64369)  @(554) -(12) @(31)  six(4590)  acres(25525)  were(998)  appropriated(83426)  on(383)  the(279)  outskirts(67855)  of(314)  Little(14250)  Rock(8854)  by(539)  Major(16617)  Robert(8137)  B(417) .(13)  Lee(11723)  of(314)  the(279)  U(533) .S(782) .(13)  Army(12638)  .(641)  The(561)  land(4128)  had(995)  been(978)  previously(8334)  used(1429)  as(430)  a(264)  rac(8700) etr(16855) ack(463)  by(539)  the(279)  local(2136)  j(492) ockey(17352)  club(6135)  .(641)  John(3629)  Worm(70548) ley(3078)  Walker(21587)  ,(1116)  a(264)  builder(7131)  for(364)  the(279)  Federal(11792)  Government(9908)  ,(1116)  supervised(56994)  the(279)  construction(7832)  .(641)  Originally(24021)  $(393)  (220) 1(16) 4(19)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  was(557)  allocated(19591)  for(364)  the(279)  construction(7832)  of(314)  the(279)  arsenal(55027)  ,(1116)  but(694)  proved(18089)  inadequate(43962)  .(641)  The(561)  budget(7786)  was(557)  later(2843)  increased(6946)  to(310)  $(393)  (220) 3(18) 0(15)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  .(641)  Work(5374)  began(5820)  on(383)  the(279)  Tower(21262)  Building(16366)  in(303)  (220) 1(16) 8(23) 4(19) 0(15)  ,(1116)  and(321)  it(424)  was(557)  the(279)  first(1118)  permanent(14884)  structure(5759)  of(314)  the(279)  arsenal(55027)  to(310)  be(381)  built(5617)  .(641)  Being(20064)  originally(12830)  constructed(19729)  to(310)  store(3436)  ammunition(35454)  ,(1116)  the(279)  building(4599)  was(557)  designed(5995)  with(440)  (220) 3(18)  @(554) -(12) @(31)  foot(4330)  @(554) -(12) @(31)  thick(11702)  ((318)  (220) 0(15)  @(554) .@(56490)  (220) 9(24) 1(16)  m(295)  )(847)  exterior(26383)  walls(13876)  .(641)  The(561)  original(3889)  plans(6440)  called(2512)  for(364)  it(424)  to(310)  be(381)  built(5617)  of(314)  stone(9506)  ,(1116)  however(4611)  ,(1116)  m(295) asonry(49084)  was(557)  used(1429)  instead(4370)  .(641)  The(561)  Arkansas(30651)  Gazette(72043)  referred(13464)  to(310)  the(279)  structure(5759)  as(430)  "(328)  A(357)  splendid(67495)  specimen(55173)  of(314)  m(295) asonry(49084)  "(328)  .(641)  
+ 
+(30858)  =(283)  =(283)  Civil(15917)  War(4843)  =(283)  =(283)  
+ 
+(30858)  For(1690)  several(3679)  years(1578)  the(279)  arsenal(55027)  ,(1116)  which(864)  was(557)  owned(12567)  by(539)  the(279)  federal(6562)  government(2936)  ,(1116)  served(9919)  as(430)  a(264)  simple(4145)  arms(11378)  depot(43140)  and(321)  was(557)  staff(5395) ed(290)  with(440)  only(1132)  a(264)  handful(22241)  of(314)  soldiers(14426)  .(641)  But(1921)  in(303)  November(6492)  (220) 1(16) 8(23) 6(21) 0(15)  ,(1116)  with(440)  the(279)  American(3567)  Civil(15917)  War(4843)  on(383)  the(279)  horizon(32946)  ,(1116)  a(264)  company(2724)  of(314)  the(279)  Second(10130)  United(3516)  States(4042)  Art(5001) illery(34198)  ,(1116)  consisting(29607)  of(314)  sixty(50614)  @(554) -(12) @(31)  five(4097)  men(2859)  ,(1116)  was(557)  transferred(21711)  to(310)  Little(14250)  Rock(8854)  under(1172)  the(279)  command(3108)  of(314)  Captain(20661)  James(7555)  T(345) otten(9985)  .(641)  On(1848)  January(5869)  (220) 1(16) 5(20)  ,(1116)  (220) 1(16) 8(23) 6(21) 1(16)  ,(1116)  the(279)  state(1528)  legislature(37474)  decided(6426)  to(310)  hold(3222)  a(264)  referendum(28728)  to(310)  determine(7995)  if(413)  a(264)  state(1528)  convention(20624)  should(1220)  be(381)  held(5467)  to(310)  consider(2814)  the(279)  issue(4125)  of(314)  se(500) cession(24654)  and(321)  to(310)  elect(3909)  delegates(33899)  to(310)  such(1680)  a(264)  convention(20624)  .(641)  It(1049)  was(557)  planned(12539)  for(364)  February(7165)  (220) 1(16) 8(23)  ;(2502)  however(4611)  ,(1116)  events(4216)  at(506)  the(279)  arsenal(55027)  ,(1116)  would(1000)  not(524)  wait(3655)  .(641)  On(1848)  January(5869)  (220) 2(17) 8(23)  ,(1116)  then(1179)  Governor(22633)  Henry(17075)  Mas(19263) sey(8246)  R(423) ector(1213)  informed(15515)  Captain(20661)  T(345) otten(9985)  that(421)  he(551)  and(321)  his(780)  soldiers(14426)  would(1000)  be(381)  "(328)  permitted(14688)  to(310)  remain(6922)  in(303)  the(279)  possession(18158)  of(314)  the(279)  Federal(11792)  officers(9324)  until(2980)  the(279)  State(3130)  ,(1116)  by(539)  authority(10872)  of(314)  the(279)  people(1208)  ,(1116)  shall(4723)  have(599)  determined(10521)  to(310)  sever(3103)  their(836)  connection(3511)  with(440)  the(279)  General(3146)  Government(9908)  ,(1116)  "(328)  T(345) otten(9985)  responded(15959)  to(310)  this(411)  by(539)  telling(11294)  the(279)  Governor(22633)  that(421)  his(780)  orders(9861)  came(3571)  from(494)  the(279)  United(3516)  States(4042)  Government(9908)  and(321)  began(5820)  a(264)  desperate(26508)  but(694)  ultimately(13260)  futile(81612)  dispatch(6631)  of(314)  letters(11592)  and(321)  tele(7712) grams(49061)  asking(9859)  for(364)  reinforcements(95097)  ,(1116)  although(7643)  rumors(33250)  were(998)  widely(13177)  spread(8597)  that(421)  they(781)  were(998)  already(2582)  coming(4840)  .(641)  The(561)  first(1118)  tele(7712) graph(4293)  wire(8794)  to(310)  span(9111)  between(1881)  Little(14250)  Rock(8854)  and(321)  Memphis(40672)  had(995)  recently(5742)  been(978)  completed(7888)  .(641)  Local(8509)  attorney(13352)  John(3629)  M(380)  Har(5061) rel(3621)  was(557)  asked(4439)  to(310)  compose(29346)  the(279)  first(1118)  tele(7712) graph(4293)  dispatched(47501)  from(494)  Arkansas(30651)  '(359) s(82)  capital(6511)  .(641)  In(733)  his(780)  message(1876)  ,(1116)  Har(5061) rel(3621)  reported(4800)  un(632) confirmed(39673)  rumors(33250)  that(421)  more(777)  federal(6562)  troops(16392)  had(995)  been(978)  sent(3106)  to(310)  reinforce(52490)  the(279)  Little(14250)  Rock(8854)  Arsenal(30948)  .(641)  
+(695)  The(561)  United(3516)  States(4042)  troops(16392)  at(506)  the(279)  out(680) posts(12301)  of(314)  the(279)  western(17942)  frontier(46398)  of(314)  the(279)  state(1528)  and(321)  in(303)  the(279)  Indian(7502)  nation(6777)  have(599)  all(660)  been(978)  recalled(30111)  from(494)  winter(12050)  quarters(30439)  to(310)  reinforce(52490)  the(279)  g(338) arrison(48321)  at(506)  Fort(10680)  Smith(8809)  .(641)  The(561)  g(338) arrison(48321)  at(506)  Fort(10680)  Smith(8809)  had(995)  been(978)  previously(8334)  transferred(21711)  to(310)  the(279)  United(3516)  States(4042)  Arsenal(30948)  in(303)  this(411)  city(3177)  ((318)  Little(14250)  Rock(8854)  )(847)  .(641)  The(561)  arsenal(55027)  is(369)  one(799)  of(314)  the(279)  richest(54477)  de(401) positories(16776)  of(314)  military(6079)  stores(10220)  in(303)  the(279)  United(3516)  States(4042)  and(321)  is(369)  supposed(9671)  to(310)  be(381)  the(279)  ultimate(16233)  destination(8833)  of(314)  the(279)  tro(7928) pps(57530)  [(498)  sic(50875)  ](2205)  ordered(11128)  from(494)  the(279)  frontier(46398)  .(641)  
+(695)  -(471) John(12702)  M(380)  Har(5061) rel(3621)  Telegram(41544)  ,(1116)  January(5869)  (220) 3(18) 1(16)  ,(1116)  (220) 1(16) 8(23) 6(21) 1(16)  
+(695)  The(561)  item(1455)  was(557)  intended(10287)  simply(4777)  as(430)  a(264)  piece(6365)  of(314)  news(3543)  ,(1116)  but(694)  tele(7712) graph(4293)  lines(4965)  quickly(5964)  spread(8597)  the(279)  news(3543)  throughout(6600)  the(279)  state(1528)  ,(1116)  fuel(10106) ing(286)  procession(80828)  sentiment(25144)  .(641)  The(561)  rumor(55957)  was(557)  interpreted(31233)  by(539)  some(1010)  Ark(21339) ans(581) ans(581)  as(430)  a(264)  call(1562)  from(494)  the(279)  governor(18471)  to(310)  assemble(40362)  to(310)  help(1438)  exp(1295) el(300)  the(279)  federal(6562)  troops(16392)  from(494)  the(279)  arsenal(55027)  .(641)  By(3113)  February(7165)  (220) 5(20)  ,(1116)  six(4590)  militia(55666)  units(7896)  ,(1116)  consisting(29607)  of(314)  (220) 1(16)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  men(2859)  ,(1116)  with(440)  a(264)  guarantee(14988)  that(421)  the(279)  numbers(4947)  could(1362)  be(381)  increased(6946)  to(310)  (220) 5(20)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  if(413)  the(279)  situations(14314)  deemed(23860)  it(424)  necessary(5689)  ,(1116)  had(995)  assembled(32878)  in(303)  Little(14250)  Rock(8854)  .(641)  Governor(22633)  R(423) ector(1213)  vehement(88222) ly(391)  denied(14390)  ordering(20735)  the(279)  troops(16392)  to(310)  assemble(40362)  or(466)  giving(6866)  any(866)  order(1906)  at(506)  all(660)  in(303)  connection(3511)  with(440)  the(279)  troops(16392)  .(641)  F(426) aced(4289)  with(440)  the(279)  fact(2029)  that(421)  the(279)  military(6079)  had(995)  assembled(32878)  believing(32863)  they(781)  were(998)  following(2614)  his(780)  orders(9861)  and(321)  the(279)  consensus(23122)  of(314)  the(279)  citizens(9977)  of(314)  Little(14250)  Rock(8854)  against(2272)  any(866)  armed(16929)  conflict(11712)  between(1881)  the(279)  civilian(27986)  army(13003)  and(321)  federal(6562)  troops(16392)  ,(1116)  Governor(22633)  R(423) ector(1213)  was(557)  forced(9290)  to(310)  take(1831)  control(2444)  of(314)  the(279)  situation(6331)  .(641)  On(1848)  February(7165)  (220) 6(21)  ,(1116)  he(551)  sent(3106)  a(264)  formal(15440)  demand(7244)  for(364)  surrender(30717)  of(314)  the(279)  arsenal(55027)  to(310)  Captain(20661)  T(345) otten(9985)  ,(1116)  
+(695)  This(1061)  movement(6977)  is(369)  prompted(27710)  by(539)  the(279)  feeling(8008)  that(421)  perv(44634) ades(3342)  the(279)  citizens(9977)  of(314)  this(411)  State(3130)  that(421)  in(303)  the(279)  present(2945)  emergency(12483)  the(279)  arms(11378)  and(321)  mun(48297) itions(5745)  of(314)  war(3980)  in(303)  the(279)  Arsenal(30948)  should(1220)  be(381)  under(1172)  the(279)  control(2444)  of(314)  the(279)  State(3130)  authorities(10949)  ,(1116)  in(303)  order(1906)  to(310)  their(836)  security(4610)  .(641)  This(1061)  movement(6977)  ,(1116)  although(7643)  not(524)  authorized(18069)  by(539)  me(728)  ,(1116)  has(682)  assumed(18533)  such(1680)  an(449)  aspect(12523)  that(421)  it(424)  becomes(8772)  my(821)  duty(13783)  ,(1116)  as(430)  the(279)  executive(10587)  of(314)  this(411)  S(326) ate(344)  ,(1116)  to(310)  inter(916) pose(2806)  my(821)  official(3813)  authority(10872)  to(310)  prevent(5190)  a(264)  collision(18188)  between(1881)  the(279)  people(1208)  of(314)  the(279)  State(3130)  and(321)  the(279)  Federal(11792)  troops(16392)  under(1172)  your(678)  command(3108)  .(641)  I(353)  therefore(8646)  demand(7244)  in(303)  the(279)  name(803)  of(314)  the(279)  State(3130)  the(279)  delivery(9403)  of(314)  the(279)  possession(18158)  of(314)  the(279)  Arsenal(30948)  and(321)  mun(48297) itions(5745)  of(314)  war(3980)  under(1172)  your(678)  charge(6545)  to(310)  the(279)  State(3130)  authorities(10949)  ,(1116)  to(310)  be(381)  held(5467)  subject(3704)  to(310)  the(279)  action(1852)  of(314)  the(279)  convention(20624)  to(310)  be(381)  held(5467)  on(383)  the(279)  (220) 4(19) th(337)  of(314)  March(5297)  next(1727)  .(641)  
+(695)  Perhaps(18200)  because(1521)  Abraham(35185)  Lincoln(23608)  had(995)  not(524)  yet(3482)  been(978)  inaugur(78207) ated(639)  as(430)  President(4642)  ,(1116)  Captain(20661)  T(345) otten(9985)  received(3816)  no(874)  instructions(10895)  from(494)  his(780)  super(2184) iors(21194)  and(321)  was(557)  forced(9290)  to(310)  withdraw(14369)  his(780)  troops(16392)  .(641)  He(1216)  agreed(7003)  to(310)  surrender(30717)  the(279)  arsenal(55027)  as(430)  long(1248)  as(430)  the(279)  governor(18471)  agreed(7003)  to(310)  three(2250)  provisions(18576)  :(535)  
+(695)  The(561)  governor(18471)  would(1000)  take(1831)  possession(18158)  of(314)  the(279)  arsenal(55027)  in(303)  the(279)  name(803)  of(314)  the(279)  United(3516)  States(4042)  .(641)  
+(695)  The(561)  soldiers(14426)  would(1000)  be(381)  allowed(5252)  safe(5902)  passage(20438)  in(303)  any(866)  direction(4944)  carrying(14885)  any(866)  personal(4204)  and(321)  public(569)  property(3234)  besides(26858)  mun(48297) itions(5745)  of(314)  war(3980)  .(641)  
+(695)  The(561)  soldiers(14426)  would(1000)  be(381)  allowed(5252)  to(310)  march(14774)  away(3023)  as(430)  men(2859)  leaving(9101)  under(1172)  orders(9861)  ,(1116)  not(524)  as(430)  conquered(66483)  and(321)  surrender(30717) ing(286)  soldiers(14426)  .(641)  
+(695)  On(1848)  the(279)  morning(6353)  of(314)  February(7165)  (220) 8(23)  ,(1116)  (220) 1(16) 8(23) 6(21) 1(16)  ,(1116)  R(423) ector(1213)  and(321)  T(345) otten(9985)  signed(8239)  an(449)  agreement(8855)  placing(23294)  the(279)  arsenal(55027)  in(303)  the(279)  hands(5888)  of(314)  state(1528)  officials(7128)  .(641)  That(2844)  afternoon(12967)  ,(1116)  the(279)  citizen(21188)  militia(55666)  marched(56677)  to(310)  the(279)  arsenal(55027)  with(440)  Governor(22633)  R(423) ector(1213)  at(506)  its(1141)  head(1901)  .(641)  All(1942)  of(314)  the(279)  federal(6562)  troops(16392)  had(995)  left(2047)  at(506)  this(411)  point(1406)  ,(1116)  except(3525)  T(345) otten(9985)  who(852)  had(995)  stayed(19013)  behind(4661)  to(310)  listen(8577)  to(310)  the(279)  Governor(22633)  '(359) s(82)  speech(8540)  and(321)  to(310)  hand(1375)  the(279)  arsenal(55027)  over(888)  in(303)  person(1637)  .(641)  
+(695)  The(561)  Little(14250)  Rock(8854)  Arsenal(30948)  was(557)  classified(20444)  in(303)  (220) 1(16) 8(23) 6(21) 0(15)  as(430)  an(449)  "(328)  arsenal(55027)  of(314)  deposit(16051)  ,(1116)  "(328)  meaning(7063)  that(421)  it(424)  was(557)  simply(4777)  a(264)  warehouse(29128)  for(364)  the(279)  storage(5638)  of(314)  weapons(9600)  intended(10287)  for(364)  the(279)  use(958)  of(314)  the(279)  state(1528)  militia(55666)  in(303)  times(2942)  of(314)  crisis(10924)  .(641)  Thus(13891)  there(1017)  were(998)  no(874)  substantial(11585)  operations(7289)  for(364)  ord(5824) nance(229528)  fabrication(56198)  or(466)  repairs(29201)  ,(1116)  nor(6130)  for(364)  the(279)  manufacture(28776)  of(314)  cartridges(69296)  at(506)  the(279)  time(854)  the(279)  Arsenal(30948)  fell(10729)  into(1083)  State(3130)  hands(5888)  .(641)  Most(7261)  of(314)  these(1439)  operations(7289)  were(998)  started(3727)  from(494)  scratch(18211)  through(1472)  the(279)  efforts(8601)  of(314)  the(279)  Arkansas(30651)  Military(26096)  Board(8486)  .(641)  
+(695)  Inside(26482)  the(279)  Little(14250)  Rock(8854)  Arsenal(30948)  after(1238)  its(1141)  seizure(50399)  in(303)  February(7165)  ,(1116)  (220) 1(16) 8(23) 6(21) 1(16)  ,(1116)  the(279)  Confeder(36786) ates(942)  inventor(68496) ied(1086)  some(1010)  (220) 1(16) 0(15)  @(554) ,@(30095)  (220) 2(17) 4(19) 7(22)  weapons(9600)  ,(1116)  (220) 2(17) 5(20) 0(15)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  mus(2991) ket(24665)  cartridges(69296)  ,(1116)  and(321)  (220) 5(20) 2(17) 0(15)  @(554) ,@(30095)  (220) 0(15) 0(15) 0(15)  percussion(80861)  caps(18009)  ,(1116)  as(430)  well(1575)  as(430)  the(279)  four(2943)  bronze(38486)  cannon(46786)  of(314)  T(345) otten(9985)  '(359) s(82)  battery(11269)  .(641)  Long(5546)  arms(11378)  in(303)  the(279)  Arsenal(30948)  '(359) s(82)  inventory(14991)  consisted(42118)  of(314)  :(535)  
+(695)  M(380) 1(16) 8(23) 2(17) 2(17)  .(641) 6(21) 9(24)  cal(1564)  ((318)  fl(1274) int(390) lock(988)  )(847)  (220) 5(20)  @(554) ,@(30095)  (220) 6(21) 2(17) 5(20)  
+(695)  M(380) 1(16) 8(23) 2(17) 2(17)  .(641) 6(21) 9(24)  cal(1564)  ((318)  percussion(80861)  @(554) -(12) @(31)  converted(15625)  )(847)  (220) 5(20) 3(18)  
+(695)  M(380) 1(16) 8(23) 4(19) 2(17)  .(641) 6(21) 9(24)  cal(1564)  smooth(10558) b(65) ore(451)  ((318)  percussion(80861)  )(847)  (220) 3(18) 5(20) 7(22)  
+(695)  M(380) 1(16) 8(23) 5(20) 5(20)  .(641) 5(20) 8(23)  cal(1564)  rifle(27219)  @(554) -(12) @(31)  mus(2991) kets(209933)  (220) 9(24) 0(15) 0(15)  
+(695)  M(380) 1(16) 8(23) 1(16) 7(22)  common(4047)  rifles(43856)  (220) 1(16) 2(17) 5(20)  
+(695)  M(380) 1(16) 8(23) 4(19) 1(16)  rifle(27219)  ((318)  "(328)  Mississippi(27509)  Rifle(45468)  "(328)  )(847)  (220) 5(20) 4(19)  
+(695)  M(380) 1(16) 8(23) 4(19) 7(22)  mus(2991) ket(24665) oon(8737)  (220) 2(17)  
+(695)  Hall(10607)  '(359) s(82)  carb(33622) ines(1489)  (220) 2(17) 6(21) 7(22)  
+(695)  Hall(10607)  '(359) s(82)  rifles(43856)  ((318)  fl(1274) int(390) lock(988)  )(847)  (220) 2(17)  @(554) ,@(30095)  (220) 8(23) 6(21) 4(19)  
+(695)  Total(10342)  (220) 1(16) 0(15)  @(554) ,@(30095)  (220) 2(17) 4(19) 7(22)  
+(695)  Of(4781)  this(411)  number(1324)  ,(1116)  approximately(12805)  (220) 9(24) 6(21) 0(15) 0(15)  weapons(9600)  were(998)  service(2393) able(470)  ,(1116)  or(466)  ready(5354)  @(554) -(12) @(31)  for(364)  @(554) -(12) @(31)  issue(4125)  .(641)  Note(6817)  there(1017)  were(998)  only(1132)  (220) 1(16)  @(554) ,@(30095)  (220) 3(18) 6(21) 4(19)  percussion(80861)  weapons(9600)  available(2420)  .(641)  Dis(3957) position(3374)  of(314)  the(279)  weapons(9600)  found(1669)  in(303)  the(279)  Arsenal(30948)  is(369)  somewhat(13987)  sketch(24716) y(88)  ,(1116)  but(694)  from(494)  various(5090)  records(7189)  it(424)  can(628)  be(381)  sur(1668) m(76) ised(3920)  that(421)  the(279)  (220) 5(20) th(337)  ,(1116)  (220) 6(21) th(337)  ,(1116)  (220) 7(22) th(337)  ,(1116)  and(321)  (220) 8(23) th(337)  Arkansas(30651)  Infantry(62375)  Reg(3083) iments(12198)  ,(1116)  must(1902) ered(11983)  in(303)  June(5361)  ,(1116)  (220) 1(16) 8(23) 6(21) 1(16)  ,(1116)  were(998)  issued(10579)  M(380) 1(16) 8(23) 1(16) 6(21)  /(593)  M(380) 1(16) 8(23) 2(17) 2(17)  .(641) 6(21) 9(24)  caliber(58720)  fl(1274) int(390) locks(33779)  .(641)  The(561)  (220) 9(24) th(337)  and(321)  (220) 1(16) 0(15) th(337)  Arkansas(30651)  ,(1116)  four(2943)  companies(4948)  of(314)  Kelly(18099)  '(359) s(82)  (220) 9(24) th(337)  Arkansas(30651)  Battalion(71136)  ,(1116)  and(321)  the(279)  (220) 3(18) rd(6295)  Arkansas(30651)  Caval(47480) ry(856)  Regiment(70215)  were(998)  issued(10579)  fl(1274) int(390) lock(988)  Hall(10607)  '(359) s(82)  Rif(86644) les(624)  .(641)  The(561)  units(7896)  comprising(43729)  the(279)  infantry(52602)  force(5176)  of(314)  Van(12345)  D(414) orn(1458)  '(359) s(82) 
+

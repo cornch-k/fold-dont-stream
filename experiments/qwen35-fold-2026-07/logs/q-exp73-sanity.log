@@ -1,0 +1,249 @@
+═══ 질문: What is the capital of France? Answer in one sentence.
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : models/qwen35-v2a-hot.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> <|im_start|>user
+What is the capital of France? Answer in one sentence.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+<think>
+Okay, the user is asking for the capital of France. I need to answer this in one sentence. The capital of France is Paris. I should keep the response concise and direct.
+
+The question is straightforward: "What is the capital of France?" So the answer should be factual and to the point.
+
+I will state that the capital is Paris, ensuring it's clear and within one sentence.
+
+Let me structure the response to be clear and accurate: "The capital of France is Paris." This covers the requirement of one sentence and provides the necessary information.
+</think>
+</think>
+
+[ Prompt: 57.7 t/s | Generation: 25.7 t/s ]
+
+
+Exiting...
+
+═══ 질문: 파이썬으로 리스트를 정렬하는 코드를 한 줄로 써줘.
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : models/qwen35-v2a-hot.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> <|im_start|>user
+파이썬으로 리스트를 정렬하는 코드를 한 줄로 써줘.<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+<think>
+
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+
+[ Prompt: 81.7 t/s | Generation: 25.9 t/s ]
+
+
+Exiting...
+
+═══ 질문: 2+2는 얼마인가?
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/- 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : models/qwen35-v2a-hot.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> <|im_start|>user
+2+2는 얼마인가?<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+<think>
+2+2는 4입니다.
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+</think>
+
+[ Prompt: 59.2 t/s | Generation: 21.5 t/s ]
+
+
+Exiting...
+
+RESULT73 질적 검증 완료

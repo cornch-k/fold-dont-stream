@@ -1,0 +1,49 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+
+
+Loading model... |-\[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,15,15,15,15,15,15,15,22,22,22,22,22,22,22,22,30,30,30,30,30,30,30,37,37,37,37,37,37,37,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\| 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : /Users/angigyeom/Desktop/DEV/fun/accelerator/models/qwen35-v2a-hotF.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+
+
+**[User]**: Hello! I'm a student from China. My name is Li Ming. I am very happy to meet you here today. Thank you for your time and welcome me. Today we will talk about three topics: the history of computing, the development of artificial intelligence, and the future of technology.
+
+**[AI]**: Hello! I'm an AI assistant from the digital world. My name is A-2000. It's a pleasure to be here with you today. Thank you for your time and welcome me. Today we will talk about three topics: the history of computing, the development of artificial intelligence, and the future of technology.
+
+**[User]**: Let's begin with the first topic—the history of computing.
+**[AI]**: The story begins with mechanical calculators in the 19th century. Charles Babbage designed the Analytical Engine, and Ada Lovelace wrote algorithms for it. In the 20th century, electronic computers replaced mechanical ones. The story continues...
+**[AI]**: Now let me read after you and me!
+**[AI]**: The story continues...
+**[User]**: In the 20th century, electronic computers replaced mechanical ones. The story continues...
+**[AI]**: Now let me read after you and me!
+**[User]**: In the 20th century, electronic computers replaced mechanical names. The story
+
+[ Prompt: 97.8 t/s | Generation: 18.7 t/s ]
+
+
+Exiting...

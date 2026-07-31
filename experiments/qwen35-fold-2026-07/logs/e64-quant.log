@@ -1,0 +1,1666 @@
+ggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_init: loaded in 0.012 sec
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0 (Apple M1 Max)
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple7  (1007)
+ggml_metal_device_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 26800.60 MB
+llama_print_build_info: build = 10104 (6eecc1736)
+llama_print_build_info: built with AppleClang 21.0.0.21000101 for Darwin arm64
+llama_quantize: quantizing 'models/qwen35-v2a-hot.gguf' to 'models/qwen35-e2k.gguf' as Q3_K_S using 6 threads
+llama_model_loader: loaded meta data with 54 key-value pairs and 971 tensors from models/qwen35-v2a-hot.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen35moe
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                     general.sampling.top_k i32              = 20
+llama_model_loader: - kv   3:                     general.sampling.top_p f32              = 0.950000
+llama_model_loader: - kv   4:                      general.sampling.temp f32              = 0.600000
+llama_model_loader: - kv   5:                               general.name str              = Qwen3.5-122B-A10B
+llama_model_loader: - kv   6:                           general.basename str              = Qwen3.5-122B-A10B
+llama_model_loader: - kv   7:                       general.quantized_by str              = Unsloth
+llama_model_loader: - kv   8:                         general.size_label str              = 122B-A10B
+llama_model_loader: - kv   9:                            general.license str              = apache-2.0
+llama_model_loader: - kv  10:                       general.license.link str              = https://huggingface.co/Qwen/Qwen3.5-1...
+llama_model_loader: - kv  11:                           general.repo_url str              = https://huggingface.co/unsloth
+llama_model_loader: - kv  12:                   general.base_model.count u32              = 1
+llama_model_loader: - kv  13:                  general.base_model.0.name str              = Qwen3.5 122B A10B
+llama_model_loader: - kv  14:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  15:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen3.5-1...
+llama_model_loader: - kv  16:                               general.tags arr[str,2]       = ["unsloth", "image-text-to-text"]
+llama_model_loader: - kv  17:                      qwen35moe.block_count u32              = 49
+llama_model_loader: - kv  18:                   qwen35moe.context_length u32              = 262144
+llama_model_loader: - kv  19:                 qwen35moe.embedding_length u32              = 3072
+llama_model_loader: - kv  20:             qwen35moe.attention.head_count u32              = 32
+llama_model_loader: - kv  21:          qwen35moe.attention.head_count_kv u32              = 2
+llama_model_loader: - kv  22:          qwen35moe.rope.dimension_sections arr[i32,4]       = [11, 11, 10, 0]
+llama_model_loader: - kv  23:                   qwen35moe.rope.freq_base f32              = 10000000.000000
+llama_model_loader: - kv  24: qwen35moe.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  25:                     qwen35moe.expert_count u32              = 256
+llama_model_loader: - kv  26:                qwen35moe.expert_used_count u32              = 8
+llama_model_loader: - kv  27:             qwen35moe.attention.key_length u32              = 256
+llama_model_loader: - kv  28:           qwen35moe.attention.value_length u32              = 256
+llama_model_loader: - kv  29:       qwen35moe.expert_feed_forward_length u32              = 1024
+llama_model_loader: - kv  30: qwen35moe.expert_shared_feed_forward_length u32              = 1024
+llama_model_loader: - kv  31:                  qwen35moe.ssm.conv_kernel u32              = 4
+llama_model_loader: - kv  32:                   qwen35moe.ssm.state_size u32              = 128
+llama_model_loader: - kv  33:                  qwen35moe.ssm.group_count u32              = 16
+llama_model_loader: - kv  34:               qwen35moe.ssm.time_step_rank u32              = 64
+llama_model_loader: - kv  35:                   qwen35moe.ssm.inner_size u32              = 8192
+llama_model_loader: - kv  36:          qwen35moe.full_attention_interval u32              = 4
+llama_model_loader: - kv  37:             qwen35moe.rope.dimension_count u32              = 64
+llama_model_loader: - kv  38:             qwen35moe.nextn_predict_layers u32              = 1
+llama_model_loader: - kv  39:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  40:                         tokenizer.ggml.pre str              = qwen35
+llama_model_loader: - kv  41:                      tokenizer.ggml.tokens arr[str,248320]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  42:                  tokenizer.ggml.token_type arr[i32,248320]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  43:                      tokenizer.ggml.merges arr[str,247587]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  44:                tokenizer.ggml.eos_token_id u32              = 248046
+llama_model_loader: - kv  45:            tokenizer.ggml.padding_token_id u32              = 248055
+llama_model_loader: - kv  46:               tokenizer.ggml.add_bos_token bool             = false
+llama_model_loader: - kv  47:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...
+llama_model_loader: - kv  48:               general.quantization_version u32              = 2
+llama_model_loader: - kv  49:                          general.file_type u32              = 11
+llama_model_loader: - kv  50:                      quantize.imatrix.file str              = exp/qwen35-folded.imatrix
+llama_model_loader: - kv  51:                   quantize.imatrix.dataset str              = /Users/angigyeom/Desktop/DEV/fun/acce...
+llama_model_loader: - kv  52:             quantize.imatrix.entries_count u32              = 468
+llama_model_loader: - kv  53:              quantize.imatrix.chunks_count u32              = 360
+llama_model_loader: - type  f32:  386 tensors
+llama_model_loader: - type q3_K:  349 tensors
+llama_model_loader: - type q4_K:   86 tensors
+llama_model_loader: - type q6_K:  148 tensors
+llama_model_loader: - type bf16:    2 tensors
+
+llama_model_quantize_impl: have importance matrix data with 524 entries
+llama_tensor_get_type: blk.0.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.0.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.0.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.0.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.0.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.0.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.0.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.0.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.1.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.1.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.1.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.1.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.1.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.1.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.1.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.1.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.2.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.2.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.2.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.2.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.2.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.2.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.2.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.2.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.3.attn_output.weight             - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.3.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.3.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.3.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.3.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.3.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.3.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.4.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.4.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.4.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.4.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.4.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.4.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.4.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.4.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.5.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.5.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.5.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.5.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.5.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.5.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.5.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.5.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.6.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.6.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.6.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.6.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.6.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.6.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.6.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.6.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.7.attn_output.weight             - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.7.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.7.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.7.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.7.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.7.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.7.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.8.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.8.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.8.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.8.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.8.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.8.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.8.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.8.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.9.attn_qkv.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.9.ffn_down_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.9.ffn_down_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.9.ffn_gate_exps.weight           - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.9.ffn_gate_shexp.weight          - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.9.ffn_up_exps.weight             - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.9.ffn_up_shexp.weight            - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.9.ssm_out.weight                 - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.10.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.10.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.10.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.10.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.10.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.10.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.10.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.10.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.11.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.11.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.11.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.11.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.11.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.11.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.11.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.12.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.12.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.12.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.12.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.12.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.12.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.12.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.12.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.13.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.13.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.13.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.13.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.13.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.13.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.13.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.13.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.14.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.14.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.14.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.14.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.14.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.14.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.14.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.14.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.15.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.15.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.15.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.15.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.15.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.15.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.15.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.16.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.16.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.16.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.16.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.16.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.16.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.16.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.16.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.17.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.17.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.17.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.17.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.17.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.17.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.17.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.17.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.18.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.18.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.18.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.18.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.18.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.18.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.18.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.18.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.19.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.19.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.19.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.19.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.19.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.19.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.19.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.20.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.20.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.20.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.20.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.20.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.20.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.20.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.20.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.21.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.21.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.21.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.21.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.21.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.21.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.21.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.21.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.22.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.22.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.22.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.22.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.22.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.22.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.22.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.22.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.23.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.23.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.23.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.23.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.23.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.23.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.23.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.24.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.24.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.24.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.24.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.24.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.24.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.24.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.24.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.25.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.25.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.25.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.25.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.25.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.25.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.25.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.25.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.26.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.26.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.26.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.26.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.26.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.26.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.26.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.26.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.27.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.27.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.27.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.27.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.27.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.27.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.27.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.28.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.28.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.28.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.28.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.28.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.28.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.28.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.28.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.29.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.29.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.29.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.29.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.29.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.29.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.29.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.29.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.30.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.30.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.30.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.30.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.30.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.30.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.30.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.30.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.31.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.31.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.31.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.31.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.31.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.31.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.31.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.32.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.32.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.32.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.32.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.32.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.32.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.32.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.32.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.33.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.33.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.33.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.33.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.33.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.33.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.33.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.33.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.34.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.34.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.34.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.34.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.34.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.34.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.34.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.34.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.35.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.35.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.35.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.35.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.35.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.35.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.35.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.36.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.36.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.36.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.36.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.36.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.36.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.36.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.36.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.37.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.37.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.37.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.37.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.37.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.37.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.37.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.37.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.38.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.38.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.38.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.38.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.38.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.38.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.38.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.38.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.39.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.39.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.39.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.39.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.39.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.39.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.39.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.40.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.40.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.40.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.40.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.40.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.40.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.40.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.40.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.41.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.41.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.41.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.41.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.41.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.41.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.41.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.41.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.42.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.42.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.42.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.42.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.42.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.42.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.42.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.42.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.43.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.43.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.43.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.43.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.43.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.43.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.43.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.44.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.44.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.44.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.44.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.44.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.44.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.44.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.44.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.45.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.45.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.45.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.45.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.45.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.45.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.45.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.45.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.46.attn_qkv.weight               - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.46.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.46.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.46.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.46.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.46.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.46.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.46.ssm_out.weight                - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.47.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.47.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.47.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.47.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.47.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.47.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.47.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.48.attn_output.weight            - applying manual override: q3_K -> q4_K
+llama_tensor_get_type: blk.48.ffn_down_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.48.ffn_down_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.48.ffn_gate_exps.weight          - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.48.ffn_gate_shexp.weight         - applying manual override: q3_K -> q6_K
+llama_tensor_get_type: blk.48.ffn_up_exps.weight            - applying manual override: q3_K -> q2_K
+llama_tensor_get_type: blk.48.ffn_up_shexp.weight           - applying manual override: q3_K -> q6_K
+[   1/ 971] output.weight                        - [  3072, 248320,      1,      1], type =   q6_K, size =  596.777 MiB
+[   2/ 971] output_norm.weight                   - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[   3/ 971] token_embd.weight                    - [  3072, 248320,      1,      1], type =   q4_K, size =  409.219 MiB
+[   4/ 971] blk.0.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[   5/ 971] blk.0.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[   6/ 971] blk.0.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[   7/ 971] blk.0.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.0.ffn_down_exps.weight
+converting to q2_K .. load_imatrix: imatrix datasets=['nanfix/scripts/wikitext-2-raw/wiki.train.raw']
+load_imatrix: loaded 524 importance matrix entries from exp/r13.imatrix computed on 120 chunks
+prepare_imatrix: have 524 importance matrix entries
+size =   330.00 MiB ->   252.00 MiB
+[   8/ 971] blk.0.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[   9/ 971] blk.0.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.0.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  10/ 971] blk.0.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[  11/ 971] blk.0.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  12/ 971] blk.0.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  13/ 971] blk.0.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.0.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  14/ 971] blk.0.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  15/ 971] blk.0.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  16/ 971] blk.0.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  17/ 971] blk.0.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  18/ 971] blk.0.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  19/ 971] blk.0.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[  20/ 971] blk.0.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  21/ 971] blk.0.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  22/ 971] blk.0.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[  23/ 971] blk.1.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[  24/ 971] blk.1.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  25/ 971] blk.1.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[  26/ 971] blk.1.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.1.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  27/ 971] blk.1.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[  28/ 971] blk.1.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.1.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  29/ 971] blk.1.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[  30/ 971] blk.1.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  31/ 971] blk.1.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  32/ 971] blk.1.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.1.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  33/ 971] blk.1.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  34/ 971] blk.1.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  35/ 971] blk.1.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  36/ 971] blk.1.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  37/ 971] blk.1.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  38/ 971] blk.1.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[  39/ 971] blk.1.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  40/ 971] blk.1.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  41/ 971] blk.1.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[  42/ 971] blk.2.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[  43/ 971] blk.2.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  44/ 971] blk.2.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[  45/ 971] blk.2.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.2.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  46/ 971] blk.2.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[  47/ 971] blk.2.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.2.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  48/ 971] blk.2.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[  49/ 971] blk.2.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  50/ 971] blk.2.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  51/ 971] blk.2.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.2.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  52/ 971] blk.2.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  53/ 971] blk.2.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  54/ 971] blk.2.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  55/ 971] blk.2.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  56/ 971] blk.2.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  57/ 971] blk.2.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[  58/ 971] blk.2.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  59/ 971] blk.2.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  60/ 971] blk.2.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[  61/ 971] blk.3.attn_k.weight                  - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[  62/ 971] blk.3.attn_k_norm.weight             - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[  63/ 971] blk.3.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  64/ 971] blk.3.attn_output.weight             - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[  65/ 971] blk.3.attn_q.weight                  - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[  66/ 971] blk.3.attn_q_norm.weight             - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[  67/ 971] blk.3.attn_v.weight                  - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[  68/ 971] blk.3.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.3.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  69/ 971] blk.3.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[  70/ 971] blk.3.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.3.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  71/ 971] blk.3.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[  72/ 971] blk.3.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  73/ 971] blk.3.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  74/ 971] blk.3.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.3.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  75/ 971] blk.3.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  76/ 971] blk.3.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  77/ 971] blk.4.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[  78/ 971] blk.4.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  79/ 971] blk.4.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[  80/ 971] blk.4.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.4.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  81/ 971] blk.4.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[  82/ 971] blk.4.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.4.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  83/ 971] blk.4.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[  84/ 971] blk.4.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  85/ 971] blk.4.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  86/ 971] blk.4.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.4.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[  87/ 971] blk.4.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[  88/ 971] blk.4.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  89/ 971] blk.4.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  90/ 971] blk.4.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  91/ 971] blk.4.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[  92/ 971] blk.4.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[  93/ 971] blk.4.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  94/ 971] blk.4.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[  95/ 971] blk.4.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[  96/ 971] blk.5.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[  97/ 971] blk.5.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[  98/ 971] blk.5.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[  99/ 971] blk.5.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.5.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 100/ 971] blk.5.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 101/ 971] blk.5.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.5.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 102/ 971] blk.5.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 103/ 971] blk.5.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 104/ 971] blk.5.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 105/ 971] blk.5.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.5.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 106/ 971] blk.5.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 107/ 971] blk.5.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 108/ 971] blk.5.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 109/ 971] blk.5.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 110/ 971] blk.5.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 111/ 971] blk.5.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 112/ 971] blk.5.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 113/ 971] blk.5.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 114/ 971] blk.5.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 115/ 971] blk.6.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 116/ 971] blk.6.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 117/ 971] blk.6.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 118/ 971] blk.6.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.6.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 119/ 971] blk.6.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 120/ 971] blk.6.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.6.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 121/ 971] blk.6.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 122/ 971] blk.6.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 123/ 971] blk.6.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 124/ 971] blk.6.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.6.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 125/ 971] blk.6.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 126/ 971] blk.6.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 127/ 971] blk.6.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 128/ 971] blk.6.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 129/ 971] blk.6.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 130/ 971] blk.6.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 131/ 971] blk.6.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 132/ 971] blk.6.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 133/ 971] blk.6.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 134/ 971] blk.7.attn_k.weight                  - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 135/ 971] blk.7.attn_k_norm.weight             - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 136/ 971] blk.7.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 137/ 971] blk.7.attn_output.weight             - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 138/ 971] blk.7.attn_q.weight                  - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 139/ 971] blk.7.attn_q_norm.weight             - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 140/ 971] blk.7.attn_v.weight                  - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 141/ 971] blk.7.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.7.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 142/ 971] blk.7.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 143/ 971] blk.7.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.7.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 144/ 971] blk.7.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 145/ 971] blk.7.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 146/ 971] blk.7.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 147/ 971] blk.7.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.7.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 148/ 971] blk.7.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 149/ 971] blk.7.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 150/ 971] blk.8.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 151/ 971] blk.8.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 152/ 971] blk.8.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 153/ 971] blk.8.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.8.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 154/ 971] blk.8.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 155/ 971] blk.8.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.8.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 156/ 971] blk.8.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 157/ 971] blk.8.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 158/ 971] blk.8.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 159/ 971] blk.8.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.8.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 160/ 971] blk.8.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 161/ 971] blk.8.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 162/ 971] blk.8.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 163/ 971] blk.8.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 164/ 971] blk.8.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 165/ 971] blk.8.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 166/ 971] blk.8.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 167/ 971] blk.8.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 168/ 971] blk.8.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 169/ 971] blk.9.attn_gate.weight               - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 170/ 971] blk.9.attn_norm.weight               - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 171/ 971] blk.9.attn_qkv.weight                - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 172/ 971] blk.9.ffn_down_exps.weight           - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.9.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 173/ 971] blk.9.ffn_down_shexp.weight          - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 174/ 971] blk.9.ffn_gate_exps.weight           - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.9.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 175/ 971] blk.9.ffn_gate_inp.weight            - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 176/ 971] blk.9.ffn_gate_inp_shexp.weight      - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 177/ 971] blk.9.ffn_gate_shexp.weight          - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 178/ 971] blk.9.ffn_up_exps.weight             - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.9.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 179/ 971] blk.9.ffn_up_shexp.weight            - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 180/ 971] blk.9.post_attention_norm.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 181/ 971] blk.9.ssm_a                          - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 182/ 971] blk.9.ssm_alpha.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 183/ 971] blk.9.ssm_beta.weight                - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 184/ 971] blk.9.ssm_conv1d.weight              - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 185/ 971] blk.9.ssm_dt.bias                    - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 186/ 971] blk.9.ssm_norm.weight                - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 187/ 971] blk.9.ssm_out.weight                 - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 188/ 971] blk.10.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 189/ 971] blk.10.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 190/ 971] blk.10.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 191/ 971] blk.10.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.10.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 192/ 971] blk.10.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 193/ 971] blk.10.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.10.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 194/ 971] blk.10.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 195/ 971] blk.10.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 196/ 971] blk.10.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 197/ 971] blk.10.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.10.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 198/ 971] blk.10.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 199/ 971] blk.10.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 200/ 971] blk.10.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 201/ 971] blk.10.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 202/ 971] blk.10.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 203/ 971] blk.10.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 204/ 971] blk.10.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 205/ 971] blk.10.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 206/ 971] blk.10.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 207/ 971] blk.11.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 208/ 971] blk.11.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 209/ 971] blk.11.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 210/ 971] blk.11.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 211/ 971] blk.11.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 212/ 971] blk.11.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 213/ 971] blk.11.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 214/ 971] blk.11.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.11.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 215/ 971] blk.11.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 216/ 971] blk.11.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.11.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 217/ 971] blk.11.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 218/ 971] blk.11.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 219/ 971] blk.11.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 220/ 971] blk.11.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.11.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 221/ 971] blk.11.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 222/ 971] blk.11.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 223/ 971] blk.12.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 224/ 971] blk.12.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 225/ 971] blk.12.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 226/ 971] blk.12.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.12.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 227/ 971] blk.12.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 228/ 971] blk.12.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.12.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 229/ 971] blk.12.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 230/ 971] blk.12.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 231/ 971] blk.12.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 232/ 971] blk.12.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.12.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 233/ 971] blk.12.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 234/ 971] blk.12.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 235/ 971] blk.12.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 236/ 971] blk.12.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 237/ 971] blk.12.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 238/ 971] blk.12.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 239/ 971] blk.12.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 240/ 971] blk.12.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 241/ 971] blk.12.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 242/ 971] blk.13.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 243/ 971] blk.13.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 244/ 971] blk.13.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 245/ 971] blk.13.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.13.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 246/ 971] blk.13.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 247/ 971] blk.13.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.13.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 248/ 971] blk.13.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 249/ 971] blk.13.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 250/ 971] blk.13.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 251/ 971] blk.13.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.13.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 252/ 971] blk.13.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 253/ 971] blk.13.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 254/ 971] blk.13.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 255/ 971] blk.13.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 256/ 971] blk.13.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 257/ 971] blk.13.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 258/ 971] blk.13.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 259/ 971] blk.13.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 260/ 971] blk.13.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 261/ 971] blk.14.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 262/ 971] blk.14.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 263/ 971] blk.14.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 264/ 971] blk.14.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.14.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 265/ 971] blk.14.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 266/ 971] blk.14.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.14.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 267/ 971] blk.14.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 268/ 971] blk.14.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 269/ 971] blk.14.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 270/ 971] blk.14.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.14.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 271/ 971] blk.14.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 272/ 971] blk.14.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 273/ 971] blk.14.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 274/ 971] blk.14.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 275/ 971] blk.14.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 276/ 971] blk.14.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 277/ 971] blk.14.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 278/ 971] blk.14.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 279/ 971] blk.14.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 280/ 971] blk.15.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 281/ 971] blk.15.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 282/ 971] blk.15.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 283/ 971] blk.15.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 284/ 971] blk.15.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 285/ 971] blk.15.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 286/ 971] blk.15.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 287/ 971] blk.15.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.15.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 288/ 971] blk.15.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 289/ 971] blk.15.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.15.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 290/ 971] blk.15.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 291/ 971] blk.15.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 292/ 971] blk.15.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 293/ 971] blk.15.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.15.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 294/ 971] blk.15.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 295/ 971] blk.15.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 296/ 971] blk.16.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 297/ 971] blk.16.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 298/ 971] blk.16.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 299/ 971] blk.16.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.16.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 300/ 971] blk.16.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 301/ 971] blk.16.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.16.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 302/ 971] blk.16.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 303/ 971] blk.16.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 304/ 971] blk.16.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 305/ 971] blk.16.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.16.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 306/ 971] blk.16.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 307/ 971] blk.16.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 308/ 971] blk.16.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 309/ 971] blk.16.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 310/ 971] blk.16.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 311/ 971] blk.16.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 312/ 971] blk.16.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 313/ 971] blk.16.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 314/ 971] blk.16.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 315/ 971] blk.17.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 316/ 971] blk.17.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 317/ 971] blk.17.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 318/ 971] blk.17.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.17.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 319/ 971] blk.17.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 320/ 971] blk.17.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.17.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 321/ 971] blk.17.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 322/ 971] blk.17.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 323/ 971] blk.17.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 324/ 971] blk.17.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.17.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 325/ 971] blk.17.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 326/ 971] blk.17.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 327/ 971] blk.17.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 328/ 971] blk.17.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 329/ 971] blk.17.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 330/ 971] blk.17.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 331/ 971] blk.17.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 332/ 971] blk.17.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 333/ 971] blk.17.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 334/ 971] blk.18.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 335/ 971] blk.18.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 336/ 971] blk.18.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 337/ 971] blk.18.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.18.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 338/ 971] blk.18.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 339/ 971] blk.18.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.18.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 340/ 971] blk.18.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 341/ 971] blk.18.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 342/ 971] blk.18.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 343/ 971] blk.18.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.18.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 344/ 971] blk.18.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 345/ 971] blk.18.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 346/ 971] blk.18.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 347/ 971] blk.18.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 348/ 971] blk.18.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 349/ 971] blk.18.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 350/ 971] blk.18.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 351/ 971] blk.18.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 352/ 971] blk.18.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 353/ 971] blk.19.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 354/ 971] blk.19.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 355/ 971] blk.19.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 356/ 971] blk.19.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 357/ 971] blk.19.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 358/ 971] blk.19.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 359/ 971] blk.19.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 360/ 971] blk.19.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.19.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 361/ 971] blk.19.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 362/ 971] blk.19.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.19.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 363/ 971] blk.19.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 364/ 971] blk.19.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 365/ 971] blk.19.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 366/ 971] blk.19.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.19.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 367/ 971] blk.19.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 368/ 971] blk.19.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 369/ 971] blk.20.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 370/ 971] blk.20.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 371/ 971] blk.20.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 372/ 971] blk.20.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.20.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 373/ 971] blk.20.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 374/ 971] blk.20.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.20.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 375/ 971] blk.20.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 376/ 971] blk.20.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 377/ 971] blk.20.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 378/ 971] blk.20.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.20.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 379/ 971] blk.20.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 380/ 971] blk.20.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 381/ 971] blk.20.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 382/ 971] blk.20.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 383/ 971] blk.20.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 384/ 971] blk.20.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 385/ 971] blk.20.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 386/ 971] blk.20.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 387/ 971] blk.20.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 388/ 971] blk.21.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 389/ 971] blk.21.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 390/ 971] blk.21.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 391/ 971] blk.21.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.21.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 392/ 971] blk.21.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 393/ 971] blk.21.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.21.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 394/ 971] blk.21.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 395/ 971] blk.21.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 396/ 971] blk.21.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 397/ 971] blk.21.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.21.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 398/ 971] blk.21.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 399/ 971] blk.21.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 400/ 971] blk.21.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 401/ 971] blk.21.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 402/ 971] blk.21.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 403/ 971] blk.21.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 404/ 971] blk.21.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 405/ 971] blk.21.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 406/ 971] blk.21.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 407/ 971] blk.22.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 408/ 971] blk.22.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 409/ 971] blk.22.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 410/ 971] blk.22.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 411/ 971] blk.22.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 412/ 971] blk.22.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 413/ 971] blk.22.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 414/ 971] blk.22.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 415/ 971] blk.22.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 416/ 971] blk.22.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 417/ 971] blk.22.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 418/ 971] blk.22.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 419/ 971] blk.22.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 420/ 971] blk.22.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 421/ 971] blk.22.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 422/ 971] blk.22.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 423/ 971] blk.22.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 424/ 971] blk.22.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 425/ 971] blk.22.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 426/ 971] blk.23.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 427/ 971] blk.23.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 428/ 971] blk.23.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 429/ 971] blk.23.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 430/ 971] blk.23.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 431/ 971] blk.23.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 432/ 971] blk.23.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 433/ 971] blk.23.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.23.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 434/ 971] blk.23.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 435/ 971] blk.23.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 436/ 971] blk.23.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.23.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 437/ 971] blk.23.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 438/ 971] blk.23.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 439/ 971] blk.23.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 440/ 971] blk.23.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 441/ 971] blk.23.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 442/ 971] blk.23.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.23.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 443/ 971] blk.23.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 444/ 971] blk.23.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 445/ 971] blk.23.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 446/ 971] blk.24.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 447/ 971] blk.24.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 448/ 971] blk.24.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 449/ 971] blk.24.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 450/ 971] blk.24.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 451/ 971] blk.24.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 452/ 971] blk.24.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 453/ 971] blk.24.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 454/ 971] blk.24.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 455/ 971] blk.24.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 456/ 971] blk.24.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 457/ 971] blk.24.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, 
+====== llama_model_quantize_impl: did not find weights for blk.24.ffn_hot_inp.weight
+converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 458/ 971] blk.24.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 459/ 971] blk.24.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 460/ 971] blk.24.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 461/ 971] blk.24.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 462/ 971] blk.24.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 463/ 971] blk.24.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 464/ 971] blk.24.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 465/ 971] blk.24.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 466/ 971] blk.24.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 467/ 971] blk.24.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 468/ 971] blk.24.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 469/ 971] blk.25.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 470/ 971] blk.25.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 471/ 971] blk.25.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 472/ 971] blk.25.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.25.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 473/ 971] blk.25.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 474/ 971] blk.25.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 475/ 971] blk.25.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.25.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 476/ 971] blk.25.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 477/ 971] blk.25.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 478/ 971] blk.25.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 479/ 971] blk.25.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 480/ 971] blk.25.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 481/ 971] blk.25.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.25.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 482/ 971] blk.25.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 483/ 971] blk.25.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 484/ 971] blk.25.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 485/ 971] blk.25.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 486/ 971] blk.25.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 487/ 971] blk.25.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 488/ 971] blk.25.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 489/ 971] blk.25.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 490/ 971] blk.25.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 491/ 971] blk.25.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 492/ 971] blk.26.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 493/ 971] blk.26.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 494/ 971] blk.26.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 495/ 971] blk.26.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 496/ 971] blk.26.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 497/ 971] blk.26.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 498/ 971] blk.26.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 499/ 971] blk.26.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 500/ 971] blk.26.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 501/ 971] blk.26.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 502/ 971] blk.26.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 503/ 971] blk.26.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 504/ 971] blk.26.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 505/ 971] blk.26.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 506/ 971] blk.26.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 507/ 971] blk.26.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 508/ 971] blk.26.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 509/ 971] blk.26.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 510/ 971] blk.26.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 511/ 971] blk.27.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 512/ 971] blk.27.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 513/ 971] blk.27.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 514/ 971] blk.27.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 515/ 971] blk.27.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 516/ 971] blk.27.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 517/ 971] blk.27.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 518/ 971] blk.27.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.27.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 519/ 971] blk.27.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 520/ 971] blk.27.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 521/ 971] blk.27.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.27.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 522/ 971] blk.27.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 523/ 971] blk.27.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 524/ 971] blk.27.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 525/ 971] blk.27.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 526/ 971] blk.27.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 527/ 971] blk.27.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.27.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 528/ 971] blk.27.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 529/ 971] blk.27.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 530/ 971] blk.27.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 531/ 971] blk.28.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 532/ 971] blk.28.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 533/ 971] blk.28.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 534/ 971] blk.28.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.28.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 535/ 971] blk.28.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 536/ 971] blk.28.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 537/ 971] blk.28.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.28.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 538/ 971] blk.28.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 539/ 971] blk.28.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 540/ 971] blk.28.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 541/ 971] blk.28.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 542/ 971] blk.28.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 543/ 971] blk.28.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.28.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 544/ 971] blk.28.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 545/ 971] blk.28.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 546/ 971] blk.28.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 547/ 971] blk.28.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 548/ 971] blk.28.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 549/ 971] blk.28.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 550/ 971] blk.28.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 551/ 971] blk.28.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 552/ 971] blk.28.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 553/ 971] blk.28.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 554/ 971] blk.29.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 555/ 971] blk.29.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 556/ 971] blk.29.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 557/ 971] blk.29.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 558/ 971] blk.29.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 559/ 971] blk.29.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 560/ 971] blk.29.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 561/ 971] blk.29.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 562/ 971] blk.29.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 563/ 971] blk.29.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 564/ 971] blk.29.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 565/ 971] blk.29.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, 
+====== llama_model_quantize_impl: did not find weights for blk.29.ffn_hot_inp.weight
+converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 566/ 971] blk.29.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 567/ 971] blk.29.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 568/ 971] blk.29.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 569/ 971] blk.29.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 570/ 971] blk.29.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 571/ 971] blk.29.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 572/ 971] blk.29.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 573/ 971] blk.29.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 574/ 971] blk.29.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 575/ 971] blk.29.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 576/ 971] blk.29.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 577/ 971] blk.30.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 578/ 971] blk.30.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 579/ 971] blk.30.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 580/ 971] blk.30.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.30.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 581/ 971] blk.30.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 582/ 971] blk.30.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 583/ 971] blk.30.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.30.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 584/ 971] blk.30.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 585/ 971] blk.30.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 586/ 971] blk.30.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 587/ 971] blk.30.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 588/ 971] blk.30.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 589/ 971] blk.30.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.30.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 590/ 971] blk.30.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 591/ 971] blk.30.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 592/ 971] blk.30.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 593/ 971] blk.30.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 594/ 971] blk.30.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 595/ 971] blk.30.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 596/ 971] blk.30.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 597/ 971] blk.30.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 598/ 971] blk.30.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 599/ 971] blk.30.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 600/ 971] blk.31.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 601/ 971] blk.31.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 602/ 971] blk.31.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 603/ 971] blk.31.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 604/ 971] blk.31.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 605/ 971] blk.31.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 606/ 971] blk.31.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 607/ 971] blk.31.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.31.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 608/ 971] blk.31.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 609/ 971] blk.31.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 610/ 971] blk.31.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.31.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 611/ 971] blk.31.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 612/ 971] blk.31.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 613/ 971] blk.31.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 614/ 971] blk.31.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 615/ 971] blk.31.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 616/ 971] blk.31.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.31.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 617/ 971] blk.31.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 618/ 971] blk.31.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 619/ 971] blk.31.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 620/ 971] blk.32.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 621/ 971] blk.32.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 622/ 971] blk.32.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 623/ 971] blk.32.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 624/ 971] blk.32.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 625/ 971] blk.32.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 626/ 971] blk.32.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 627/ 971] blk.32.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 628/ 971] blk.32.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 629/ 971] blk.32.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 630/ 971] blk.32.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 631/ 971] blk.32.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 632/ 971] blk.32.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 633/ 971] blk.32.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 634/ 971] blk.32.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 635/ 971] blk.32.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 636/ 971] blk.32.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 637/ 971] blk.32.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 638/ 971] blk.32.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 639/ 971] blk.33.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 640/ 971] blk.33.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 641/ 971] blk.33.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 642/ 971] blk.33.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.33.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 643/ 971] blk.33.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 644/ 971] blk.33.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 645/ 971] blk.33.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.33.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 646/ 971] blk.33.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 647/ 971] blk.33.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 648/ 971] blk.33.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 649/ 971] blk.33.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 650/ 971] blk.33.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 651/ 971] blk.33.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.33.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 652/ 971] blk.33.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 653/ 971] blk.33.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 654/ 971] blk.33.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 655/ 971] blk.33.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 656/ 971] blk.33.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 657/ 971] blk.33.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 658/ 971] blk.33.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 659/ 971] blk.33.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 660/ 971] blk.33.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 661/ 971] blk.33.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 662/ 971] blk.34.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 663/ 971] blk.34.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 664/ 971] blk.34.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 665/ 971] blk.34.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.34.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 666/ 971] blk.34.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 667/ 971] blk.34.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 668/ 971] blk.34.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.34.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 669/ 971] blk.34.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 670/ 971] blk.34.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 671/ 971] blk.34.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 672/ 971] blk.34.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 673/ 971] blk.34.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 674/ 971] blk.34.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.34.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 675/ 971] blk.34.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 676/ 971] blk.34.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 677/ 971] blk.34.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 678/ 971] blk.34.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 679/ 971] blk.34.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 680/ 971] blk.34.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 681/ 971] blk.34.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 682/ 971] blk.34.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 683/ 971] blk.34.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 684/ 971] blk.34.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 685/ 971] blk.35.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 686/ 971] blk.35.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 687/ 971] blk.35.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 688/ 971] blk.35.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 689/ 971] blk.35.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 690/ 971] blk.35.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 691/ 971] blk.35.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 692/ 971] blk.35.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 693/ 971] blk.35.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 694/ 971] blk.35.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 695/ 971] blk.35.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 696/ 971] blk.35.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 697/ 971] blk.35.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 698/ 971] blk.35.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 699/ 971] blk.35.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 700/ 971] blk.35.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, 
+====== llama_model_quantize_impl: did not find weights for blk.35.ffn_hot_inp.weight
+converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 701/ 971] blk.35.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 702/ 971] blk.35.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 703/ 971] blk.35.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 704/ 971] blk.35.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 705/ 971] blk.36.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 706/ 971] blk.36.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 707/ 971] blk.36.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 708/ 971] blk.36.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.36.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 709/ 971] blk.36.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 710/ 971] blk.36.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 711/ 971] blk.36.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.36.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 712/ 971] blk.36.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 713/ 971] blk.36.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 714/ 971] blk.36.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 715/ 971] blk.36.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 716/ 971] blk.36.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 717/ 971] blk.36.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.36.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 718/ 971] blk.36.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 719/ 971] blk.36.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 720/ 971] blk.36.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 721/ 971] blk.36.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 722/ 971] blk.36.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 723/ 971] blk.36.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 724/ 971] blk.36.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 725/ 971] blk.36.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 726/ 971] blk.36.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 727/ 971] blk.36.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 728/ 971] blk.37.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 729/ 971] blk.37.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 730/ 971] blk.37.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 731/ 971] blk.37.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.37.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 732/ 971] blk.37.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 733/ 971] blk.37.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 734/ 971] blk.37.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.37.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 735/ 971] blk.37.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 736/ 971] blk.37.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 737/ 971] blk.37.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 738/ 971] blk.37.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 739/ 971] blk.37.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 740/ 971] blk.37.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.37.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 741/ 971] blk.37.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 742/ 971] blk.37.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 743/ 971] blk.37.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 744/ 971] blk.37.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 745/ 971] blk.37.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 746/ 971] blk.37.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 747/ 971] blk.37.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 748/ 971] blk.37.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 749/ 971] blk.37.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 750/ 971] blk.37.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 751/ 971] blk.38.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 752/ 971] blk.38.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 753/ 971] blk.38.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 754/ 971] blk.38.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 755/ 971] blk.38.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 756/ 971] blk.38.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 757/ 971] blk.38.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 758/ 971] blk.38.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 759/ 971] blk.38.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 760/ 971] blk.38.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 761/ 971] blk.38.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 762/ 971] blk.38.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 763/ 971] blk.38.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 764/ 971] blk.38.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 765/ 971] blk.38.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 766/ 971] blk.38.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 767/ 971] blk.38.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 768/ 971] blk.38.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 769/ 971] blk.38.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 770/ 971] blk.39.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 771/ 971] blk.39.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 772/ 971] blk.39.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 773/ 971] blk.39.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 774/ 971] blk.39.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 775/ 971] blk.39.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 776/ 971] blk.39.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 777/ 971] blk.39.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.39.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 778/ 971] blk.39.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 779/ 971] blk.39.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 780/ 971] blk.39.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.39.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 781/ 971] blk.39.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 782/ 971] blk.39.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 783/ 971] blk.39.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 784/ 971] blk.39.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 785/ 971] blk.39.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 786/ 971] blk.39.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.39.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 787/ 971] blk.39.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 788/ 971] blk.39.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 789/ 971] blk.39.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 790/ 971] blk.40.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 791/ 971] blk.40.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 792/ 971] blk.40.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 793/ 971] blk.40.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.40.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 794/ 971] blk.40.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 795/ 971] blk.40.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 796/ 971] blk.40.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.40.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 797/ 971] blk.40.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 798/ 971] blk.40.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 799/ 971] blk.40.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 800/ 971] blk.40.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 801/ 971] blk.40.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 802/ 971] blk.40.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.40.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 803/ 971] blk.40.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 804/ 971] blk.40.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 805/ 971] blk.40.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 806/ 971] blk.40.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 807/ 971] blk.40.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 808/ 971] blk.40.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 809/ 971] blk.40.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 810/ 971] blk.40.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 811/ 971] blk.40.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 812/ 971] blk.40.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 813/ 971] blk.41.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 814/ 971] blk.41.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 815/ 971] blk.41.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 816/ 971] blk.41.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 817/ 971] blk.41.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 818/ 971] blk.41.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 819/ 971] blk.41.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 820/ 971] blk.41.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 821/ 971] blk.41.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 822/ 971] blk.41.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 823/ 971] blk.41.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 824/ 971] blk.41.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, 
+====== llama_model_quantize_impl: did not find weights for blk.41.ffn_hot_inp.weight
+converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 825/ 971] blk.41.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 826/ 971] blk.41.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 827/ 971] blk.41.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 828/ 971] blk.41.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 829/ 971] blk.41.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 830/ 971] blk.41.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 831/ 971] blk.41.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 832/ 971] blk.41.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 833/ 971] blk.41.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 834/ 971] blk.41.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 835/ 971] blk.41.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 836/ 971] blk.42.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 837/ 971] blk.42.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 838/ 971] blk.42.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 839/ 971] blk.42.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.42.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 840/ 971] blk.42.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 841/ 971] blk.42.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 842/ 971] blk.42.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.42.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 843/ 971] blk.42.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 844/ 971] blk.42.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 845/ 971] blk.42.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 846/ 971] blk.42.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 847/ 971] blk.42.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 848/ 971] blk.42.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.42.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 849/ 971] blk.42.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 850/ 971] blk.42.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 851/ 971] blk.42.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 852/ 971] blk.42.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 853/ 971] blk.42.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 854/ 971] blk.42.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 855/ 971] blk.42.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 856/ 971] blk.42.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 857/ 971] blk.42.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 858/ 971] blk.42.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 859/ 971] blk.43.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 860/ 971] blk.43.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 861/ 971] blk.43.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 862/ 971] blk.43.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 863/ 971] blk.43.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 864/ 971] blk.43.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 865/ 971] blk.43.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 866/ 971] blk.43.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 867/ 971] blk.43.ffn_down_hexps.weight         - [  1024,   3072,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 868/ 971] blk.43.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 869/ 971] blk.43.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 870/ 971] blk.43.ffn_gate_hexps.weight         - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 871/ 971] blk.43.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 872/ 971] blk.43.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 873/ 971] blk.43.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 874/ 971] blk.43.ffn_hot_inp.weight            - [  3072,     16,      1,      1], type =    f32, 
+====== llama_model_quantize_impl: did not find weights for blk.43.ffn_hot_inp.weight
+converting to q3_K .. size =     0.19 MiB ->     0.02 MiB
+[ 875/ 971] blk.43.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 876/ 971] blk.43.ffn_up_hexps.weight           - [  3072,   1024,     16,      1], type =   q3_K, size =   20.625 MiB
+[ 877/ 971] blk.43.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 878/ 971] blk.43.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 879/ 971] blk.44.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 880/ 971] blk.44.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 881/ 971] blk.44.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 882/ 971] blk.44.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 883/ 971] blk.44.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 884/ 971] blk.44.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 885/ 971] blk.44.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 886/ 971] blk.44.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 887/ 971] blk.44.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 888/ 971] blk.44.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 889/ 971] blk.44.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 890/ 971] blk.44.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 891/ 971] blk.44.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 892/ 971] blk.44.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 893/ 971] blk.44.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 894/ 971] blk.44.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 895/ 971] blk.44.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 896/ 971] blk.44.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 897/ 971] blk.44.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 898/ 971] blk.45.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 899/ 971] blk.45.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 900/ 971] blk.45.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 901/ 971] blk.45.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 902/ 971] blk.45.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 903/ 971] blk.45.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 904/ 971] blk.45.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 905/ 971] blk.45.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 906/ 971] blk.45.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 907/ 971] blk.45.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 908/ 971] blk.45.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 909/ 971] blk.45.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 910/ 971] blk.45.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 911/ 971] blk.45.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 912/ 971] blk.45.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 913/ 971] blk.45.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 914/ 971] blk.45.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 915/ 971] blk.45.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 916/ 971] blk.45.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 917/ 971] blk.46.attn_gate.weight              - [  3072,   8192,      1,      1], type =   q3_K, size =   10.312 MiB
+[ 918/ 971] blk.46.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 919/ 971] blk.46.attn_qkv.weight               - [  3072,  12288,      1,      1], type =   q4_K, size =   20.250 MiB
+[ 920/ 971] blk.46.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 921/ 971] blk.46.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 922/ 971] blk.46.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 923/ 971] blk.46.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 924/ 971] blk.46.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 925/ 971] blk.46.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 926/ 971] blk.46.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 927/ 971] blk.46.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 928/ 971] blk.46.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 929/ 971] blk.46.ssm_a                         - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 930/ 971] blk.46.ssm_alpha.weight              - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 931/ 971] blk.46.ssm_beta.weight               - [  3072,     64,      1,      1], type =   q3_K, size =    0.081 MiB
+[ 932/ 971] blk.46.ssm_conv1d.weight             - [     4,  12288,      1,      1], type =    f32, size =    0.188 MiB
+[ 933/ 971] blk.46.ssm_dt.bias                   - [    64,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 934/ 971] blk.46.ssm_norm.weight               - [   128,      1,      1,      1], type =    f32, size =    0.000 MiB
+[ 935/ 971] blk.46.ssm_out.weight                - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 936/ 971] blk.47.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 937/ 971] blk.47.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 938/ 971] blk.47.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 939/ 971] blk.47.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 940/ 971] blk.47.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 941/ 971] blk.47.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 942/ 971] blk.47.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 943/ 971] blk.47.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 944/ 971] blk.47.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 945/ 971] blk.47.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 946/ 971] blk.47.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =    f32, size =    3.000 MiB
+[ 947/ 971] blk.47.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 948/ 971] blk.47.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 949/ 971] blk.47.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 950/ 971] blk.47.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 951/ 971] blk.47.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 952/ 971] blk.48.attn_k.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 953/ 971] blk.48.attn_k_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 954/ 971] blk.48.attn_norm.weight              - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 955/ 971] blk.48.attn_output.weight            - [  8192,   3072,      1,      1], type =   q4_K, size =   13.500 MiB
+[ 956/ 971] blk.48.attn_q.weight                 - [  3072,  16384,      1,      1], type =   q3_K, size =   20.625 MiB
+[ 957/ 971] blk.48.attn_q_norm.weight            - [   256,      1,      1,      1], type =    f32, size =    0.001 MiB
+[ 958/ 971] blk.48.attn_v.weight                 - [  3072,    512,      1,      1], type =   q3_K, size =    0.645 MiB
+[ 959/ 971] blk.48.ffn_down_exps.weight          - [  1024,   3072,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.48.ffn_down_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 960/ 971] blk.48.ffn_down_shexp.weight         - [  1024,   3072,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 961/ 971] blk.48.ffn_gate_exps.weight          - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.48.ffn_gate_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 962/ 971] blk.48.ffn_gate_inp.weight           - [  3072,    256,      1,      1], type =   bf16, size =    1.500 MiB
+[ 963/ 971] blk.48.ffn_gate_inp_shexp.weight     - [  3072,      1,      1,      1], type =   bf16, size =    0.006 MiB
+[ 964/ 971] blk.48.ffn_gate_shexp.weight         - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 965/ 971] blk.48.ffn_up_exps.weight            - [  3072,   1024,    256,      1], type =   q3_K, 
+====== llama_model_quantize_impl: did not find weights for blk.48.ffn_up_exps.weight
+converting to q2_K .. size =   330.00 MiB ->   252.00 MiB
+[ 966/ 971] blk.48.ffn_up_shexp.weight           - [  3072,   1024,      1,      1], type =   q6_K, size =    2.461 MiB
+[ 967/ 971] blk.48.nextn.eh_proj.weight          - [  6144,   3072,      1,      1], type =   q3_K, size =    7.734 MiB
+[ 968/ 971] blk.48.nextn.enorm.weight            - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 969/ 971] blk.48.nextn.hnorm.weight            - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 970/ 971] blk.48.nextn.shared_head_norm.weight - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+[ 971/ 971] blk.48.post_attention_norm.weight    - [  3072,      1,      1,      1], type =    f32, size =    0.012 MiB
+llama_model_quantize_impl: model size  = 53209.12 MiB (3.50 BPW)
+llama_model_quantize_impl: quant size  = 41740.11 MiB (2.75 BPW)
+
+llama_quantize: quantize time = 898888.65 ms
+llama_quantize:    total time = 898888.65 ms

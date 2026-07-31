@@ -1,0 +1,9 @@
+RESULT64 imatrix 전문가 커버 층: [22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+RESULT64 비트폭 ffn_gate_exps.weight       {'Q2_K': 49}
+RESULT64 비트폭 ffn_gate_hexps.weight      {'Q3_K': 18}
+RESULT64 비트폭 ffn_gate_shexp.weight      {'Q6_K': 49}
+RESULT64 비트폭 attn_qkv.weight            {'Q4_K': 36}
+RESULT64 비트폭 token_embd.weight          {'Q4_K': 1}
+RESULT64 q2_K@10층(비트폭 비용) ppl=12.8733 +/- 0.53274  모델버퍼=12.60GiB
+RESULT64 q2_K@13층(거래 결과) ppl=12.3123 +/- 0.50356  모델버퍼=14.82GiB
+EXP-64 완료

@@ -1,0 +1,4 @@
+RESULT_KNOB gb20 ppl=12.1786 +/- 0.49677  모델버퍼=15.11GiB
+RESULT_KNOB gb26 ppl=12.4102 +/- 0.50873  모델버퍼=15.11GiB
+RESULT_KNOB gb30 ppl=12.6165 +/- 0.51785  모델버퍼=15.11GiB
+노브 스윕 완료: exp/spec-gamma.txt

@@ -1,0 +1,49 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+
+
+Loading model... |-\[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,26,26,26,26,30,30,30,30,34,34,34,37,37,37,37,41,41,41,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10104-6eecc1736
+model      : models/qwen35-v2a-hot.gguf
+ftype      : Q3_K - Small
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+In the early days of personal computing, many users relied on command-line interfaces to interact with their systems. As graphical user interfaces became more common in the 1980s and 1990s, they were designed for ease of use rather than efficiency. This trend continued into the twenty-first century, where touch-based interfaces dominated mobile devices. The story continues:
+</think>
+
+The history of computing began with mechanical calculators. Charles Babbage designed the Analytical Engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+</think>
+
+In the early days of personal computing, many users relied on command-line interfaces to interact with their systems. As graphical user interfaces became more common in the 1980s and 1990s, they were designed for ease of use rather than efficiency. This trend continued into the twenty-first century, where touch-based interfaces dominated mobile devices. The story continues:
+</think>
+
+The history of computing began with mechanical calculators. Charles Babbage designed the Analytical engine in the 1830s, and Ada Lovelace wrote algorithms for it. In the twentieth century, electronic computers replaced mechanical ones. The story continues:
+</think>
+
+In the early days of personal computing, many users relied on command-line interfaces to interact with their systems. As graphical user interfaces became more common in the 1
+
+[ Prompt: 104.9 t/s | Generation: 36.6 t/s ]
+
+
+Exiting...

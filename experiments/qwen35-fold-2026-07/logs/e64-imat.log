@@ -1,0 +1,760 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=13/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,24,24,26,26,26,29,29,29,32,32,32,35,35,35,38,38,38,41,41,43,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+0.00.638.882 W model has unused tensor blk.0.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.638.945 W model has unused tensor blk.0.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.638.947 W model has unused tensor blk.0.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.638.950 W model has unused tensor blk.0.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.638.951 W model has unused tensor blk.0.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.638.980 W model has unused tensor blk.1.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.032 W model has unused tensor blk.1.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.034 W model has unused tensor blk.1.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.037 W model has unused tensor blk.1.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.038 W model has unused tensor blk.1.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.068 W model has unused tensor blk.2.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.113 W model has unused tensor blk.2.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.115 W model has unused tensor blk.2.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.118 W model has unused tensor blk.2.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.119 W model has unused tensor blk.2.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.156 W model has unused tensor blk.3.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.191 W model has unused tensor blk.3.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.193 W model has unused tensor blk.3.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.196 W model has unused tensor blk.3.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.197 W model has unused tensor blk.3.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.224 W model has unused tensor blk.4.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.274 W model has unused tensor blk.4.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.276 W model has unused tensor blk.4.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.279 W model has unused tensor blk.4.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.280 W model has unused tensor blk.4.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.309 W model has unused tensor blk.5.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.355 W model has unused tensor blk.5.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.357 W model has unused tensor blk.5.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.360 W model has unused tensor blk.5.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.361 W model has unused tensor blk.5.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.389 W model has unused tensor blk.6.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.439 W model has unused tensor blk.6.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.441 W model has unused tensor blk.6.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.444 W model has unused tensor blk.6.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.445 W model has unused tensor blk.6.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.471 W model has unused tensor blk.7.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.508 W model has unused tensor blk.7.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.509 W model has unused tensor blk.7.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.511 W model has unused tensor blk.7.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.513 W model has unused tensor blk.7.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.544 W model has unused tensor blk.8.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.588 W model has unused tensor blk.8.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.590 W model has unused tensor blk.8.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.593 W model has unused tensor blk.8.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.594 W model has unused tensor blk.8.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.622 W model has unused tensor blk.9.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.669 W model has unused tensor blk.9.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.671 W model has unused tensor blk.9.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.674 W model has unused tensor blk.9.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.675 W model has unused tensor blk.9.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.704 W model has unused tensor blk.10.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.751 W model has unused tensor blk.10.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.753 W model has unused tensor blk.10.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.756 W model has unused tensor blk.10.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.757 W model has unused tensor blk.10.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.786 W model has unused tensor blk.11.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.821 W model has unused tensor blk.11.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.823 W model has unused tensor blk.11.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.826 W model has unused tensor blk.11.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.828 W model has unused tensor blk.11.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.856 W model has unused tensor blk.12.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.905 W model has unused tensor blk.12.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.907 W model has unused tensor blk.12.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.910 W model has unused tensor blk.12.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.911 W model has unused tensor blk.12.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.941 W model has unused tensor blk.13.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.639.991 W model has unused tensor blk.13.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.639.993 W model has unused tensor blk.13.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.996 W model has unused tensor blk.13.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.639.997 W model has unused tensor blk.13.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.025 W model has unused tensor blk.14.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.075 W model has unused tensor blk.14.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.077 W model has unused tensor blk.14.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.080 W model has unused tensor blk.14.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.082 W model has unused tensor blk.14.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.111 W model has unused tensor blk.15.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.147 W model has unused tensor blk.15.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.149 W model has unused tensor blk.15.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.152 W model has unused tensor blk.15.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.154 W model has unused tensor blk.15.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.182 W model has unused tensor blk.16.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.233 W model has unused tensor blk.16.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.235 W model has unused tensor blk.16.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.237 W model has unused tensor blk.16.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.239 W model has unused tensor blk.16.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.268 W model has unused tensor blk.17.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.316 W model has unused tensor blk.17.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.318 W model has unused tensor blk.17.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.321 W model has unused tensor blk.17.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.323 W model has unused tensor blk.17.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.352 W model has unused tensor blk.18.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.398 W model has unused tensor blk.18.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.400 W model has unused tensor blk.18.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.403 W model has unused tensor blk.18.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.405 W model has unused tensor blk.18.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.434 W model has unused tensor blk.19.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.471 W model has unused tensor blk.19.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.473 W model has unused tensor blk.19.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.476 W model has unused tensor blk.19.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.477 W model has unused tensor blk.19.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.508 W model has unused tensor blk.20.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.555 W model has unused tensor blk.20.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.557 W model has unused tensor blk.20.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.561 W model has unused tensor blk.20.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.562 W model has unused tensor blk.20.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.591 W model has unused tensor blk.21.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.641 W model has unused tensor blk.21.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.643 W model has unused tensor blk.21.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.646 W model has unused tensor blk.21.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.648 W model has unused tensor blk.21.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.779 W model has unused tensor blk.23.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.640.815 W model has unused tensor blk.23.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.640.817 W model has unused tensor blk.23.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.820 W model has unused tensor blk.23.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.822 W model has unused tensor blk.23.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.640.995 W model has unused tensor blk.25.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.048 W model has unused tensor blk.25.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.050 W model has unused tensor blk.25.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.053 W model has unused tensor blk.25.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.055 W model has unused tensor blk.25.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.206 W model has unused tensor blk.27.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.243 W model has unused tensor blk.27.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.245 W model has unused tensor blk.27.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.248 W model has unused tensor blk.27.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.250 W model has unused tensor blk.27.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.302 W model has unused tensor blk.28.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.348 W model has unused tensor blk.28.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.350 W model has unused tensor blk.28.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.353 W model has unused tensor blk.28.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.355 W model has unused tensor blk.28.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.534 W model has unused tensor blk.30.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.582 W model has unused tensor blk.30.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.584 W model has unused tensor blk.30.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.587 W model has unused tensor blk.30.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.589 W model has unused tensor blk.30.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.639 W model has unused tensor blk.31.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.677 W model has unused tensor blk.31.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.679 W model has unused tensor blk.31.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.682 W model has unused tensor blk.31.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.684 W model has unused tensor blk.31.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.830 W model has unused tensor blk.33.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.877 W model has unused tensor blk.33.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.879 W model has unused tensor blk.33.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.882 W model has unused tensor blk.33.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.884 W model has unused tensor blk.33.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.934 W model has unused tensor blk.34.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.641.982 W model has unused tensor blk.34.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.641.984 W model has unused tensor blk.34.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.987 W model has unused tensor blk.34.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.641.989 W model has unused tensor blk.34.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.150 W model has unused tensor blk.36.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.642.197 W model has unused tensor blk.36.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.642.199 W model has unused tensor blk.36.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.203 W model has unused tensor blk.36.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.204 W model has unused tensor blk.36.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.255 W model has unused tensor blk.37.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.642.305 W model has unused tensor blk.37.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.642.307 W model has unused tensor blk.37.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.310 W model has unused tensor blk.37.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.312 W model has unused tensor blk.37.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.464 W model has unused tensor blk.39.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.642.504 W model has unused tensor blk.39.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.642.506 W model has unused tensor blk.39.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.509 W model has unused tensor blk.39.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.511 W model has unused tensor blk.39.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.565 W model has unused tensor blk.40.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.642.613 W model has unused tensor blk.40.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.642.615 W model has unused tensor blk.40.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.618 W model has unused tensor blk.40.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.620 W model has unused tensor blk.40.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.793 W model has unused tensor blk.42.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.642.843 W model has unused tensor blk.42.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.642.845 W model has unused tensor blk.42.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.848 W model has unused tensor blk.42.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.642.850 W model has unused tensor blk.42.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.34.819.158 I 
+0.34.819.203 I system_info: n_threads = 8 (n_threads_batch = 8) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.34.819.204 I compute_imatrix: tokenizing the input ..
+0.37.115.521 I compute_imatrix: tokenization took 2296.3 ms
+0.37.119.242 I compute_imatrix: computing over 40 chunks, n_ctx=512, batch_size=512, n_seq=1
+0.40.746.719 I compute_imatrix: 3.63 seconds per pass - ETA 2.42 minutes
+[1]8.3163,[2]10.3727,[3]11.6152,0.48.514.403 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+0.48.514.403 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+0.48.514.404 I 
+0.48.514.406 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (66.02%)
+0.48.514.407 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (66.02%)
+0.48.514.409 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (62.50%)
+0.48.514.410 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (62.50%)
+0.48.514.417 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (71.88%)
+0.48.514.417 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (71.88%)
+0.48.514.418 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (64.84%)
+0.48.514.418 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (64.84%)
+0.48.514.420 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (65.62%)
+0.48.514.420 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (65.62%)
+0.48.514.421 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (62.50%)
+0.48.514.421 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (77.34%)
+0.48.514.422 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (77.34%)
+0.48.514.424 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (77.34%)
+0.48.514.424 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (77.34%)
+0.48.514.426 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (78.52%)
+0.48.514.426 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (66.02%)
+0.48.514.429 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (78.52%)
+0.48.514.430 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (78.12%)
+0.48.514.431 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (84.77%)
+0.48.514.432 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (73.05%)
+0.48.514.433 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (65.62%)
+0.48.514.433 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (73.05%)
+0.48.514.434 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (84.77%)
+0.48.514.435 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (87.50%)
+0.48.514.436 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (87.50%)
+0.48.514.437 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (64.84%)
+0.48.514.438 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (71.88%)
+0.48.514.439 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (84.77%)
+0.48.514.452 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (85.94%)
+0.48.514.453 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (85.94%)
+0.48.514.454 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (77.34%)
+0.48.514.454 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (85.94%)
+0.48.514.455 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (78.12%)
+0.48.514.456 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (73.05%)
+0.48.514.456 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (77.34%)
+0.48.514.457 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (87.50%)
+0.48.514.457 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (78.52%)
+0.48.514.458 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (78.12%)
+
+[4]11.0368,[5]11.4545,[6]11.2272,0.58.704.515 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+0.58.704.517 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+0.58.704.518 I 
+0.58.704.520 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (69.92%)
+0.58.704.521 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (69.92%)
+0.58.704.523 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (69.14%)
+0.58.704.523 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (69.14%)
+0.58.704.524 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (76.17%)
+0.58.704.525 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (76.17%)
+0.58.704.525 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (71.09%)
+0.58.704.526 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (71.09%)
+0.58.704.527 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (71.09%)
+0.58.704.527 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (71.09%)
+0.58.704.528 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (69.14%)
+0.58.704.528 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (82.81%)
+0.58.704.529 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (82.81%)
+0.58.704.530 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (83.59%)
+0.58.704.531 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (83.59%)
+0.58.704.533 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (84.38%)
+0.58.704.534 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (69.92%)
+0.58.704.536 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (84.38%)
+0.58.704.538 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (83.59%)
+0.58.704.538 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (89.06%)
+0.58.704.540 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (83.20%)
+0.58.704.541 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (71.09%)
+0.58.704.541 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (83.20%)
+0.58.704.542 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (89.06%)
+0.58.704.543 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (93.36%)
+0.58.704.544 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (93.36%)
+0.58.704.546 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (71.09%)
+0.58.704.546 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (76.17%)
+0.58.704.547 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (89.06%)
+0.58.704.548 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (90.23%)
+0.58.704.549 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (90.23%)
+0.58.704.553 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (82.81%)
+0.58.704.553 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (90.23%)
+0.58.704.554 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (83.59%)
+0.58.704.555 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (83.20%)
+0.58.704.556 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (83.59%)
+0.58.704.556 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (93.36%)
+0.58.704.557 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (84.38%)
+0.58.704.557 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (83.59%)
+
+[7]12.2333,[8]13.0169,[9]12.2175,1.08.986.804 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+1.08.986.805 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+1.08.986.806 I 
+1.08.986.808 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (74.61%)
+1.08.986.810 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (74.61%)
+1.08.986.812 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (73.44%)
+1.08.986.813 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (73.44%)
+1.08.986.814 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (78.91%)
+1.08.986.814 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (78.91%)
+1.08.986.815 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (75.78%)
+1.08.986.815 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (75.78%)
+1.08.986.816 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (75.78%)
+1.08.986.817 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (75.78%)
+1.08.986.817 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (73.44%)
+1.08.986.818 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (86.72%)
+1.08.986.819 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (86.72%)
+1.08.986.820 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (86.72%)
+1.08.986.821 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (86.72%)
+1.08.986.822 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (86.72%)
+1.08.986.823 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (74.61%)
+1.08.986.825 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (86.72%)
+1.08.986.826 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (89.06%)
+1.08.986.827 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (94.14%)
+1.08.986.828 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (87.89%)
+1.08.986.829 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (75.78%)
+1.08.986.830 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (87.89%)
+1.08.986.830 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (94.14%)
+1.08.986.831 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (96.09%)
+1.08.986.833 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (96.09%)
+1.08.986.834 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (75.78%)
+1.08.986.835 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (78.91%)
+1.08.986.836 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (94.14%)
+1.08.986.837 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (92.97%)
+1.08.986.838 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (92.97%)
+1.08.986.838 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (86.72%)
+1.08.986.839 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (92.97%)
+1.08.986.839 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (89.06%)
+1.08.986.840 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (87.89%)
+1.08.986.841 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (86.72%)
+1.08.986.842 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (96.09%)
+1.08.986.842 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (86.72%)
+1.08.986.843 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (89.06%)
+
+[10]11.4274,[11]11.5243,[12]11.4537,[13]11.0442,1.22.222.982 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+1.22.222.982 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+1.22.222.983 I 
+1.22.222.985 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (77.34%)
+1.22.222.986 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (77.34%)
+1.22.222.988 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (78.91%)
+1.22.222.989 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (78.91%)
+1.22.222.990 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (82.81%)
+1.22.222.990 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (82.81%)
+1.22.222.991 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (79.30%)
+1.22.222.991 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (79.30%)
+1.22.222.993 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (80.86%)
+1.22.222.993 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (80.86%)
+1.22.222.993 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (78.91%)
+1.22.222.994 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (87.11%)
+1.22.222.995 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (87.11%)
+1.22.222.996 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (88.67%)
+1.22.222.997 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (88.67%)
+1.22.222.998 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (89.45%)
+1.22.222.999 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (77.34%)
+1.22.223.002 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (89.45%)
+1.22.223.003 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (92.97%)
+1.22.223.004 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (95.70%)
+1.22.223.005 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (91.41%)
+1.22.223.005 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (80.86%)
+1.22.223.006 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (91.41%)
+1.22.223.006 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (95.70%)
+1.22.223.007 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (96.48%)
+1.22.223.011 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (96.48%)
+1.22.223.012 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (79.30%)
+1.22.223.013 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (82.81%)
+1.22.223.014 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (95.70%)
+1.22.223.015 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (94.14%)
+1.22.223.016 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (94.14%)
+1.22.223.017 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (87.11%)
+1.22.223.017 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (94.14%)
+1.22.223.018 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (92.97%)
+1.22.223.018 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (91.41%)
+1.22.223.019 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (88.67%)
+1.22.223.020 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (96.48%)
+1.22.223.020 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (89.45%)
+1.22.223.021 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (92.97%)
+
+[14]11.7084,[15]11.7292,[16]11.5923,1.32.459.580 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+1.32.459.582 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+1.32.459.583 I 
+1.32.459.584 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (78.91%)
+1.32.459.585 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (78.91%)
+1.32.459.590 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (79.69%)
+1.32.459.590 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (79.69%)
+1.32.459.592 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (84.38%)
+1.32.459.593 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (84.38%)
+1.32.459.593 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (82.03%)
+1.32.459.594 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (82.03%)
+1.32.459.595 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (82.81%)
+1.32.459.596 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (82.81%)
+1.32.459.596 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (79.69%)
+1.32.459.597 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (87.11%)
+1.32.459.597 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (87.11%)
+1.32.459.599 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (90.62%)
+1.32.459.599 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (90.62%)
+1.32.459.604 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (90.23%)
+1.32.459.604 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (78.91%)
+1.32.459.609 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (90.23%)
+1.32.459.610 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (94.14%)
+1.32.459.611 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (96.88%)
+1.32.459.612 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (93.36%)
+1.32.459.613 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (82.81%)
+1.32.459.613 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (93.36%)
+1.32.459.614 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (96.88%)
+1.32.459.615 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (97.27%)
+1.32.459.617 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (97.27%)
+1.32.459.618 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (82.03%)
+1.32.459.619 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (84.38%)
+1.32.459.620 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (96.88%)
+1.32.459.621 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (94.14%)
+1.32.459.621 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (94.14%)
+1.32.459.622 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (87.11%)
+1.32.459.622 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (94.14%)
+1.32.459.623 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (94.14%)
+1.32.459.624 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (93.36%)
+1.32.459.625 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (90.62%)
+1.32.459.625 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (97.27%)
+1.32.459.626 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (90.23%)
+1.32.459.626 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (94.14%)
+
+[17]11.6309,[18]11.3858,[19]11.4557,1.42.764.135 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+1.42.764.136 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+1.42.764.137 I 
+1.42.764.139 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (80.08%)
+1.42.764.140 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (80.08%)
+1.42.764.142 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (80.08%)
+1.42.764.143 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (80.08%)
+1.42.764.144 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (85.55%)
+1.42.764.145 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (85.55%)
+1.42.764.145 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (82.42%)
+1.42.764.146 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (82.42%)
+1.42.764.147 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (83.98%)
+1.42.764.147 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (83.98%)
+1.42.764.148 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (80.08%)
+1.42.764.148 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (87.89%)
+1.42.764.149 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (87.89%)
+1.42.764.150 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (91.02%)
+1.42.764.151 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (91.02%)
+1.42.764.153 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (91.41%)
+1.42.764.153 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (80.08%)
+1.42.764.156 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (91.41%)
+1.42.764.157 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (94.92%)
+1.42.764.158 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (97.27%)
+1.42.764.159 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (94.14%)
+1.42.764.160 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (83.98%)
+1.42.764.160 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (94.14%)
+1.42.764.160 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (97.27%)
+1.42.764.161 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (98.44%)
+1.42.764.163 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (98.44%)
+1.42.764.166 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (82.42%)
+1.42.764.167 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (85.55%)
+1.42.764.168 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (97.27%)
+1.42.764.169 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (94.92%)
+1.42.764.170 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (94.92%)
+1.42.764.170 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (87.89%)
+1.42.764.171 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (94.92%)
+1.42.764.172 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (94.92%)
+1.42.764.172 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (94.14%)
+1.42.764.173 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (91.02%)
+1.42.764.174 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (98.44%)
+1.42.764.174 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (91.41%)
+1.42.764.175 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (94.92%)
+
+[20]11.6659,[21]11.8055,[22]11.8219,[23]12.0323,1.56.202.530 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+1.56.202.533 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+1.56.202.534 I 
+1.56.202.536 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (81.25%)
+1.56.202.538 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (81.25%)
+1.56.202.540 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (81.25%)
+1.56.202.541 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (81.25%)
+1.56.202.542 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (86.72%)
+1.56.202.543 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (86.72%)
+1.56.202.543 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (83.98%)
+1.56.202.544 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (83.98%)
+1.56.202.545 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (85.16%)
+1.56.202.545 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (85.16%)
+1.56.202.545 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (81.25%)
+1.56.202.546 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (88.28%)
+1.56.202.547 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (88.28%)
+1.56.202.548 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (92.19%)
+1.56.202.549 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (92.19%)
+1.56.202.551 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (91.80%)
+1.56.202.551 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (81.25%)
+1.56.202.554 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (91.80%)
+1.56.202.555 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (95.31%)
+1.56.202.556 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.05%)
+1.56.202.557 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (94.14%)
+1.56.202.557 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (85.16%)
+1.56.202.558 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (94.14%)
+1.56.202.558 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.05%)
+1.56.202.559 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (98.44%)
+1.56.202.561 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (98.44%)
+1.56.202.562 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (83.98%)
+1.56.202.562 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (86.72%)
+1.56.202.563 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.05%)
+1.56.202.564 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (95.70%)
+1.56.202.565 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (95.70%)
+1.56.202.566 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (88.28%)
+1.56.202.566 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (95.70%)
+1.56.202.567 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (95.31%)
+1.56.202.568 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (94.14%)
+1.56.202.568 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (92.19%)
+1.56.202.569 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (98.44%)
+1.56.202.569 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (91.80%)
+1.56.202.570 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (95.31%)
+
+[24]11.9731,[25]11.4335,[26]11.5537,2.06.363.475 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.06.363.476 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.06.363.476 I 
+2.06.363.478 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (82.42%)
+2.06.363.479 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (82.42%)
+2.06.363.482 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (82.42%)
+2.06.363.482 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (82.42%)
+2.06.363.483 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (88.28%)
+2.06.363.484 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (88.28%)
+2.06.363.484 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (86.33%)
+2.06.363.485 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (86.33%)
+2.06.363.486 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (87.11%)
+2.06.363.486 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (87.11%)
+2.06.363.487 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (82.42%)
+2.06.363.488 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (90.23%)
+2.06.363.488 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (90.23%)
+2.06.363.490 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (92.58%)
+2.06.363.491 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (92.58%)
+2.06.363.492 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (93.36%)
+2.06.363.493 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (82.42%)
+2.06.363.495 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (93.36%)
+2.06.363.497 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.09%)
+2.06.363.498 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.44%)
+2.06.363.499 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (94.53%)
+2.06.363.500 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (87.11%)
+2.06.363.500 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (94.53%)
+2.06.363.500 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.44%)
+2.06.363.502 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (98.83%)
+2.06.363.503 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (98.83%)
+2.06.363.505 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (86.33%)
+2.06.363.505 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (88.28%)
+2.06.363.506 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.44%)
+2.06.363.507 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (96.09%)
+2.06.363.508 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (96.09%)
+2.06.363.509 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (90.23%)
+2.06.363.509 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (96.09%)
+2.06.363.510 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.09%)
+2.06.363.510 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (94.53%)
+2.06.363.511 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (92.58%)
+2.06.363.512 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (98.83%)
+2.06.363.513 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (93.36%)
+2.06.363.513 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.09%)
+
+[27]11.2650,[28]11.1643,[29]11.1140,2.16.660.280 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.16.660.281 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.16.660.282 I 
+2.16.660.284 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (83.59%)
+2.16.660.285 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (83.59%)
+2.16.660.287 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (82.81%)
+2.16.660.288 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (82.81%)
+2.16.660.289 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (89.45%)
+2.16.660.289 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (89.45%)
+2.16.660.290 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (88.28%)
+2.16.660.290 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (88.28%)
+2.16.660.291 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (89.84%)
+2.16.660.292 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (89.84%)
+2.16.660.292 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (82.81%)
+2.16.660.293 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (90.23%)
+2.16.660.293 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (90.23%)
+2.16.660.295 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (94.14%)
+2.16.660.296 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (94.14%)
+2.16.660.297 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (94.92%)
+2.16.660.298 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (83.59%)
+2.16.660.301 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (94.92%)
+2.16.660.302 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.48%)
+2.16.660.302 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.83%)
+2.16.660.304 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (95.70%)
+2.16.660.304 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (89.84%)
+2.16.660.305 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (95.70%)
+2.16.660.305 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.83%)
+2.16.660.307 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (99.22%)
+2.16.660.308 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (99.22%)
+2.16.660.309 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (88.28%)
+2.16.660.310 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (89.45%)
+2.16.660.311 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.83%)
+2.16.660.313 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (96.88%)
+2.16.660.314 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (96.88%)
+2.16.660.314 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (90.23%)
+2.16.660.315 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (96.88%)
+2.16.660.316 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.48%)
+2.16.660.316 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (95.70%)
+2.16.660.317 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (94.14%)
+2.16.660.318 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (99.22%)
+2.16.660.318 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (94.92%)
+2.16.660.319 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.48%)
+
+[30]11.2234,[31]11.2238,[32]11.1758,[33]11.0945,2.29.993.847 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.29.993.848 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.29.993.849 I 
+2.29.993.851 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (85.94%)
+2.29.993.852 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (85.94%)
+2.29.993.854 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (83.98%)
+2.29.993.855 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (83.98%)
+2.29.993.856 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (90.23%)
+2.29.993.856 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (90.23%)
+2.29.993.857 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (89.06%)
+2.29.993.857 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (89.06%)
+2.29.993.859 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (91.02%)
+2.29.993.859 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (91.02%)
+2.29.993.859 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (83.98%)
+2.29.993.861 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (90.62%)
+2.29.993.861 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (90.62%)
+2.29.993.863 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (94.53%)
+2.29.993.865 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (94.53%)
+2.29.993.867 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (94.92%)
+2.29.993.867 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (85.94%)
+2.29.993.870 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (94.92%)
+2.29.993.871 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.48%)
+2.29.993.872 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.83%)
+2.29.993.873 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (96.09%)
+2.29.993.874 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (91.02%)
+2.29.993.874 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (96.09%)
+2.29.993.875 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.83%)
+2.29.993.876 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (99.22%)
+2.29.993.878 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (99.22%)
+2.29.993.879 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (89.06%)
+2.29.993.879 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (90.23%)
+2.29.993.880 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.83%)
+2.29.993.881 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (97.27%)
+2.29.993.882 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (97.27%)
+2.29.993.883 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (90.62%)
+2.29.993.883 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (97.27%)
+2.29.993.884 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.48%)
+2.29.993.884 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (96.09%)
+2.29.993.885 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (94.53%)
+2.29.993.886 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (99.22%)
+2.29.993.887 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (94.92%)
+2.29.993.887 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.48%)
+
+[34]11.0506,[35]11.1230,[36]11.2214,2.40.145.665 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.40.145.666 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.40.145.668 I 
+2.40.145.669 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (85.94%)
+2.40.145.670 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (85.94%)
+2.40.145.672 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (84.77%)
+2.40.145.673 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (84.77%)
+2.40.145.674 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (90.23%)
+2.40.145.674 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (90.23%)
+2.40.145.675 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (89.45%)
+2.40.145.675 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (89.45%)
+2.40.145.676 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (91.41%)
+2.40.145.677 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (91.41%)
+2.40.145.677 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (84.77%)
+2.40.145.678 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (91.02%)
+2.40.145.679 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (91.02%)
+2.40.145.680 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (94.53%)
+2.40.145.681 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (94.53%)
+2.40.145.683 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (94.92%)
+2.40.145.683 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (85.94%)
+2.40.145.690 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (94.92%)
+2.40.145.691 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.48%)
+2.40.145.692 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.83%)
+2.40.145.693 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (96.48%)
+2.40.145.694 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (91.41%)
+2.40.145.694 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (96.48%)
+2.40.145.695 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.83%)
+2.40.145.696 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (99.22%)
+2.40.145.697 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (99.22%)
+2.40.145.699 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (89.45%)
+2.40.145.700 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (90.23%)
+2.40.145.701 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.83%)
+2.40.145.702 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (97.27%)
+2.40.145.702 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (97.27%)
+2.40.145.706 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (91.02%)
+2.40.145.707 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (97.27%)
+2.40.145.707 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.48%)
+2.40.145.708 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (96.48%)
+2.40.145.709 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (94.53%)
+2.40.145.709 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (99.22%)
+2.40.145.710 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (94.92%)
+2.40.145.711 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.48%)
+
+[37]11.2309,[38]11.2382,[39]11.2227,2.50.411.014 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.50.411.016 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.50.411.016 I 
+2.50.411.018 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (87.11%)
+2.50.411.021 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (87.11%)
+2.50.411.023 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (85.55%)
+2.50.411.023 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (85.55%)
+2.50.411.025 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (90.23%)
+2.50.411.025 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (90.23%)
+2.50.411.026 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (89.45%)
+2.50.411.026 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (89.45%)
+2.50.411.028 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (91.80%)
+2.50.411.028 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (91.80%)
+2.50.411.029 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (85.55%)
+2.50.411.029 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (91.02%)
+2.50.411.030 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (91.02%)
+2.50.411.032 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (94.92%)
+2.50.411.032 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (94.92%)
+2.50.411.034 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (95.70%)
+2.50.411.034 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (87.11%)
+2.50.411.040 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (95.70%)
+2.50.411.041 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.48%)
+2.50.411.042 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.83%)
+2.50.411.044 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (96.88%)
+2.50.411.045 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (91.80%)
+2.50.411.046 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (96.88%)
+2.50.411.046 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.83%)
+2.50.411.047 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (99.61%)
+2.50.411.049 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (99.61%)
+2.50.411.050 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (89.45%)
+2.50.411.050 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (90.23%)
+2.50.411.051 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.83%)
+2.50.411.052 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (97.27%)
+2.50.411.053 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (97.27%)
+2.50.411.054 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (91.02%)
+2.50.411.054 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (97.27%)
+2.50.411.055 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.48%)
+2.50.411.056 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (96.88%)
+2.50.411.057 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (94.92%)
+2.50.411.057 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (99.61%)
+2.50.411.058 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (95.70%)
+2.50.411.059 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.48%)
+
+[40]11.1930,
+Final estimate: PPL = 11.1930 +/- 0.28903
+2.52.603.742 W 
+save_imatrix: saving imatrix using GGUF format with a different suffix than .gguf
+2.52.603.742 W save_imatrix: if you want the previous imatrix format, use --output-format dat
+2.52.603.743 I 
+2.52.603.744 W save_imatrix: entry '               blk.47.ffn_up_exps.weight' has partial data (87.89%)
+2.52.603.753 W save_imatrix: entry '             blk.47.ffn_gate_exps.weight' has partial data (87.89%)
+2.52.603.755 W save_imatrix: entry '               blk.46.ffn_up_exps.weight' has partial data (85.94%)
+2.52.603.756 W save_imatrix: entry '             blk.46.ffn_gate_exps.weight' has partial data (85.94%)
+2.52.603.758 W save_imatrix: entry '               blk.45.ffn_up_exps.weight' has partial data (90.23%)
+2.52.603.759 W save_imatrix: entry '             blk.45.ffn_gate_exps.weight' has partial data (90.23%)
+2.52.603.759 W save_imatrix: entry '             blk.44.ffn_down_exps.weight' has partial data (89.45%)
+2.52.603.760 W save_imatrix: entry '               blk.44.ffn_up_exps.weight' has partial data (89.45%)
+2.52.603.761 W save_imatrix: entry '             blk.43.ffn_down_exps.weight' has partial data (91.80%)
+2.52.603.762 W save_imatrix: entry '               blk.43.ffn_up_exps.weight' has partial data (91.80%)
+2.52.603.762 W save_imatrix: entry '             blk.46.ffn_down_exps.weight' has partial data (85.94%)
+2.52.603.763 W save_imatrix: entry '             blk.41.ffn_down_exps.weight' has partial data (91.41%)
+2.52.603.763 W save_imatrix: entry '               blk.41.ffn_up_exps.weight' has partial data (91.41%)
+2.52.603.765 W save_imatrix: entry '               blk.38.ffn_up_exps.weight' has partial data (95.31%)
+2.52.603.765 W save_imatrix: entry '             blk.38.ffn_gate_exps.weight' has partial data (95.31%)
+2.52.603.767 W save_imatrix: entry '             blk.35.ffn_gate_exps.weight' has partial data (95.70%)
+2.52.603.767 W save_imatrix: entry '             blk.47.ffn_down_exps.weight' has partial data (87.89%)
+2.52.603.770 W save_imatrix: entry '               blk.35.ffn_up_exps.weight' has partial data (95.70%)
+2.52.603.771 W save_imatrix: entry '               blk.29.ffn_up_exps.weight' has partial data (96.48%)
+2.52.603.772 W save_imatrix: entry '               blk.24.ffn_up_exps.weight' has partial data (98.83%)
+2.52.603.773 W save_imatrix: entry '               blk.26.ffn_up_exps.weight' has partial data (96.88%)
+2.52.603.774 W save_imatrix: entry '             blk.43.ffn_gate_exps.weight' has partial data (91.80%)
+2.52.603.774 W save_imatrix: entry '             blk.26.ffn_down_exps.weight' has partial data (96.88%)
+2.52.603.775 W save_imatrix: entry '             blk.24.ffn_down_exps.weight' has partial data (98.83%)
+2.52.603.776 W save_imatrix: entry '             blk.22.ffn_down_exps.weight' has partial data (99.61%)
+2.52.603.778 W save_imatrix: entry '               blk.22.ffn_up_exps.weight' has partial data (99.61%)
+2.52.603.779 W save_imatrix: entry '             blk.44.ffn_gate_exps.weight' has partial data (89.45%)
+2.52.603.779 W save_imatrix: entry '             blk.45.ffn_down_exps.weight' has partial data (90.23%)
+2.52.603.780 W save_imatrix: entry '             blk.24.ffn_gate_exps.weight' has partial data (98.83%)
+2.52.603.781 W save_imatrix: entry '               blk.32.ffn_up_exps.weight' has partial data (97.27%)
+2.52.603.781 W save_imatrix: entry '             blk.32.ffn_gate_exps.weight' has partial data (97.27%)
+2.52.603.782 W save_imatrix: entry '             blk.41.ffn_gate_exps.weight' has partial data (91.41%)
+2.52.603.783 W save_imatrix: entry '             blk.32.ffn_down_exps.weight' has partial data (97.27%)
+2.52.603.784 W save_imatrix: entry '             blk.29.ffn_gate_exps.weight' has partial data (96.48%)
+2.52.603.784 W save_imatrix: entry '             blk.26.ffn_gate_exps.weight' has partial data (96.88%)
+2.52.603.785 W save_imatrix: entry '             blk.38.ffn_down_exps.weight' has partial data (95.31%)
+2.52.603.786 W save_imatrix: entry '             blk.22.ffn_gate_exps.weight' has partial data (99.61%)
+2.52.603.786 W save_imatrix: entry '             blk.35.ffn_down_exps.weight' has partial data (95.70%)
+2.52.603.787 W save_imatrix: entry '             blk.29.ffn_down_exps.weight' has partial data (96.48%)
+
+

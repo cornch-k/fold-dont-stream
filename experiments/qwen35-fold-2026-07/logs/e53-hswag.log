@@ -1,0 +1,604 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,15,15,15,15,15,15,15,22,22,22,22,22,22,22,22,30,30,30,30,30,30,30,37,37,37,37,37,37,37,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+0.00.692.855 W model has unused tensor blk.1.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.692.908 W model has unused tensor blk.1.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.692.910 W model has unused tensor blk.1.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.692.912 W model has unused tensor blk.1.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.692.914 W model has unused tensor blk.1.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.692.943 W model has unused tensor blk.2.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.692.988 W model has unused tensor blk.2.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.692.991 W model has unused tensor blk.2.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.692.993 W model has unused tensor blk.2.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.692.995 W model has unused tensor blk.2.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.025 W model has unused tensor blk.3.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.061 W model has unused tensor blk.3.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.063 W model has unused tensor blk.3.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.066 W model has unused tensor blk.3.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.067 W model has unused tensor blk.3.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.094 W model has unused tensor blk.4.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.151 W model has unused tensor blk.4.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.154 W model has unused tensor blk.4.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.157 W model has unused tensor blk.4.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.158 W model has unused tensor blk.4.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.186 W model has unused tensor blk.5.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.234 W model has unused tensor blk.5.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.236 W model has unused tensor blk.5.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.239 W model has unused tensor blk.5.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.240 W model has unused tensor blk.5.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.272 W model has unused tensor blk.6.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.319 W model has unused tensor blk.6.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.321 W model has unused tensor blk.6.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.323 W model has unused tensor blk.6.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.325 W model has unused tensor blk.6.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.352 W model has unused tensor blk.7.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.386 W model has unused tensor blk.7.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.396 W model has unused tensor blk.7.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.398 W model has unused tensor blk.7.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.399 W model has unused tensor blk.7.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.524 W model has unused tensor blk.9.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.570 W model has unused tensor blk.9.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.572 W model has unused tensor blk.9.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.575 W model has unused tensor blk.9.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.576 W model has unused tensor blk.9.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.604 W model has unused tensor blk.10.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.653 W model has unused tensor blk.10.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.655 W model has unused tensor blk.10.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.658 W model has unused tensor blk.10.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.660 W model has unused tensor blk.10.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.689 W model has unused tensor blk.11.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.725 W model has unused tensor blk.11.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.728 W model has unused tensor blk.11.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.731 W model has unused tensor blk.11.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.732 W model has unused tensor blk.11.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.761 W model has unused tensor blk.12.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.813 W model has unused tensor blk.12.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.815 W model has unused tensor blk.12.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.818 W model has unused tensor blk.12.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.819 W model has unused tensor blk.12.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.848 W model has unused tensor blk.13.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.895 W model has unused tensor blk.13.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.897 W model has unused tensor blk.13.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.900 W model has unused tensor blk.13.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.901 W model has unused tensor blk.13.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.930 W model has unused tensor blk.14.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.693.979 W model has unused tensor blk.14.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.693.981 W model has unused tensor blk.14.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.985 W model has unused tensor blk.14.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.693.986 W model has unused tensor blk.14.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.117 W model has unused tensor blk.16.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.167 W model has unused tensor blk.16.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.169 W model has unused tensor blk.16.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.173 W model has unused tensor blk.16.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.174 W model has unused tensor blk.16.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.204 W model has unused tensor blk.17.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.252 W model has unused tensor blk.17.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.255 W model has unused tensor blk.17.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.258 W model has unused tensor blk.17.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.259 W model has unused tensor blk.17.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.289 W model has unused tensor blk.18.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.337 W model has unused tensor blk.18.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.339 W model has unused tensor blk.18.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.342 W model has unused tensor blk.18.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.344 W model has unused tensor blk.18.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.375 W model has unused tensor blk.19.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.411 W model has unused tensor blk.19.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.413 W model has unused tensor blk.19.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.416 W model has unused tensor blk.19.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.417 W model has unused tensor blk.19.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.447 W model has unused tensor blk.20.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.495 W model has unused tensor blk.20.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.497 W model has unused tensor blk.20.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.501 W model has unused tensor blk.20.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.502 W model has unused tensor blk.20.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.532 W model has unused tensor blk.21.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.583 W model has unused tensor blk.21.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.585 W model has unused tensor blk.21.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.588 W model has unused tensor blk.21.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.590 W model has unused tensor blk.21.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.718 W model has unused tensor blk.23.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.755 W model has unused tensor blk.23.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.757 W model has unused tensor blk.23.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.760 W model has unused tensor blk.23.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.762 W model has unused tensor blk.23.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.814 W model has unused tensor blk.24.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.862 W model has unused tensor blk.24.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.864 W model has unused tensor blk.24.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.867 W model has unused tensor blk.24.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.869 W model has unused tensor blk.24.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.922 W model has unused tensor blk.25.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.694.971 W model has unused tensor blk.25.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.694.973 W model has unused tensor blk.25.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.977 W model has unused tensor blk.25.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.694.978 W model has unused tensor blk.25.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.032 W model has unused tensor blk.26.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.079 W model has unused tensor blk.26.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.082 W model has unused tensor blk.26.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.085 W model has unused tensor blk.26.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.086 W model has unused tensor blk.26.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.116 W model has unused tensor blk.27.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.155 W model has unused tensor blk.27.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.157 W model has unused tensor blk.27.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.160 W model has unused tensor blk.27.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.161 W model has unused tensor blk.27.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.212 W model has unused tensor blk.28.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.261 W model has unused tensor blk.28.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.263 W model has unused tensor blk.28.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.266 W model has unused tensor blk.28.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.268 W model has unused tensor blk.28.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.322 W model has unused tensor blk.29.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.373 W model has unused tensor blk.29.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.375 W model has unused tensor blk.29.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.378 W model has unused tensor blk.29.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.380 W model has unused tensor blk.29.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.551 W model has unused tensor blk.31.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.589 W model has unused tensor blk.31.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.591 W model has unused tensor blk.31.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.594 W model has unused tensor blk.31.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.596 W model has unused tensor blk.31.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.646 W model has unused tensor blk.32.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.695 W model has unused tensor blk.32.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.697 W model has unused tensor blk.32.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.700 W model has unused tensor blk.32.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.702 W model has unused tensor blk.32.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.731 W model has unused tensor blk.33.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.777 W model has unused tensor blk.33.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.779 W model has unused tensor blk.33.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.782 W model has unused tensor blk.33.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.783 W model has unused tensor blk.33.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.834 W model has unused tensor blk.34.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.883 W model has unused tensor blk.34.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.885 W model has unused tensor blk.34.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.888 W model has unused tensor blk.34.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.890 W model has unused tensor blk.34.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.940 W model has unused tensor blk.35.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.695.980 W model has unused tensor blk.35.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.695.982 W model has unused tensor blk.35.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.985 W model has unused tensor blk.35.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.695.987 W model has unused tensor blk.35.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.039 W model has unused tensor blk.36.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.090 W model has unused tensor blk.36.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.092 W model has unused tensor blk.36.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.095 W model has unused tensor blk.36.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.097 W model has unused tensor blk.36.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.274 W model has unused tensor blk.38.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.324 W model has unused tensor blk.38.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.326 W model has unused tensor blk.38.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.329 W model has unused tensor blk.38.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.331 W model has unused tensor blk.38.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.362 W model has unused tensor blk.39.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.403 W model has unused tensor blk.39.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.406 W model has unused tensor blk.39.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.409 W model has unused tensor blk.39.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.411 W model has unused tensor blk.39.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.465 W model has unused tensor blk.40.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.516 W model has unused tensor blk.40.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.518 W model has unused tensor blk.40.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.521 W model has unused tensor blk.40.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.523 W model has unused tensor blk.40.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.576 W model has unused tensor blk.41.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.625 W model has unused tensor blk.41.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.627 W model has unused tensor blk.41.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.631 W model has unused tensor blk.41.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.633 W model has unused tensor blk.41.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.686 W model has unused tensor blk.42.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.735 W model has unused tensor blk.42.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.738 W model has unused tensor blk.42.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.741 W model has unused tensor blk.42.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.743 W model has unused tensor blk.42.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.796 W model has unused tensor blk.43.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.696.839 W model has unused tensor blk.43.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.696.841 W model has unused tensor blk.43.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.844 W model has unused tensor blk.43.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.696.846 W model has unused tensor blk.43.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.28.868.494 I 
+0.28.868.538 I system_info: n_threads = 8 (n_threads_batch = 8) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.28.879.342 I hellaswag_score : loaded 10042 tasks from prompt.
+0.28.879.350 I ================================= is_spm = 0
+0.28.879.352 I hellaswag_score : selecting 400 randomized tasks.
+0.29.029.919 I hellaswag_score : calculating hellaswag score over selected tasks.
+
+task	acc_norm	95% confidence interval
+1	0.00000000%	[0.0000%, 79.3451%]
+2	0.00000000%	[0.0000%, 65.7620%]
+3	33.33333333%	[6.1492%, 79.2340%]
+4	25.00000000%	[4.5587%, 69.9358%]
+5	40.00000000%	[11.7621%, 76.9276%]
+6	50.00000000%	[18.7616%, 81.2384%]
+7	57.14285714%	[25.0458%, 84.1780%]
+8	62.50000000%	[30.5742%, 86.3156%]
+9	55.55555556%	[26.6651%, 81.1221%]
+10	50.00000000%	[23.6593%, 76.3407%]
+11	54.54545455%	[28.0092%, 78.7287%]
+12	50.00000000%	[25.3782%, 74.6218%]
+13	53.84615385%	[29.1438%, 76.7939%]
+14	57.14285714%	[32.5906%, 78.6192%]
+15	60.00000000%	[35.7468%, 80.1755%]
+16	62.50000000%	[38.6410%, 81.5188%]
+17	58.82352941%	[36.0054%, 78.3889%]
+18	55.55555556%	[33.7164%, 75.4405%]
+19	52.63157895%	[31.7078%, 72.6702%]
+20	55.00000000%	[34.2085%, 74.1802%]
+21	52.38095238%	[32.3695%, 71.6560%]
+22	50.00000000%	[30.7221%, 69.2779%]
+23	52.17391304%	[32.9627%, 70.7628%]
+24	50.00000000%	[31.4274%, 68.5726%]
+25	48.00000000%	[30.0313%, 66.5015%]
+26	46.15384615%	[28.7559%, 64.5421%]
+27	44.44444444%	[27.5859%, 62.6870%]
+28	42.85714286%	[26.5085%, 60.9292%]
+29	41.37931034%	[25.5132%, 59.2622%]
+30	40.00000000%	[24.5906%, 57.6796%]
+31	41.93548387%	[26.4155%, 59.2337%]
+32	43.75000000%	[28.1653%, 60.6744%]
+33	45.45454545%	[29.8429%, 62.0141%]
+34	47.05882353%	[31.4515%, 63.2633%]
+35	48.57142857%	[32.9942%, 64.4312%]
+36	47.22222222%	[31.9860%, 62.9941%]
+37	45.94594595%	[31.0386%, 61.6160%]
+38	47.36842105%	[32.4790%, 62.7410%]
+39	46.15384615%	[31.5669%, 61.4306%]
+40	47.50000000%	[32.9355%, 62.5026%]
+41	48.78048780%	[34.2544%, 63.5155%]
+42	47.61904762%	[33.3596%, 62.2775%]
+43	48.83720930%	[34.6174%, 63.2477%]
+44	50.00000000%	[35.8318%, 64.1682%]
+45	48.88888889%	[34.9570%, 62.9955%]
+46	47.82608696%	[34.1247%, 61.8626%]
+47	46.80851064%	[33.3317%, 60.7676%]
+48	47.91666667%	[34.4713%, 61.6708%]
+49	46.93877551%	[33.7035%, 60.6191%]
+50	48.00000000%	[34.7971%, 61.4883%]
+51	49.01960784%	[35.8575%, 62.3191%]
+52	48.07692308%	[35.1041%, 61.3143%]
+53	47.16981132%	[34.3822%, 60.3399%]
+54	46.29629630%	[33.6899%, 59.3946%]
+55	45.45454545%	[33.0253%, 58.4773%]
+56	44.64285714%	[32.3867%, 57.5868%]
+57	45.61403509%	[33.3726%, 58.4093%]
+58	44.82758621%	[32.7499%, 57.5479%]
+59	45.76271186%	[33.7013%, 58.3422%]
+60	46.66666667%	[34.6279%, 59.1066%]
+61	45.90163934%	[34.0129%, 58.2760%]
+62	45.16129032%	[33.4197%, 57.4675%]
+63	46.03174603%	[34.3089%, 58.2107%]
+64	45.31250000%	[33.7294%, 57.4264%]
+65	44.61538462%	[33.1695%, 56.6622%]
+66	43.93939394%	[32.6281%, 55.9174%]
+67	44.77611940%	[33.4764%, 56.6424%]
+68	44.11764706%	[32.9462%, 55.9181%]
+69	43.47826087%	[32.4328%, 55.2116%]
+70	44.28571429%	[33.2495%, 55.9164%]
+71	43.66197183%	[32.7461%, 55.2285%]
+72	44.44444444%	[33.5391%, 55.9126%]
+73	43.83561644%	[33.0453%, 55.2422%]
+74	44.59459459%	[33.8158%, 55.9069%]
+75	44.00000000%	[33.3315%, 55.2532%]
+76	44.73684211%	[34.0807%, 55.8995%]
+77	44.15584416%	[33.6053%, 55.2618%]
+78	43.58974359%	[33.1432%, 54.6380%]
+79	44.30379747%	[33.8678%, 55.2681%]
+80	45.00000000%	[34.5777%, 55.8805%]
+81	44.44444444%	[34.1196%, 55.2724%]
+82	45.12195122%	[34.8113%, 55.8692%]
+83	44.57831325%	[34.3613%, 55.2750%]
+84	45.23809524%	[35.0357%, 55.8570%]
+85	44.70588235%	[34.5937%, 55.2759%]
+86	45.34883721%	[35.2516%, 55.8438%]
+87	45.97701149%	[35.8971%, 56.3972%]
+88	46.59090909%	[36.5305%, 56.9365%]
+89	46.06741573%	[36.0897%, 56.3705%]
+90	46.66666667%	[36.7084%, 56.8978%]
+91	47.25274725%	[37.3158%, 57.4122%]
+92	46.73913043%	[36.8801%, 56.8595%]
+93	46.23655914%	[36.4546%, 56.3171%]
+94	46.80851064%	[37.0459%, 56.8217%]
+95	47.36842105%	[37.6267%, 57.3147%]
+96	47.91666667%	[38.1974%, 57.7962%]
+97	47.42268041%	[37.7745%, 57.2672%]
+98	47.95918367%	[38.3331%, 57.7392%]
+99	48.48484848%	[38.8822%, 58.2007%]
+100	48.00000000%	[38.4646%, 57.6834%]
+101	48.51485149%	[39.0025%, 58.1361%]
+102	48.03921569%	[38.5919%, 57.6289%]
+103	47.57281553%	[38.1900%, 57.1302%]
+104	48.07692308%	[38.7153%, 57.5755%]
+105	48.57142857%	[39.2322%, 58.0115%]
+106	49.05660377%	[39.7407%, 58.4385%]
+107	49.53271028%	[40.2411%, 58.8567%]
+108	50.00000000%	[40.7335%, 59.2665%]
+109	49.54128440%	[40.3319%, 58.7819%]
+110	50.00000000%	[40.8152%, 59.1848%]
+111	49.54954955%	[40.4203%, 58.7089%]
+112	50.00000000%	[40.8949%, 59.1051%]
+113	50.44247788%	[41.3622%, 59.4937%]
+114	50.00000000%	[40.9725%, 59.0275%]
+115	50.43478261%	[41.4316%, 59.4099%]
+116	50.00000000%	[41.0481%, 58.9519%]
+117	49.57264957%	[40.6718%, 58.5007%]
+118	50.00000000%	[41.1219%, 58.8781%]
+119	50.42016807%	[41.5654%, 59.2486%]
+120	50.00000000%	[41.1939%, 58.8061%]
+121	49.58677686%	[40.8290%, 58.3700%]
+122	50.00000000%	[41.2641%, 58.7359%]
+123	49.59349593%	[40.9047%, 58.3069%]
+124	50.00000000%	[41.3327%, 58.6673%]
+125	50.40000000%	[41.7548%, 59.0214%]
+126	50.79365079%	[42.1710%, 59.3694%]
+127	51.18110236%	[42.5814%, 59.7114%]
+128	50.78125000%	[42.2247%, 59.2923%]
+129	50.38759690%	[41.8740%, 58.8787%]
+130	50.00000000%	[41.5292%, 58.4708%]
+131	50.38167939%	[41.9317%, 58.8099%]
+132	50.75757576%	[42.3289%, 59.1434%]
+133	51.12781955%	[42.7208%, 59.4715%]
+134	51.49253731%	[43.1076%, 59.7943%]
+135	51.85185185%	[43.4893%, 60.1119%]
+136	52.20588235%	[43.8661%, 60.4245%]
+137	52.55474453%	[44.2380%, 60.7322%]
+138	52.17391304%	[43.8942%, 60.3359%]
+139	51.79856115%	[43.5558%, 59.9446%]
+140	51.42857143%	[43.2227%, 59.5582%]
+141	51.77304965%	[43.5883%, 59.8638%]
+142	52.11267606%	[43.9493%, 60.1648%]
+143	52.44755245%	[44.3058%, 60.4612%]
+144	52.77777778%	[44.6580%, 60.7532%]
+145	53.10344828%	[45.0058%, 61.0409%]
+146	53.42465753%	[45.3494%, 61.3243%]
+147	53.74149660%	[45.6888%, 61.6036%]
+148	53.37837838%	[45.3578%, 61.2280%]
+149	53.69127517%	[45.6928%, 61.5042%]
+150	54.00000000%	[46.0238%, 61.7764%]
+151	53.64238411%	[45.6970%, 61.4070%]
+152	53.28947368%	[45.3749%, 61.0419%]
+153	53.59477124%	[45.7014%, 61.3120%]
+154	53.89610390%	[46.0242%, 61.5784%]
+155	54.19354839%	[46.3432%, 61.8410%]
+156	53.84615385%	[46.0249%, 61.4826%]
+157	53.50318471%	[45.7109%, 61.1281%]
+158	53.79746835%	[46.0258%, 61.3888%]
+159	54.08805031%	[46.3372%, 61.6461%]
+160	54.37500000%	[46.6450%, 61.8998%]
+161	54.65838509%	[46.9494%, 62.1502%]
+162	54.93827160%	[47.2505%, 62.3973%]
+163	55.21472393%	[47.5481%, 62.6412%]
+164	55.48780488%	[47.8426%, 62.8818%]
+165	55.75757576%	[48.1337%, 63.1194%]
+166	56.02409639%	[48.4218%, 63.3539%]
+167	56.28742515%	[48.7066%, 63.5855%]
+168	56.54761905%	[48.9884%, 63.8141%]
+169	56.21301775%	[48.6773%, 63.4725%]
+170	55.88235294%	[48.3702%, 63.1345%]
+171	56.14035088%	[48.6490%, 63.3619%]
+172	56.39534884%	[48.9248%, 63.5865%]
+173	56.64739884%	[49.1977%, 63.8083%]
+174	56.32183908%	[48.8944%, 63.4761%]
+175	56.57142857%	[49.1645%, 63.6961%]
+176	56.25000000%	[48.8650%, 63.3680%]
+177	55.93220339%	[48.5692%, 63.0432%]
+178	56.17977528%	[48.8365%, 63.2620%]
+179	55.86592179%	[48.5443%, 62.9411%]
+180	56.11111111%	[48.8088%, 63.1580%]
+181	55.80110497%	[48.5201%, 62.8409%]
+182	55.49450549%	[48.2349%, 62.5269%]
+183	55.73770492%	[48.4967%, 62.7427%]
+184	55.43478261%	[48.2149%, 62.4324%]
+185	55.67567568%	[48.4741%, 62.6464%]
+186	55.37634409%	[48.1954%, 62.3397%]
+187	55.08021390%	[47.9201%, 62.0358%]
+188	54.78723404%	[47.6479%, 61.7349%]
+189	54.49735450%	[47.3788%, 61.4367%]
+190	54.73684211%	[47.6353%, 61.6507%]
+191	54.97382199%	[47.8892%, 61.8623%]
+192	54.68750000%	[47.6231%, 61.5680%]
+193	54.40414508%	[47.3599%, 61.2765%]
+194	54.63917526%	[47.6113%, 61.4868%]
+195	54.35897436%	[47.3510%, 61.1985%]
+196	54.08163265%	[47.0936%, 60.9127%]
+197	53.80710660%	[46.8390%, 60.6296%]
+198	53.53535354%	[46.5872%, 60.3490%]
+199	53.76884422%	[46.8359%, 60.5591%]
+200	53.50000000%	[46.5866%, 60.2814%]
+201	53.23383085%	[46.3401%, 60.0063%]
+202	52.97029703%	[46.0962%, 59.7335%]
+203	52.70935961%	[45.8549%, 59.4632%]
+204	52.94117647%	[46.1008%, 59.6728%]
+205	52.68292683%	[45.8619%, 59.4052%]
+206	52.42718447%	[45.6255%, 59.1400%]
+207	52.17391304%	[45.3916%, 58.8770%]
+208	51.92307692%	[45.1600%, 58.6164%]
+209	52.15311005%	[45.4031%, 58.8254%]
+210	52.38095238%	[45.6441%, 59.0322%]
+211	52.60663507%	[45.8831%, 59.2370%]
+212	52.83018868%	[46.1199%, 59.4397%]
+213	53.05164319%	[46.3548%, 59.6404%]
+214	52.80373832%	[46.1249%, 59.3837%]
+215	52.55813953%	[45.8973%, 59.1292%]
+216	52.31481481%	[45.6719%, 58.8768%]
+217	52.07373272%	[45.4488%, 58.6265%]
+218	51.83486239%	[45.2279%, 58.3783%]
+219	52.05479452%	[45.4600%, 58.5787%]
+220	52.27272727%	[45.6903%, 58.7772%]
+221	52.03619910%	[45.4712%, 58.5316%]
+222	52.25225225%	[45.6994%, 58.7285%]
+223	52.46636771%	[45.9257%, 58.9235%]
+224	52.67857143%	[46.1502%, 59.1166%]
+225	52.88888889%	[46.3729%, 59.3079%]
+226	52.65486726%	[46.1554%, 59.0656%]
+227	52.86343612%	[46.3762%, 59.2554%]
+228	52.63157895%	[46.1607%, 59.0153%]
+229	52.83842795%	[46.3795%, 59.2037%]
+230	52.60869565%	[46.1659%, 58.9658%]
+231	52.38095238%	[45.9543%, 58.7297%]
+232	52.15517241%	[45.7446%, 58.4955%]
+233	51.93133047%	[45.5369%, 58.2631%]
+234	51.70940171%	[45.3311%, 58.0325%]
+235	51.48936170%	[45.1271%, 57.8037%]
+236	51.27118644%	[44.9250%, 57.5767%]
+237	51.05485232%	[44.7247%, 57.3513%]
+238	50.84033613%	[44.5262%, 57.1277%]
+239	51.04602510%	[44.7422%, 57.3168%]
+240	51.25000000%	[44.9565%, 57.5041%]
+241	51.03734440%	[44.7595%, 57.2826%]
+242	51.23966942%	[44.9720%, 57.4686%]
+243	51.02880658%	[44.7766%, 57.2490%]
+244	50.81967213%	[44.5829%, 57.0310%]
+245	50.61224490%	[44.3909%, 56.8147%]
+246	50.40650407%	[44.2005%, 56.6000%]
+247	50.20242915%	[44.0118%, 56.3868%]
+248	50.40322581%	[44.2220%, 56.5721%]
+249	50.60240964%	[44.4307%, 56.7558%]
+250	50.40000000%	[44.2433%, 56.5446%]
+251	50.59760956%	[44.4502%, 56.7270%]
+252	50.79365079%	[44.6557%, 56.9078%]
+253	50.59288538%	[44.4696%, 56.6984%]
+254	50.39370079%	[44.2850%, 56.4906%]
+255	50.19607843%	[44.1020%, 56.2843%]
+256	50.39062500%	[44.3056%, 56.4641%]
+257	50.19455253%	[44.1240%, 56.2594%]
+258	50.38759690%	[44.3259%, 56.4379%]
+259	50.57915058%	[44.5264%, 56.6149%]
+260	50.76923077%	[44.7256%, 56.7905%]
+261	50.95785441%	[44.9233%, 56.9647%]
+262	50.76335878%	[44.7426%, 56.7621%]
+263	50.57034221%	[44.5633%, 56.5609%]
+264	50.37878788%	[44.3856%, 56.3612%]
+265	50.56603774%	[44.5815%, 56.5344%]
+266	50.75187970%	[44.7761%, 56.7062%]
+267	50.93632959%	[44.9694%, 56.8767%]
+268	50.74626866%	[44.7926%, 56.6788%]
+269	50.55762082%	[44.6173%, 56.4822%]
+270	50.37037037%	[44.4433%, 56.2870%]
+271	50.18450185%	[44.2707%, 56.0931%]
+272	50.36764706%	[44.4622%, 56.2629%]
+273	50.18315018%	[44.2908%, 56.0704%]
+274	50.36496350%	[44.4809%, 56.2390%]
+275	50.18181818%	[44.3107%, 56.0479%]
+276	50.36231884%	[44.4993%, 56.2154%]
+277	50.18050542%	[44.3303%, 56.0257%]
+278	50.35971223%	[44.5176%, 56.1920%]
+279	50.53763441%	[44.7036%, 56.3570%]
+280	50.71428571%	[44.8885%, 56.5208%]
+281	50.88967972%	[45.0721%, 56.6833%]
+282	51.06382979%	[45.2545%, 56.8446%]
+283	50.88339223%	[45.0862%, 56.6569%]
+284	51.05633803%	[45.2673%, 56.8172%]
+285	50.87719298%	[45.1002%, 56.6308%]
+286	50.69930070%	[44.9344%, 56.4457%]
+287	50.87108014%	[45.1141%, 56.6050%]
+288	51.04166667%	[45.2927%, 56.7632%]
+289	51.21107266%	[45.4702%, 56.9202%]
+290	51.37931034%	[45.6465%, 57.0760%]
+291	51.54639175%	[45.8217%, 57.2308%]
+292	51.36986301%	[45.6566%, 57.0475%]
+293	51.53583618%	[45.8307%, 57.2013%]
+294	51.70068027%	[46.0036%, 57.3539%]
+295	51.86440678%	[46.1754%, 57.5054%]
+296	51.68918919%	[46.0113%, 57.3238%]
+297	51.85185185%	[46.1820%, 57.4744%]
+298	52.01342282%	[46.3517%, 57.6239%]
+299	51.83946488%	[46.1886%, 57.4437%]
+300	51.66666667%	[46.0266%, 57.2646%]
+301	51.82724252%	[46.1951%, 57.4133%]
+302	51.98675497%	[46.3625%, 57.5611%]
+303	51.81518152%	[46.2016%, 57.3833%]
+304	51.64473684%	[46.0418%, 57.2066%]
+305	51.47540984%	[45.8831%, 57.0310%]
+306	51.30718954%	[45.7255%, 56.8565%]
+307	51.14006515%	[45.5690%, 56.6829%]
+308	51.29870130%	[45.7351%, 56.8303%]
+309	51.13268608%	[45.5796%, 56.6580%]
+310	51.29032258%	[45.7446%, 56.8045%]
+311	51.44694534%	[45.9086%, 56.9500%]
+312	51.60256410%	[46.0717%, 57.0945%]
+313	51.43769968%	[45.9170%, 56.9235%]
+314	51.27388535%	[45.7634%, 56.7536%]
+315	51.42857143%	[45.9254%, 56.8974%]
+316	51.58227848%	[46.0864%, 57.0402%]
+317	51.73501577%	[46.2464%, 57.1821%]
+318	51.57232704%	[46.0937%, 57.0135%]
+319	51.41065831%	[45.9419%, 56.8458%]
+320	51.56250000%	[46.1009%, 56.9870%]
+321	51.40186916%	[45.9501%, 56.8205%]
+322	51.24223602%	[45.8003%, 56.6549%]
+323	51.08359133%	[45.6515%, 56.4902%]
+324	51.23456790%	[45.8094%, 56.6308%]
+325	51.38461538%	[45.9664%, 56.7705%]
+326	51.22699387%	[45.8184%, 56.6070%]
+327	51.07033639%	[45.6714%, 56.4444%]
+328	51.21951220%	[45.8273%, 56.5834%]
+329	51.06382979%	[45.6812%, 56.4219%]
+330	51.21212121%	[45.8362%, 56.5601%]
+331	51.35951662%	[45.9904%, 56.6974%]
+332	51.50602410%	[46.1437%, 56.8339%]
+333	51.65165165%	[46.2961%, 56.9695%]
+334	51.49700599%	[46.1507%, 56.8093%]
+335	51.34328358%	[46.0062%, 56.6499%]
+336	51.48809524%	[46.1577%, 56.7849%]
+337	51.33531157%	[46.0140%, 56.6265%]
+338	51.18343195%	[45.8712%, 56.4690%]
+339	51.32743363%	[46.0218%, 56.6033%]
+340	51.47058824%	[46.1715%, 56.7368%]
+341	51.31964809%	[46.0295%, 56.5804%]
+342	51.46198830%	[46.1784%, 56.7131%]
+343	51.31195335%	[46.0372%, 56.5577%]
+344	51.16279070%	[45.8969%, 56.4030%]
+345	51.30434783%	[46.0448%, 56.5351%]
+346	51.15606936%	[45.9053%, 56.3814%]
+347	51.00864553%	[45.7667%, 56.2285%]
+348	50.86206897%	[45.6289%, 56.0764%]
+349	50.71633238%	[45.4920%, 55.9251%]
+350	50.85714286%	[45.6389%, 56.0568%]
+351	50.99715100%	[45.7850%, 56.1877%]
+352	51.13636364%	[45.9304%, 56.3178%]
+353	51.27478754%	[46.0750%, 56.4472%]
+354	51.41242938%	[46.2188%, 56.5757%]
+355	51.54929577%	[46.3619%, 56.7035%]
+356	51.68539326%	[46.5042%, 56.8306%]
+357	51.54061625%	[46.3677%, 56.6807%]
+358	51.39664804%	[46.2320%, 56.5316%]
+359	51.53203343%	[46.3735%, 56.6581%]
+360	51.38888889%	[46.2386%, 56.5099%]
+361	51.24653740%	[46.1044%, 56.3624%]
+362	51.10497238%	[45.9711%, 56.2157%]
+363	51.23966942%	[46.1117%, 56.3417%]
+364	51.37362637%	[46.2516%, 56.4670%]
+365	51.50684932%	[46.3908%, 56.5915%]
+366	51.63934426%	[46.5293%, 56.7154%]
+367	51.77111717%	[46.6670%, 56.8385%]
+368	51.90217391%	[46.8041%, 56.9609%]
+369	52.03252033%	[46.9405%, 57.0827%]
+370	51.89189189%	[46.8076%, 56.9373%]
+371	51.75202156%	[46.6755%, 56.7927%]
+372	51.88172043%	[46.8111%, 56.9139%]
+373	51.74262735%	[46.6797%, 56.7701%]
+374	51.60427807%	[46.5490%, 56.6269%]
+375	51.73333333%	[46.6839%, 56.7476%]
+376	51.86170213%	[46.8181%, 56.8677%]
+377	51.72413793%	[46.6881%, 56.7254%]
+378	51.58730159%	[46.5588%, 56.5839%]
+379	51.71503958%	[46.6922%, 56.7034%]
+380	51.84210526%	[46.8250%, 56.8223%]
+381	51.96850394%	[46.9572%, 56.9405%]
+382	51.83246073%	[46.8285%, 56.7999%]
+383	51.95822454%	[46.9600%, 56.9175%]
+384	52.08333333%	[47.0909%, 57.0345%]
+385	52.20779221%	[47.2211%, 57.1509%]
+386	52.33160622%	[47.3506%, 57.2666%]
+387	52.45478036%	[47.4796%, 57.3817%]
+388	52.57731959%	[47.6079%, 57.4962%]
+389	52.44215938%	[47.4798%, 57.3568%]
+390	52.56410256%	[47.6075%, 57.4707%]
+391	52.42966752%	[47.4800%, 57.3321%]
+392	52.55102041%	[47.6070%, 57.4455%]
+393	52.41730280%	[47.4802%, 57.3076%]
+394	52.53807107%	[47.6067%, 57.4205%]
+395	52.65822785%	[47.7325%, 57.5328%]
+396	52.52525253%	[47.6063%, 57.3957%]
+397	52.64483627%	[47.7315%, 57.5075%]
+398	52.76381910%	[47.8561%, 57.6187%]
+399	52.88220551%	[47.9802%, 57.7293%]
+400	52.75000000%	[47.8546%, 57.5931%]
+
+

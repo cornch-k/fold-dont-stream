@@ -1,0 +1,4 @@
+RESULT_KNOB k4 ppl=13.2648 +/- 0.54608  모델버퍼=15.11GiB
+RESULT_KNOB k8 ppl=12.1406 +/- 0.49833  모델버퍼=15.11GiB
+RESULT_KNOB k10 ppl=12.3336 +/- 0.50946  모델버퍼=15.11GiB
+노브 스윕 완료: exp/spec-k.txt

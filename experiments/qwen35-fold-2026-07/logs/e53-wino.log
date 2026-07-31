@@ -1,0 +1,1469 @@
+warn: LLAMA_ARG_REPACK environment variable is set, but will be overwritten by command line argument --no-repack
+[E2-FOLD] arch=qwen35moe experts_folded R=-1 lead=0 unique_ffn=10/48 gamma=1.000 map=[E2-FOLD] shared expert follows the LOGICAL layer
+0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,15,15,15,15,15,15,15,22,22,22,22,22,22,22,22,30,30,30,30,30,30,30,37,37,37,37,37,37,37,44,45,46,47
+[E2-FOLD] mixer (attn / delta-net) is NOT folded — logical index kept
+0.00.679.172 W model has unused tensor blk.1.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.224 W model has unused tensor blk.1.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.226 W model has unused tensor blk.1.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.229 W model has unused tensor blk.1.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.233 W model has unused tensor blk.1.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.261 W model has unused tensor blk.2.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.307 W model has unused tensor blk.2.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.309 W model has unused tensor blk.2.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.312 W model has unused tensor blk.2.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.313 W model has unused tensor blk.2.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.343 W model has unused tensor blk.3.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.378 W model has unused tensor blk.3.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.380 W model has unused tensor blk.3.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.383 W model has unused tensor blk.3.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.384 W model has unused tensor blk.3.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.415 W model has unused tensor blk.4.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.461 W model has unused tensor blk.4.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.463 W model has unused tensor blk.4.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.466 W model has unused tensor blk.4.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.467 W model has unused tensor blk.4.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.498 W model has unused tensor blk.5.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.545 W model has unused tensor blk.5.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.547 W model has unused tensor blk.5.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.550 W model has unused tensor blk.5.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.551 W model has unused tensor blk.5.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.579 W model has unused tensor blk.6.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.625 W model has unused tensor blk.6.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.627 W model has unused tensor blk.6.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.630 W model has unused tensor blk.6.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.631 W model has unused tensor blk.6.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.660 W model has unused tensor blk.7.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.695 W model has unused tensor blk.7.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.698 W model has unused tensor blk.7.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.701 W model has unused tensor blk.7.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.702 W model has unused tensor blk.7.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.842 W model has unused tensor blk.9.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.891 W model has unused tensor blk.9.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.893 W model has unused tensor blk.9.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.896 W model has unused tensor blk.9.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.898 W model has unused tensor blk.9.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.927 W model has unused tensor blk.10.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.679.975 W model has unused tensor blk.10.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.679.978 W model has unused tensor blk.10.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.981 W model has unused tensor blk.10.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.679.983 W model has unused tensor blk.10.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.012 W model has unused tensor blk.11.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.050 W model has unused tensor blk.11.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.053 W model has unused tensor blk.11.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.056 W model has unused tensor blk.11.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.058 W model has unused tensor blk.11.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.087 W model has unused tensor blk.12.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.136 W model has unused tensor blk.12.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.138 W model has unused tensor blk.12.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.141 W model has unused tensor blk.12.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.142 W model has unused tensor blk.12.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.171 W model has unused tensor blk.13.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.219 W model has unused tensor blk.13.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.221 W model has unused tensor blk.13.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.224 W model has unused tensor blk.13.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.225 W model has unused tensor blk.13.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.254 W model has unused tensor blk.14.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.306 W model has unused tensor blk.14.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.308 W model has unused tensor blk.14.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.311 W model has unused tensor blk.14.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.313 W model has unused tensor blk.14.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.443 W model has unused tensor blk.16.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.496 W model has unused tensor blk.16.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.498 W model has unused tensor blk.16.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.502 W model has unused tensor blk.16.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.503 W model has unused tensor blk.16.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.534 W model has unused tensor blk.17.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.583 W model has unused tensor blk.17.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.585 W model has unused tensor blk.17.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.588 W model has unused tensor blk.17.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.590 W model has unused tensor blk.17.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.621 W model has unused tensor blk.18.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.672 W model has unused tensor blk.18.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.675 W model has unused tensor blk.18.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.678 W model has unused tensor blk.18.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.680 W model has unused tensor blk.18.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.711 W model has unused tensor blk.19.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.751 W model has unused tensor blk.19.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.753 W model has unused tensor blk.19.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.756 W model has unused tensor blk.19.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.758 W model has unused tensor blk.19.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.789 W model has unused tensor blk.20.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.840 W model has unused tensor blk.20.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.842 W model has unused tensor blk.20.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.845 W model has unused tensor blk.20.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.847 W model has unused tensor blk.20.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.881 W model has unused tensor blk.21.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.680.932 W model has unused tensor blk.21.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.680.934 W model has unused tensor blk.21.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.937 W model has unused tensor blk.21.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.680.939 W model has unused tensor blk.21.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.083 W model has unused tensor blk.23.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.122 W model has unused tensor blk.23.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.126 W model has unused tensor blk.23.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.129 W model has unused tensor blk.23.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.131 W model has unused tensor blk.23.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.188 W model has unused tensor blk.24.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.239 W model has unused tensor blk.24.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.241 W model has unused tensor blk.24.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.244 W model has unused tensor blk.24.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.246 W model has unused tensor blk.24.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.306 W model has unused tensor blk.25.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.357 W model has unused tensor blk.25.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.359 W model has unused tensor blk.25.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.362 W model has unused tensor blk.25.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.364 W model has unused tensor blk.25.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.431 W model has unused tensor blk.26.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.485 W model has unused tensor blk.26.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.488 W model has unused tensor blk.26.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.491 W model has unused tensor blk.26.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.492 W model has unused tensor blk.26.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.527 W model has unused tensor blk.27.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.567 W model has unused tensor blk.27.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.569 W model has unused tensor blk.27.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.572 W model has unused tensor blk.27.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.574 W model has unused tensor blk.27.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.629 W model has unused tensor blk.28.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.679 W model has unused tensor blk.28.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.682 W model has unused tensor blk.28.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.685 W model has unused tensor blk.28.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.687 W model has unused tensor blk.28.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.740 W model has unused tensor blk.29.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.681.792 W model has unused tensor blk.29.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.681.794 W model has unused tensor blk.29.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.797 W model has unused tensor blk.29.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.799 W model has unused tensor blk.29.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.681.988 W model has unused tensor blk.31.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.029 W model has unused tensor blk.31.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.033 W model has unused tensor blk.31.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.036 W model has unused tensor blk.31.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.038 W model has unused tensor blk.31.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.092 W model has unused tensor blk.32.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.143 W model has unused tensor blk.32.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.146 W model has unused tensor blk.32.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.149 W model has unused tensor blk.32.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.150 W model has unused tensor blk.32.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.181 W model has unused tensor blk.33.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.229 W model has unused tensor blk.33.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.231 W model has unused tensor blk.33.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.234 W model has unused tensor blk.33.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.236 W model has unused tensor blk.33.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.292 W model has unused tensor blk.34.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.344 W model has unused tensor blk.34.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.346 W model has unused tensor blk.34.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.349 W model has unused tensor blk.34.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.351 W model has unused tensor blk.34.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.409 W model has unused tensor blk.35.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.451 W model has unused tensor blk.35.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.453 W model has unused tensor blk.35.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.457 W model has unused tensor blk.35.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.458 W model has unused tensor blk.35.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.514 W model has unused tensor blk.36.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.570 W model has unused tensor blk.36.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.572 W model has unused tensor blk.36.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.575 W model has unused tensor blk.36.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.577 W model has unused tensor blk.36.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.768 W model has unused tensor blk.38.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.822 W model has unused tensor blk.38.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.824 W model has unused tensor blk.38.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.827 W model has unused tensor blk.38.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.829 W model has unused tensor blk.38.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.864 W model has unused tensor blk.39.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.682.905 W model has unused tensor blk.39.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.682.907 W model has unused tensor blk.39.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.910 W model has unused tensor blk.39.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.912 W model has unused tensor blk.39.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.682.967 W model has unused tensor blk.40.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.683.025 W model has unused tensor blk.40.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.683.027 W model has unused tensor blk.40.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.030 W model has unused tensor blk.40.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.032 W model has unused tensor blk.40.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.087 W model has unused tensor blk.41.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.683.140 W model has unused tensor blk.41.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.683.143 W model has unused tensor blk.41.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.147 W model has unused tensor blk.41.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.149 W model has unused tensor blk.41.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.204 W model has unused tensor blk.42.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.683.254 W model has unused tensor blk.42.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.683.257 W model has unused tensor blk.42.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.260 W model has unused tensor blk.42.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.262 W model has unused tensor blk.42.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.319 W model has unused tensor blk.43.post_attention_norm.weight (size = 12288 bytes) -- ignoring
+0.00.683.365 W model has unused tensor blk.43.ffn_gate_inp.weight (size = 3145728 bytes) -- ignoring
+0.00.683.367 W model has unused tensor blk.43.ffn_down_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.371 W model has unused tensor blk.43.ffn_gate_exps.weight (size = 346030080 bytes) -- ignoring
+0.00.683.373 W model has unused tensor blk.43.ffn_up_exps.weight (size = 346030080 bytes) -- ignoring
+0.29.359.634 I 
+0.29.359.670 I system_info: n_threads = 8 (n_threads_batch = 8) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.29.360.462 I winogrande_score : loaded 1267 tasks from prompt.
+0.29.360.468 I winogrande_score : tokenizing selected tasks
+0.29.465.914 I winogrande_score : calculating winogrande score over selected tasks.
+1	0.0000	 -4.194221   -4.645302  1  2
+2	50.0000	 -4.187112   -4.370442  1  1
+3	33.3333	 -6.444031   -6.701579  1  2
+4	50.0000	 -2.253521   -3.024415  1  1
+5	40.0000	 -3.215142   -3.131523  2  1
+6	50.0000	 -3.160707   -3.296071  1  1
+7	57.1429	 -5.647173   -6.340076  1  1
+8	62.5000	 -4.719576   -4.164726  2  2
+9	66.6667	 -3.459725   -3.375240  2  2
+10	70.0000	 -2.567970   -2.602942  1  1
+11	72.7273	 -3.217945   -3.217568  2  2
+12	75.0000	 -5.308254   -1.955399  2  2
+13	76.9231	 -2.636439   -4.183530  1  1
+14	71.4286	 -6.363017   -5.566751  2  1
+15	73.3333	 -4.662179   -3.881115  2  2
+16	75.0000	 -4.121205   -4.273020  1  1
+17	76.4706	 -5.569640   -5.289341  2  2
+18	72.2222	 -4.778439   -4.001420  2  1
+19	68.4211	 -3.428273   -3.173712  2  1
+20	65.0000	 -3.463758   -3.574601  1  2
+21	61.9048	 -3.815907   -4.258319  1  2
+22	59.0909	 -2.577609   -3.060692  1  2
+23	60.8696	 -4.184023   -4.074095  2  2
+24	62.5000	 -2.591258   -2.709322  1  1
+25	64.0000	 -3.561446   -3.260515  2  2
+26	65.3846	 -2.335349   -2.777486  1  1
+27	62.9630	 -5.005562   -4.981054  2  1
+28	64.2857	 -6.065012   -6.923004  1  1
+29	65.5172	 -4.357199   -5.330779  1  1
+30	66.6667	 -4.246507   -4.608913  1  1
+31	67.7419	 -2.739067   -2.941738  1  1
+32	68.7500	 -4.146327   -4.173019  1  1
+33	69.6970	 -4.504561   -4.480902  2  2
+34	70.5882	 -4.070605   -4.410844  1  1
+35	68.5714	 -5.095379   -5.380017  1  2
+36	69.4444	 -3.406203   -3.388230  2  2
+37	67.5676	 -2.771801   -3.265340  1  2
+38	68.4211	 -3.047219   -4.405092  1  1
+39	66.6667	 -2.955039   -3.128267  1  2
+40	67.5000	 -3.648700   -3.598719  2  2
+41	68.2927	 -1.457413   -1.826080  1  1
+42	69.0476	 -1.807486   -2.216792  1  1
+43	69.7674	 -3.527441   -2.851634  2  2
+44	68.1818	 -3.067845   -2.903793  2  1
+45	68.8889	 -3.044278   -2.655962  2  2
+46	67.3913	 -3.452506   -3.444705  2  1
+47	68.0851	 -3.630990   -3.476915  2  2
+48	66.6667	 -3.890886   -3.929636  1  2
+49	65.3061	 -3.503510   -3.570628  1  2
+50	66.0000	 -4.201899   -4.458178  1  1
+51	64.7059	 -2.380451   -2.340046  2  1
+52	65.3846	 -2.961776   -2.911644  2  2
+53	66.0377	 -2.303480   -2.517639  1  1
+54	64.8148	 -2.640929   -2.748397  1  2
+55	65.4545	 -2.447912   -2.455930  1  1
+56	66.0714	 -3.457406   -2.802829  2  2
+57	64.9123	 -1.954355   -1.969964  1  2
+58	65.5172	 -3.603538   -3.350358  2  2
+59	66.1017	 -3.869903   -4.517870  1  1
+60	66.6667	 -4.320979   -5.026110  1  1
+61	67.2131	 -3.917369   -3.652564  2  2
+62	67.7419	 -3.506702   -3.334264  2  2
+63	68.2540	 -4.279557   -2.201435  2  2
+64	67.1875	 -3.813775   -2.855045  2  1
+65	66.1538	 -2.900527   -3.420896  1  2
+66	65.1515	 -2.750391   -3.157514  1  2
+67	65.6716	 -3.559234   -3.586493  1  1
+68	64.7059	 -4.104919   -4.105575  1  2
+69	65.2174	 -3.082371   -2.923730  2  2
+70	64.2857	 -1.729403   -1.675992  2  1
+71	64.7887	 -3.439901   -4.060003  1  1
+72	65.2778	 -2.983426   -3.125741  1  1
+73	65.7534	 -1.243584   -1.327608  1  1
+74	64.8649	 -3.260984   -3.338517  1  2
+75	64.0000	 -3.058532   -2.482330  2  1
+76	64.4737	 -3.348614   -3.194454  2  2
+77	63.6364	 -4.112612   -4.336442  1  2
+78	64.1026	 -3.537155   -4.018643  1  1
+79	63.2911	 -3.927563   -4.428666  1  2
+80	63.7500	 -6.250275   -6.367840  1  1
+81	64.1975	 -6.014328   -5.868286  2  2
+82	64.6341	 -2.030784   -2.385968  1  1
+83	63.8554	 -5.331342   -5.962605  1  2
+84	64.2857	 -2.511823   -2.585107  1  1
+85	64.7059	 -3.478966   -2.855017  2  2
+86	63.9535	 -6.154613   -5.304224  2  1
+87	63.2184	 -5.300239   -5.361309  1  2
+88	63.6364	 -5.254909   -5.384863  1  1
+89	62.9213	 -2.968646   -3.044939  1  2
+90	62.2222	 -3.291342   -3.129993  2  1
+91	61.5385	 -4.441348   -4.180429  2  1
+92	61.9565	 -3.318245   -3.279430  2  2
+93	62.3656	 -4.438898   -4.849238  1  1
+94	61.7021	 -4.508426   -4.782046  1  2
+95	62.1053	 -2.716018   -3.647425  1  1
+96	62.5000	 -2.897545   -2.466621  2  2
+97	61.8557	 -4.375063   -4.144510  2  1
+98	62.2449	 -3.697515   -4.290381  1  1
+99	62.6263	 -5.162419   -3.823286  2  2
+100	62.0000	 -4.593861   -4.719484  1  2
+101	62.3762	 -4.545942   -3.884534  2  2
+102	61.7647	 -3.384225   -3.348351  2  1
+103	62.1359	 -3.910164   -2.755665  2  2
+104	62.5000	 -4.731365   -4.894897  1  1
+105	62.8571	 -2.996303   -2.880311  2  2
+106	63.2075	 -2.980399   -3.474754  1  1
+107	63.5514	 -3.684654   -3.744530  1  1
+108	63.8889	 -1.282315   -1.750043  1  1
+109	64.2202	 -2.528101   -2.239807  2  2
+110	64.5455	 -2.154184   -2.997749  1  1
+111	63.9640	 -3.683859   -3.687184  1  2
+112	63.3929	 -4.666322   -5.029541  1  2
+113	63.7168	 -6.854825   -6.682655  2  2
+114	64.0351	 -2.812335   -2.821550  1  1
+115	64.3478	 -3.136535   -2.956634  2  2
+116	63.7931	 -3.523467   -3.441731  2  1
+117	64.1026	 -7.445916   -5.290307  2  2
+118	64.4068	 -1.163743   -1.067542  2  2
+119	64.7059	 -3.268198   -3.318311  1  1
+120	65.0000	 -2.113005   -3.411074  1  1
+121	64.4628	 -2.474225   -3.184478  1  2
+122	63.9344	 -3.171086   -2.977462  2  1
+123	63.4146	 -3.413402   -3.705287  1  2
+124	63.7097	 -2.226566   -2.342907  1  1
+125	64.0000	 -3.721600   -3.042640  2  2
+126	63.4921	 -2.905403   -2.239372  2  1
+127	62.9921	 -3.924348   -3.985650  1  2
+128	63.2812	 -3.127693   -2.992344  2  2
+129	62.7907	 -3.154074   -2.992815  2  1
+130	62.3077	 -1.963586   -7.873991  1  2
+131	62.5954	 -3.774577   -3.740860  2  2
+132	62.8788	 -6.086231   -5.827831  2  2
+133	62.4060	 -4.227795   -4.302671  1  2
+134	62.6866	 -6.894319   -6.578134  2  2
+135	62.2222	 -4.280788   -4.408790  1  2
+136	62.5000	 -4.309006   -4.820461  1  1
+137	62.7737	 -2.194090   -0.385905  2  2
+138	63.0435	 -4.474980   -4.014332  2  2
+139	62.5899	 -2.890692   -2.793159  2  1
+140	62.8571	 -3.803648   -3.392911  2  2
+141	62.4113	 -2.669671   -1.500818  2  1
+142	62.6761	 -5.595961   -5.411316  2  2
+143	62.9371	 -3.058462   -2.903655  2  2
+144	62.5000	 -3.376750   -3.968309  1  2
+145	62.0690	 -6.013837   -5.709490  2  1
+146	62.3288	 -5.816669   -5.403913  2  2
+147	61.9048	 -2.997696   -9.397923  1  2
+148	62.1622	 -3.129129   -9.039083  1  1
+149	61.7450	 -3.258875   -3.440383  1  2
+150	61.3333	 -2.455370   -2.593566  1  2
+151	60.9272	 -3.071027   -3.017262  2  1
+152	61.1842	 -4.479026   -4.141875  2  2
+153	60.7843	 -3.028461   -2.858220  2  1
+154	61.0390	 -4.238445   -4.612028  1  1
+155	61.2903	 -3.671942   -5.029431  1  1
+156	60.8974	 -2.679034   -2.706901  1  2
+157	60.5096	 -2.518237  -12.897674  1  2
+158	60.1266	 -5.066642   -4.908539  2  1
+159	60.3774	 -5.386971   -5.065231  2  2
+160	60.6250	 -3.794571   -2.919686  2  2
+161	60.2484	 -5.000357   -5.323211  1  2
+162	60.4938	 -5.004399   -5.621434  1  1
+163	60.7362	 -0.322608  -12.831375  1  1
+164	60.9756	 -3.947984   -3.319405  2  2
+165	60.6061	 -4.214814   -4.588827  1  2
+166	60.8434	 -3.196268   -4.849224  1  1
+167	60.4790	 -3.002410   -2.309685  2  1
+168	60.1190	 -3.086167   -3.217913  1  2
+169	60.3550	 -5.253058   -4.433925  2  2
+170	60.5882	 -4.262410   -3.929532  2  2
+171	60.2339	 -2.494088   -2.964812  1  2
+172	60.4651	 -1.669136   -1.958618  1  1
+173	60.6936	 -2.561421   -2.743947  1  1
+174	60.9195	 -3.874386   -4.716563  1  1
+175	61.1429	 -1.912259   -7.801891  1  1
+176	61.3636	 -3.710487   -3.470256  2  2
+177	61.0169	 -6.539370   -6.190902  2  1
+178	61.2360	 -6.657071   -6.530414  2  2
+179	60.8939	 -2.794750   -2.567535  2  1
+180	61.1111	 -2.107407   -3.540010  1  1
+181	61.3260	 -3.080151   -7.181874  1  1
+182	61.5385	 -2.940607   -2.851164  2  2
+183	61.7486	 -1.401475   -2.192182  1  1
+184	61.9565	 -2.377270   -2.102691  2  2
+185	61.6216	 -6.267865   -5.375449  2  1
+186	61.8280	 -3.475898   -3.189578  2  2
+187	61.4973	 -4.602583   -4.877768  1  2
+188	61.7021	 -4.510862   -4.249186  2  2
+189	61.9048	 -2.138165   -2.375497  1  1
+190	61.5789	 -2.719388   -2.762659  1  2
+191	61.7801	 -2.485909   -2.728732  1  1
+192	61.4583	 -5.580128   -5.563851  2  1
+193	61.6580	 -3.441689   -3.620782  1  1
+194	61.3402	 -2.968815   -3.018777  1  2
+195	61.0256	 -5.671125   -5.066895  2  1
+196	60.7143	 -3.796799   -3.712276  2  1
+197	60.9137	 -3.864241   -3.801193  2  2
+198	61.1111	 -4.481850   -3.232453  2  2
+199	60.8040	 -5.340509   -4.785294  2  1
+200	60.5000	 -3.459610   -3.707256  1  2
+201	60.6965	 -3.481323   -3.673324  1  1
+202	60.3960	 -3.385557   -3.601189  1  2
+203	60.5911	 -3.725980   -3.447061  2  2
+204	60.7843	 -3.813944   -3.899827  1  1
+205	60.9756	 -4.166689   -4.082856  2  2
+206	60.6796	 -3.537292   -3.553525  1  2
+207	60.8696	 -2.945182   -3.301008  1  1
+208	60.5769	 -3.885689   -3.980404  1  2
+209	60.7656	 -3.730673   -4.488509  1  1
+210	60.9524	 -3.380412   -3.163977  2  2
+211	61.1374	 -2.063589   -2.782020  1  1
+212	61.3208	 -1.719793   -1.631984  2  2
+213	61.5023	 -3.823964   -4.062675  1  1
+214	61.2150	 -2.159372   -2.554222  1  2
+215	61.3953	 -2.340034   -2.364484  1  1
+216	61.5741	 -3.289163   -3.078252  2  2
+217	61.7512	 -3.708539   -4.084406  1  1
+218	61.9266	 -2.319119   -2.385693  1  1
+219	62.1005	 -4.173304   -3.828377  2  2
+220	61.8182	 -2.378345   -2.430591  1  2
+221	61.9910	 -4.026414   -3.529593  2  2
+222	62.1622	 -2.657248   -2.848268  1  1
+223	62.3318	 -4.753821   -5.254949  1  1
+224	62.0536	 -3.780539   -3.570951  2  1
+225	62.2222	 -4.881880   -4.400498  2  2
+226	61.9469	 -3.802589   -3.676982  2  1
+227	61.6740	 -2.936773   -3.047055  1  2
+228	61.8421	 -3.750195   -3.538162  2  2
+229	62.0087	 -5.117148   -5.159464  1  1
+230	61.7391	 -5.345499   -5.366899  1  2
+231	61.9048	 -6.318017   -6.180778  2  2
+232	61.6379	 -3.151918   -3.055985  2  1
+233	61.8026	 -3.436141   -3.277192  2  2
+234	61.9658	 -3.924685   -4.225176  1  1
+235	62.1277	 -3.724356   -3.494206  2  2
+236	61.8644	 -6.886283   -7.354136  1  2
+237	62.0253	 -3.499294   -3.947875  1  1
+238	62.1849	 -6.101682   -5.547940  2  2
+239	61.9247	 -4.644902   -4.602918  2  1
+240	61.6667	 -3.524849   -3.488670  2  1
+241	61.4108	 -4.547210   -4.552118  1  2
+242	61.5702	 -3.823113   -4.391753  1  1
+243	61.3169	 -4.309269   -4.387743  1  2
+244	61.0656	 -3.233229   -3.363215  1  2
+245	61.2245	 -4.231915   -4.647911  1  1
+246	60.9756	 -4.407650   -4.409135  1  2
+247	60.7287	 -2.257232   -2.072197  2  1
+248	60.4839	 -5.134968   -3.562873  2  1
+249	60.2410	 -2.427825   -2.420448  2  1
+250	60.0000	 -4.397815   -4.549476  1  2
+251	59.7610	 -4.797040   -4.515205  2  1
+252	59.9206	 -3.368184   -3.299384  2  2
+253	60.0791	 -3.713930   -3.776159  1  1
+254	59.8425	 -3.612661   -3.340804  2  1
+255	60.0000	 -3.010988   -2.806838  2  2
+256	60.1562	 -3.372560   -3.525857  1  1
+257	59.9222	 -3.207549   -3.412339  1  2
+258	59.6899	 -4.670398   -4.781512  1  2
+259	59.4595	 -3.524601   -3.311224  2  1
+260	59.2308	 -2.261385  -10.501904  1  2
+261	59.0038	 -6.097004   -4.979956  2  1
+262	58.7786	 -4.354224   -3.984266  2  1
+263	58.9354	 -4.308960   -4.322991  1  1
+264	58.7121	 -2.932058   -2.380624  2  1
+265	58.8679	 -2.855786   -2.381563  2  2
+266	58.6466	 -3.291370   -3.189422  2  1
+267	58.8015	 -3.141293   -3.058305  2  2
+268	58.5821	 -2.757711   -2.922359  1  2
+269	58.7361	 -3.037470   -3.100424  1  1
+270	58.8889	 -4.284817   -4.505795  1  1
+271	58.6716	 -1.956220   -1.895843  2  1
+272	58.4559	 -5.959316   -5.986195  1  2
+273	58.6081	 -4.172879   -4.700620  1  1
+274	58.7591	 -1.977481   -2.316301  1  1
+275	58.9091	 -2.644829   -2.650540  1  1
+276	58.6957	 -2.051744   -1.897447  2  1
+277	58.8448	 -1.716582   -1.454532  2  2
+278	58.9928	 -3.375311   -3.367709  2  2
+279	58.7814	 -3.712812   -3.028957  2  1
+280	58.5714	 -5.154995   -4.740356  2  1
+281	58.3630	 -3.092592   -3.431057  1  2
+282	58.1560	 -3.123294   -2.703369  2  1
+283	58.3039	 -2.623512   -2.301837  2  2
+284	58.4507	 -4.056313   -4.174747  1  1
+285	58.5965	 -4.449875   -5.146910  1  1
+286	58.3916	 -4.233030   -4.210090  2  1
+287	58.5366	 -3.980903   -4.237025  1  1
+288	58.6806	 -2.512218   -2.286840  2  2
+289	58.8235	 -1.851641   -1.887899  1  1
+290	58.9655	 -2.117413   -2.536026  1  1
+291	58.7629	 -4.826278   -4.320355  2  1
+292	58.5616	 -3.626284   -3.443572  2  1
+293	58.7031	 -4.298884   -4.214531  2  2
+294	58.8435	 -3.159456   -3.487893  1  1
+295	58.9831	 -3.446271   -3.924608  1  1
+296	58.7838	 -3.811767   -4.183803  1  2
+297	58.9226	 -2.420724   -2.312570  2  2
+298	58.7248	 -3.011747   -2.845129  2  1
+299	58.5284	 -2.335072   -2.675001  1  2
+300	58.3333	 -2.807174   -3.029771  1  2
+301	58.4718	 -1.889250   -2.087670  1  1
+302	58.2781	 -9.653428   -8.470004  2  1
+303	58.4158	 -3.477077   -3.105580  2  2
+304	58.5526	 -2.397572   -2.849461  1  1
+305	58.6885	 -2.135148   -1.722744  2  2
+306	58.4967	 -2.420339   -2.301773  2  1
+307	58.6319	 -4.995263   -5.081881  1  1
+308	58.4416	 -2.060140   -2.306621  1  2
+309	58.2524	 -2.857409   -3.046547  1  2
+310	58.3871	 -2.755978   -3.420612  1  1
+311	58.1994	 -6.526076   -6.746413  1  2
+312	58.3333	 -2.363088   -2.502226  1  1
+313	58.4665	 -3.938658   -3.669411  2  2
+314	58.5987	 -2.534425   -2.473339  2  2
+315	58.7302	 -3.914467   -4.061158  1  1
+316	58.5443	 -3.892498   -3.862129  2  1
+317	58.6751	 -4.103079   -3.511048  2  2
+318	58.4906	 -3.027727   -2.836186  2  1
+319	58.3072	 -2.883520   -2.519799  2  1
+320	58.4375	 -2.440961   -3.318252  1  1
+321	58.5670	 -4.378340   -2.951495  2  2
+322	58.6957	 -3.604866   -3.788924  1  1
+323	58.5139	 -3.547455   -3.787772  1  2
+324	58.3333	 -2.979116   -3.221660  1  2
+325	58.1538	 -4.122589   -4.007127  2  1
+326	57.9755	 -4.156059   -4.175316  1  2
+327	57.7982	 -4.014128   -3.822347  2  1
+328	57.9268	 -4.614620   -4.147910  2  2
+329	57.7508	 -2.715062   -2.688730  2  1
+330	57.5758	 -5.471720   -5.264067  2  1
+331	57.4018	 -5.152658   -5.522549  1  2
+332	57.5301	 -5.948230   -6.135369  1  1
+333	57.3574	 -5.298855   -5.325870  1  2
+334	57.4850	 -4.702274   -4.073336  2  2
+335	57.3134	 -4.359162   -4.413278  1  2
+336	57.4405	 -4.851653   -5.055897  1  1
+337	57.5668	 -4.702411   -4.768171  1  1
+338	57.3964	 -3.461471   -3.389518  2  1
+339	57.5221	 -4.572824   -4.646614  1  1
+340	57.6471	 -4.488719   -4.160492  2  2
+341	57.7713	 -4.831666   -4.456789  2  2
+342	57.8947	 -2.999284   -3.203362  1  1
+343	57.7259	 -5.419178   -5.413855  2  1
+344	57.5581	 -4.516432   -4.880555  1  2
+345	57.6812	 -4.977880   -5.345584  1  1
+346	57.8035	 -3.200834   -8.605386  1  1
+347	57.6369	 -2.650816   -2.857977  1  2
+348	57.7586	 -3.763635   -3.594123  2  2
+349	57.8797	 -3.299878   -3.588737  1  1
+350	57.7143	 -2.580826   -2.415046  2  1
+351	57.8348	 -3.715876   -3.443368  2  2
+352	57.6705	 -3.647717   -3.496392  2  1
+353	57.7904	 -4.727187   -4.706017  2  2
+354	57.6271	 -2.646257   -2.824797  1  2
+355	57.7465	 -4.749318   -5.107995  1  1
+356	57.8652	 -4.483510   -4.774366  1  1
+357	57.9832	 -2.251815   -3.032471  1  1
+358	58.1006	 -4.016256   -4.005912  2  2
+359	57.9387	 -4.452519   -4.267243  2  1
+360	58.0556	 -2.358204   -2.491144  1  1
+361	57.8947	 -3.225775   -3.855278  1  2
+362	58.0110	 -1.763352   -2.144159  1  1
+363	57.8512	 -4.255230   -4.402279  1  2
+364	57.9670	 -5.720024   -5.812250  1  1
+365	58.0822	 -4.451441   -4.330057  2  2
+366	58.1967	 -4.158126   -4.128824  2  2
+367	58.0381	 -3.189887   -3.416013  1  2
+368	58.1522	 -3.627579   -3.591678  2  2
+369	58.2656	 -5.056420   -5.127567  1  1
+370	58.3784	 -4.310568   -3.442916  2  2
+371	58.4906	 -1.066035  -10.853054  1  1
+372	58.6022	 -3.962562   -4.097855  1  1
+373	58.7131	 -3.745064   -3.437202  2  2
+374	58.8235	 -3.741447   -3.840993  1  1
+375	58.6667	 -3.322126   -3.338876  1  2
+376	58.7766	 -3.753886   -3.916621  1  1
+377	58.6207	 -2.281715   -2.291985  1  2
+378	58.4656	 -2.510474   -2.425737  2  1
+379	58.5752	 -3.233112   -3.314708  1  1
+380	58.6842	 -2.320133   -3.005776  1  1
+381	58.7927	 -4.544092   -4.439275  2  2
+382	58.9005	 -5.260169   -4.508137  2  2
+383	58.7467	 -3.715830   -3.986144  1  2
+384	58.8542	 -1.337695  -11.300169  1  1
+385	58.7013	 -4.414499   -3.961376  2  1
+386	58.8083	 -1.780811   -1.962397  1  1
+387	58.9147	 -2.137720   -1.722960  2  2
+388	59.0206	 -2.860855   -2.780235  2  2
+389	59.1260	 -0.863238   -1.266788  1  1
+390	58.9744	 -3.627600   -3.377833  2  1
+391	59.0793	 -3.956063   -3.841229  2  2
+392	58.9286	 -3.701017   -3.694235  2  1
+393	59.0331	 -3.115796   -3.363791  1  1
+394	59.1371	 -5.167201   -4.311572  2  2
+395	59.2405	 -1.285645   -1.453287  1  1
+396	59.3434	 -5.667769   -5.416368  2  2
+397	59.4458	 -2.829594   -3.061560  1  1
+398	59.5477	 -2.469080   -2.762118  1  1
+399	59.6491	 -3.101851   -2.723719  2  2
+400	59.5000	 -2.753451   -2.835135  1  2
+401	59.6010	 -6.275738   -6.237803  2  2
+402	59.4527	 -4.179805   -4.500812  1  2
+403	59.5533	 -3.935772   -4.076879  1  1
+404	59.4059	 -3.556164   -3.627313  1  2
+405	59.2593	 -5.272882   -5.124749  2  1
+406	59.3596	 -3.704443   -3.739637  1  1
+407	59.4595	 -6.006922   -5.670161  2  2
+408	59.5588	 -3.921013   -3.194605  2  2
+409	59.6577	 -4.973480   -4.291272  2  2
+410	59.5122	 -4.601112   -5.049776  1  2
+411	59.6107	 -6.236280   -6.632898  1  1
+412	59.4660	 -2.250050   -2.148508  2  1
+413	59.3220	 -4.490283   -5.169950  1  2
+414	59.4203	 -3.877227   -4.327292  1  1
+415	59.2771	 -5.551349   -6.455177  1  2
+416	59.3750	 -3.338823   -2.653986  2  2
+417	59.2326	 -4.830545   -4.532612  2  1
+418	59.3301	 -2.850119   -4.032689  1  1
+419	59.4272	 -4.274147   -4.324518  1  1
+420	59.5238	 -4.188797   -3.878518  2  2
+421	59.3824	 -3.710524   -4.064518  1  2
+422	59.2417	 -6.557658   -6.702043  1  2
+423	59.3381	 -2.914432   -2.938190  1  1
+424	59.4340	 -3.049793   -3.099578  1  1
+425	59.2941	 -5.494331   -5.223206  2  1
+426	59.1549	 -2.915075   -2.815435  2  1
+427	59.0164	 -4.469640   -4.664207  1  2
+428	59.1121	 -3.853388   -4.059099  1  1
+429	59.2075	 -4.255532   -4.165426  2  2
+430	59.3023	 -1.802844   -1.523619  2  2
+431	59.1647	 -2.028203   -1.867293  2  1
+432	59.2593	 -4.411921   -4.169809  2  2
+433	59.1224	 -3.773150   -4.887909  1  2
+434	58.9862	 -4.204030   -4.299878  1  2
+435	58.8506	 -4.707499   -4.446484  2  1
+436	58.9450	 -3.455349   -3.415814  2  2
+437	59.0389	 -2.935880   -2.946666  1  1
+438	59.1324	 -3.261372   -2.664785  2  2
+439	58.9977	 -3.918173   -4.207198  1  2
+440	59.0909	 -2.326590   -2.550821  1  1
+441	59.1837	 -4.308749   -4.297992  2  2
+442	59.2760	 -3.741512   -3.807868  1  1
+443	59.1422	 -3.712543   -3.846936  1  2
+444	59.2342	 -6.120536   -5.365762  2  2
+445	59.3258	 -4.865375   -4.977376  1  1
+446	59.1928	 -2.515647   -3.128320  1  2
+447	59.0604	 -4.728945   -4.419663  2  1
+448	59.1518	 -5.806104   -5.677416  2  2
+449	59.2428	 -1.357162   -3.900772  1  1
+450	59.1111	 -1.434545   -3.938259  1  2
+451	58.9800	 -5.028133   -5.685962  1  2
+452	59.0708	 -2.192301   -1.567883  2  2
+453	59.1611	 -2.470941   -2.673835  1  1
+454	59.2511	 -4.492520   -4.667625  1  1
+455	59.3407	 -6.479143   -6.318440  2  2
+456	59.4298	 -3.572302   -2.848176  2  2
+457	59.5186	 -2.291767   -2.299498  1  1
+458	59.3886	 -3.372689   -3.954980  1  2
+459	59.4771	 -3.480601   -3.768197  1  1
+460	59.5652	 -4.632545   -4.730623  1  1
+461	59.4360	 -3.529728   -9.962615  1  2
+462	59.5238	 -4.723063  -10.345121  1  1
+463	59.3952	 -5.273753   -5.312313  1  2
+464	59.4828	 -4.075629   -3.689398  2  2
+465	59.3548	 -2.466223   -2.717825  1  2
+466	59.4421	 -4.205088   -4.012416  2  2
+467	59.5289	 -3.743060   -4.359823  1  1
+468	59.6154	 -3.740213   -3.737626  2  2
+469	59.4883	 -2.796185   -3.092023  1  2
+470	59.5745	 -7.366224   -7.132647  2  2
+471	59.6603	 -2.119498   -1.814736  2  2
+472	59.5339	 -1.848262   -1.824331  2  1
+473	59.6195	 -1.987689   -1.856266  2  2
+474	59.7046	 -1.400821   -1.553030  1  1
+475	59.7895	 -4.142350   -4.549971  1  1
+476	59.8739	 -4.861742   -4.493460  2  2
+477	59.9581	 -3.077471   -3.407970  1  1
+478	59.8326	 -2.909878   -2.380656  2  1
+479	59.9165	 -0.387772  -11.642001  1  1
+480	60.0000	 -6.240575   -4.634170  2  2
+481	60.0832	 -3.382672   -3.380411  2  2
+482	60.1660	 -5.792306   -5.432714  2  2
+483	60.2484	 -1.408200   -1.756402  1  1
+484	60.3306	 -3.585158   -2.903178  2  2
+485	60.4124	 -1.665802  -12.403775  1  1
+486	60.2881	 -2.631785  -12.794569  1  2
+487	60.3696	 -4.142889   -4.508946  1  1
+488	60.2459	 -5.735110   -5.776306  1  2
+489	60.3272	 -3.242836   -3.563255  1  1
+490	60.4082	 -3.195580   -3.126667  2  2
+491	60.2851	 -3.315181   -3.135073  2  1
+492	60.3659	 -2.833039   -3.843837  1  1
+493	60.2434	 -5.228796   -5.235297  1  2
+494	60.3239	 -5.527458   -4.881094  2  2
+495	60.4040	 -2.557985   -3.160967  1  1
+496	60.4839	 -1.536206   -1.292589  2  2
+497	60.5634	 -6.681151   -6.564521  2  2
+498	60.6426	 -7.113684   -7.721995  1  1
+499	60.7214	 -4.051917   -3.949800  2  2
+500	60.6000	 -4.097908   -3.588142  2  1
+501	60.4790	 -5.624654   -6.076209  1  2
+502	60.3586	 -3.247109   -8.974634  1  2
+503	60.4374	 -4.352506   -4.215817  2  2
+504	60.5159	 -2.772072   -2.811725  1  1
+505	60.5941	 -2.652847   -2.895396  1  1
+506	60.6719	 -4.069613   -3.601260  2  2
+507	60.5523	 -3.900897   -4.543221  1  2
+508	60.4331	 -4.755551   -5.025317  1  2
+509	60.5108	 -3.859224   -3.900579  1  1
+510	60.3922	 -7.015976   -6.428738  2  1
+511	60.4697	 -3.609381   -3.899523  1  1
+512	60.3516	 -3.375266   -3.441180  1  2
+513	60.2339	 -3.638433   -3.255058  2  1
+514	60.1167	 -3.471387   -3.597361  1  2
+515	60.1942	 -5.323681   -4.671245  2  2
+516	60.2713	 -4.874859   -5.466539  1  1
+517	60.3482	 -3.248484   -2.778543  2  2
+518	60.4247	 -4.813504   -3.175269  2  2
+519	60.5010	 -3.965482   -4.105955  1  1
+520	60.3846	 -5.182419   -4.803680  2  1
+521	60.2687	 -5.588335   -5.781045  1  2
+522	60.3448	 -2.816846   -2.977192  1  1
+523	60.4207	 -2.803425   -3.184645  1  1
+524	60.3053	 -5.276778   -5.228921  2  1
+525	60.1905	 -1.895708   -2.012365  1  2
+526	60.2662	 -2.114630   -2.552095  1  1
+527	60.1518	 -2.372157   -2.886965  1  2
+528	60.2273	 -5.691044   -5.553972  2  2
+529	60.3025	 -2.487031   -2.668631  1  1
+530	60.1887	 -1.646813   -1.685197  1  2
+531	60.2637	 -3.035891   -2.892319  2  2
+532	60.3383	 -4.084183   -4.050798  2  2
+533	60.4128	 -5.498993   -5.534372  1  1
+534	60.4869	 -5.144656   -4.600158  2  2
+535	60.5607	 -2.339324   -2.337142  2  2
+536	60.6343	 -0.934661   -1.996938  1  1
+537	60.7076	 -4.265872   -3.454124  2  2
+538	60.7807	 -7.972079   -8.184386  1  1
+539	60.6679	 -2.315658   -8.982141  1  2
+540	60.7407	 -2.709993   -3.141292  1  1
+541	60.8133	 -2.585000   -2.273745  2  2
+542	60.7011	 -3.960550   -4.126055  1  2
+543	60.7735	 -2.725554   -2.737710  1  1
+544	60.6618	 -2.162060   -2.231608  1  2
+545	60.7339	 -2.743618   -3.113961  1  1
+546	60.6227	 -3.840322   -4.048678  1  2
+547	60.6947	 -1.387439   -1.345087  2  2
+548	60.7664	 -1.594176   -1.901686  1  1
+549	60.6557	 -4.437911   -4.627449  1  2
+550	60.7273	 -2.226109   -1.997902  2  2
+551	60.7985	 -4.148422   -4.733085  1  1
+552	60.8696	 -4.574416   -4.428945  2  2
+553	60.7595	 -5.178687   -5.376739  1  2
+554	60.8303	 -7.211753   -7.283276  1  1
+555	60.7207	 -3.341670   -3.158599  2  1
+556	60.7914	 -4.731714   -4.479133  2  2
+557	60.6822	 -4.214643   -4.099523  2  1
+558	60.5735	 -2.667360   -2.298987  2  1
+559	60.6440	 -4.085560   -3.668277  2  2
+560	60.7143	 -5.670153   -5.620859  2  2
+561	60.6061	 -1.848536   -1.721615  2  1
+562	60.4982	 -3.339663   -3.442655  1  2
+563	60.5684	 -2.409621   -2.570827  1  1
+564	60.6383	 -7.153049   -6.683045  2  2
+565	60.5310	 -4.380214   -4.279619  2  1
+566	60.4240	 -3.595629   -3.654099  1  2
+567	60.4938	 -5.607876   -5.442623  2  2
+568	60.3873	 -4.159238   -3.798181  2  1
+569	60.4569	 -5.949609   -6.137687  1  1
+570	60.5263	 -6.627561   -6.453629  2  2
+571	60.5954	 -2.982814   -3.133735  1  1
+572	60.6643	 -2.650467   -2.389722  2  2
+573	60.7330	 -4.842926   -5.190155  1  1
+574	60.6272	 -5.312772   -5.720559  1  2
+575	60.6957	 -3.601452   -3.871184  1  1
+576	60.7639	 -3.105165   -2.749349  2  2
+577	60.8319	 -3.752374   -4.689332  1  1
+578	60.8997	 -2.620936   -1.824356  2  2
+579	60.7945	 -2.772553   -2.789086  1  2
+580	60.8621	 -3.582376   -3.672473  1  1
+581	60.9294	 -6.596273   -7.052469  1  1
+582	60.8247	 -6.771551   -6.899075  1  2
+583	60.8919	 -4.887689   -4.628860  2  2
+584	60.9589	 -5.252460   -5.270055  1  1
+585	61.0256	 -5.052516   -4.660566  2  2
+586	61.0922	 -1.816931  -13.406292  1  1
+587	61.1584	 -4.711680   -4.852447  1  1
+588	61.2245	 -4.721715   -4.557940  2  2
+589	61.1205	 -4.330563   -4.349488  1  2
+590	61.1864	 -3.782509   -3.734988  2  2
+591	61.2521	 -4.117573   -3.906730  2  2
+592	61.1486	 -2.901741   -2.630244  2  1
+593	61.2142	 -4.480713   -4.783758  1  1
+594	61.1111	 -2.019815   -1.876316  2  1
+595	61.0084	 -2.091361   -2.126652  1  2
+596	61.0738	 -3.721416   -3.173178  2  2
+597	61.1390	 -3.483068   -3.156464  2  2
+598	61.0368	 -3.433469   -3.049965  2  1
+599	61.1018	 -4.999169   -5.266871  1  1
+600	61.1667	 -1.946706   -2.048541  1  1
+601	61.0649	 -4.042053   -3.418360  2  1
+602	61.1296	 -3.534755   -2.977976  2  2
+603	61.0282	 -5.658148   -5.823731  1  2
+604	61.0927	 -3.702269   -4.836081  1  1
+605	61.1570	 -2.639352   -2.411658  2  2
+606	61.2211	 -3.139200   -3.908367  1  1
+607	61.1203	 -3.528375   -3.188766  2  1
+608	61.1842	 -1.872973   -2.292635  1  1
+609	61.2479	 -2.500610   -2.317237  2  2
+610	61.3115	 -4.197497   -4.145640  2  2
+611	61.3748	 -3.714692   -3.458280  2  2
+612	61.2745	 -6.285209   -6.528923  1  2
+613	61.3377	 -4.677494   -4.403903  2  2
+614	61.4007	 -4.330990   -4.925601  1  1
+615	61.3008	 -3.055132   -3.308300  1  2
+616	61.3636	 -5.102718   -5.504579  1  1
+617	61.4263	 -2.254450   -2.565936  1  1
+618	61.3269	 -4.215337   -4.357460  1  2
+619	61.2278	 -3.615242   -3.772858  1  2
+620	61.2903	 -4.909539   -4.649034  2  2
+621	61.1916	 -3.819978   -3.557611  2  1
+622	61.2540	 -2.482224   -3.665090  1  1
+623	61.3162	 -3.180283   -3.384653  1  1
+624	61.2179	 -3.238569   -3.390391  1  2
+625	61.2800	 -3.464333   -3.806467  1  1
+626	61.3419	 -4.413750   -4.267392  2  2
+627	61.2440	 -5.265876   -5.276755  1  2
+628	61.1465	 -4.188487   -4.269218  1  2
+629	61.2083	 -4.044288   -4.541466  1  1
+630	61.1111	 -4.039354   -3.532649  2  1
+631	61.0143	 -4.746966   -4.794805  1  2
+632	60.9177	 -3.635180   -3.598410  2  1
+633	60.9795	 -4.697293   -4.118006  2  2
+634	60.8833	 -2.941795   -2.990856  1  2
+635	60.7874	 -2.309746   -2.276706  2  1
+636	60.8491	 -3.802635   -4.508635  1  1
+637	60.9105	 -3.533026   -3.456556  2  2
+638	60.9718	 -3.100769   -3.223825  1  1
+639	61.0329	 -5.386315   -6.054494  1  1
+640	60.9375	 -3.089145   -2.311607  2  1
+641	60.9984	 -3.166732   -2.715894  2  2
+642	61.0592	 -3.196959   -2.573044  2  2
+643	60.9642	 -2.610021   -3.573464  1  2
+644	60.8696	 -4.404987   -3.643390  2  1
+645	60.9302	 -0.920494   -8.107451  1  1
+646	60.9907	 -5.118953   -5.253496  1  1
+647	61.0510	 -3.359604   -3.111947  2  2
+648	60.9568	 -5.183084   -5.009075  2  1
+649	61.0169	 -5.503060   -5.376447  2  2
+650	60.9231	 -1.163167   -1.129726  2  1
+651	60.9831	 -1.173019   -1.064177  2  2
+652	60.8896	 -3.846870   -4.437143  1  2
+653	60.9495	 -3.048621   -3.054946  1  1
+654	61.0092	 -3.036971   -2.548510  2  2
+655	61.0687	 -3.188879   -3.630446  1  1
+656	61.1280	 -3.730510   -3.702016  2  2
+657	61.1872	 -1.802989   -1.876661  1  1
+658	61.0942	 -5.955887   -6.217880  1  2
+659	61.1533	 -5.010384   -5.312082  1  1
+660	61.0606	 -4.857780   -4.865235  1  2
+661	60.9682	 -0.988326   -0.792039  2  1
+662	60.8761	 -1.305058   -1.603934  1  2
+663	60.7843	 -4.212022   -3.092118  2  1
+664	60.6928	 -3.222421   -3.475545  1  2
+665	60.6015	 -2.737440   -2.380125  2  1
+666	60.6607	 -3.633787   -3.723086  1  1
+667	60.5697	 -5.187981   -5.262313  1  2
+668	60.4790	 -4.546868   -4.490472  2  1
+669	60.3886	 -5.743572   -5.125117  2  1
+670	60.4478	 -4.887200   -5.448993  1  1
+671	60.3577	 -1.930210   -1.730446  2  1
+672	60.4167	 -2.116597   -3.061656  1  1
+673	60.4755	 -3.690556   -4.824413  1  1
+674	60.3858	 -7.042631   -7.193314  1  2
+675	60.4444	 -3.761530   -3.900457  1  1
+676	60.5030	 -3.642322   -3.727669  1  1
+677	60.5613	 -4.930996   -4.381926  2  2
+678	60.6195	 -2.825476   -2.826036  1  1
+679	60.6775	 -3.902172   -3.885499  2  2
+680	60.7353	 -5.213595   -5.589779  1  1
+681	60.7930	 -2.129541   -2.496647  1  1
+682	60.8504	 -3.399195   -3.299790  2  2
+683	60.9078	 -5.772181   -5.915682  1  1
+684	60.9649	 -3.849601   -3.943259  1  1
+685	60.8759	 -2.761065   -2.164826  2  1
+686	60.9329	 -8.265726   -8.292652  1  1
+687	60.8443	 -6.919048   -6.810934  2  1
+688	60.7558	 -3.928661   -3.320067  2  1
+689	60.6676	 -4.788352   -4.837313  1  2
+690	60.7246	 -3.124648   -3.339176  1  1
+691	60.6368	 -3.503614   -3.739799  1  2
+692	60.6936	 -4.050197   -3.082280  2  2
+693	60.7504	 -2.019652   -2.046200  1  1
+694	60.8069	 -2.334587   -2.426824  1  1
+695	60.8633	 -2.724581   -2.609163  2  2
+696	60.7759	 -2.017965   -2.086101  1  2
+697	60.8321	 -2.586686   -2.249524  2  2
+698	60.7450	 -1.742310   -1.462010  2  1
+699	60.6581	 -3.119658   -3.412242  1  2
+700	60.5714	 -4.075168   -4.213967  1  2
+701	60.6277	 -4.454437   -4.873787  1  1
+702	60.6838	 -7.518683   -7.184608  2  2
+703	60.5974	 -7.123812   -6.931206  2  1
+704	60.6534	 -4.336470   -4.465559  1  1
+705	60.7092	 -5.298783   -5.074821  2  2
+706	60.6232	 -5.580795   -5.595168  1  2
+707	60.6789	 -3.006192   -3.126410  1  1
+708	60.7345	 -3.977886   -3.870639  2  2
+709	60.7898	 -3.732889   -3.824181  1  1
+710	60.7042	 -3.774602   -3.380253  2  1
+711	60.6188	 -2.359640   -5.214531  1  2
+712	60.6742	 -2.066568   -5.476593  1  1
+713	60.5891	 -1.472249   -0.971430  2  1
+714	60.5042	 -3.658869   -3.726360  1  2
+715	60.5594	 -3.935615   -3.772257  2  2
+716	60.4749	 -7.057152   -7.052998  2  1
+717	60.5300	 -4.013443   -4.111168  1  1
+718	60.5850	 -4.401902   -4.545585  1  1
+719	60.6398	 -5.344476   -5.950505  1  1
+720	60.6944	 -4.063895   -3.926625  2  2
+721	60.7490	 -2.776470   -2.383199  2  2
+722	60.6648	 -2.530999   -2.467874  2  1
+723	60.5809	 -8.220128   -8.209872  2  1
+724	60.6354	 -5.693793   -5.128746  2  2
+725	60.5517	 -6.015305   -5.714350  2  1
+726	60.4683	 -3.627117   -3.050369  2  1
+727	60.3851	 -2.637451   -2.484096  2  1
+728	60.4396	 -3.894399   -3.754557  2  2
+729	60.4938	 -4.519433   -4.118386  2  2
+730	60.5479	 -4.286612   -4.348652  1  1
+731	60.4651	 -4.118138   -4.028129  2  1
+732	60.3825	 -3.575319   -3.577625  1  2
+733	60.4366	 -5.003766   -4.994125  2  2
+734	60.3542	 -4.032827   -3.926769  2  1
+735	60.4082	 -3.714586   -3.438457  2  2
+736	60.3261	 -3.515270   -3.591120  1  2
+737	60.3799	 -3.483787   -3.626844  1  1
+738	60.4336	 -2.639808   -2.318868  2  2
+739	60.4871	 -4.995350   -3.846759  2  2
+740	60.5405	 -5.349430   -5.131421  2  2
+741	60.4588	 -4.601594   -4.348569  2  1
+742	60.5121	 -2.061972   -2.875840  1  1
+743	60.5653	 -3.813091   -3.849105  1  1
+744	60.6183	 -2.687894   -2.247350  2  2
+745	60.5369	 -2.759388   -2.416750  2  1
+746	60.5898	 -5.802660   -5.696468  2  2
+747	60.5087	 -3.961068   -3.674131  2  1
+748	60.4278	 -3.774400   -3.987632  1  2
+749	60.4806	 -3.783463   -4.451848  1  1
+750	60.4000	 -5.423483   -5.513712  1  2
+751	60.4527	 -2.069755   -1.941870  2  2
+752	60.5053	 -0.654490   -0.794130  1  1
+753	60.4250	 -3.373121   -3.064593  2  1
+754	60.4775	 -1.753936   -3.098605  1  1
+755	60.3974	 -2.196606   -3.413563  1  2
+756	60.4497	 -2.693732   -3.023980  1  1
+757	60.5020	 -5.580359   -5.602722  1  1
+758	60.4222	 -5.244782   -5.314812  1  2
+759	60.3426	 -3.986791   -4.454031  1  2
+760	60.3947	 -4.660115   -4.845774  1  1
+761	60.3154	 -2.813457   -2.914809  1  2
+762	60.2362	 -2.648347   -2.635132  2  1
+763	60.2883	 -2.312989   -2.437399  1  1
+764	60.2094	 -0.373259  -11.054339  1  2
+765	60.2614	 -0.275096  -10.565378  1  1
+766	60.3133	 -3.263590   -2.903176  2  2
+767	60.3651	 -3.217165   -3.457616  1  1
+768	60.4167	 -3.033719   -3.425128  1  1
+769	60.4681	 -4.326576   -3.980401  2  2
+770	60.5195	 -3.133979   -2.903334  2  2
+771	60.4410	 -3.722508   -3.855811  1  2
+772	60.4922	 -4.514240   -4.558771  1  1
+773	60.4140	 -4.107204   -2.822067  2  1
+774	60.3359	 -2.242745   -2.350803  1  2
+775	60.3871	 -4.716030   -4.760635  1  1
+776	60.4381	 -6.316641   -4.703083  2  2
+777	60.3604	 -4.330595   -3.888331  2  1
+778	60.4113	 -2.179723   -7.947777  1  1
+779	60.4621	 -3.393470   -3.274488  2  2
+780	60.3846	 -3.970106   -3.718577  2  1
+781	60.4353	 -2.417089   -2.767432  1  1
+782	60.3581	 -3.150645   -3.196325  1  2
+783	60.4087	 -6.228011   -5.184082  2  2
+784	60.4592	 -2.928196   -2.893389  2  2
+785	60.5096	 -5.371338   -5.443809  1  1
+786	60.5598	 -3.888368   -3.649805  2  2
+787	60.6099	 -4.145201   -4.971298  1  1
+788	60.6599	 -5.793246   -5.760763  2  2
+789	60.7098	 -4.366345   -4.693565  1  1
+790	60.7595	 -4.284086   -4.287674  1  1
+791	60.8091	 -3.957881   -2.911150  2  2
+792	60.8586	 -3.219065   -2.906669  2  2
+793	60.9079	 -4.252198   -4.376584  1  1
+794	60.8312	 -3.131428   -3.199129  1  2
+795	60.8805	 -4.195311   -4.076470  2  2
+796	60.9296	 -3.823251   -4.188967  1  1
+797	60.8532	 -4.010486   -4.051097  1  2
+798	60.7769	 -4.058621   -4.342204  1  2
+799	60.7009	 -4.050290   -3.731284  2  1
+800	60.6250	 -3.202725   -3.303502  1  2
+801	60.5493	 -3.577224   -3.495820  2  1
+802	60.5985	 -3.995778   -3.965103  2  2
+803	60.5230	 -3.862134   -3.845558  2  1
+804	60.4478	 -3.651839   -3.712552  1  2
+805	60.3727	 -2.707313   -2.665928  2  1
+806	60.4218	 -3.634954   -4.330677  1  1
+807	60.4709	 -4.381735   -2.541616  2  2
+808	60.5198	 -4.023708   -3.953847  2  2
+809	60.5686	 -5.130926   -5.184495  1  1
+810	60.6173	 -6.314854   -6.242058  2  2
+811	60.6658	 -5.516628   -5.466960  2  2
+812	60.5911	 -3.620990   -3.394787  2  1
+813	60.5166	 -2.766390   -2.447284  2  1
+814	60.4423	 -3.669004   -3.530449  2  1
+815	60.4908	 -4.221089   -4.130477  2  2
+816	60.5392	 -5.129874   -4.644876  2  2
+817	60.5875	 -2.069762   -2.105745  1  1
+818	60.6357	 -4.644217   -4.494551  2  2
+819	60.6838	 -2.798271   -2.611456  2  2
+820	60.7317	 -2.449589   -3.351418  1  1
+821	60.7795	 -3.501673   -3.514930  1  1
+822	60.8273	 -3.416030   -3.278495  2  2
+823	60.7533	 -1.959087   -2.613878  1  2
+824	60.8010	 -3.431101   -3.676824  1  1
+825	60.7273	 -5.073184   -4.410065  2  1
+826	60.6538	 -5.252672   -5.044418  2  1
+827	60.5804	 -6.361552   -6.164310  2  1
+828	60.6280	 -2.977849   -3.265517  1  1
+829	60.6755	 -4.439713   -4.161812  2  2
+830	60.7229	 -4.879416   -4.921085  1  1
+831	60.6498	 -5.303926   -5.950400  1  2
+832	60.5769	 -5.212757   -5.134717  2  1
+833	60.6242	 -2.370800   -2.624624  1  1
+834	60.6715	 -2.740948   -2.841826  1  1
+835	60.7186	 -2.356257   -2.623747  1  1
+836	60.6459	 -3.299916   -3.037099  2  1
+837	60.6930	 -4.478731   -5.321462  1  1
+838	60.6205	 -4.765107   -4.434666  2  1
+839	60.5483	 -3.899703   -4.077608  1  2
+840	60.4762	 -3.861493   -4.199797  1  2
+841	60.5232	 -6.959869   -6.966696  1  1
+842	60.4513	 -4.500487   -4.203100  2  1
+843	60.3796	 -3.971731   -4.285058  1  2
+844	60.3081	 -4.664230   -4.287822  2  1
+845	60.2367	 -3.412355   -3.490261  1  2
+846	60.2837	 -4.568446   -4.310737  2  2
+847	60.2125	 -4.543122   -4.196003  2  1
+848	60.1415	 -2.491697   -8.711304  1  2
+849	60.1885	 -0.990681   -9.338581  1  1
+850	60.1176	 -5.214428   -6.222112  1  2
+851	60.0470	 -1.850045   -2.321176  1  2
+852	59.9765	 -3.404337   -4.135247  1  2
+853	60.0234	 -3.136263   -3.835750  1  1
+854	59.9532	 -4.574907   -4.568173  2  1
+855	60.0000	 -3.407629   -3.100961  2  2
+856	60.0467	 -3.272530   -3.453810  1  1
+857	60.0933	 -4.138935   -3.779161  2  2
+858	60.1399	 -3.684145   -3.561574  2  2
+859	60.1863	 -3.720546   -4.035401  1  1
+860	60.2326	 -4.124940   -4.064347  2  2
+861	60.2787	 -3.343944   -2.947693  2  2
+862	60.3248	 -3.846846   -3.271025  2  2
+863	60.3708	 -3.067969   -3.476177  1  1
+864	60.4167	 -1.374765   -5.133430  1  1
+865	60.4624	 -4.130928   -2.897512  2  2
+866	60.5081	 -3.490406   -2.478429  2  2
+867	60.5536	 -2.810225   -2.852857  1  1
+868	60.4839	 -6.049324   -5.484813  2  1
+869	60.5293	 -3.763206   -4.177498  1  1
+870	60.4598	 -3.137773   -2.855679  2  1
+871	60.5052	 -4.086347   -3.793803  2  2
+872	60.5505	 -5.706511   -5.329468  2  2
+873	60.5956	 -3.709888   -3.784065  1  1
+874	60.5263	 -4.005723   -4.040507  1  2
+875	60.4571	 -3.935491   -3.902488  2  1
+876	60.5023	 -4.096803   -3.954242  2  2
+877	60.5473	 -2.258005   -2.086450  2  2
+878	60.5923	 -2.768880   -3.133844  1  1
+879	60.6371	 -4.103107   -4.088801  2  2
+880	60.6818	 -3.051364   -2.949055  2  2
+881	60.7264	 -6.062834   -5.502578  2  2
+882	60.6576	 -4.426372   -4.175963  2  1
+883	60.5889	 -3.132483   -3.062849  2  1
+884	60.6335	 -3.769032   -3.648660  2  2
+885	60.5650	 -3.889535   -3.645222  2  1
+886	60.6095	 -6.269204   -5.860223  2  2
+887	60.5411	 -4.800092   -5.217453  1  2
+888	60.5856	 -3.516887   -3.367390  2  2
+889	60.5174	 -4.323244   -4.736349  1  2
+890	60.4494	 -3.177431   -3.404227  1  2
+891	60.3816	 -2.498535   -2.878918  1  2
+892	60.4260	 -3.209031   -3.161319  2  2
+893	60.4703	 -2.462348   -2.429760  2  2
+894	60.5145	 -2.944667   -2.913779  2  2
+895	60.4469	 -4.012255   -3.981231  2  1
+896	60.4911	 -5.775089   -5.323880  2  2
+897	60.5351	 -5.351772   -5.411098  1  1
+898	60.5791	 -4.733703   -4.082166  2  2
+899	60.5117	 -4.362995   -5.052495  1  2
+900	60.4444	 -3.293375   -9.641862  1  2
+901	60.4883	 -1.708394   -2.884743  1  1
+902	60.5322	 -4.165876   -3.764809  2  2
+903	60.5759	 -5.879978   -5.715800  2  2
+904	60.5088	 -4.608472   -4.432695  2  1
+905	60.5525	 -2.435445   -2.056715  2  2
+906	60.4857	 -5.377255   -5.433068  1  2
+907	60.5292	 -3.377760   -3.164715  2  2
+908	60.5727	 -3.874541   -4.036858  1  1
+909	60.6161	 -2.236889   -2.214272  2  2
+910	60.5495	 -2.932680   -2.780342  2  1
+911	60.4830	 -2.170885   -2.135985  2  1
+912	60.5263	 -2.907447   -2.865766  2  2
+913	60.5696	 -5.152472   -4.931515  2  2
+914	60.6127	 -5.001101   -5.455069  1  1
+915	60.6557	 -3.615349   -3.677725  1  1
+916	60.6987	 -3.312493   -3.151034  2  2
+917	60.7415	 -3.167938   -3.873325  1  1
+918	60.6754	 -3.963619   -3.455531  2  1
+919	60.7182	 -4.317207   -3.339589  2  2
+920	60.7609	 -4.725502   -3.505732  2  2
+921	60.6949	 -4.403783   -4.330922  2  1
+922	60.7375	 -3.764947   -3.746896  2  2
+923	60.7801	 -5.289358   -5.635953  1  1
+924	60.8225	 -3.976297   -3.695421  2  2
+925	60.8649	 -2.025090   -1.713487  2  2
+926	60.9071	 -4.703973   -4.693939  2  2
+927	60.9493	 -5.584573   -5.353868  2  2
+928	60.9914	 -5.122853   -5.035909  2  2
+929	60.9257	 -4.364367   -4.555232  1  2
+930	60.9677	 -3.363999   -5.218622  1  1
+931	60.9023	 -3.773589   -5.267222  1  2
+932	60.9442	 -2.031768   -1.839176  2  2
+933	60.8789	 -2.269565   -1.956217  2  1
+934	60.8137	 -6.825169   -6.604333  2  1
+935	60.8556	 -4.092452   -4.248765  1  1
+936	60.7906	 -2.974240   -2.745522  2  1
+937	60.7257	 -2.668765   -2.843624  1  2
+938	60.7676	 -5.588393   -5.566249  2  2
+939	60.7029	 -4.749795   -4.245786  2  1
+940	60.7447	 -4.378511   -2.473417  2  2
+941	60.7864	 -4.873089   -4.751653  2  2
+942	60.8280	 -3.160474   -2.710346  2  2
+943	60.7635	 -3.878871   -3.516527  2  1
+944	60.8051	 -2.786398   -2.552546  2  2
+945	60.8466	 -2.237174   -1.820849  2  2
+946	60.7822	 -2.351215   -2.465478  1  2
+947	60.7181	 -2.369401   -1.922146  2  1
+948	60.7595	 -4.376320   -3.195712  2  2
+949	60.8008	 -4.674881   -5.092050  1  1
+950	60.7368	 -2.686753   -2.865470  1  2
+951	60.6730	 -2.780447   -2.545887  2  1
+952	60.7143	 -4.468716   -4.266819  2  2
+953	60.7555	 -2.880861   -2.728630  2  2
+954	60.7966	 -4.793038   -3.697881  2  2
+955	60.7330	 -6.995808   -6.853673  2  1
+956	60.6695	 -4.690940   -5.464656  1  2
+957	60.7106	 -4.436491   -5.602906  1  1
+958	60.6472	 -3.334169   -2.662466  2  1
+959	60.6882	 -3.200933   -2.664540  2  2
+960	60.7292	 -4.048830   -4.308714  1  1
+961	60.6660	 -4.656806   -4.783927  1  2
+962	60.6029	 -5.959659   -5.638499  2  1
+963	60.5400	 -3.905831   -3.950756  1  2
+964	60.4772	 -2.964225   -3.060237  1  2
+965	60.5181	 -5.437168   -5.406398  2  2
+966	60.5590	 -2.923460   -2.792256  2  2
+967	60.4964	 -3.606023   -3.397844  2  1
+968	60.5372	 -6.552842   -7.145885  1  1
+969	60.4747	 -5.184655   -5.309120  1  2
+970	60.5155	 -2.098056   -2.079012  2  2
+971	60.4531	 -5.184546   -5.123151  2  1
+972	60.4938	 -4.360407   -4.248719  2  2
+973	60.4317	 -3.526450   -3.863533  1  2
+974	60.4723	 -2.227905   -2.292188  1  1
+975	60.5128	 -5.761098   -6.249068  1  1
+976	60.4508	 -6.951837   -7.029563  1  2
+977	60.4913	 -4.474689   -3.354051  2  2
+978	60.4294	 -2.943293   -2.786391  2  1
+979	60.4699	 -4.559899   -4.556841  2  2
+980	60.4082	 -2.741779   -3.502085  1  2
+981	60.4485	 -4.066917   -4.141019  1  1
+982	60.4888	 -4.648051   -4.350163  2  2
+983	60.4273	 -2.926898   -2.920849  2  1
+984	60.4675	 -4.889302   -6.183607  1  1
+985	60.4061	 -6.290633   -7.081772  1  2
+986	60.3448	 -6.302579   -6.239381  2  1
+987	60.2837	 -4.744687   -4.668337  2  1
+988	60.3239	 -4.430001   -4.010462  2  2
+989	60.3640	 -4.381194   -4.423813  1  1
+990	60.3030	 -4.784659   -4.640327  2  1
+991	60.2422	 -4.693522   -4.864817  1  2
+992	60.2823	 -5.104262   -5.661737  1  1
+993	60.3223	 -4.514394   -3.789417  2  2
+994	60.3622	 -2.686942   -3.099313  1  1
+995	60.3015	 -1.712081   -1.542959  2  1
+996	60.2410	 -2.868610   -2.652765  2  1
+997	60.1805	 -1.542721   -1.641019  1  2
+998	60.2204	 -4.284982   -4.566573  1  1
+999	60.1602	 -2.378104   -1.698650  2  1
+1000	60.2000	 -2.575315   -2.600676  1  1
+1001	60.1399	 -5.157750   -5.246710  1  2
+1002	60.1796	 -5.607183   -5.114535  2  2
+1003	60.1196	 -5.276848   -5.180468  2  1
+1004	60.0598	 -6.485618   -6.578578  1  2
+1005	60.0995	 -4.498847   -4.771290  1  1
+1006	60.0398	 -0.966151   -1.152461  1  2
+1007	59.9801	 -1.508820   -1.494470  2  1
+1008	60.0198	 -2.986999   -2.524149  2  2
+1009	60.0595	 -4.231046   -4.056956  2  2
+1010	60.0990	 -4.196671   -4.029030  2  2
+1011	60.1385	 -3.002715   -3.220713  1  1
+1012	60.1779	 -5.517258   -6.001062  1  1
+1013	60.2172	 -3.665036   -3.173661  2  2
+1014	60.2564	 -2.954519   -3.192513  1  1
+1015	60.2956	 -3.720043   -1.932410  2  2
+1016	60.2362	 -3.915718   -4.139113  1  2
+1017	60.1770	 -3.672704   -3.774555  1  2
+1018	60.1179	 -3.859677   -3.186761  2  1
+1019	60.1570	 -4.533805   -3.955238  2  2
+1020	60.1961	 -3.111366   -3.181749  1  1
+1021	60.2351	 -3.254887   -3.168880  2  2
+1022	60.2740	 -2.466327   -2.400803  2  2
+1023	60.2151	 -2.135494   -1.953324  2  1
+1024	60.1562	 -4.002125   -3.624196  2  1
+1025	60.1951	 -7.030144   -7.001328  2  2
+1026	60.1365	 -4.266075   -3.892245  2  1
+1027	60.0779	 -4.720155   -5.291183  1  2
+1028	60.1167	 -4.619030   -3.562503  2  2
+1029	60.0583	 -2.993564   -3.211648  1  2
+1030	60.0000	 -6.174379   -5.643385  2  1
+1031	60.0388	 -5.358881   -5.138392  2  2
+1032	60.0775	 -3.361668   -2.999429  2  2
+1033	60.1162	 -2.286700   -2.369533  1  1
+1034	60.0580	 -3.281308   -3.049089  2  1
+1035	60.0966	 -2.274563   -2.581567  1  1
+1036	60.1351	 -4.035007   -4.063613  1  1
+1037	60.0771	 -3.892538   -3.903927  1  2
+1038	60.1156	 -2.741193   -2.883323  1  1
+1039	60.1540	 -4.971056   -4.661694  2  2
+1040	60.0962	 -2.106802   -2.236674  1  2
+1041	60.1345	 -8.596792   -4.180671  2  2
+1042	60.1727	 -3.165658   -3.641861  1  1
+1043	60.2109	 -3.868928   -3.654632  2  2
+1044	60.2490	 -4.656629   -4.819364  1  1
+1045	60.2871	 -3.177058   -2.989202  2  2
+1046	60.3250	 -3.617254   -3.786364  1  1
+1047	60.3629	 -2.898677   -3.215405  1  1
+1048	60.4008	 -2.985196   -2.558735  2  2
+1049	60.4385	 -4.127606   -4.239187  1  1
+1050	60.3810	 -3.383546   -3.272701  2  1
+1051	60.3235	 -3.480835   -2.953773  2  1
+1052	60.3612	 -2.326246   -2.510175  1  1
+1053	60.3989	 -3.152521   -2.356985  2  2
+1054	60.4364	 -4.554663   -4.111085  2  2
+1055	60.4739	 -3.899122   -4.104449  1  1
+1056	60.5114	 -3.762151   -3.606380  2  2
+1057	60.5487	 -2.663812   -3.973803  1  1
+1058	60.4915	 -3.094001   -3.173433  1  2
+1059	60.5288	 -2.880321   -2.910530  1  1
+1060	60.5660	 -1.664218   -2.531778  1  1
+1061	60.5090	 -3.600884   -3.288290  2  1
+1062	60.5461	 -3.534554   -3.473045  2  2
+1063	60.4892	 -4.063194   -3.854038  2  1
+1064	60.5263	 -4.385736   -4.503241  1  1
+1065	60.4695	 -5.526686   -5.079755  2  1
+1066	60.4128	 -3.533482   -3.846692  1  2
+1067	60.4499	 -2.654302   -2.904001  1  1
+1068	60.3933	 -2.817966   -2.864568  1  2
+1069	60.3368	 -3.653884   -3.039320  2  1
+1070	60.3738	 -1.337800   -2.094253  1  1
+1071	60.4108	 -4.880147   -3.823155  2  2
+1072	60.3545	 -3.660690   -3.711479  1  2
+1073	60.2982	 -3.305365   -4.465586  1  2
+1074	60.3352	 -3.493762   -3.216906  2  2
+1075	60.2791	 -1.913209   -2.187730  1  2
+1076	60.3160	 -2.076616   -2.623531  1  1
+1077	60.2600	 -4.576867   -4.593519  1  2
+1078	60.2041	 -3.521903   -3.601377  1  2
+1079	60.1483	 -3.565743   -3.400253  2  1
+1080	60.1852	 -3.919852   -4.228328  1  1
+1081	60.2220	 -3.017964   -3.143836  1  1
+1082	60.2588	 -2.272318   -1.948749  2  2
+1083	60.2955	 -4.581675   -4.445789  2  2
+1084	60.3321	 -3.331090   -4.588238  1  1
+1085	60.3687	 -2.578146   -2.595400  1  1
+1086	60.4052	 -2.969546   -3.065118  1  1
+1087	60.4416	 -2.788960   -2.719034  2  2
+1088	60.3860	 -4.996169   -5.226936  1  2
+1089	60.4224	 -2.165381   -2.433030  1  1
+1090	60.3670	 -4.878475   -5.165691  1  2
+1091	60.3116	 -4.469182   -4.737812  1  2
+1092	60.3480	 -2.644192   -2.503632  2  2
+1093	60.2928	 -2.854240   -2.931366  1  2
+1094	60.3291	 -5.934464   -5.088967  2  2
+1095	60.3653	 -0.629594   -1.287654  1  1
+1096	60.4015	 -3.634190   -4.279767  1  1
+1097	60.3464	 -2.186051   -2.312042  1  2
+1098	60.2914	 -2.024385   -1.873202  2  1
+1099	60.3276	 -1.715413   -1.722020  1  1
+1100	60.2727	 -4.205040   -3.910172  2  1
+1101	60.3088	 -3.181939   -3.799332  1  1
+1102	60.3448	 -3.042749   -2.526021  2  2
+1103	60.2901	 -3.014384   -3.185414  1  2
+1104	60.2355	 -3.118474   -3.059474  2  1
+1105	60.2715	 -3.301350   -3.103959  2  2
+1106	60.3074	 -2.320427   -1.409328  2  2
+1107	60.2529	 -3.191683   -2.511538  2  1
+1108	60.2888	 -4.314929   -2.754349  2  2
+1109	60.3246	 -4.731266   -4.371850  2  2
+1110	60.2703	 -2.616365   -2.476686  2  1
+1111	60.2160	 -3.901487   -3.887336  2  1
+1112	60.2518	 -5.510463   -5.402235  2  2
+1113	60.2875	 -1.327786  -12.343554  1  1
+1114	60.3232	 -3.709754   -3.705534  2  2
+1115	60.2691	 -2.899918   -2.877027  2  1
+1116	60.3047	 -3.876199   -3.780579  2  2
+1117	60.2507	 -4.202206   -4.496740  1  2
+1118	60.1968	 -4.940736   -4.897687  2  1
+1119	60.2324	 -3.322659   -3.351923  1  1
+1120	60.1786	 -4.122253   -4.389866  1  2
+1121	60.2141	 -3.514998   -3.805199  1  1
+1122	60.1604	 -3.645978   -3.504144  2  1
+1123	60.1959	 -3.188848   -4.233663  1  1
+1124	60.1423	 -3.967219   -4.553279  1  2
+1125	60.0889	 -3.870384   -3.186335  2  1
+1126	60.1243	 -3.123065   -3.028897  2  2
+1127	60.1597	 -5.253772   -4.864699  2  2
+1128	60.1950	 -3.735538   -3.634365  2  2
+1129	60.1417	 -3.253952   -2.995386  2  1
+1130	60.1770	 -4.125197   -4.367590  1  1
+1131	60.1238	 -3.354721   -3.262055  2  1
+1132	60.0707	 -3.407217   -3.628856  1  2
+1133	60.1059	 -3.605229   -3.971349  1  1
+1134	60.1411	 -3.356610   -3.429515  1  1
+1135	60.0881	 -3.862757   -4.017096  1  2
+1136	60.1232	 -3.136126   -3.496947  1  1
+1137	60.0704	 -3.256341   -3.389009  1  2
+1138	60.0176	 -5.694501   -6.059724  1  2
+1139	60.0527	 -3.207943   -3.029461  2  2
+1140	60.0000	 -7.449326   -7.830282  1  2
+1141	60.0351	 -6.917185   -7.375265  1  1
+1142	59.9825	 -3.621511   -3.538072  2  1
+1143	59.9300	 -2.066328   -1.924944  2  1
+1144	59.9650	 -3.170082   -2.987396  2  2
+1145	60.0000	 -4.155775   -3.893142  2  2
+1146	60.0349	 -2.723248   -2.926474  1  1
+1147	60.0697	 -4.201826   -3.898653  2  2
+1148	60.1045	 -6.031542   -4.637039  2  2
+1149	60.0522	 -7.374771   -7.952336  1  2
+1150	60.0870	 -4.134269   -3.578619  2  2
+1151	60.1216	 -5.898990   -5.990477  1  1
+1152	60.1562	 -3.704498   -3.795588  1  1
+1153	60.1908	 -4.862253   -4.398913  2  2
+1154	60.2253	 -2.316583   -2.447954  1  1
+1155	60.2597	 -4.716335   -5.230278  1  1
+1156	60.2941	 -4.351062   -4.403308  1  1
+1157	60.3284	 -3.882156   -3.649437  2  2
+1158	60.3627	 -2.988588   -3.083367  1  1
+1159	60.3969	 -2.806873   -2.785913  2  2
+1160	60.4310	 -7.301845   -7.419383  1  1
+1161	60.3790	 -3.876438   -4.665692  1  2
+1162	60.4131	 -3.696193   -5.010976  1  1
+1163	60.4471	 -7.707372   -7.071095  2  2
+1164	60.3952	 -5.054980   -4.483739  2  1
+1165	60.4292	 -3.942822   -4.138271  1  1
+1166	60.4631	 -2.848091   -2.356908  2  2
+1167	60.4113	 -2.929597   -2.478804  2  1
+1168	60.3596	 -3.765472   -3.733106  2  1
+1169	60.3935	 -6.101017   -5.200617  2  2
+1170	60.3419	 -3.633881   -3.553966  2  1
+1171	60.3757	 -5.556107   -4.777353  2  2
+1172	60.4096	 -3.032676   -2.955599  2  2
+1173	60.4433	 -4.403833   -3.543111  2  2
+1174	60.4770	 -4.657603   -4.539083  2  2
+1175	60.5106	 -8.261160   -8.028116  2  2
+1176	60.5442	 -3.569355   -2.446076  2  2
+1177	60.5777	 -5.173126   -5.138019  2  2
+1178	60.6112	 -6.205154   -6.589441  1  1
+1179	60.5598	 -5.493843   -5.376824  2  1
+1180	60.5085	 -6.551903   -6.406085  2  1
+1181	60.5419	 -3.680720   -3.858104  1  1
+1182	60.5753	 -3.741292   -4.139146  1  1
+1183	60.6086	 -5.483141   -5.503486  1  1
+1184	60.6419	 -6.966516   -6.389026  2  2
+1185	60.5907	 -6.541332   -6.158216  2  1
+1186	60.5396	 -2.526870   -2.513048  2  1
+1187	60.4886	 -4.505361   -4.839418  1  2
+1188	60.4377	 -4.398423   -4.324435  2  1
+1189	60.3869	 -4.076368   -3.917819  2  1
+1190	60.4202	 -4.837691   -4.525617  2  2
+1191	60.4534	 -1.008405   -8.254979  1  1
+1192	60.4027	 -1.491381   -8.681056  1  2
+1193	60.3521	 -1.491037   -9.297226  1  2
+1194	60.3015	 -2.650039   -2.910023  1  2
+1195	60.3347	 -4.160331   -3.109723  2  2
+1196	60.3679	 -2.173646   -2.175850  1  1
+1197	60.4010	 -3.477203   -3.530876  1  1
+1198	60.4341	 -3.078846   -2.818598  2  2
+1199	60.3837	 -3.143633   -3.249315  1  2
+1200	60.3333	 -3.350602   -3.231219  2  1
+1201	60.3664	 -1.133680   -6.637542  1  1
+1202	60.3161	 -1.029287   -7.014599  1  2
+1203	60.3491	 -3.082100   -2.695249  2  2
+1204	60.3821	 -5.369706   -5.111463  2  2
+1205	60.4149	 -5.257778   -5.712938  1  1
+1206	60.4478	 -5.171633   -4.608929  2  2
+1207	60.3977	 -4.236290   -4.216853  2  1
+1208	60.4305	 -3.606013   -4.402799  1  1
+1209	60.3805	 -2.926840   -2.658116  2  1
+1210	60.4132	 -4.391689   -3.618913  2  2
+1211	60.4459	 -3.700490   -3.887890  1  1
+1212	60.3960	 -4.265357   -4.283932  1  2
+1213	60.4287	 -5.334851   -5.312607  2  2
+1214	60.3789	 -2.097748   -2.037678  2  1
+1215	60.4115	 -1.695004   -3.070363  1  1
+1216	60.4441	 -4.719338   -4.999153  1  1
+1217	60.4766	 -1.718809   -0.747895  2  2
+1218	60.4269	 -4.184720   -4.140283  2  1
+1219	60.3774	 -6.299252   -6.287982  2  1
+1220	60.3279	 -4.587071   -4.470376  2  1
+1221	60.2785	 -6.613781   -6.816896  1  2
+1222	60.3110	 -3.900133   -3.649189  2  2
+1223	60.3434	 -7.315390   -7.487322  1  1
+1224	60.2941	 -3.953197   -3.606449  2  1
+1225	60.3265	 -3.591131   -2.138747  2  2
+1226	60.3589	 -3.249957   -4.703209  1  1
+1227	60.3097	 -2.482903   -2.540412  1  2
+1228	60.3420	 -2.600619   -2.860836  1  1
+1229	60.3743	 -3.530344   -4.255888  1  1
+1230	60.4065	 -2.586796   -2.939491  1  1
+1231	60.4387	 -3.543785   -2.710495  2  2
+1232	60.4708	 -1.052705   -9.298873  1  1
+1233	60.4217	 -0.493413   -9.568780  1  2
+1234	60.4538	 -1.924594   -1.864408  2  2
+1235	60.4049	 -2.340504   -2.233199  2  1
+1236	60.3560	 -4.323917   -4.965905  1  2
+1237	60.3880	 -5.089318   -5.915322  1  1
+1238	60.4200	 -3.989452   -3.428472  2  2
+1239	60.3713	 -2.877504   -2.994959  1  2
+1240	60.4032	 -5.656909   -5.650180  2  2
+1241	60.3546	 -5.592405   -5.405475  2  1
+1242	60.3865	 -3.519928   -3.696834  1  1
+1243	60.4183	 -4.392335   -3.962168  2  2
+1244	60.4502	 -2.911798   -2.762297  2  2
+1245	60.4016	 -4.284117   -3.993329  2  1
+1246	60.3531	 -4.719680   -5.092322  1  2
+1247	60.3849	 -4.608251   -4.959642  1  1
+1248	60.4167	 -3.279999   -4.843688  1  1
+1249	60.3683	 -3.931217   -3.512213  2  1
+1250	60.4000	 -3.196692   -3.179967  2  2
+1251	60.4317	 -2.982934   -2.934726  2  2
+1252	60.4633	 -1.980664   -1.909322  2  2
+1253	60.4150	 -1.572405   -1.481907  2  1
+1254	60.3668	 -9.340929   -8.640512  2  1
+1255	60.3187	 -8.262704   -8.703095  1  2
+1256	60.3503	 -3.863348   -3.572999  2  2
+1257	60.3819	 -4.325426   -8.483771  1  1
+1258	60.3339	 -4.497915   -5.021953  1  2
+1259	60.3654	 -2.298961   -2.068168  2  2
+1260	60.3175	 -2.270624   -2.227622  2  1
+1261	60.3489	 -3.384655   -3.293069  2  2
+1262	60.3011	 -4.315676   -3.933753  2  1
+1263	60.3325	 -2.498802   -2.597457  1  1
+1264	60.2848	 -3.387154   -3.386767  2  1
+1265	60.3162	 -4.074019   -4.106120  1  1
+1266	60.3476	 -1.598907   -2.362062  1  1
+1267	60.3788	 -5.304312   -5.254807  2  2
+
+11.05.861.293 I Final Winogrande score(1267 tasks): 60.3788 +/- 1.3746
+
