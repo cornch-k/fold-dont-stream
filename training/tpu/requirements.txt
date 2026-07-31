@@ -1,0 +1,8 @@
+# Colab TPU 런타임에는 jax/jaxlib이 TPU 플러그인과 함께 미리 깔려 있다.
+# jax를 다시 설치하면 TPU를 못 잡으므로 여기 넣지 않는다 (버전만 확인).
+flax>=0.10
+optax>=0.2.4
+datasets>=3.0        # prepare_fineweb.py
+tokenizers>=0.21     # prepare_fineweb.py
+matplotlib>=3.8      # scaling.py --plot
+numpy

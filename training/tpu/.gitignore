@@ -1,0 +1,6 @@
+__pycache__/
+data/
+ckpt/
+logs/
+results/*.json
+results/*.png
